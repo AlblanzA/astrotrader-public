@@ -4,7 +4,7 @@
   "channel": "stable",
   "minVersion": "30.0",
   "downloadUrl": {
-    "windows": "https://astrotraderpro.com/download/AstroTraderPro_Setup_v34.0.exe",
+    "windows": "https://alblanza.github.io/astrotrader-public/download/AstroTraderPro_Setup_v34.0.exe",
     "macos": null,
     "linux": null
   },
