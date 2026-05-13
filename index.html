@@ -1,27 +1,58 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="UTF-8">
+<html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AstroTrader Pro - Risorse pubbliche</title>
+<title>AstroTrader Pro&trade; - Financial astrology, public-domain astronomy</title>
+<meta name="description" content="AstroTrader Pro - educational financial astrology app. Public-domain astronomical algorithms (VSOP87, IAU 2006). 13 languages, 12 zodiac signs, 13 planets, time projections.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:radial-gradient(ellipse at 50% 50%,#162038 0%,#0A1020 50%,#04060C 100%);color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;padding:60px 20px;min-height:100vh;line-height:1.7}
-.wrap{max-width:680px;margin:0 auto;text-align:center}
-h1{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:42px;letter-spacing:3px;font-weight:700;margin-bottom:8px;background:linear-gradient(180deg,#F5E8B8,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:#A8A095;font-style:italic;font-size:16px;margin-bottom:48px}
-.links{display:flex;flex-direction:column;gap:14px;margin-bottom:48px}
-.links a{display:block;padding:18px 24px;background:rgba(232,201,106,0.08);border:1px solid rgba(232,201,106,0.3);border-radius:10px;color:#F5E8B8;text-decoration:none;font-size:16px;transition:all 0.25s}
+body{background:radial-gradient(ellipse at 50% 50%,#162038 0%,#0A1020 50%,#04060C 100%);color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;padding:48px 20px;min-height:100vh;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;text-align:center}
+.logo{width:128px;height:128px;border-radius:24px;margin:0 auto 22px;display:block;box-shadow:0 8px 32px rgba(232,201,106,0.18),0 0 0 1px rgba(232,201,106,0.25)}
+h1{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:42px;letter-spacing:3px;font-weight:700;margin-bottom:6px;background:linear-gradient(180deg,#F5E8B8,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tm{font-size:14px;color:#E8C96A;letter-spacing:1.5px;font-family:'Cinzel','Georgia',serif;margin-left:4px}
+.sub{color:#A8A095;font-style:italic;font-size:16px;margin-bottom:36px;letter-spacing:0.4px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:40px;text-align:left}
+.feat{padding:16px 18px;background:rgba(20,28,48,0.55);border:1px solid rgba(232,201,106,0.22);border-radius:10px}
+.feat-t{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.feat-d{font-size:14px;color:#C0B59E;line-height:1.5}
+.links{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.links a{display:block;padding:16px 22px;background:rgba(232,201,106,0.08);border:1px solid rgba(232,201,106,0.3);border-radius:10px;color:#F5E8B8;text-decoration:none;font-size:15px;transition:all 0.25s}
 .links a:hover{background:rgba(232,201,106,0.15);border-color:#E8C96A;transform:translateY(-2px)}
-.links a small{display:block;color:#A8A095;font-size:13px;margin-top:4px;font-style:italic}
-.footer{padding:24px;border-top:1px solid rgba(232,201,106,0.2);font-size:13px;color:#A8A095}
+.links a small{display:block;color:#A8A095;font-size:12px;margin-top:3px;font-style:italic}
+.disclaimer{background:rgba(224,82,82,0.06);border-left:3px solid #E05252;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:28px;text-align:left;font-size:13.5px;color:#DCD4C0;font-style:italic;line-height:1.55}
+.footer{padding:22px 0 0;border-top:1px solid rgba(232,201,106,0.2);font-family:'JetBrains Mono','Consolas',monospace;font-size:11.5px;color:#9A8F7E;line-height:1.7;letter-spacing:0.3px}
 .footer a{color:#E8C96A;text-decoration:underline}
+.tm-notice{margin-top:10px;color:#A8A095;font-size:11px;letter-spacing:0.5px}
 </style>
 </head><body><div class="wrap">
-<h1>ASTROTRADER PRO</h1>
-<div class="sub">Astrologia finanziaria classica - Risorse pubbliche</div>
-<div class="links">
-<a href="privacy.html">Privacy Policy<small>Informativa privacy GDPR-compliant</small></a>
-<a href="terms.html">Termini di servizio<small>Condizioni d'uso del software</small></a>
-<a href="version.json">version.json<small>Manifest auto-aggiornamento desktop</small></a>
+
+<img src="assets/icon-final.png" alt="AstroTrader Pro logo" class="logo">
+<h1>ASTROTRADER PRO<span class="tm">&trade;</span></h1>
+<div class="sub">Financial astrology &middot; Public-domain astronomy</div>
+
+<div class="features">
+ <div class="feat"><div class="feat-t">12 Zodiac signs</div><div class="feat-d">Classical tropical zodiac with element coloring (fire/earth/air/water)</div></div>
+ <div class="feat"><div class="feat-t">13 Planets</div><div class="feat-d">Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Chiron, True Node, Lilith</div></div>
+ <div class="feat"><div class="feat-t">Time projections</div><div class="feat-d">Play forward in time, see how planets move and how bull/bear assets shift</div></div>
+ <div class="feat"><div class="feat-t">13 Languages</div><div class="feat-d">IT, EN, ES, FR, DE, PT, NL, RU, ZH, JA, KO, AR, HI</div></div>
 </div>
-<div class="footer">Software proprietario.<br><a href="mailto:lanzafamea2001@gmail.com">lanzafamea2001@gmail.com</a></div>
+
+<div class="disclaimer">
+ <b>Educational tool.</b> Astrological projections do NOT constitute financial advice, investment recommendation, or trading signal. Any financial decision is the user's sole responsibility.
+</div>
+
+<div class="links">
+ <a href="privacy.html">Privacy Policy<small>GDPR-compliant privacy notice (IT + EN)</small></a>
+ <a href="terms.html">Terms of Service<small>Software license terms (IT + EN)</small></a>
+ <a href="https://github.com/AlblanzA/astrotrader-public">GitHub source<small>Public landing &amp; legal docs repository</small></a>
+</div>
+
+<div class="footer">
+ Astronomical engine: <b>astronomy-engine</b> by Don Cross (MIT License), based on public-domain algorithms VSOP87 (Bureau des Longitudes, Paris, 1987) and IAU 2006 (International Astronomical Union). Open fonts: Cinzel, Crimson Pro, JetBrains Mono, Inter (SIL Open Font License 1.1).
+ <div class="tm-notice">
+  &copy; 2026 Alberto Nicola Lanzafame. AstroTrader Pro&trade; &mdash; marchio depositato presso UIBM Italia 2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame. All rights reserved pursuant to Italian Law 633/1941 and EU Directive 2001/29/EC.<br>
+  Contact: <a href="mailto:lanzafamea2001@gmail.com">lanzafamea2001@gmail.com</a>
+ </div>
+</div>
+
 </div></body></html>
