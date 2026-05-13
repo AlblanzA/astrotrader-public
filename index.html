@@ -1,97 +1,268 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AstroTrader Pro&trade; - Where classical astrology meets modern markets</title>
-<meta name="description" content="AstroTrader Pro - educational app uniting two-thousand-year classical astrology (Ptolemy, Volguine, Barbault, Bailey, Palamidessi) with a century of financial astrology (Gann, Bradley, Ebertin, Merriman, Meridian, Crawford). For traders, astrologers, and curious learners. 13 languages.">
+<title>AstroTrader Pro&trade; · Classical astrology meets modern markets</title>
+<meta name="description" content="The first mobile app uniting two-thousand-year classical astrology (Ptolemy, Volguine, Barbault, Bailey, Palamidessi) with a century of financial astrology (Gann, Bradley, Ebertin, Merriman, Meridian, Crawford). 200+ assets, 13 languages, privacy-first.">
+<meta property="og:title" content="AstroTrader Pro™ — Classical astrology meets modern markets">
+<meta property="og:description" content="200+ financial assets · 13 planets · 12 zodiac signs · 13 languages · Privacy-first">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/icon-final.png">
 <style>
+/* === RESET === */
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:radial-gradient(ellipse at 50% 50%,#162038 0%,#0A1020 50%,#04060C 100%);color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;padding:48px 20px;min-height:100vh;line-height:1.7}
-.wrap{max-width:760px;margin:0 auto}
-.center{text-align:center}
-.logo{width:128px;height:128px;border-radius:24px;margin:0 auto 22px;display:block;box-shadow:0 8px 32px rgba(232,201,106,0.18),0 0 0 1px rgba(232,201,106,0.25)}
-h1{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:42px;letter-spacing:3px;font-weight:700;margin-bottom:6px;background:linear-gradient(180deg,#F5E8B8,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
-.tm{font-size:14px;color:#E8C96A;letter-spacing:1.5px;font-family:'Cinzel','Georgia',serif;margin-left:4px}
-.sub{color:#A8A095;font-style:italic;font-size:17px;margin-bottom:34px;letter-spacing:0.4px;text-align:center;line-height:1.5}
-.intro{font-size:15.5px;color:#C0B59E;line-height:1.7;margin-bottom:36px;padding:18px 22px;background:rgba(20,28,48,0.5);border:1px solid rgba(232,201,106,0.18);border-radius:12px}
-.intro b{color:#F5E8B8;font-weight:600}
-h2{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:18px;letter-spacing:2px;text-transform:uppercase;margin:36px 0 14px;font-weight:700}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:30px}
-.feat{padding:14px 16px;background:rgba(20,28,48,0.55);border:1px solid rgba(232,201,106,0.22);border-radius:10px}
-.feat-t{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin-bottom:4px}
-.feat-d{font-size:13.5px;color:#C0B59E;line-height:1.5}
-.audience{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:36px}
-.aud{padding:16px 18px;background:rgba(20,28,48,0.55);border-left:3px solid #E8C96A;border-radius:0 10px 10px 0}
-.aud-t{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin-bottom:6px}
-.aud-d{font-size:13.5px;color:#C0B59E;line-height:1.55}
-.lineage{padding:16px 20px;background:rgba(232,201,106,0.05);border-left:3px solid rgba(232,201,106,0.5);border-radius:0 10px 10px 0;margin-bottom:20px}
-.lineage h3{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:13px;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:8px;font-weight:700}
-.lineage p{font-size:13.5px;color:#C0B59E;line-height:1.6}
-.lineage b{color:#F5E8B8}
-.links{display:flex;flex-direction:column;gap:12px;margin:32px 0}
-.links a{display:block;padding:16px 22px;background:rgba(232,201,106,0.08);border:1px solid rgba(232,201,106,0.3);border-radius:10px;color:#F5E8B8;text-decoration:none;font-size:15px;transition:all 0.25s}
-.links a:hover{background:rgba(232,201,106,0.15);border-color:#E8C96A;transform:translateY(-2px)}
-.links a small{display:block;color:#A8A095;font-size:12px;margin-top:3px;font-style:italic}
-.disclaimer{background:rgba(224,82,82,0.06);border-left:3px solid #E05252;border-radius:0 8px 8px 0;padding:14px 18px;margin:28px 0;font-size:13.5px;color:#DCD4C0;font-style:italic;line-height:1.55}
-.footer{padding:22px 0 0;border-top:1px solid rgba(232,201,106,0.2);font-family:'JetBrains Mono','Consolas',monospace;font-size:11.5px;color:#9A8F7E;line-height:1.7;letter-spacing:0.3px}
-.footer a{color:#E8C96A;text-decoration:underline}
-.tm-notice{margin-top:10px;color:#A8A095;font-size:11px;letter-spacing:0.5px}
-.tagline{margin-top:32px;text-align:center;font-style:italic;color:#A8A095;font-size:14px;letter-spacing:0.5px;line-height:1.6}
+html{scroll-behavior:smooth}
+body{background:#04060C;color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* === STARRY BG === */
+.starfield{position:fixed;inset:0;z-index:-2;background:
+ radial-gradient(ellipse at 50% -10%,#1A2542 0%,#0A1020 35%,#04060C 75%),
+ radial-gradient(1.5px 1.5px at 20% 30%,rgba(255,255,255,0.7),transparent 50%),
+ radial-gradient(1px 1px at 70% 60%,rgba(255,255,255,0.5),transparent 50%),
+ radial-gradient(1.5px 1.5px at 90% 20%,rgba(232,201,106,0.55),transparent 50%),
+ radial-gradient(1px 1px at 40% 80%,rgba(82,200,208,0.45),transparent 50%),
+ radial-gradient(1.2px 1.2px at 15% 70%,rgba(155,123,196,0.4),transparent 50%);
+ background-size:cover,280px 280px,280px 280px,280px 280px,280px 280px,280px 280px;
+ background-attachment:fixed;
+ animation:drift 90s linear infinite}
+@keyframes drift{from{background-position:center,0 0,0 0,0 0,0 0,0 0}to{background-position:center,280px 280px,-280px 280px,280px -280px,-280px -280px,280px 0}}
+.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 30%,rgba(4,6,12,0.5) 100%)}
+
+/* === HEADERS === */
+@font-face{font-family:'Cinzel';src:local('Cinzel'),local('Georgia');font-display:swap}
+h1,h2,h3,.hd-font{font-family:'Cinzel','Trajan Pro','Georgia',serif}
+
+/* === HERO === */
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative}
+.hero-orbit{position:relative;width:148px;height:148px;margin:0 auto 32px;animation:floatY 6s ease-in-out infinite}
+.hero-orbit::before,.hero-orbit::after{content:'';position:absolute;border:1px solid rgba(232,201,106,0.18);border-radius:50%}
+.hero-orbit::before{inset:-22px;border-style:dashed;animation:rot 60s linear infinite}
+.hero-orbit::after{inset:-44px;animation:rot 120s linear infinite reverse}
+@keyframes rot{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-orbit img{width:100%;height:100%;border-radius:32px;box-shadow:0 16px 60px rgba(232,201,106,0.22),0 0 0 1px rgba(232,201,106,0.3),inset 0 0 0 4px rgba(0,0,0,0.4);position:relative;z-index:2}
+.brand{font-size:clamp(38px,7vw,68px);letter-spacing:4px;font-weight:700;line-height:1;margin-bottom:6px;background:linear-gradient(180deg,#F5E8B8 0%,#E8C96A 50%,#8B6F2D 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 60px rgba(232,201,106,0.25)}
+.tm{font-size:clamp(14px,1.8vw,20px);color:#E8C96A;letter-spacing:1.5px;vertical-align:super;opacity:0.85}
+.tagline{font-size:clamp(15px,2.2vw,20px);color:#C0B59E;font-style:italic;letter-spacing:0.5px;max-width:560px;margin:14px auto 38px;line-height:1.5}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:50px;font-family:'Cinzel','Georgia',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.25s;border:1px solid transparent}
+.cta-primary{background:linear-gradient(135deg,#E8C96A,#C9A84C);color:#0A1020;box-shadow:0 8px 28px rgba(232,201,106,0.35)}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,201,106,0.5)}
+.cta-secondary{background:rgba(232,201,106,0.06);border-color:rgba(232,201,106,0.35);color:#E8C96A}
+.cta-secondary:hover{background:rgba(232,201,106,0.12);transform:translateY(-2px)}
+.cta-soon{position:relative;opacity:0.92}
+.cta-soon::after{content:'soon';position:absolute;top:-8px;right:-8px;background:#E05252;color:#fff;font-size:9px;letter-spacing:0.5px;padding:2px 7px;border-radius:10px;font-family:'JetBrains Mono',monospace;font-weight:500;text-transform:lowercase;letter-spacing:1px;box-shadow:0 2px 8px rgba(224,82,82,0.4)}
+.scroll-hint{margin-top:20px;font-size:11px;color:#7A7568;letter-spacing:2px;text-transform:uppercase;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:0.4}50%{opacity:0.9}}
+
+/* === SECTIONS === */
+.section{max-width:920px;margin:0 auto;padding:60px 24px;position:relative}
+.kicker{font-family:'Cinzel','Georgia',serif;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:#E8C96A;text-align:center;margin-bottom:8px;font-weight:600}
+.section h2{font-size:clamp(26px,4vw,38px);text-align:center;color:#F5E8B8;letter-spacing:1.5px;font-weight:700;margin-bottom:14px}
+.section .lead{text-align:center;max-width:680px;margin:0 auto 36px;color:#C0B59E;font-size:16px;line-height:1.7}
+.section .lead b{color:#F5E8B8;font-weight:600}
+
+/* === FOR WHOM === */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
+.who-card{padding:24px 22px;background:linear-gradient(160deg,rgba(20,28,48,0.85),rgba(10,16,30,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:14px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
+.who-card:hover{transform:translateY(-4px);border-color:rgba(232,201,106,0.5)}
+.who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(232,201,106,0.7),transparent)}
+.who-glyph{font-size:32px;line-height:1;margin-bottom:12px;display:block}
+.who-card[data-kind="trader"] .who-glyph{color:#5DCAA5}
+.who-card[data-kind="astro"] .who-glyph{color:#9B7BC4}
+.who-card[data-kind="learner"] .who-glyph{color:#52C8D0}
+.who-t{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.who-d{font-size:14.5px;color:#C0B59E;line-height:1.6}
+
+/* === LINEAGE === */
+.lineage-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:8px}
+.lineage{padding:28px 26px;background:rgba(20,28,48,0.6);border:1px solid rgba(232,201,106,0.22);border-radius:14px;position:relative}
+.lineage::before{content:'';position:absolute;left:0;top:24px;bottom:24px;width:3px;background:linear-gradient(180deg,#E8C96A,#8B6F2D);border-radius:0 3px 3px 0}
+.lineage-tag{font-family:'JetBrains Mono','Consolas',monospace;font-size:10px;letter-spacing:2px;color:#E8C96A;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.lineage h3{font-size:20px;color:#F5E8B8;letter-spacing:1px;font-weight:700;margin-bottom:18px}
+.author{padding:10px 0;border-bottom:1px solid rgba(232,201,106,0.1)}
+.author:last-child{border-bottom:none}
+.author-name{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:14.5px;font-weight:600;letter-spacing:0.5px}
+.author-years{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#7A7568;margin-left:6px;letter-spacing:0.3px}
+.author-work{display:block;font-size:13.5px;color:#C0B59E;font-style:italic;line-height:1.5;margin-top:3px}
+
+/* === FEATURES === */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px}
+.feat{padding:20px 20px;background:rgba(20,28,48,0.55);border:1px solid rgba(232,201,106,0.18);border-radius:12px;transition:all 0.25s;position:relative}
+.feat:hover{background:rgba(20,28,48,0.8);border-color:rgba(232,201,106,0.4);transform:translateY(-2px)}
+.feat-icon{font-size:26px;line-height:1;margin-bottom:10px}
+.feat-t{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.feat-d{font-size:13.5px;color:#A8A095;line-height:1.55}
+
+/* === ZODIAC STRIP === */
+.zodiac-strip{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:32px 0 8px;padding:18px;background:linear-gradient(90deg,rgba(20,28,48,0.3),rgba(20,28,48,0.6),rgba(20,28,48,0.3));border-top:1px solid rgba(232,201,106,0.15);border-bottom:1px solid rgba(232,201,106,0.15)}
+.zg{font-size:24px;width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;font-weight:700}
+.zg[data-el="0"]{background:rgba(217,83,79,0.18);color:#fff;border:1px solid rgba(217,83,79,0.5)}
+.zg[data-el="1"]{background:rgba(92,184,92,0.18);color:#fff;border:1px solid rgba(92,184,92,0.5)}
+.zg[data-el="2"]{background:rgba(245,197,24,0.22);color:#1a1a1a;border:1px solid rgba(245,197,24,0.5)}
+.zg[data-el="3"]{background:rgba(59,125,216,0.18);color:#fff;border:1px solid rgba(59,125,216,0.55)}
+.legend{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:11.5px;color:#7A7568;font-family:'JetBrains Mono',monospace;letter-spacing:1px;margin-bottom:24px}
+.legend-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+
+/* === DISCLAIMER === */
+.disclaimer{max-width:680px;margin:48px auto 0;padding:22px 26px;background:rgba(224,82,82,0.05);border-left:3px solid #E05252;border-radius:0 12px 12px 0;font-size:14px;color:#C0B59E;font-style:italic;line-height:1.65}
+.disclaimer b{color:#F5E8B8;font-style:normal;letter-spacing:0.5px}
+
+/* === LINKS BOTTOM === */
+.bottom-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:40px auto 0;max-width:680px}
+.bl{flex:1 1 200px;text-align:center;padding:16px 18px;background:rgba(232,201,106,0.05);border:1px solid rgba(232,201,106,0.25);border-radius:10px;color:#E8C96A;text-decoration:none;font-family:'Cinzel','Georgia',serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;transition:all 0.25s}
+.bl:hover{background:rgba(232,201,106,0.12);border-color:#E8C96A;transform:translateY(-2px)}
+.bl small{display:block;margin-top:5px;color:#A8A095;font-size:10.5px;letter-spacing:0.5px;font-style:italic;text-transform:none;font-weight:400;font-family:'Crimson Pro',serif}
+
+/* === FOOTER === */
+.foot{margin-top:60px;padding:32px 24px;border-top:1px solid rgba(232,201,106,0.2);background:rgba(4,6,12,0.55);text-align:center}
+.foot p{max-width:760px;margin:0 auto 10px;font-family:'JetBrains Mono','Consolas',monospace;font-size:11.5px;color:#9A8F7E;line-height:1.7;letter-spacing:0.3px}
+.foot p b{color:#C0B59E}
+.foot a{color:#E8C96A;text-decoration:underline}
+.foot-tag{display:block;margin-top:18px;font-family:'Cinzel','Georgia',serif;font-style:italic;color:#A8A095;font-size:13px;letter-spacing:1.5px}
+
+/* === RESPONSIVE === */
+@media (max-width:600px){
+ .hero{min-height:75vh;padding:60px 18px 40px}
+ .hero-orbit{width:118px;height:118px}
+ .hero-orbit::before{inset:-16px}
+ .hero-orbit::after{inset:-32px}
+ .cta{padding:13px 22px;font-size:12px}
+ .section{padding:48px 18px}
+ .lineage{padding:22px 20px}
+ .zg{width:36px;height:36px;font-size:20px}
+}
 </style>
-</head><body><div class="wrap">
+</head><body>
 
-<img src="assets/icon-final.png" alt="AstroTrader Pro logo" class="logo">
-<h1>ASTROTRADER PRO<span class="tm">&trade;</span></h1>
-<div class="sub">Where two-thousand-year astrological tradition meets modern financial markets</div>
+<div class="starfield"></div>
+<div class="vignette"></div>
 
-<div class="intro">
- AstroTrader Pro unites <b>two distinct knowledge traditions</b> in a single coherent mobile tool: the canonical Western astrology of Ptolemy, Volguine, Barbault, Bailey and Palamidessi, layered with the twentieth-century financial-astrology lineage of Gann, Bradley, Ebertin, Merriman, Meridian and Crawford. The result is an interactive zodiac wheel where every planetary transit becomes a symbolic signal mapped to <b>200+ financial assets</b> across indices, stocks, commodities, forex, crypto and ETFs. Scroll time forward, watch the planets move, see which sectors come into bullish trine — or which fall under bearish square — at any moment from today to the next decades.
-</div>
-
-<h2>For whom</h2>
-<div class="audience">
- <div class="aud"><div class="aud-t">Traders &amp; pros</div><div class="aud-d">A qualitative complement on top of technical and fundamental analysis. Bull/bear bias ranking, transit timing windows, sector rotation hints.</div></div>
- <div class="aud"><div class="aud-t">Astrologers</div><div class="aud-d">Arc-second-accurate ephemeris, classical aspect doctrine with configurable orbs, retrograde-aware ±7-year scanning. The full Western tropical toolkit in your pocket.</div></div>
- <div class="aud"><div class="aud-t">Curious learners</div><div class="aud-d">A guided introduction to the language of the sky. Tap any sign or planet for a clear explanation. No prior knowledge required.</div></div>
-</div>
-
-<h2>Two traditions, one tool</h2>
-
-<div class="lineage">
- <h3>Classical astrological lineage</h3>
- <p><b>Claudius Ptolemy</b> (II AD, <i>Tetrabiblos</i>) · <b>Alexander Volguine</b> (1903–1976, mundane astrology) · <b>André Barbault</b> (1921–2019, statistical cyclical indexes) · <b>Alice Bailey</b> (1880–1949, esoteric correspondences planet ↔ sign ↔ nation) · <b>Tommaso Palamidessi</b> (1915–1983, archeosophical archetypes of sectors).</p>
-</div>
-
-<div class="lineage">
- <h3>Financial astrology layer</h3>
- <p><b>W. D. Gann</b> (1878–1955, <i>Tunnel Thru the Air</i> 1927) · <b>Donald Bradley</b> (Siderograph index) · <b>Reinhold Ebertin</b> (1901–1988, cosmobiology) · <b>Raymond Merriman</b> (<i>Stock Market Timing</i>) · <b>Bill Meridian</b> (<i>Planetary Stock Trading</i>) · <b>Arch Crawford</b> (Crawford Perspectives, since 1977).</p>
-</div>
-
-<h2>Features</h2>
-<div class="features">
- <div class="feat"><div class="feat-t">Zodiac wheel</div><div class="feat-d">12 signs colored by element (fire/earth/air/water), 13 planets with classical glyphs, tap-to-explain tooltips</div></div>
- <div class="feat"><div class="feat-t">Time projections</div><div class="feat-d">Scroll the slider or press PLAY to fast-forward the sky; bull/bear asset list updates live</div></div>
- <div class="feat"><div class="feat-t">Asset detail</div><div class="feat-d">Tap any card for ticker, sector, ruling planet, current aspect trigger, archetype, transit duration window</div></div>
- <div class="feat"><div class="feat-t">13 Languages</div><div class="feat-d">IT, EN, ES, FR, DE, PT, NL, RU, ZH, JA, KO, AR (RTL), HI</div></div>
-</div>
-
-<div class="disclaimer">
- <b>Educational tool.</b> Astrological projections do NOT constitute financial advice, investment recommendation, or trading signal. Any financial decision is the user's sole responsibility. The predictive efficacy of financial astrology on modern markets is not scientifically established; the framework is offered as a qualitative complement to conventional analysis, never as a replacement.
-</div>
-
-<div class="links">
- <a href="privacy.html">Privacy Policy<small>GDPR-compliant privacy notice (IT + EN)</small></a>
- <a href="terms.html">Terms of Service<small>Software license terms (IT + EN)</small></a>
- <a href="https://github.com/AlblanzA/astrotrader-public">GitHub source<small>Public landing &amp; legal documentation repository</small></a>
-</div>
-
-<div class="footer">
- Astronomical engine: <b>astronomy-engine</b> by Don Cross (MIT License), based on public-domain algorithms VSOP87 (Bureau des Longitudes, Paris, 1987) and IAU 2006 (International Astronomical Union). Open fonts: Cinzel, Crimson Pro, JetBrains Mono, Inter (SIL Open Font License 1.1).
- <div class="tm-notice">
-  &copy; 2026 Alberto Nicola Lanzafame. AstroTrader Pro&trade; &mdash; marchio depositato presso UIBM Italia 2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame. All rights reserved pursuant to Italian Law 633/1941 and EU Directive 2001/29/EC.<br>
-  Contact: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>
+<!-- HERO -->
+<section class="hero">
+ <div class="hero-orbit"><img src="assets/icon-final.png" alt="AstroTrader Pro logo"></div>
+ <h1 class="brand">ASTROTRADER PRO<span class="tm">&trade;</span></h1>
+ <p class="tagline">Where two-thousand-year astrological tradition meets modern financial markets — in a fluid, privacy-first mobile experience.</p>
+ <div class="cta-row">
+  <a class="cta cta-primary cta-soon" href="#" aria-disabled="true" title="Coming soon on Google Play">Google Play</a>
+  <a class="cta cta-secondary" href="#whatis">Discover</a>
  </div>
-</div>
+ <div class="scroll-hint">scroll &darr;</div>
+</section>
 
-<div class="tagline">Two thousand years of celestial observation. One century of market application.<br>One app that bridges them, in your pocket.</div>
+<!-- WHAT IS -->
+<section class="section" id="whatis">
+ <div class="kicker">The project</div>
+ <h2>Two traditions, one tool</h2>
+ <p class="lead">
+  AstroTrader Pro unites <b>two distinct knowledge traditions</b> in a single coherent mobile app: the canonical Western astrology of <b>Ptolemy, Volguine, Barbault, Bailey and Palamidessi</b>, layered with the twentieth-century financial-astrology lineage of <b>Gann, Bradley, Ebertin, Merriman, Meridian and Crawford</b>. The result is an interactive zodiac wheel where every planetary transit becomes a symbolic signal mapped to <b>200+ financial assets</b> across indices, stocks, commodities, forex, crypto and ETFs.
+ </p>
 
-</div></body></html>
+ <div class="zodiac-strip" aria-hidden="true">
+  <span class="zg" data-el="0">&#9800;</span><span class="zg" data-el="1">&#9801;</span><span class="zg" data-el="2">&#9802;</span><span class="zg" data-el="3">&#9803;</span>
+  <span class="zg" data-el="0">&#9804;</span><span class="zg" data-el="1">&#9805;</span><span class="zg" data-el="2">&#9806;</span><span class="zg" data-el="3">&#9807;</span>
+  <span class="zg" data-el="0">&#9808;</span><span class="zg" data-el="1">&#9809;</span><span class="zg" data-el="2">&#9810;</span><span class="zg" data-el="3">&#9811;</span>
+ </div>
+ <div class="legend">
+  <span><span class="legend-dot" style="background:#D9534F"></span>Fire</span>
+  <span><span class="legend-dot" style="background:#5CB85C"></span>Earth</span>
+  <span><span class="legend-dot" style="background:#F5C518"></span>Air</span>
+  <span><span class="legend-dot" style="background:#3B7DD8"></span>Water</span>
+ </div>
+</section>
+
+<!-- FOR WHOM -->
+<section class="section">
+ <div class="kicker">For whom</div>
+ <h2>Three audiences, one interface</h2>
+ <p class="lead">Designed to serve very different users — from quant traders to lifelong astrologers to total beginners — without dumbing down or gatekeeping.</p>
+ <div class="who">
+  <div class="who-card" data-kind="trader">
+   <span class="who-glyph">&#9650;</span>
+   <div class="who-t">Traders &amp; pros</div>
+   <div class="who-d">A qualitative framework on top of technical and fundamental analysis. Bull/bear bias ranking, transit timing windows with retrograde-aware duration, sector rotation hints. Zero noise.</div>
+  </div>
+  <div class="who-card" data-kind="astro">
+   <span class="who-glyph">&#9743;</span>
+   <div class="who-t">Astrologers</div>
+   <div class="who-d">Arc-second-accurate ephemeris, classical aspect doctrine with configurable orbs, retrograde-aware aspect-window scanning across &plusmn;7 years. The full Western tropical toolkit on a phone.</div>
+  </div>
+  <div class="who-card" data-kind="learner">
+   <span class="who-glyph">&#9734;</span>
+   <div class="who-t">Curious learners</div>
+   <div class="who-d">A guided introduction to the language of the sky. Tap any sign or planet for a clear explanation. No prior knowledge required. 13 languages including RTL Arabic.</div>
+  </div>
+ </div>
+</section>
+
+<!-- LINEAGE -->
+<section class="section">
+ <div class="kicker">The roots</div>
+ <h2>Standing on giants' shoulders</h2>
+ <p class="lead">Every rulership, archetype and aspect doctrine in the app comes directly from the canonical authors of two intertwined disciplines.</p>
+ <div class="lineage-wrap">
+
+  <div class="lineage">
+   <div class="lineage-tag">Classical astrology</div>
+   <h3>Two thousand years of tradition</h3>
+   <div class="author"><span class="author-name">Claudius Ptolemy</span><span class="author-years">II AD</span><span class="author-work">Tetrabiblos &mdash; foundational system of signs, houses, aspects and planetary natures.</span></div>
+   <div class="author"><span class="author-name">Alexander Volguine</span><span class="author-years">1903&ndash;1976</span><span class="author-work">Mundane astrology and lunar cycles applied to collective events.</span></div>
+   <div class="author"><span class="author-name">Andr&eacute; Barbault</span><span class="author-years">1921&ndash;2019</span><span class="author-work">Pioneer of statistical mundane astrology and cyclical index methodology.</span></div>
+   <div class="author"><span class="author-name">Alice Bailey</span><span class="author-years">1880&ndash;1949</span><span class="author-work">Esoteric Astrology: hierarchical correspondences between planets, signs and nations.</span></div>
+   <div class="author"><span class="author-name">Tommaso Palamidessi</span><span class="author-years">1915&ndash;1983</span><span class="author-work">Archeosophy: esoteric archetypes of planets and sectors.</span></div>
+  </div>
+
+  <div class="lineage">
+   <div class="lineage-tag">Financial astrology</div>
+   <h3>A century of market application</h3>
+   <div class="author"><span class="author-name">William D. Gann</span><span class="author-years">1878&ndash;1955</span><span class="author-work">Tunnel Thru the Air (1927) &mdash; the seminal work on planetary-cycle market timing.</span></div>
+   <div class="author"><span class="author-name">Donald Bradley</span><span class="author-years">1925&ndash;1974</span><span class="author-work">The Siderograph: aggregated planetary aspect index for sentiment cycles.</span></div>
+   <div class="author"><span class="author-name">Reinhold Ebertin</span><span class="author-years">1901&ndash;1988</span><span class="author-work">Cosmobiology: planetary-picture methodology for bull/bear bias extraction.</span></div>
+   <div class="author"><span class="author-name">Raymond Merriman</span><span class="author-years">contemp.</span><span class="author-work">Stock Market Timing (5 vols) &mdash; modern reference for planetary market cycles.</span></div>
+   <div class="author"><span class="author-name">Bill Meridian</span><span class="author-years">contemp.</span><span class="author-work">Planetary Stock Trading &mdash; corporate natal-chart catalog and IPO analysis.</span></div>
+   <div class="author"><span class="author-name">Arch Crawford</span><span class="author-years">since 1977</span><span class="author-work">Crawford Perspectives &mdash; longest-running financial astrology newsletter.</span></div>
+  </div>
+
+ </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+ <div class="kicker">What's inside</div>
+ <h2>Built to be used, daily</h2>
+ <p class="lead">A complete, polished mobile experience &mdash; not a research prototype. Designed to feel native on every device.</p>
+ <div class="feat-grid">
+  <div class="feat"><div class="feat-icon">&#9737;</div><div class="feat-t">Zodiac wheel</div><div class="feat-d">12 signs colored by element, 13 planets with classical glyphs, tap any element to learn its tradition.</div></div>
+  <div class="feat"><div class="feat-icon">&#9658;</div><div class="feat-t">Time projections</div><div class="feat-d">Press PLAY to fast-forward the sky. Bull/bear asset list updates live, no lag, even on entry-level phones.</div></div>
+  <div class="feat"><div class="feat-icon">&#10071;</div><div class="feat-t">Asset detail</div><div class="feat-d">Tap any card for ticker, sector, ruling planet, current aspect trigger, archetype and transit duration window.</div></div>
+  <div class="feat"><div class="feat-icon">&#9201;</div><div class="feat-t">Aspect windows</div><div class="feat-d">Retrograde-aware scanning computes start, exact and end of every aspect across &plusmn;7 years.</div></div>
+  <div class="feat"><div class="feat-icon">&#127760;</div><div class="feat-t">13 languages</div><div class="feat-d">IT, EN, ES, FR, DE, PT, NL, RU, ZH, JA, KO, AR (RTL), HI &mdash; with proper glyph rendering everywhere.</div></div>
+  <div class="feat"><div class="feat-icon">&#128274;</div><div class="feat-t">Privacy-first</div><div class="feat-d">Zero trackers, zero analytics, zero remote calls. Everything runs offline on public-domain algorithms.</div></div>
+ </div>
+
+ <div class="disclaimer">
+  <b>Educational tool.</b> Astrological projections do NOT constitute financial advice, investment recommendation, or trading signal. Any financial decision is the user's sole responsibility. The predictive efficacy of financial astrology on modern markets is not scientifically established; the framework is offered as a qualitative complement to conventional analysis, never as a replacement.
+ </div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<section class="section" style="padding-top:0">
+ <div class="kicker">Documents</div>
+ <h2>Privacy &amp; terms</h2>
+ <p class="lead">Fully GDPR-compliant. No data collected after install. Bundled astronomical algorithms are public-domain (VSOP87 + IAU 2006).</p>
+ <div class="bottom-links">
+  <a class="bl" href="privacy.html">Privacy Policy<small>IT + EN &middot; GDPR-compliant</small></a>
+  <a class="bl" href="terms.html">Terms of Service<small>IT + EN &middot; License terms</small></a>
+  <a class="bl" href="https://github.com/AlblanzA/astrotrader-public">GitHub source<small>This landing &amp; legal docs</small></a>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+ <p><b>Astronomical engine:</b> astronomy-engine by Don Cross (MIT License), based on public-domain algorithms VSOP87 (Bureau des Longitudes, Paris, 1987) and IAU 2006 (International Astronomical Union). Lunar Node and Apogee via Meeus classical formulas.</p>
+ <p><b>Open fonts:</b> Cinzel, Crimson Pro, JetBrains Mono, Inter (all SIL Open Font License 1.1).</p>
+ <p style="margin-top:16px">&copy; 2026 Alberto Nicola Lanzafame. AstroTrader Pro&trade; &mdash; <i>marchio depositato presso UIBM Italia 2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame.</i> All rights reserved pursuant to Italian Law 633/1941 and EU Directive 2001/29/EC.</p>
+ <p style="margin-top:12px">Contact: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></p>
+ <span class="foot-tag">Two thousand years of sky. One century of markets. One app.</span>
+</footer>
+
+</body></html>
