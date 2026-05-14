@@ -75,7 +75,7 @@ On top of this classical foundation, the app integrates the modern lineage that 
 - **Aspect-window timing** — retrograde-aware scanning computes the start, exact and end dates of every major aspect ±7 years
 - **From / To date range** (premium) — limit projections to a custom window
 - **13 languages** — IT, EN, ES, FR, DE, PT, NL, RU, ZH, JA, KO, AR (RTL), HI
-- **Privacy-first** — zero trackers, zero analytics, zero remote calls. All calculations run locally on public-domain algorithms.
+- **Privacy-first** — no tracking, no analytics, no advertising. Calculations run locally on open-source, public-domain algorithms; minimal subscription metadata only.
 
 ---
 
@@ -104,7 +104,7 @@ Single HTML/JS codebase, compiled to native Android (Capacitor 6) and Windows de
 
 **Copyright © 2026 Alberto Nicola Lanzafame.** AstroTrader Pro™ — *marchio depositato presso UIBM Italia 2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame.* All rights reserved pursuant to Italian Law 633/1941 and EU Directive 2001/29/EC.
 
-The app is **100% free of GPL/AGPL dependencies**. All astronomical calculations use the MIT-licensed `astronomy-engine` library, based on public-domain algorithms (VSOP87 by Bureau des Longitudes 1987; IAU 2006 by International Astronomical Union; Meeus classical formulas for lunar node and apogee).
+Astronomical calculations are based on open-source, public-domain algorithms (VSOP87, IAU). The app uses the MIT-licensed `astronomy-engine` library and fonts under SIL Open Font License 1.1.
 
 - 📜 [Privacy Policy](privacy.html) (IT + EN, GDPR-compliant)
 - 📜 [Terms of Service](terms.html) (IT + EN)
