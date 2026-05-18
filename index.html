@@ -1163,7 +1163,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <div class="foot-col">
         <h4 data-i18n="foot_contact">Contact</h4>
         <ul>
-          <li><a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></li>
+          <li><a href="mailto:info@astrotraderpro.com">info@astrotraderpro.com</a></li>
           <li><a href="https://github.com/AlblanzA/astrotrader-public" rel="noopener">GitHub</a></li>
         </ul>
       </div>
@@ -1976,7 +1976,7 @@ var I18N={
   var sel=document.getElementById('lang-select');
   var saved=null;
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
-  var nav=(navigator.language||'en').toLowerCase().split('-')[0];
+  var nav='en'; // forced EN default for first-time visitors (was: navigator.language)
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
     setLang(initial);
   sel.value=initial;
