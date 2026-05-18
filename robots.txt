@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/screenshots/
+
+Sitemap: https://astrotraderpro.com/sitemap.xml

@@ -1,162 +1,221 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Termini d'uso — AstroTrader Pro</title>
+<meta name="theme-color" content="#0A1020">
+<title>Terms of Service — AstroTrader Pro</title>
+<meta name="description" content="Terms of service of AstroTrader Pro — license, subscription terms, disclaimers, governing law.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://astrotraderpro.com/terms.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0A1020;color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;line-height:1.7;padding:40px 20px;min-height:100vh}
-.wrap{max-width:780px;margin:0 auto}
-h1{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:32px;letter-spacing:2px;margin-bottom:8px;font-weight:700;text-align:center}
-.sub{text-align:center;color:#A8A095;font-style:italic;margin-bottom:32px;font-size:14px}
-h2{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:20px;letter-spacing:1px;margin:28px 0 12px;font-weight:600;border-bottom:1px solid rgba(232,201,106,0.3);padding-bottom:6px}
-p{margin-bottom:14px;font-size:15px}
-ul{margin:8px 0 16px 24px;font-size:15px}
-li{margin-bottom:6px}
-a{color:#E8C96A;text-decoration:underline}
-.warn{background:rgba(224,82,82,0.10);border-left:3px solid #E05252;padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#F5C8C8;line-height:1.6}
-.lang-switch{text-align:center;margin-bottom:24px}
-.lang-switch a{margin:0 6px;color:#A8A095;text-decoration:none;font-size:13px}
-.lang-switch a:hover{color:#E8C96A}
-strong{color:#F5E8B8}
+:root{
+  --navy:#0A1020;--navy-deep:#04060C;--navy-mid:#162038;
+  --gold:#E8C96A;--gold-light:#F5E8B8;--gold-dark:#C9A84C;
+  --bear:#E05252;
+  --text:#DCD4C0;--text-dim:#A8A095;
+  --serif:'Crimson Pro','Georgia',serif;
+  --display:'Cinzel','Georgia',serif;
+  --ui:'Inter','Helvetica Neue',sans-serif;
+}
+html,body{background:var(--navy-deep);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.7;min-height:100%}
+body{background:linear-gradient(180deg,var(--navy-deep) 0%,var(--navy) 100%);padding:0 0 60px}
+.topbar{padding:18px 0;border-bottom:1px solid rgba(232,201,106,0.15);background:rgba(4,6,12,0.6);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
+.container{max-width:780px;margin:0 auto;padding:0 24px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1080px}
+.brand{font-family:var(--display);color:var(--gold);text-decoration:none;font-size:16px;letter-spacing:3px;font-weight:600}
+.brand small{display:block;font-size:10px;color:var(--gold-dark);letter-spacing:2px;font-weight:400;font-family:var(--ui);margin-top:2px}
+.lang-select{background:rgba(22,32,56,0.6);color:var(--gold-light);border:1px solid rgba(232,201,106,0.25);padding:8px 12px;border-radius:6px;font-family:var(--ui);font-size:13px;cursor:pointer}
+main{padding-top:48px}
+h1{font-family:var(--display);color:var(--gold-light);font-size:2.2rem;letter-spacing:2px;margin-bottom:8px;font-weight:600}
+.lead{color:var(--gold);font-size:1.05rem;margin-bottom:32px;font-family:var(--ui)}
+.meta{color:var(--text-dim);font-size:0.9rem;font-family:var(--ui);margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid rgba(232,201,106,0.15)}
+h2{font-family:var(--display);color:var(--gold);font-size:1.35rem;letter-spacing:1.5px;margin:36px 0 14px;font-weight:600}
+p{margin-bottom:14px}
+ul{margin:10px 0 20px 24px}
+li{margin-bottom:8px}
+strong{color:var(--gold-light)}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(232,201,106,0.3)}
+a:hover{color:var(--gold-light);border-bottom-color:var(--gold)}
+.back{display:inline-block;margin-top:48px;color:var(--text-dim);font-family:var(--ui);font-size:0.9rem;border:none}
+.box{background:rgba(22,32,56,0.35);border:1px solid rgba(232,201,106,0.18);border-radius:10px;padding:20px 24px;margin:18px 0}
+.box.warn{border-left:3px solid var(--bear);background:rgba(224,82,82,0.06);border-color:rgba(224,82,82,0.25)}
+.translate-note{background:rgba(232,201,106,0.06);border-left:3px solid var(--gold);padding:14px 18px;margin:0 0 32px;font-size:0.93rem;border-radius:0 6px 6px 0;display:none}
+html[data-lang]:not([data-lang="en"]):not([data-lang="it"]) .translate-note{display:block}
+@media (max-width:640px){body{font-size:16px}h1{font-size:1.7rem}}
 </style>
 </head>
-<body><div class="wrap">
-<div class="lang-switch">
-<a href="#it">IT</a> | <a href="#en">EN</a>
-</div>
+<body>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="/">AstroTrader Pro<small data-i18n="brand_sub">Classical financial astrology</small></a>
+    <select class="lang-select" id="lang-select" aria-label="Language">
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+      <option value="nl">Nederlands</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+</header>
 
-<a id="it"></a>
-<h1>Termini d'uso</h1>
-<div class="sub">AstroTrader Pro — versione italiana</div>
+<main>
+  <div class="container">
+    <h1 data-i18n="title">Terms of Service</h1>
+    <p class="lead" data-i18n="lead">The rules of using AstroTrader Pro™. Read them — they protect both of us.</p>
+    <p class="meta"><strong data-i18n="meta_updated_l">Last updated:</strong> <span data-i18n="meta_updated">14 May 2026</span> · <strong data-i18n="meta_version_l">Version:</strong> <span>1.2.0</span></p>
 
-<p><strong>Ultimo aggiornamento:</strong> 3 maggio 2026</p>
+    <div class="translate-note" data-i18n="translate_note">This document is authoritative in English and Italian. Translations of other languages will be added — for now this page is shown in English.</div>
 
-<p>Utilizzando l'app <strong>AstroTrader Pro</strong> (di seguito "l'app") accetti integralmente i seguenti termini e condizioni. Se non sei d'accordo con uno qualsiasi dei punti, disinstalla l'app e non utilizzarla.</p>
+    <h2 data-i18n="s1_t">1. Acceptance</h2>
+    <p data-i18n="s1_b">By installing or using AstroTrader Pro (the "App"), you agree to these Terms of Service. If you don't agree, do not install or use the App. These Terms form a binding agreement between you (the "User") and Alberto Nicola Lanzafame, individual developer based in Italy (the "Developer").</p>
 
-<h2>1. Natura del servizio</h2>
-<p>AstroTrader Pro è uno <strong>strumento educativo e di ricerca</strong> che applica calcoli astronomici classici (effemeridi, transiti, aspetti) a simboli di mercato secondo la tradizione storica dell'astrologia finanziaria classica (W.D. Gann, Donald Bradley, Reinhold Ebertin, Raymond Merriman, Bill Meridian, Arch Crawford). L'app non sostituisce in alcun modo la consulenza di un professionista finanziario qualificato e regolamentato.</p>
+    <h2 data-i18n="s2_t">2. Description of the service</h2>
+    <p data-i18n="s2_b">AstroTrader Pro is an <strong>educational mobile tool</strong> that applies classical Western astrological tradition to financial markets. It shows planetary positions, transits, and symbolic correspondences between planets and economic sectors based on historical sources (Ptolemy, W.D. Gann, Louise McWhirter, Tommaso Palamidessi, Alice Bailey, and others).</p>
 
-<div class="warn"><strong>AVVISO IMPORTANTE:</strong> AstroTrader Pro NON costituisce consulenza finanziaria, raccomandazione di investimento, sollecitazione all'acquisto o vendita di strumenti finanziari, né alcuna forma di intermediazione finanziaria ai sensi del TUF (D.Lgs. 58/1998) e della normativa europea MiFID II.</div>
+    <div class="box warn">
+      <p data-i18n="s2_disclaimer"><strong>Important:</strong> AstroTrader Pro is NOT financial advice, NOT a recommendation to buy or sell, NOT a trading signal, and NOT a market prediction. The predictive efficacy of astrology is not scientifically proven. Trading involves risk of total capital loss. Every financial decision is solely your responsibility. Always consult a qualified financial advisor before making investment decisions.</p>
+    </div>
 
-<h2>2. Limitazione di responsabilità</h2>
-<p>L'efficacia predittiva dell'astrologia finanziaria sui mercati moderni <strong>non è scientificamente dimostrata in modo robusto</strong>. I segnali generati dall'app vanno considerati come spunti educativi e qualitativi, mai come previsioni operative affidabili.</p>
-<p>Trading e investimenti comportano rischio di perdita totale del capitale investito. L'utente è l'unico responsabile delle proprie decisioni finanziarie e delle conseguenze che ne derivano.</p>
-<p>Nei limiti consentiti dalla legge, AstroTrader e i suoi sviluppatori NON saranno responsabili per:</p>
-<ul>
-<li>Perdite finanziarie dirette o indirette derivanti dall'uso dell'app;</li>
-<li>Decisioni di investimento prese basandosi sui contenuti mostrati;</li>
-<li>Errori di calcolo astronomico, interruzioni del servizio, bug software;</li>
-<li>Perdita di dati locali a seguito di disinstallazione, aggiornamento o malfunzionamento del dispositivo;</li>
-<li>Danni morali, perdite di chance o opportunità mancate.</li>
-</ul>
+    <h2 data-i18n="s3_t">3. License</h2>
+    <p data-i18n="s3_b">The Developer grants you a personal, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for personal and non-commercial use only. You may not modify, reverse-engineer, redistribute, sublicense, or commercially exploit the App or its content.</p>
 
-<h2>3. Periodo di prova e abbonamento</h2>
-<p>L'app offre un <strong>periodo di prova gratuito di 7 giorni</strong> dalla prima apertura. Al termine del trial, l'accesso continuo richiede l'attivazione dell'abbonamento premium al costo di <strong>19,99 €/mese</strong> (prezzo IVA inclusa per l'Italia; può variare per altri paesi secondo la conversione valutaria di Google Play / App Store).</p>
-<p>L'abbonamento si rinnova <strong>automaticamente</strong> alla fine di ogni periodo di fatturazione fino alla disdetta. Puoi annullare in qualsiasi momento dalle impostazioni del tuo account Google Play o App Store; la cancellazione ha effetto al termine del periodo già pagato.</p>
-<p>I diritti di recesso e rimborso sono regolati dalle policy dello store dove è stato effettuato l'acquisto:</p>
-<ul>
-<li>Google Play: <a href="https://support.google.com/googleplay/answer/2479637">support.google.com/googleplay/answer/2479637</a></li>
-<li>App Store: <a href="https://support.apple.com/HT204084">support.apple.com/HT204084</a></li>
-</ul>
+    <h2 data-i18n="s4_t">4. Eligibility</h2>
+    <p data-i18n="s4_b">You must be <strong>at least 18 years old</strong> to use the App. The App is rated 18+ and is not intended for minors. By using the App you represent that you meet this age requirement.</p>
 
-<h2>4. Proprietà intellettuale</h2>
-<p>Il codice sorgente, l'interfaccia grafica, i database di corrispondenze pianeta-asset, le motivazioni astrologiche e ogni contenuto originale dell'app sono opere protette dal diritto d'autore italiano (Legge 633/1941) ed europeo, di proprietà di AstroTrader.</p>
-<p>L'app utilizza:</p>
-<ul>
-<li><strong>astronomy-engine</strong> (Don Cross, MIT License) per il calcolo astronomico, basato su algoritmi pubblici VSOP87 (Bureau des Longitudes, Paris) e IAU 2006 (International Astronomical Union).</li>
-<li>Posizioni planetarie, fasi lunari ed eventi astronomici sono derivati da algoritmi di pubblico dominio e archivi astronomici liberamente disponibili.</li>
-<li>Font open: Cinzel, Crimson Pro, JetBrains Mono, Inter (SIL Open Font License).</li>
-</ul>
-<p>È vietata la riproduzione, distribuzione, decompilazione, reverse engineering o creazione di opere derivate senza autorizzazione scritta di AstroTrader.</p>
+    <h2 data-i18n="s5_t">5. Subscription terms</h2>
+    <p data-i18n="s5_intro">The basic features of the App are free. Premium features are offered through an auto-renewing subscription managed by Google Play:</p>
+    <ul>
+      <li data-i18n="s5_l1"><strong>Price:</strong> €19.99/month (or local equivalent set by Google Play).</li>
+      <li data-i18n="s5_l2"><strong>Free trial:</strong> 7 days, no charge if cancelled before the trial ends.</li>
+      <li data-i18n="s5_l3"><strong>Auto-renewal:</strong> Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</li>
+      <li data-i18n="s5_l4"><strong>Cancellation:</strong> You can cancel anytime from your Google Play account settings. Cancellation takes effect at the end of the current billing period.</li>
+      <li data-i18n="s5_l5"><strong>Refunds:</strong> Refund requests are handled by Google Play according to its <a href="https://support.google.com/googleplay/answer/2479637" rel="noopener">refund policy</a>.</li>
+    </ul>
 
-<h2>5. Condotta dell'utente</h2>
-<p>L'utente si impegna a:</p>
-<ul>
-<li>Utilizzare l'app esclusivamente per scopi personali e non commerciali;</li>
-<li>Non tentare di compromettere l'integrità o la sicurezza dell'app;</li>
-<li>Non condividere, rivendere o distribuire l'app o i suoi contenuti;</li>
-<li>Non utilizzare l'app per attività illegali o lesive di terzi.</li>
-</ul>
+    <h2 data-i18n="s6_t">6. User obligations</h2>
+    <p data-i18n="s6_intro">You agree to:</p>
+    <ul>
+      <li data-i18n="s6_l1">Use the App only for lawful, personal, educational purposes</li>
+      <li data-i18n="s6_l2">Not represent the App's output as financial advice to third parties</li>
+      <li data-i18n="s6_l3">Not attempt to circumvent subscription validation or technical protections</li>
+      <li data-i18n="s6_l4">Not use the App in jurisdictions where astrology-based financial content is prohibited</li>
+    </ul>
 
-<h2>6. Modifiche al servizio</h2>
-<p>AstroTrader si riserva il diritto di modificare, aggiornare o sospendere temporaneamente l'app per motivi tecnici, legali o commerciali. Cambiamenti sostanziali ai termini saranno comunicati con almeno 30 giorni di preavviso prima dell'entrata in vigore.</p>
+    <h2 data-i18n="s7_t">7. Disclaimer of warranties</h2>
+    <p data-i18n="s7_b">The App is provided "AS IS" and "AS AVAILABLE", without warranties of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, accuracy, completeness, or non-infringement. The Developer does not warrant that the App will be uninterrupted, error-free, or that astronomical calculations will be without minor approximations inherent in the underlying public-domain algorithms (VSOP87, IAU 2006).</p>
 
-<h2>7. Foro competente e legge applicabile</h2>
-<p>Questi termini sono regolati dalla legge italiana. Per qualsiasi controversia derivante dall'uso dell'app, il foro competente è quello del consumatore (luogo di residenza dell'utente) per consumatori UE, altrimenti il foro di Catania per utenti business.</p>
+    <h2 data-i18n="s8_t">8. Limitation of liability</h2>
+    <p data-i18n="s8_b">To the maximum extent permitted by law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, revenue, data, or investment, arising out of or in connection with your use of the App. The Developer's total aggregate liability shall not exceed the amount you paid for the App in the 12 months preceding the claim.</p>
+    <p data-i18n="s8_b2">Nothing in these Terms excludes or limits liability for death or personal injury caused by negligence, fraud, or any liability that cannot be excluded under applicable law.</p>
 
-<h2>8. Contatti</h2>
-<p>Per qualsiasi domanda relativa a questi termini d'uso:</p>
-<ul>
-<li>Email: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></li>
-</ul>
+    <h2 data-i18n="s9_t">9. Intellectual property</h2>
+    <p data-i18n="s9_b">"AstroTrader Pro" is a trademark of Alberto Nicola Lanzafame (Italian trademark application <strong>UIBM n. 2026000082570</strong> of 05/05/2026, Nice classes 9, 41, 42 — pending examination). All content of the App — code, design, glyphs, illustrations, texts — is protected by copyright under Italian Law 633/1941 and EU Directive 2001/29/EC. Astronomical calculations rely on public-domain algorithms (VSOP87, IAU 2006).</p>
 
-<hr style="margin:48px 0 32px;border:0;border-top:1px solid rgba(232,201,106,0.3)">
+    <h2 data-i18n="s10_t">10. Termination</h2>
+    <p data-i18n="s10_b">You may stop using the App at any time by uninstalling it. The Developer may suspend or terminate your license if you breach these Terms. On termination, sections 7, 8, 9, 11, and 12 survive.</p>
 
-<a id="en"></a>
-<h1>Terms of Use</h1>
-<div class="sub">AstroTrader Pro — English version</div>
+    <h2 data-i18n="s11_t">11. Governing law and jurisdiction</h2>
+    <p data-i18n="s11_b">These Terms are governed by Italian law. Any dispute shall be submitted to the exclusive jurisdiction of the Italian courts. If you are a consumer resident in the EU, mandatory consumer protection provisions of your country of residence remain unaffected.</p>
 
-<p><strong>Last updated:</strong> May 3, 2026</p>
+    <h2 data-i18n="s12_t">12. Changes to these Terms</h2>
+    <p data-i18n="s12_b">We may update these Terms to reflect changes in the App or applicable law. The latest version is always at <a href="https://astrotraderpro.com/terms.html">astrotraderpro.com/terms.html</a>. Material changes will be highlighted on this page and, where appropriate, communicated through the App. Continued use after changes constitutes acceptance.</p>
 
-<p>By using <strong>AstroTrader Pro</strong> (the "app") you fully accept the following terms and conditions. If you disagree with any point, uninstall the app and do not use it.</p>
+    <h2 data-i18n="s13_t">13. Contact</h2>
+    <p data-i18n="s13_b">For any question about these Terms, write to <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
 
-<h2>1. Nature of the service</h2>
-<p>AstroTrader Pro is an <strong>educational and research tool</strong> that applies classical astronomical calculations (ephemerides, transits, aspects) to market symbols according to the historical tradition of classical financial astrology (W.D. Gann, Donald Bradley, Reinhold Ebertin, Raymond Merriman, Bill Meridian, Arch Crawford). The app does not replace in any way the advice of a qualified and regulated financial professional.</p>
+    <a href="/" class="back" data-i18n="back">← Back to AstroTrader Pro</a>
+  </div>
+</main>
 
-<div class="warn"><strong>IMPORTANT NOTICE:</strong> AstroTrader Pro DOES NOT constitute financial advice, investment recommendation, solicitation to buy or sell financial instruments, or any form of financial intermediation under EU MiFID II regulations or analogous frameworks worldwide.</div>
-
-<h2>2. Limitation of liability</h2>
-<p>The predictive effectiveness of financial astrology on modern markets <strong>is not scientifically robustly proven</strong>. Signals generated by the app should be considered as educational and qualitative inspiration, never as reliable operational predictions.</p>
-<p>Trading and investing involve risk of total loss of invested capital. The user is solely responsible for their own financial decisions and the resulting consequences.</p>
-<p>To the extent permitted by law, AstroTrader and its developers SHALL NOT be liable for:</p>
-<ul>
-<li>Direct or indirect financial losses arising from use of the app;</li>
-<li>Investment decisions made based on displayed content;</li>
-<li>Astronomical calculation errors, service interruptions, software bugs;</li>
-<li>Loss of local data following uninstallation, update or device malfunction;</li>
-<li>Moral damages, loss of chance or missed opportunities.</li>
-</ul>
-
-<h2>3. Trial period and subscription</h2>
-<p>The app offers a <strong>7-day free trial</strong> from first launch. After the trial, continued access requires activation of premium subscription at the cost of <strong>€19.99/month</strong> (price including VAT for Italy; may vary for other countries based on Google Play / App Store currency conversion).</p>
-<p>Subscription <strong>auto-renews</strong> at the end of each billing period until cancellation. You can cancel anytime from your Google Play or App Store account settings; cancellation takes effect at the end of the already-paid period.</p>
-<p>Withdrawal and refund rights are governed by the policies of the store where the purchase was made:</p>
-<ul>
-<li>Google Play: <a href="https://support.google.com/googleplay/answer/2479637">support.google.com/googleplay/answer/2479637</a></li>
-<li>App Store: <a href="https://support.apple.com/HT204084">support.apple.com/HT204084</a></li>
-</ul>
-
-<h2>4. Intellectual property</h2>
-<p>The source code, graphic interface, planet-asset correspondence databases, astrological reasoning and any original app content are works protected by Italian (Law 633/1941) and European copyright, owned by AstroTrader.</p>
-<p>The app uses:</p>
-<ul>
-<li><strong>astronomy-engine</strong> (Don Cross, MIT License) for astronomical calculation, based on public-domain algorithms VSOP87 (Bureau des Longitudes, Paris) and IAU 2006 (International Astronomical Union).</li>
-<li>Planetary positions, lunar phases and astronomical events are derived from public-domain algorithms and freely available astronomical archives.</li>
-<li>Open fonts: Cinzel, Crimson Pro, JetBrains Mono, Inter (SIL Open Font License).</li>
-</ul>
-<p>Reproduction, distribution, decompilation, reverse engineering or creation of derivative works without written authorization from AstroTrader is prohibited.</p>
-
-<h2>5. User conduct</h2>
-<p>The user undertakes to:</p>
-<ul>
-<li>Use the app exclusively for personal, non-commercial purposes;</li>
-<li>Not attempt to compromise the integrity or security of the app;</li>
-<li>Not share, resell or distribute the app or its content;</li>
-<li>Not use the app for illegal or third-party-harming activities.</li>
-</ul>
-
-<h2>6. Service changes</h2>
-<p>AstroTrader reserves the right to modify, update or temporarily suspend the app for technical, legal or commercial reasons. Substantial changes to the terms will be announced with at least 30 days' notice before they take effect.</p>
-
-<h2>7. Governing law and jurisdiction</h2>
-<p>These terms are governed by Italian law. For any dispute arising from use of the app, the competent court is that of the consumer (user's place of residence) for EU consumers, otherwise the Court of Catania (Italy) for business users.</p>
-
-<h2>8. Contact</h2>
-<p>For any questions about these terms of use:</p>
-<ul>
-<li>Email: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></li>
-</ul>
-
-</div></body></html>
+<script>
+var I18N={
+  en:{},
+  it:{
+    brand_sub:"Astrologia finanziaria classica",
+    title:"Termini di servizio",
+    lead:"Le regole d'uso di AstroTrader Pro™. Leggile — proteggono entrambi.",
+    meta_updated_l:"Ultimo aggiornamento:",meta_updated:"14 maggio 2026",meta_version_l:"Versione:",
+    translate_note:"Questo documento è autoritativo in italiano e inglese.",
+    s1_t:"1. Accettazione",
+    s1_b:"Installando o utilizzando AstroTrader Pro (l'\"App\"), accetti questi Termini di servizio. Se non accetti, non installare né utilizzare l'App. Questi Termini costituiscono un accordo vincolante tra te (l'\"Utente\") e Alberto Nicola Lanzafame, sviluppatore individuale con sede in Italia (lo \"Sviluppatore\").",
+    s2_t:"2. Descrizione del servizio",
+    s2_b:"AstroTrader Pro è uno <strong>strumento educativo per mobile</strong> che applica la tradizione astrologica occidentale classica ai mercati finanziari. Mostra posizioni planetarie, transiti e corrispondenze simboliche tra pianeti e settori economici basate su fonti storiche (Tolomeo, W.D. Gann, Louise McWhirter, Tommaso Palamidessi, Alice Bailey, e altri).",
+    s2_disclaimer:"<strong>Importante:</strong> AstroTrader Pro NON è consulenza finanziaria, NON è raccomandazione di acquisto o vendita, NON è segnale di trading, e NON è previsione di mercato. L'efficacia predittiva dell'astrologia non è scientificamente provata. Il trading comporta il rischio di perdita totale del capitale. Ogni decisione finanziaria è esclusivamente di tua responsabilità. Consulta sempre un consulente finanziario qualificato prima di prendere decisioni di investimento.",
+    s3_t:"3. Licenza",
+    s3_b:"Lo Sviluppatore ti concede una licenza personale, non esclusiva, non trasferibile e revocabile per installare e utilizzare l'App su dispositivi di tua proprietà o sotto il tuo controllo, esclusivamente per uso personale e non commerciale. Non puoi modificare, decompilare, ridistribuire, sublicenziare o sfruttare commercialmente l'App o i suoi contenuti.",
+    s4_t:"4. Requisiti di idoneità",
+    s4_b:"Devi avere <strong>almeno 18 anni</strong> per utilizzare l'App. L'App è classificata 18+ e non è destinata ai minori. Utilizzando l'App dichiari di soddisfare questo requisito di età.",
+    s5_t:"5. Termini di sottoscrizione",
+    s5_intro:"Le funzionalità base dell'App sono gratuite. Le funzioni Premium sono offerte tramite sottoscrizione a rinnovo automatico gestita da Google Play:",
+    s5_l1:"<strong>Prezzo:</strong> €19,99/mese (o equivalente locale impostato da Google Play).",
+    s5_l2:"<strong>Trial gratuito:</strong> 7 giorni, nessun addebito se annullato prima della fine del trial.",
+    s5_l3:"<strong>Rinnovo automatico:</strong> Le sottoscrizioni si rinnovano automaticamente salvo cancellazione almeno 24 ore prima della fine del periodo corrente.",
+    s5_l4:"<strong>Cancellazione:</strong> Puoi cancellare in qualsiasi momento dalle impostazioni del tuo account Google Play. La cancellazione ha effetto alla fine del periodo di fatturazione corrente.",
+    s5_l5:"<strong>Rimborsi:</strong> Le richieste di rimborso sono gestite da Google Play secondo la sua <a href=\"https://support.google.com/googleplay/answer/2479637\" rel=\"noopener\">policy di rimborso</a>.",
+    s6_t:"6. Obblighi dell'utente",
+    s6_intro:"Ti impegni a:",
+    s6_l1:"Utilizzare l'App solo per scopi leciti, personali, educativi",
+    s6_l2:"Non rappresentare l'output dell'App come consulenza finanziaria a terzi",
+    s6_l3:"Non tentare di aggirare la validazione della sottoscrizione o le protezioni tecniche",
+    s6_l4:"Non utilizzare l'App in giurisdizioni dove i contenuti finanziari basati sull'astrologia sono proibiti",
+    s7_t:"7. Esclusione di garanzia",
+    s7_b:"L'App è fornita \"COSÌ COM'È\" e \"COME DISPONIBILE\", senza garanzie di alcun tipo, espresse o implicite, incluse ma non limitate a commerciabilità, idoneità a uno scopo particolare, accuratezza, completezza o non violazione di diritti. Lo Sviluppatore non garantisce che l'App sarà ininterrotta, priva di errori, o che i calcoli astronomici saranno privi delle minori approssimazioni inerenti agli algoritmi pubblico-dominio sottostanti (VSOP87, IAU 2006).",
+    s8_t:"8. Limitazione di responsabilità",
+    s8_b:"Nei limiti massimi consentiti dalla legge, lo Sviluppatore non sarà responsabile per danni indiretti, incidentali, speciali, consequenziali o punitivi, né per perdita di profitti, ricavi, dati o investimenti, derivanti da o in connessione con l'uso dell'App. La responsabilità totale aggregata dello Sviluppatore non eccederà l'importo pagato per l'App nei 12 mesi precedenti la richiesta.",
+    s8_b2:"Nulla in questi Termini esclude o limita la responsabilità per morte o lesioni personali causate da negligenza, frode, o qualsiasi responsabilità che non possa essere esclusa secondo la legge applicabile.",
+    s9_t:"9. Proprietà intellettuale",
+    s9_b:"\"AstroTrader Pro\" è marchio di Alberto Nicola Lanzafame (domanda di marchio italiana <strong>UIBM n. 2026000082570</strong> del 05/05/2026, classi di Nizza 9, 41, 42 — in attesa di esame). Tutto il contenuto dell'App — codice, design, glifi, illustrazioni, testi — è protetto dal diritto d'autore secondo la Legge italiana 633/1941 e la Direttiva UE 2001/29/CE. I calcoli astronomici si basano su algoritmi pubblico-dominio (VSOP87, IAU 2006).",
+    s10_t:"10. Risoluzione",
+    s10_b:"Puoi smettere di usare l'App in qualsiasi momento disinstallandola. Lo Sviluppatore può sospendere o terminare la tua licenza se violi questi Termini. Alla risoluzione, le sezioni 7, 8, 9, 11 e 12 sopravvivono.",
+    s11_t:"11. Legge applicabile e giurisdizione",
+    s11_b:"Questi Termini sono regolati dalla legge italiana. Qualsiasi controversia sarà sottoposta alla giurisdizione esclusiva dei tribunali italiani. Se sei un consumatore residente nell'UE, le disposizioni obbligatorie di protezione del consumatore del tuo paese di residenza rimangono inalterate.",
+    s12_t:"12. Modifiche a questi Termini",
+    s12_b:"Possiamo aggiornare questi Termini per riflettere modifiche dell'App o della normativa. La versione più recente è sempre su <a href=\"https://astrotraderpro.com/terms.html\">astrotraderpro.com/terms.html</a>. Modifiche sostanziali saranno evidenziate in questa pagina e, se opportuno, comunicate tramite l'App. L'uso continuato dopo le modifiche costituisce accettazione.",
+    s13_t:"13. Contatti",
+    s13_b:"Per qualsiasi domanda su questi Termini, scrivi a <a href=\"mailto:astrotraderproapp@gmail.com\">astrotraderproapp@gmail.com</a>.",
+    back:"← Torna ad AstroTrader Pro"
+  }
+};
+(function(){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var key=el.getAttribute('data-i18n');
+    I18N.en[key]=el.innerHTML;
+  });
+  var html=document.documentElement;
+  var sel=document.getElementById('lang-select');
+  var saved=null; try{saved=localStorage.getItem('atpLandLang')}catch(e){}
+  var nav=(navigator.language||'en').toLowerCase().split('-')[0];
+  var initial=(saved && I18N[saved]) ? saved : (I18N[nav] ? nav : 'en');
+  setLang(initial); sel.value=initial;
+  sel.addEventListener('change',function(){setLang(sel.value)});
+  function setLang(l){
+    html.setAttribute('data-lang',l);
+    html.setAttribute('lang',l);
+    html.setAttribute('dir',l==='ar'?'rtl':'ltr');
+    try{localStorage.setItem('atpLandLang',l)}catch(e){}
+    var dict=I18N[l]||I18N.en;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key=el.getAttribute('data-i18n');
+      var v=dict[key];
+      if(typeof v==='undefined') v=I18N.en[key];
+      if(typeof v==='undefined') return;
+      if(v.indexOf('<')>=0) el.innerHTML=v; else el.textContent=v;
+    });
+  }
+})();
+</script>
+</body>
+</html>

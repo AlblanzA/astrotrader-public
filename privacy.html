@@ -1,143 +1,220 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0A1020">
 <title>Privacy Policy — AstroTrader Pro</title>
+<meta name="description" content="Privacy policy of AstroTrader Pro — what data we process, why, and your rights under GDPR.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://astrotraderpro.com/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0A1020;color:#DCD4C0;font-family:'Crimson Pro','Georgia',serif;line-height:1.7;padding:40px 20px;min-height:100vh}
-.wrap{max-width:780px;margin:0 auto}
-h1{font-family:'Cinzel','Georgia',serif;color:#E8C96A;font-size:32px;letter-spacing:2px;margin-bottom:8px;font-weight:700;text-align:center}
-.sub{text-align:center;color:#A8A095;font-style:italic;margin-bottom:32px;font-size:14px}
-h2{font-family:'Cinzel','Georgia',serif;color:#F5E8B8;font-size:20px;letter-spacing:1px;margin:28px 0 12px;font-weight:600;border-bottom:1px solid rgba(232,201,106,0.3);padding-bottom:6px}
-h3{color:#E8C96A;font-size:16px;margin:18px 0 8px;font-weight:600}
-p{margin-bottom:14px;font-size:15px}
-ul{margin:8px 0 16px 24px;font-size:15px}
-li{margin-bottom:6px}
-a{color:#E8C96A;text-decoration:underline}
-.meta{margin-top:40px;padding:16px;background:rgba(232,201,106,0.06);border-left:3px solid #E8C96A;border-radius:0 6px 6px 0;font-size:13px;color:#A8A095}
-.lang-switch{text-align:center;margin-bottom:24px}
-.lang-switch a{margin:0 6px;color:#A8A095;text-decoration:none;font-size:13px}
-.lang-switch a:hover{color:#E8C96A}
-strong{color:#F5E8B8}
+:root{
+  --navy:#0A1020;--navy-deep:#04060C;--navy-mid:#162038;
+  --gold:#E8C96A;--gold-light:#F5E8B8;--gold-dark:#C9A84C;
+  --text:#DCD4C0;--text-dim:#A8A095;
+  --serif:'Crimson Pro','Georgia',serif;
+  --display:'Cinzel','Georgia',serif;
+  --ui:'Inter','Helvetica Neue',sans-serif;
+}
+html,body{background:var(--navy-deep);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.7;min-height:100%}
+body{background:linear-gradient(180deg,var(--navy-deep) 0%,var(--navy) 100%);padding:0 0 60px}
+.topbar{padding:18px 0;border-bottom:1px solid rgba(232,201,106,0.15);background:rgba(4,6,12,0.6);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
+.container{max-width:780px;margin:0 auto;padding:0 24px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1080px}
+.brand{font-family:var(--display);color:var(--gold);text-decoration:none;font-size:16px;letter-spacing:3px;font-weight:600}
+.brand small{display:block;font-size:10px;color:var(--gold-dark);letter-spacing:2px;font-weight:400;font-family:var(--ui);margin-top:2px}
+.lang-select{background:rgba(22,32,56,0.6);color:var(--gold-light);border:1px solid rgba(232,201,106,0.25);padding:8px 12px;border-radius:6px;font-family:var(--ui);font-size:13px;cursor:pointer}
+main{padding-top:48px}
+h1{font-family:var(--display);color:var(--gold-light);font-size:2.2rem;letter-spacing:2px;margin-bottom:8px;font-weight:600}
+.lead{color:var(--gold);font-size:1.05rem;margin-bottom:32px;font-family:var(--ui)}
+.meta{color:var(--text-dim);font-size:0.9rem;font-family:var(--ui);margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid rgba(232,201,106,0.15)}
+h2{font-family:var(--display);color:var(--gold);font-size:1.35rem;letter-spacing:1.5px;margin:36px 0 14px;font-weight:600}
+h3{font-family:var(--ui);color:var(--gold-light);font-size:1.05rem;margin:24px 0 10px;font-weight:600;letter-spacing:0.5px}
+p{margin-bottom:14px}
+ul{margin:10px 0 20px 24px}
+li{margin-bottom:8px}
+strong{color:var(--gold-light)}
+.dim{color:var(--text-dim);font-size:0.95rem}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(232,201,106,0.3)}
+a:hover{color:var(--gold-light);border-bottom-color:var(--gold)}
+.back{display:inline-block;margin-top:48px;color:var(--text-dim);font-family:var(--ui);font-size:0.9rem;border:none}
+.box{background:rgba(22,32,56,0.35);border:1px solid rgba(232,201,106,0.18);border-radius:10px;padding:20px 24px;margin:18px 0}
+.box.warn{border-color:rgba(232,201,106,0.4);background:rgba(232,201,106,0.05)}
+.translate-note{background:rgba(232,201,106,0.06);border-left:3px solid var(--gold);padding:14px 18px;margin:0 0 32px;font-size:0.93rem;color:var(--text);border-radius:0 6px 6px 0;display:none}
+html[data-lang]:not([data-lang="en"]):not([data-lang="it"]) .translate-note{display:block}
+@media (max-width:640px){body{font-size:16px}h1{font-size:1.7rem}}
 </style>
 </head>
-<body><div class="wrap">
-<div class="lang-switch">
-<a href="#it">IT</a> | <a href="#en">EN</a>
-</div>
+<body>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="/">AstroTrader Pro<small data-i18n="brand_sub">Classical financial astrology</small></a>
+    <select class="lang-select" id="lang-select" aria-label="Language">
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+      <option value="nl">Nederlands</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+</header>
 
-<a id="it"></a>
-<h1>Privacy Policy</h1>
-<div class="sub">AstroTrader Pro — versione italiana</div>
+<main>
+  <div class="container">
+    <h1 data-i18n="title">Privacy Policy</h1>
+    <p class="lead" data-i18n="lead">How AstroTrader Pro™ handles your information — clearly, concisely, in plain language.</p>
+    <p class="meta"><strong data-i18n="meta_updated_l">Last updated:</strong> <span data-i18n="meta_updated">14 May 2026</span> · <strong data-i18n="meta_version_l">Version:</strong> <span>1.2.0</span></p>
 
-<p><strong>Ultimo aggiornamento:</strong> 14 maggio 2026</p>
+    <div class="translate-note" data-i18n="translate_note">This document is authoritative in English and Italian. Translations of other languages will be added — for now this page is shown in English.</div>
 
-<p>Questa informativa descrive come <strong>AstroTrader Pro</strong> (di seguito "l'app") tratta i dati degli utenti. L'app è gestita da Alberto Nicola Lanzafame, contattabile a <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
+    <h2 data-i18n="s1_t">1. The short version</h2>
+    <p data-i18n="s1_b">AstroTrader Pro does not track you, does not run analytics, does not show ads, and does not sell or share your data. The app works 100% offline. The only data processed is what is strictly necessary to manage your optional Premium subscription, handled by Google Play and RevenueCat.</p>
 
-<h2>1. Principio generale</h2>
-<p>AstroTrader Pro è progettata secondo il principio <strong>privacy-first</strong>: <strong>nessun tracciamento, nessuna analitica, nessuna pubblicità</strong>. L'unico dato trattato è quello strettamente necessario alla gestione dell'abbonamento, descritto al punto 3.</p>
+    <h2 data-i18n="s2_t">2. Data controller</h2>
+    <p data-i18n="s2_b">The data controller is <strong>Alberto Nicola Lanzafame</strong>, individual developer based in Italy. For any privacy-related question or to exercise your rights, contact: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
 
-<h2>2. Dati che restano solo sul tuo dispositivo</h2>
-<ul>
-<li><strong>Preferenze interfaccia</strong> — lingua selezionata, tema, font, dimensione testo, orbi astrologici personalizzati. Salvati in <code>localStorage</code> del WebView locale.</li>
-<li><strong>Stato trial</strong> — data di inizio del periodo di prova di 7 giorni, flag accettazione disclaimer, flag completamento onboarding. Salvati localmente.</li>
-<li><strong>Watchlist personale (se attivata)</strong> — lista dei ticker che hai marcato come preferiti. Solo locale.</li>
-<li><strong>Configurazione notifiche</strong> — pianeti monitorati, anticipo, soglie. Solo locale.</li>
-</ul>
+    <h2 data-i18n="s3_t">3. What data we process</h2>
+    <p data-i18n="s3_intro">When you install and use AstroTrader Pro:</p>
+    <ul>
+      <li data-i18n="s3_l1"><strong>No personal data</strong> is collected by the app itself. The wheel, transits, glossary and projections run entirely offline on your device.</li>
+      <li data-i18n="s3_l2"><strong>No analytics, tracking, or advertising SDKs</strong> are integrated. The app does not communicate with our servers (we do not operate any) during normal use.</li>
+      <li data-i18n="s3_l3"><strong>Local preferences</strong> (language, theme, date) are stored locally on your device only. They never leave your phone.</li>
+    </ul>
+    <p data-i18n="s3_sub">If you subscribe to Premium, the following data is processed by our payment processors:</p>
+    <ul>
+      <li data-i18n="s3_pl1"><strong>Google Play (Google LLC)</strong>: handles the purchase, billing, and Google Account identity necessary to complete the transaction. Subject to Google's privacy policy.</li>
+      <li data-i18n="s3_pl2"><strong>RevenueCat (RevenueCat, Inc.)</strong>: receives a pseudonymous identifier and subscription metadata (status, plan, expiry) needed to validate your Premium entitlement on your device. Subject to RevenueCat's privacy policy.</li>
+    </ul>
 
-<h2>3. Gestione abbonamenti</h2>
-<p>Quando acquisti un abbonamento Premium, due fornitori terzi trattano dati strettamente necessari alla gestione dell'abbonamento:</p>
-<ul>
-<li><strong>RevenueCat, Inc.</strong> (USA) — infrastruttura di gestione abbonamenti: elabora un identificatore pseudonimo e i metadati della transazione (identificativo del prodotto, data, stato dell'abbonamento). Privacy policy: <a href="https://www.revenuecat.com/privacy/">www.revenuecat.com/privacy/</a></li>
-<li><strong>Google LLC</strong> — Google Play Billing gestisce direttamente il pagamento secondo le proprie policy. Nessun dato anagrafico o di pagamento (es. carta di credito) transita per noi o per RevenueCat. Privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-</ul>
-<p>Non condividiamo dati con altri soggetti. Non usiamo strumenti di tracciamento, analitica o pubblicità. Tale trattamento minimo è strettamente necessario per verificare lo stato dell'abbonamento e abilitare le funzionalità Premium.</p>
+    <h2 data-i18n="s4_t">4. Purposes and legal basis</h2>
+    <p data-i18n="s4_b">The only purpose of the data processing described above is <strong>to manage your Premium subscription</strong> (delivery of the contracted service). Legal basis: Art. 6(1)(b) GDPR — performance of a contract you entered into.</p>
 
-<h2>4. Calcoli astronomici</h2>
-<p>L'app è completamente <strong>offline-capable</strong> dopo l'installazione. I calcoli astronomici sono basati su algoritmi open source di pubblico dominio (VSOP87, IAU) eseguiti localmente sul tuo dispositivo. Nessuna informazione astrologica o di utilizzo viene inviata a server esterni.</p>
-<p>Se attivi gli aggiornamenti automatici dell'app, il sistema operativo (Google Play) gestirà il download della nuova versione secondo le proprie policy.</p>
+    <h2 data-i18n="s5_t">5. International transfers</h2>
+    <p data-i18n="s5_b">Google and RevenueCat process data in the United States. Transfers outside the EEA are covered by Standard Contractual Clauses (Art. 46 GDPR) and, for Google, additionally by the EU-U.S. Data Privacy Framework adequacy decision.</p>
 
-<h2>5. Notifiche push locali</h2>
-<p>Se attivi le notifiche transiti astrologici, vengono pianificate e mostrate <strong>localmente</strong> dal tuo dispositivo. Nessun server esterno è coinvolto. Puoi disattivarle in qualsiasi momento dalle impostazioni dell'app o del sistema operativo.</p>
+    <h2 data-i18n="s6_t">6. Retention</h2>
+    <p data-i18n="s6_b">Subscription data is retained by Google Play and RevenueCat for as long as your subscription is active and afterwards in accordance with their retention policies (typically up to 5 years for accounting and dispute resolution). Local preferences on your device are kept until you uninstall the app or clear its data.</p>
 
-<h2>6. Pagamenti</h2>
-<p>Il pagamento dell'abbonamento Premium è gestito interamente da <strong>Google Play Billing</strong>. AstroTrader Pro non riceve, conserva o tratta dati di pagamento. Per dettagli consulta la <a href="https://policies.google.com/privacy">Privacy Policy di Google</a>.</p>
+    <h2 data-i18n="s7_t">7. Your rights (GDPR)</h2>
+    <p data-i18n="s7_intro">You have the right to:</p>
+    <ul>
+      <li data-i18n="s7_l1">Access the data we process about you (Art. 15)</li>
+      <li data-i18n="s7_l2">Rectify inaccurate data (Art. 16)</li>
+      <li data-i18n="s7_l3">Erase your data, subject to legal retention obligations (Art. 17)</li>
+      <li data-i18n="s7_l4">Restrict processing (Art. 18)</li>
+      <li data-i18n="s7_l5">Receive your data in a portable format (Art. 20)</li>
+      <li data-i18n="s7_l6">Object to processing (Art. 21)</li>
+      <li data-i18n="s7_l7">Lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali, <a href="https://www.gpdp.it/" rel="noopener">gpdp.it</a>)</li>
+    </ul>
+    <p data-i18n="s7_outro">To exercise these rights, write to <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>. We will respond within 30 days.</p>
 
-<h2>7. Diritti dell'utente (GDPR)</h2>
-<p>Ai sensi del Regolamento UE 2016/679 (GDPR) hai diritto di accesso, rettifica, cancellazione e portabilità dei dati relativi al tuo abbonamento. Per esercitare questi diritti scrivi a <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
-<p>Per cancellare i dati locali è sufficiente disinstallare l'app dal dispositivo (questa azione rimuove anche tutte le preferenze e lo stato locale).</p>
+    <h2 data-i18n="s8_t">8. Children</h2>
+    <p data-i18n="s8_b">AstroTrader Pro is rated 18+ and is not directed at children. We do not knowingly collect data from anyone under 18. If you believe a minor has provided information, contact us and we will delete it.</p>
 
-<h2>8. Minori</h2>
-<p>L'app non è destinata a minori di 18 anni. I contenuti finanziari richiedono maturità di giudizio. Se sei genitore e ritieni che tuo figlio abbia installato l'app, disinstallala dal dispositivo.</p>
+    <h2 data-i18n="s9_t">9. Security</h2>
+    <p data-i18n="s9_b">The app uses HTTPS (TLS 1.2+) for all communications with Google Play and RevenueCat. No data leaves your device except as described above. The app is signed with a private keystore held by the developer.</p>
 
-<h2>9. Modifiche a questa policy</h2>
-<p>Eventuali aggiornamenti saranno pubblicati su questa pagina con la data dell'ultimo aggiornamento aggiornata. Cambiamenti sostanziali saranno comunicati tramite la prossima apertura dell'app con un avviso esplicito.</p>
+    <h2 data-i18n="s10_t">10. Changes to this policy</h2>
+    <p data-i18n="s10_b">We may update this policy to reflect changes in the app or applicable law. The latest version is always at <a href="https://astrotraderpro.com/privacy.html">astrotraderpro.com/privacy.html</a>. Material changes will be highlighted on this page and, where appropriate, communicated through the app.</p>
 
-<h2>10. Contatti</h2>
-<p>Per qualsiasi domanda relativa a questa privacy policy:</p>
-<ul>
-<li>Email: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></li>
-</ul>
+    <div class="box warn">
+      <p data-i18n="closing"><strong>In summary:</strong> we don't see you, we don't follow you, we don't sell anything about you. The only data flowing is what Google Play and RevenueCat strictly need to deliver a subscription you actively choose to start. Everything else stays on your phone.</p>
+    </div>
 
-<hr style="margin:48px 0 32px;border:0;border-top:1px solid rgba(232,201,106,0.3)">
+    <a href="/" class="back" data-i18n="back">← Back to AstroTrader Pro</a>
+  </div>
+</main>
 
-<a id="en"></a>
-<h1>Privacy Policy</h1>
-<div class="sub">AstroTrader Pro — English version</div>
-
-<p><strong>Last updated:</strong> May 14, 2026</p>
-
-<p>This policy describes how <strong>AstroTrader Pro</strong> (the "app") handles user data. The app is operated by Alberto Nicola Lanzafame, reachable at <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
-
-<h2>1. General principle</h2>
-<p>AstroTrader Pro is designed under a <strong>privacy-first</strong> principle: <strong>no tracking, no analytics, no advertising</strong>. The only data processed is what is strictly necessary to manage your subscription, described in section 3.</p>
-
-<h2>2. Data that stays only on your device</h2>
-<ul>
-<li><strong>Interface preferences</strong> — selected language, theme, font, text size, custom astrological orbs. Stored in local WebView <code>localStorage</code>.</li>
-<li><strong>Trial state</strong> — start date of the 7-day trial, disclaimer-acceptance flag, onboarding-completion flag. Stored locally.</li>
-<li><strong>Personal watchlist (if activated)</strong> — list of tickers you marked as favorites. Local only.</li>
-<li><strong>Notification configuration</strong> — monitored planets, lead time, thresholds. Local only.</li>
-</ul>
-
-<h2>3. Subscription management</h2>
-<p>When you purchase a Premium subscription, two third-party providers process data strictly necessary to manage the subscription:</p>
-<ul>
-<li><strong>RevenueCat, Inc.</strong> (USA) — subscription-management infrastructure: processes a pseudonymous identifier and transaction metadata (product ID, date, subscription status). Privacy policy: <a href="https://www.revenuecat.com/privacy/">www.revenuecat.com/privacy/</a></li>
-<li><strong>Google LLC</strong> — Google Play Billing handles the payment directly under its own policies. No personal or payment data (e.g. credit card) passes through us or RevenueCat. Privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-</ul>
-<p>We do not share data with any other parties. We do not use tracking, analytics, or advertising tools. This minimal processing is strictly necessary to verify subscription status and enable Premium features.</p>
-
-<h2>4. Astronomical calculations</h2>
-<p>The app is fully <strong>offline-capable</strong> after installation. Astronomical calculations are based on open-source, public-domain algorithms (VSOP87, IAU) executed locally on your device. No astrological or usage information is sent to external servers.</p>
-<p>If you enable app auto-updates, the operating system (Google Play) will handle the download of the new version under its own policies.</p>
-
-<h2>5. Local push notifications</h2>
-<p>If you enable astrological transit notifications, they are scheduled and shown <strong>locally</strong> by your device. No external server is involved. You can disable them at any time from app or OS settings.</p>
-
-<h2>6. Payments</h2>
-<p>Premium subscription payment is handled entirely by <strong>Google Play Billing</strong>. AstroTrader Pro does not receive, store or process payment data. For details consult the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-
-<h2>7. User rights (GDPR)</h2>
-<p>Under EU Regulation 2016/679 (GDPR) you have the right of access, rectification, erasure and portability of data relating to your subscription. To exercise these rights write to <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a>.</p>
-<p>To delete local data simply uninstall the app from the device (this action also removes all preferences and local state).</p>
-
-<h2>8. Minors</h2>
-<p>The app is not intended for users under 18. Financial content requires mature judgment. If you are a parent and believe your child has installed the app, uninstall it from the device.</p>
-
-<h2>9. Changes to this policy</h2>
-<p>Any updates will be published on this page with the "Last updated" date refreshed. Substantial changes will be announced on the next app launch with an explicit notice.</p>
-
-<h2>10. Contact</h2>
-<p>For any questions about this privacy policy:</p>
-<ul>
-<li>Email: <a href="mailto:astrotraderproapp@gmail.com">astrotraderproapp@gmail.com</a></li>
-</ul>
-
-<div class="meta">
-This document is part of the AstroTrader Pro distribution. The most current version is available at the URL configured in the app's Info section.
-</div>
-
-</div></body></html>
+<script>
+var I18N={
+  en:{},
+  it:{
+    brand_sub:"Astrologia finanziaria classica",
+    title:"Informativa sulla privacy",
+    lead:"Come AstroTrader Pro™ gestisce le tue informazioni — in modo chiaro, conciso, in linguaggio semplice.",
+    meta_updated_l:"Ultimo aggiornamento:",meta_updated:"14 maggio 2026",meta_version_l:"Versione:",
+    translate_note:"Questo documento è autoritativo in italiano e inglese.",
+    s1_t:"1. La versione breve",
+    s1_b:"AstroTrader Pro non ti traccia, non usa analytics, non mostra pubblicità, non vende né condivide i tuoi dati. L'app funziona al 100% offline. Gli unici dati trattati sono quelli strettamente necessari per gestire la tua eventuale sottoscrizione Premium, gestita da Google Play e RevenueCat.",
+    s2_t:"2. Titolare del trattamento",
+    s2_b:"Il titolare del trattamento è <strong>Alberto Nicola Lanzafame</strong>, sviluppatore individuale con sede in Italia. Per qualsiasi domanda relativa alla privacy o per esercitare i tuoi diritti, contatta: <a href=\"mailto:astrotraderproapp@gmail.com\">astrotraderproapp@gmail.com</a>.",
+    s3_t:"3. Quali dati trattiamo",
+    s3_intro:"Quando installi e utilizzi AstroTrader Pro:",
+    s3_l1:"<strong>Nessun dato personale</strong> viene raccolto dall'app stessa. La ruota, i transiti, il glossario e le proiezioni funzionano interamente offline sul tuo dispositivo.",
+    s3_l2:"<strong>Nessun SDK di analytics, tracking o pubblicità</strong> è integrato. L'app non comunica con nostri server (non ne gestiamo) durante l'uso normale.",
+    s3_l3:"<strong>Le preferenze locali</strong> (lingua, tema, data) sono memorizzate solo localmente sul tuo dispositivo. Non lasciano mai il tuo telefono.",
+    s3_sub:"Se ti abboni a Premium, i seguenti dati vengono trattati dai nostri processori di pagamento:",
+    s3_pl1:"<strong>Google Play (Google LLC)</strong>: gestisce l'acquisto, la fatturazione e l'identità Google Account necessaria per completare la transazione. Soggetto alla privacy policy di Google.",
+    s3_pl2:"<strong>RevenueCat (RevenueCat, Inc.)</strong>: riceve un identificativo pseudonimo e metadati della sottoscrizione (stato, piano, scadenza) necessari per validare il tuo Premium sul dispositivo. Soggetto alla privacy policy di RevenueCat.",
+    s4_t:"4. Finalità e base giuridica",
+    s4_b:"L'unica finalità del trattamento descritto sopra è <strong>la gestione della sottoscrizione Premium</strong> (esecuzione del servizio contrattualizzato). Base giuridica: art. 6(1)(b) GDPR — esecuzione di un contratto da te concluso.",
+    s5_t:"5. Trasferimenti internazionali",
+    s5_b:"Google e RevenueCat trattano dati negli Stati Uniti. I trasferimenti fuori dal SEE sono coperti da Clausole Contrattuali Standard (art. 46 GDPR) e, per Google, anche dalla decisione di adeguatezza EU-U.S. Data Privacy Framework.",
+    s6_t:"6. Conservazione",
+    s6_b:"I dati della sottoscrizione sono conservati da Google Play e RevenueCat finché la sottoscrizione è attiva e successivamente in conformità alle loro policy (in genere fino a 5 anni per contabilità e gestione contestazioni). Le preferenze locali sul dispositivo sono mantenute fino alla disinstallazione dell'app o alla cancellazione dei suoi dati.",
+    s7_t:"7. I tuoi diritti (GDPR)",
+    s7_intro:"Hai diritto a:",
+    s7_l1:"Accedere ai dati che trattiamo su di te (art. 15)",
+    s7_l2:"Rettificare dati inesatti (art. 16)",
+    s7_l3:"Cancellare i tuoi dati, fatti salvi gli obblighi di conservazione di legge (art. 17)",
+    s7_l4:"Limitare il trattamento (art. 18)",
+    s7_l5:"Ricevere i tuoi dati in formato portabile (art. 20)",
+    s7_l6:"Opporti al trattamento (art. 21)",
+    s7_l7:"Proporre reclamo al Garante per la protezione dei dati personali (<a href=\"https://www.gpdp.it/\" rel=\"noopener\">gpdp.it</a>)",
+    s7_outro:"Per esercitare questi diritti, scrivi a <a href=\"mailto:astrotraderproapp@gmail.com\">astrotraderproapp@gmail.com</a>. Risponderemo entro 30 giorni.",
+    s8_t:"8. Minori",
+    s8_b:"AstroTrader Pro è classificata 18+ e non è destinata ai minori. Non raccogliamo consapevolmente dati da chi ha meno di 18 anni. Se ritieni che un minore abbia fornito informazioni, contattaci e le cancelleremo.",
+    s9_t:"9. Sicurezza",
+    s9_b:"L'app utilizza HTTPS (TLS 1.2+) per tutte le comunicazioni con Google Play e RevenueCat. Nessun dato lascia il dispositivo tranne quanto descritto sopra. L'app è firmata con keystore privato detenuto dallo sviluppatore.",
+    s10_t:"10. Modifiche a questa policy",
+    s10_b:"Possiamo aggiornare questa policy per riflettere modifiche dell'app o della normativa. La versione più recente è sempre su <a href=\"https://astrotraderpro.com/privacy.html\">astrotraderpro.com/privacy.html</a>. Modifiche sostanziali saranno evidenziate in questa pagina e, se opportuno, comunicate tramite l'app.",
+    closing:"<strong>In sintesi:</strong> non ti vediamo, non ti seguiamo, non vendiamo nulla che ti riguardi. Gli unici dati che circolano sono quelli che Google Play e RevenueCat necessitano strettamente per consegnare una sottoscrizione che scegli attivamente di iniziare. Tutto il resto resta sul tuo telefono.",
+    back:"← Torna ad AstroTrader Pro"
+  }
+};
+(function(){
+  // Capture original EN content from DOM as the EN dict
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var key=el.getAttribute('data-i18n');
+    I18N.en[key]=el.innerHTML;
+  });
+  var html=document.documentElement;
+  var sel=document.getElementById('lang-select');
+  var saved=null; try{saved=localStorage.getItem('atpLandLang')}catch(e){}
+  var nav=(navigator.language||'en').toLowerCase().split('-')[0];
+  // Use saved if has a dict, otherwise nav lang, otherwise EN
+  var initial=(saved && I18N[saved]) ? saved : (I18N[nav] ? nav : 'en');
+  setLang(initial); sel.value=initial;
+  sel.addEventListener('change',function(){setLang(sel.value)});
+  function setLang(l){
+    html.setAttribute('data-lang',l);
+    html.setAttribute('lang',l);
+    html.setAttribute('dir',l==='ar'?'rtl':'ltr');
+    try{localStorage.setItem('atpLandLang',l)}catch(e){}
+    // Fallback: l → I18N[l] if exists, else EN (and show translate-note via CSS)
+    var dict=I18N[l]||I18N.en;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key=el.getAttribute('data-i18n');
+      var v=dict[key];
+      if(typeof v==='undefined') v=I18N.en[key];
+      if(typeof v==='undefined') return;
+      if(v.indexOf('<')>=0) el.innerHTML=v; else el.textContent=v;
+    });
+  }
+})();
+</script>
+</body>
+</html>
