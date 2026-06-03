@@ -244,6 +244,7 @@ html[dir="rtl"] .step::before{left:auto;right:18px}
 .ptier-price small{font-size:0.95rem;color:var(--text-dim);font-family:var(--ui);font-weight:400;letter-spacing:1px}
 .ptier-sub{font-size:0.88rem;color:var(--text-dim);margin-top:10px;line-height:1.5}
 .ptier-discount{color:var(--bull);font-family:var(--ui);font-size:0.85rem;margin:8px 0;font-weight:600;letter-spacing:0.3px}
+.ptier-plat{display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:8px 0 2px;padding:4px 11px;border-radius:12px;border:1px solid rgba(232,201,106,0.3);color:var(--gold)}.ptier-best .ptier-plat,.ptier-lifetime .ptier-plat{color:var(--bull);border-color:rgba(93,202,165,0.4)}
 .ptier-note{display:inline-block;font-family:var(--ui);font-size:0.78rem;letter-spacing:1px;color:var(--bull);margin-top:14px;border:1px solid rgba(93,202,165,0.3);padding:5px 12px;border-radius:14px;background:rgba(93,202,165,0.08)}
 .price-trial{display:inline-block;background:rgba(93,202,165,0.15);color:var(--bull);padding:5px 12px;border-radius:14px;font-family:var(--ui);font-size:11px;letter-spacing:1.5px;margin-top:14px;border:1px solid rgba(93,202,165,0.3);text-transform:uppercase;font-weight:600}
 .pricing-features{max-width:520px;margin:0 auto}
@@ -819,7 +820,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
-    <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web-app: Annual &euro;69.99 &amp; Lifetime &euro;199 &middot; 7-day free trial</p>
+    <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199 &middot; 7-day free trial</p>
   </div>
 </section>
 
@@ -1107,14 +1108,14 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <div class="ptier">
         <span class="ptier-badge" data-i18n="ptier_monthly_badge">Monthly</span>
         <div class="ptier-price">€9.99 <small data-i18n="per_month">/month</small></div>
-        <div style="display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:10px 0 0;border:1px solid rgba(232,201,106,0.3);padding:4px 11px;border-radius:12px;color:var(--gold)">📱 Solo App Android (Google Play)</div>
+        <span class="ptier-plat" data-i18n="plat_app">📱 Android app only</span>
         <p class="ptier-sub" data-i18n="ptier_monthly_sub">Flexible. Cancel anytime.</p>
         <span class="price-trial" data-i18n="trial_badge">7-day free trial</span>
       </div>
       <div class="ptier ptier-best">
         <span class="ptier-badge" data-i18n="ptier_annual_badge">Annual · Best value</span>
         <div class="ptier-price">€69.99 <small data-i18n="per_year">/year</small></div>
-        <div style="display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:10px 0 0;border:1px solid rgba(232,201,106,0.3);padding:4px 11px;border-radius:12px;color:var(--bull);border-color:rgba(93,202,165,0.4)">🌐 Solo Web-app</div>
+        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-discount" data-i18n="ptier_annual_save">Save 42% — equivalent to €5.83/month</p>
         <p class="ptier-sub" data-i18n="ptier_annual_sub">For long-term explorers.</p>
         <span class="price-trial" data-i18n="trial_badge">7-day free trial</span>
@@ -1122,12 +1123,12 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <div class="ptier ptier-lifetime">
         <span class="ptier-badge" data-i18n="ptier_lifetime_badge">Lifetime supporter</span>
         <div class="ptier-price">€199 <small data-i18n="one_time">once</small></div>
-        <div style="display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:10px 0 0;border:1px solid rgba(232,201,106,0.3);padding:4px 11px;border-radius:12px;color:var(--bull);border-color:rgba(93,202,165,0.4)">🌐 Solo Web-app</div>
+        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-sub" data-i18n="ptier_lifetime_sub">All future updates included. Support indie development.</p>
         <span class="ptier-note" data-i18n="ptier_lifetime_note">Pay once. Use forever.</span>
       </div>
     </div>
-    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px"><strong>Monthly &euro;9.99/month</strong> is available both in the Android app and on the web. The <strong>Annual</strong> and <strong>Lifetime</strong> plans are available <strong>only on the web app</strong>.</p>
+    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px"><strong>Monthly &euro;9.99/month</strong> is available <strong>only in the Android app</strong> (Google Play). The <strong>Annual</strong> and <strong>Lifetime</strong> plans are available <strong>only on the web app</strong>.</p>
     <div class="pricing-features">
       <p class="dim" data-i18n="pricing_sub" style="text-align:center;font-size:0.95rem;margin:32px 0 14px">All plans include:</p>
       <ul class="price-list">
@@ -1281,6 +1282,7 @@ var I18N={
     trial_badge:"7-day free trial",per_month:"/month",pricing_sub:"All Premium features included",
     pricing_intro:"All plans include the same Premium features. Choose the cadence that fits you. 7-day free trial on all subscriptions.",
     ptier_monthly_badge:"Monthly",
+    plat_app:"📱 Android app only",plat_web:"🌐 Web app only",
     ptier_monthly_sub:"Flexible. Cancel anytime.",
     ptier_annual_badge:"Annual · Best value",
     ptier_annual_save:"Save 42% — equivalent to €5.83/month",
@@ -1351,6 +1353,7 @@ var I18N={
     trial_badge:"7 giorni gratis",per_month:"/mese",pricing_sub:"Tutte le funzioni Premium incluse",
     pricing_intro:"Tutti i piani includono le stesse funzioni Premium. Scegli la cadenza più adatta a te. 7 giorni gratis su tutte le sottoscrizioni.",
     ptier_monthly_badge:"Mensile",
+    plat_app:"📱 Solo app Android",plat_web:"🌐 Solo web-app",
     ptier_monthly_sub:"Flessibile. Cancella in qualsiasi momento.",
     ptier_annual_badge:"Annuale · Best value",
     ptier_annual_save:"Risparmi 42% — equivale a €5,83/mese",
@@ -1421,6 +1424,7 @@ var I18N={
     trial_badge:"7 días gratis",per_month:"/mes",pricing_sub:"Todas las funciones Premium incluidas",
     pricing_intro:"Todos los planes incluyen las mismas funciones Premium. Elige la cadencia que más te convenga. 7 días gratis en todas las suscripciones.",
     ptier_monthly_badge:"Mensual",
+    plat_app:"📱 Solo en la app Android",plat_web:"🌐 Solo en la web app",
     ptier_monthly_sub:"Flexible. Cancela en cualquier momento.",
     ptier_annual_badge:"Anual · Mejor valor",
     ptier_annual_save:"Ahorra 42% — equivale a €5,83/mes",
@@ -1491,6 +1495,7 @@ var I18N={
     trial_badge:"7 jours gratuits",per_month:"/mois",pricing_sub:"Toutes les fonctions Premium incluses",
     pricing_intro:"Tous les plans incluent les mêmes fonctions Premium. Choisissez la fréquence qui vous convient. 7 jours gratuits sur toutes les souscriptions.",
     ptier_monthly_badge:"Mensuel",
+    plat_app:"📱 Appli Android uniquement",plat_web:"🌐 Web app uniquement",
     ptier_monthly_sub:"Flexible. Annulable à tout moment.",
     ptier_annual_badge:"Annuel · Meilleur prix",
     ptier_annual_save:"Économisez 42% — équivalent à €5,83/mois",
@@ -1561,6 +1566,7 @@ var I18N={
     trial_badge:"7 Tage kostenlos",per_month:"/Monat",pricing_sub:"Alle Premium-Funktionen enthalten",
     pricing_intro:"Alle Pläne enthalten dieselben Premium-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt. 7 Tage kostenlos auf alle Abos.",
     ptier_monthly_badge:"Monatlich",
+    plat_app:"📱 Nur in der Android-App",plat_web:"🌐 Nur in der Web-App",
     ptier_monthly_sub:"Flexibel. Jederzeit kündbar.",
     ptier_annual_badge:"Jährlich · Bester Preis",
     ptier_annual_save:"42% sparen — entspricht €5,83/Monat",
@@ -1631,6 +1637,7 @@ var I18N={
     trial_badge:"7 dias grátis",per_month:"/mês",pricing_sub:"Todos os recursos Premium incluídos",
     pricing_intro:"Todos os planos incluem as mesmas funções Premium. Escolha a cadência que mais lhe convém. 7 dias grátis em todas as assinaturas.",
     ptier_monthly_badge:"Mensal",
+    plat_app:"📱 Apenas no app Android",plat_web:"🌐 Apenas na web app",
     ptier_monthly_sub:"Flexível. Cancele a qualquer momento.",
     ptier_annual_badge:"Anual · Melhor valor",
     ptier_annual_save:"Economize 42% — equivale a €5,83/mês",
@@ -1701,6 +1708,7 @@ var I18N={
     trial_badge:"7 dagen gratis",per_month:"/maand",pricing_sub:"Alle Premium-functies inbegrepen",
     pricing_intro:"Alle plannen bevatten dezelfde Premium-functies. Kies de frequentie die bij je past. 7 dagen gratis op alle abonnementen.",
     ptier_monthly_badge:"Maandelijks",
+    plat_app:"📱 Alleen Android-app",plat_web:"🌐 Alleen web-app",
     ptier_monthly_sub:"Flexibel. Annuleer wanneer je wilt.",
     ptier_annual_badge:"Jaarlijks · Beste prijs",
     ptier_annual_save:"Bespaar 42% — gelijk aan €5,83/maand",
@@ -1771,6 +1779,7 @@ var I18N={
     trial_badge:"7 дней бесплатно",per_month:"/месяц",pricing_sub:"Все Premium-функции включены",
     pricing_intro:"Все планы включают одинаковые Premium-функции. Выберите подходящий ритм. 7 дней бесплатно на всех подписках.",
     ptier_monthly_badge:"Ежемесячно",
+    plat_app:"📱 Только в Android-приложении",plat_web:"🌐 Только в веб-приложении",
     ptier_monthly_sub:"Гибко. Отмена в любое время.",
     ptier_annual_badge:"Годовой · Лучшая цена",
     ptier_annual_save:"Экономия 42% — эквивалент €5,83/месяц",
@@ -1841,6 +1850,7 @@ var I18N={
     trial_badge:"7天免费",per_month:"/月",pricing_sub:"包含所有 Premium 功能",
     pricing_intro:"所有方案均包含相同的高级功能。选择适合您的频率。所有订阅均享7天免费试用。",
     ptier_monthly_badge:"月付",
+    plat_app:"📱 仅限安卓应用",plat_web:"🌐 仅限网页版",
     ptier_monthly_sub:"灵活。随时取消。",
     ptier_annual_badge:"年付 · 最佳价值",
     ptier_annual_save:"节省42% — 相当于每月€5.83",
@@ -1911,6 +1921,7 @@ var I18N={
     trial_badge:"7日間無料",per_month:"/月",pricing_sub:"全 Premium 機能を含む",
     pricing_intro:"すべてのプランは同じプレミアム機能を含みます。あなたに合うペースを選んでください。すべてのサブスクリプションで7日間無料体験。",
     ptier_monthly_badge:"月額",
+    plat_app:"📱 Androidアプリのみ",plat_web:"🌐 ウェブアプリのみ",
     ptier_monthly_sub:"柔軟。いつでもキャンセル可能。",
     ptier_annual_badge:"年額 · ベストバリュー",
     ptier_annual_save:"42%お得 — 月額€5.83相当",
@@ -1981,6 +1992,7 @@ var I18N={
     trial_badge:"7일 무료",per_month:"/월",pricing_sub:"모든 Premium 기능 포함",
     pricing_intro:"모든 플랜은 동일한 프리미엄 기능을 포함합니다. 당신에게 맞는 주기를 선택하세요. 모든 구독에 7일 무료 체험.",
     ptier_monthly_badge:"월간",
+    plat_app:"📱 안드로이드 앱 전용",plat_web:"🌐 웹 앱 전용",
     ptier_monthly_sub:"유연함. 언제든지 취소.",
     ptier_annual_badge:"연간 · 최고 가치",
     ptier_annual_save:"42% 절약 — 월 €5.83 상당",
@@ -2051,6 +2063,7 @@ var I18N={
     trial_badge:"7 أيام مجانًا",per_month:"/شهر",pricing_sub:"جميع ميزات Premium مضمنة",
     pricing_intro:"جميع الخطط تتضمن نفس ميزات Premium. اختر الإيقاع المناسب لك. 7 أيام مجانية على جميع الاشتراكات.",
     ptier_monthly_badge:"شهري",
+    plat_app:"📱 تطبيق أندرويد فقط",plat_web:"🌐 تطبيق الويب فقط",
     ptier_monthly_sub:"مرن. إلغاء في أي وقت.",
     ptier_annual_badge:"سنوي · أفضل قيمة",
     ptier_annual_save:"وفّر 42% — ما يعادل €5.83/شهر",
@@ -2121,6 +2134,7 @@ var I18N={
     trial_badge:"7 दिन मुफ़्त",per_month:"/महीना",pricing_sub:"सभी Premium सुविधाएँ शामिल",
     pricing_intro:"सभी प्लान में समान प्रीमियम सुविधाएँ शामिल हैं। आपके लिए सही गति चुनें। सभी सब्सक्रिप्शन पर 7 दिन का मुफ्त परीक्षण।",
     ptier_monthly_badge:"मासिक",
+    plat_app:"📱 केवल Android ऐप",plat_web:"🌐 केवल वेब ऐप",
     ptier_monthly_sub:"लचीला। किसी भी समय रद्द करें।",
     ptier_annual_badge:"वार्षिक · सर्वोत्तम मूल्य",
     ptier_annual_save:"42% बचाएं — €5.83/महीना के बराबर",
