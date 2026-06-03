@@ -461,7 +461,19 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-  .planet{display:none}
+  .p-sun{transform:rotate(0deg) translateX(min(14vw,56px)) rotate(0deg)}
+  .p-moon{transform:rotate(45deg) translateX(min(18vw,72px)) rotate(-45deg)}
+  .p-mercury{transform:rotate(90deg) translateX(min(22vw,86px)) rotate(-90deg)}
+  .p-venus{transform:rotate(135deg) translateX(min(26vw,100px)) rotate(-135deg)}
+  .p-mars{transform:rotate(180deg) translateX(min(30vw,116px)) rotate(-180deg)}
+  .p-jupiter{transform:rotate(225deg) translateX(min(34vw,130px)) rotate(-225deg)}
+  .p-saturn{transform:rotate(270deg) translateX(min(38vw,146px)) rotate(-270deg)}
+  .p-uranus{transform:rotate(315deg) translateX(min(31vw,122px)) rotate(-315deg)}
+  .p-neptune{transform:rotate(20deg) translateX(min(37vw,140px)) rotate(-20deg)}
+  .p-pluto{transform:rotate(160deg) translateX(min(41vw,156px)) rotate(-160deg)}
+  .p-chiron{transform:rotate(70deg) translateX(min(28vw,108px)) rotate(-70deg)}
+  .p-northnode{transform:rotate(290deg) translateX(min(21vw,80px)) rotate(-290deg)}
+  .p-lilith{transform:rotate(110deg) translateX(min(17vw,66px)) rotate(-110deg)}
   .zodiac-ring{opacity:0.4}
   .how-bar-bull,.how-bar-neut,.how-bar-bear{transform:scaleX(var(--w,0.85))!important}
   .how-svg-line{stroke-dashoffset:0!important}
