@@ -828,7 +828,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div class="hero-tagline" data-i18n="tagline">Ancient wisdom for modern markets</div>
     <p class="hero-pitch" data-i18n="hero_pitch">The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="https://astrotraderpro.lanzafamea2001.workers.dev/">Open the Webapp</a>
+      <a class="btn btn-primary" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
       <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
@@ -2214,7 +2214,7 @@ var I18N={
   var sel=document.getElementById('lang-select');
   var saved=null;
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
-  var nav='en'; // forced EN default for first-time visitors (was: navigator.language)
+  var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
     setLang(initial);
   sel.value=initial;
@@ -2266,5 +2266,94 @@ var I18N={
 })();
 </script>
 
+
+<!-- ===== LP 2026: launch bar + glow boost + sticky CTA (additivo) ===== -->
+<style id="lp2026">
+/* barra lancio sticky con countdown lunare */
+#lpBar{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 12px;background:linear-gradient(90deg,#0A1020,#16203A 50%,#0A1020);border-bottom:1px solid rgba(232,201,106,.45);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#ECE7DA;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+#lpBar .dot{width:8px;height:8px;border-radius:50%;background:#5DCAA5;position:relative;flex:none}
+#lpBar .dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid #5DCAA5;opacity:.6;animation:lpPulse 2s ease-out infinite}
+@keyframes lpPulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+#lpBar b{color:#F5E8B8}
+#lpBar .t{color:#E8C96A;font-weight:700;letter-spacing:.5px;min-width:104px;display:inline-block}
+#lpBar a{flex:none;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:700;text-decoration:none;padding:4px 14px;border-radius:999px;font-size:12px;box-shadow:0 4px 14px rgba(232,201,106,.4);transition:transform .15s ease}
+#lpBar a:active{transform:scale(.95)}
+body{padding-top:42px}
+@media(max-width:560px){#lpBar{font-size:11px;gap:8px}#lpBar .t{min-width:90px}}
+/* titolo hero in gradiente oro */
+.hero h1{background:linear-gradient(135deg,#F5E8B8,#E8C96A 55%,#C9A84C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 18px rgba(232,201,106,.25))}
+/* pianeti e segni più accesi (armonizzato con l'app) */
+.planet svg{filter:saturate(1.4) brightness(1.18) drop-shadow(0 0 12px rgba(232,201,106,.55))}
+.zodiac-ring use{filter:drop-shadow(0 0 7px currentColor);opacity:.95}
+.zodiac-ring circle:nth-of-type(2){filter:drop-shadow(0 0 8px rgba(232,201,106,.6))}
+/* card: lift + glow al passaggio (come l'app) */
+.features-grid>*,.pricing-box,.screen-frame{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+@media(hover:hover){
+.features-grid>*:hover,.pricing-box:hover{transform:translateY(-3px);border-color:rgba(232,201,106,.55)!important;box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 22px rgba(232,201,106,.12)}
+.screen-frame:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 26px rgba(232,201,106,.2)}
+}
+/* CTA primaria: glow + shine + feedback tattile */
+.btn-primary{position:relative;overflow:hidden;box-shadow:0 8px 28px rgba(232,201,106,.4)!important;transition:transform .16s ease,box-shadow .16s ease}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);transform:translateX(-110%);animation:lpShine 3.2s ease-in-out infinite}
+@keyframes lpShine{55%{transform:translateX(110%)}100%{transform:translateX(110%)}}
+@media(hover:hover){.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,201,106,.55)!important}}
+.btn-primary:active{transform:scale(.96)}
+/* CTA sticky mobile */
+#lpSticky{display:none}
+@media(max-width:740px){
+#lpSticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:998;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:800;font-family:ui-monospace,Menlo,monospace;font-size:14px;letter-spacing:.4px;padding:14px;border-radius:999px;justify-content:center;align-items:center;gap:8px;text-decoration:none;box-shadow:0 10px 34px rgba(232,201,106,.45),0 6px 18px rgba(0,0,0,.4);transition:transform .15s ease}
+#lpSticky:active{transform:scale(.97)}
+body{padding-bottom:74px}
+}
+@media (prefers-reduced-motion:reduce){#lpBar .dot::after,.btn-primary::after{animation:none}}
+</style>
+<script>
+(function(){
+'use strict';
+var L={
+ en:{full:'Full Moon',nm:'New Moon',inw:'in',cta:'Open free',sticky:'Open the Webapp — free'},
+ it:{full:'Luna Piena',nm:'Luna Nuova',inw:'tra',cta:'Apri gratis',sticky:'Apri la Webapp — gratis'},
+ es:{full:'Luna llena',nm:'Luna nueva',inw:'en',cta:'Abrir gratis',sticky:'Abre la Webapp — gratis'},
+ fr:{full:'Pleine lune',nm:'Nouvelle lune',inw:'dans',cta:'Ouvrir',sticky:'Ouvrir la Webapp — gratuit'},
+ de:{full:'Vollmond',nm:'Neumond',inw:'in',cta:'Gratis öffnen',sticky:'Webapp öffnen — gratis'},
+ pt:{full:'Lua cheia',nm:'Lua nova',inw:'em',cta:'Abrir grátis',sticky:'Abrir a Webapp — grátis'},
+ nl:{full:'Volle maan',nm:'Nieuwe maan',inw:'over',cta:'Gratis openen',sticky:'Open de webapp — gratis'},
+ ru:{full:'Полнолуние',nm:'Новолуние',inw:'через',cta:'Открыть',sticky:'Открыть веб-приложение — бесплатно'},
+ zh:{full:'满月',nm:'新月',inw:'还有',cta:'免费打开',sticky:'打开网页版 — 免费'},
+ ja:{full:'満月',nm:'新月',inw:'まで',cta:'無料で開く',sticky:'Webアプリを開く — 無料'},
+ ko:{full:'보름달',nm:'신월',inw:'까지',cta:'무료로 열기',sticky:'웹앱 열기 — 무료'},
+ ar:{full:'بدر',nm:'محاق',inw:'خلال',cta:'افتح مجاناً',sticky:'افتح تطبيق الويب — مجاناً'},
+ hi:{full:'पूर्णिमा',nm:'अमावस्या',inw:'में',cta:'मुफ़्त खोलें',sticky:'वेबऐप खोलें — मुफ़्त'}
+};
+function lang(){ try{var l=localStorage.getItem('atpLandLang'); if(l&&L[l])return l;}catch(e){} return 'en'; }
+var APP='https://astrotraderpro.astrotraderproapp.workers.dev/';
+// prossima lunazione (sinodico medio, precisione ~ore: per countdown marketing è ok)
+var SYN=29.530588853*86400000, EPOCH=Date.UTC(2000,0,6,18,14,0); // luna nuova 06/01/2000
+function nextLun(){
+ var n=Date.now(), k=(n-EPOCH)/SYN;
+ var nextNew=EPOCH+Math.ceil(k)*SYN;
+ var kf=k-Math.floor(k); var nextFull=EPOCH+(Math.floor(k)+(kf<0.5?0.5:1.5))*SYN;
+ return (nextFull<nextNew)?{t:nextFull,type:'full'}:{t:nextNew,type:'nm'};
+}
+var bar=document.createElement('div'); bar.id='lpBar';
+bar.innerHTML='<span class="dot"></span><span id="lpBarTxt"></span><span class="t" id="lpBarT"></span><a id="lpBarCta" href="'+APP+'"></a>';
+document.body.appendChild(bar);
+var st=document.createElement('a'); st.id='lpSticky'; st.href=APP;
+document.body.appendChild(st);
+function fmt(ms){var d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000),s2=Math.floor(ms%60000/1000);
+ return d>0?(d+'g '+h+'h '+m+'m'):(h>0?(h+'h '+m+'m '+s2+'s'):(m+'m '+s2+'s'));}
+var lun=nextLun();
+function tick(){
+ var S=L[lang()];
+ if(lun.t-Date.now()<=0) lun=nextLun();
+ var emoji=lun.type==='full'?'\uD83C\uDF15':'\uD83C\uDF11';
+ document.getElementById('lpBarTxt').innerHTML=emoji+' <b>'+(lun.type==='full'?S.full:S.nm)+'</b> '+S.inw;
+ document.getElementById('lpBarT').textContent=fmt(lun.t-Date.now());
+ document.getElementById('lpBarCta').textContent=S.cta+' \u2192';
+ st.textContent='\uD83D\uDE80 '+S.sticky;
+}
+tick(); setInterval(tick,1000);
+})();
+</script>
 </body>
 </html>
