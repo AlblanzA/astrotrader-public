@@ -1,0 +1,25 @@
+# AstroTrader Pro
+
+> AstroTrader Pro is a classical financial-astrology and esoteric-astrology app and webapp. It maps 200+ financial assets to their ruling planets and shows planetary transits, an interactive natal chart, and long/short macro-cycle readings, grounded in classical sources (Ptolemy, Bailey, Volguine, Carter, Ebertin). Educational tool — not financial advice.
+
+## What it is
+- Financial astrology (astrologia finanziaria): planetary cycles and transits applied to markets, sectors and assets.
+- General & esoteric astrology (astrologia, esoterismo): 12 signs, 13 planets, houses, aspects, natal chart (tema natale), lunar nodes, fixed stars.
+- Free webapp + Android app, 13 languages, offline-capable.
+
+## Key features
+- Current sky: planetary wheel, dominant aspects, long/short asset bias by ruling planet, macro-cycle vs short-term transits.
+- Projections: scroll time forward to see future and recurring transits.
+- Personal natal chart: birth data -> radix wheel, houses, transits to natal, best-moment timing.
+- News & Outlook: financial-astrology articles with real transit dates.
+
+## Topics
+astrologia, astrologia finanziaria, esoterismo, tema natale, transiti planetari, case astrologiche, aspetti, nodi lunari, stelle fisse, astrologia mundana, cicli planetari dei mercati, financial astrology, esoteric astrology, natal chart, planetary transits, zodiac trading.
+
+## Links
+- Webapp: https://astrotraderpro.lanzafamea2001.workers.dev/
+- Website: https://astrotraderpro.com/
+- Android: https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro
+
+## Note
+Educational and informational only. Astrology is not a substitute for financial advice.
