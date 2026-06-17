@@ -479,25 +479,6 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
   .how-svg-line{stroke-dashoffset:0!important}
 }
 </style>
-
-<!-- SEO/AI boost: keywords, hreflang, Organization+WebSite JSON-LD -->
-<meta name="keywords" content="astrologia finanziaria, financial astrology, astrologia, esoterismo, tema natale, transiti planetari, oroscopo finanziario, astrologia mundana, cicli planetari mercati, esoteric astrology, natal chart, planetary transits, zodiac trading, AstroTrader Pro">
-<link rel="alternate" hreflang="en" href="https://astrotraderpro.com/">
-<link rel="alternate" hreflang="it" href="https://astrotraderpro.com/?lang=it">
-<link rel="alternate" hreflang="es" href="https://astrotraderpro.com/?lang=es">
-<link rel="alternate" hreflang="fr" href="https://astrotraderpro.com/?lang=fr">
-<link rel="alternate" hreflang="de" href="https://astrotraderpro.com/?lang=de">
-<link rel="alternate" hreflang="pt" href="https://astrotraderpro.com/?lang=pt">
-<link rel="alternate" hreflang="nl" href="https://astrotraderpro.com/?lang=nl">
-<link rel="alternate" hreflang="ru" href="https://astrotraderpro.com/?lang=ru">
-<link rel="alternate" hreflang="zh" href="https://astrotraderpro.com/?lang=zh">
-<link rel="alternate" hreflang="ja" href="https://astrotraderpro.com/?lang=ja">
-<link rel="alternate" hreflang="ko" href="https://astrotraderpro.com/?lang=ko">
-<link rel="alternate" hreflang="ar" href="https://astrotraderpro.com/?lang=ar">
-<link rel="alternate" hreflang="hi" href="https://astrotraderpro.com/?lang=hi">
-<link rel="alternate" hreflang="x-default" href="https://astrotraderpro.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","logo":"https://astrotraderpro.com/assets/icon-512.png","description":"Astrologia finanziaria classica ed astrologia esoterica: ruota planetaria, transiti, tema natale e mappatura di 200+ asset ai pianeti governatori.","founder":{"@type":"Person","name":"Alberto Nicola Lanzafame"},"sameAs":["https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro","https://astrotraderpro.lanzafamea2001.workers.dev/"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","inLanguage":["en","it","es","fr","de","pt","nl","ru","zh","ja","ko","ar","hi"],"description":"Financial astrology and esoteric astrology: planetary wheel, transits, natal chart, 200+ assets mapped to ruling planets. Educational tool."}</script>
 </head>
 <body>
 
@@ -847,7 +828,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div class="hero-tagline" data-i18n="tagline">Ancient wisdom for modern markets</div>
     <p class="hero-pitch" data-i18n="hero_pitch">The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
+      <a class="btn btn-primary" data-i18n="cta_webapp" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
       <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
@@ -2235,6 +2216,7 @@ var I18N={
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
   var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
+  (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};for(var k in W){ if(I18N[k]) I18N[k].cta_webapp=W[k]; }})();
     setLang(initial);
   sel.value=initial;
   sel.addEventListener('change',function(){setLang(sel.value)});
