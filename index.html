@@ -2236,6 +2236,7 @@ var I18N={
   var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
   (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; } }})();
+  var LAUNCH_STATE='live', PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro'; // definito PRIMA di setLang(): applyLaunchState ora vede 'live'
     setLang(initial);
   sel.value=initial;
   sel.addEventListener('change',function(){setLang(sel.value)});
@@ -2259,8 +2260,6 @@ var I18N={
   }
   // === LAUNCH STATE ===
   // Change LAUNCH_STATE to 'live' when AstroTrader Pro is published on Google Play.
-  var LAUNCH_STATE='live'; // 'pre' | 'live' — flip to 'live' on Play Store launch
-  var PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro';
   function applyLaunchState(dict){
     var cta=document.getElementById('cta-primary');
     if(!cta) return;
