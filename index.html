@@ -848,7 +848,8 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <p class="hero-pitch" data-i18n="hero_pitch">The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" data-i18n="cta_webapp" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
-      <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
+      <a id="cta-primary" class="btn btn-primary" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro" data-i18n="cta_download">Get it on Google Play</a>
+      <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://x.com/Astrotraderpro" data-i18n="cta_follow">Follow on X</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
     <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199 &middot; 7-day free trial</p>
@@ -1282,7 +1283,7 @@ var I18N={
     title:"AstroTrader Pro — Ancient wisdom for modern markets",
     tagline:"Ancient wisdom for modern markets",
     hero_pitch:"The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.",
-    cta_primary:"Coming soon on Google Play",
+    cta_primary:"Coming soon on Google Play",cta_follow:"Follow on X",
     cta_download:"Get it on Google Play",
     cta_secondary:"See how it works",
     cta_note:"7-day free trial · Premium €9.99/month",
@@ -2235,7 +2236,7 @@ var I18N={
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
   var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
-  (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; } }})();
+  (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};var F={en:'Follow on X',it:'Segui su X',es:'Síguenos en X',fr:'Suivre sur X',de:'Auf X folgen',pt:'Seguir no X',nl:'Volg op X',ru:'Подписаться в X',zh:'在 X 关注',ja:'Xでフォロー',ko:'X에서 팔로우',ar:'تابعنا على X',hi:'X पर फ़ॉलो करें'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; if(F[k]) I18N[k].cta_follow=F[k]; } }})();
   var LAUNCH_STATE='live', PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro'; // definito PRIMA di setLang(): applyLaunchState ora vede 'live'
     setLang(initial);
   sel.value=initial;
