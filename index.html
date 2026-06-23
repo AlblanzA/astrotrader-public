@@ -115,7 +115,7 @@
     {"@type":"Question","name":"Does the app predict markets?","acceptedAnswer":{"@type":"Answer","text":"No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven."}},
     {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription. The wheel, projections, and glossary work fully offline."}},
     {"@type":"Question","name":"How many languages are available?","acceptedAnswer":{"@type":"Answer","text":"13 languages: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), and Hindi."}},
-    {"@type":"Question","name":"Does the subscription auto-renew?","acceptedAnswer":{"@type":"Answer","text":"Yes, but you can cancel anytime from Google Play settings. If you cancel during the 7-day free trial, you are not charged. After the trial, billing is 9.99 EUR per month."}},
+    {"@type":"Question","name":"Does the subscription auto-renew?","acceptedAnswer":{"@type":"Answer","text":"Yes, but you can cancel anytime from Google Play settings. Billing is 9.99 EUR per month."}},
     {"@type":"Question","name":"What data does the app collect?","acceptedAnswer":{"@type":"Answer","text":"No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy."}},
     {"@type":"Question","name":"Who is the app for?","acceptedAnswer":{"@type":"Answer","text":"For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+."}}
   ]
@@ -244,7 +244,6 @@ html[dir="rtl"] .step::before{left:auto;right:18px}
 .ptier-price small{font-size:0.95rem;color:var(--text-dim);font-family:var(--ui);font-weight:400;letter-spacing:1px}
 .ptier-sub{font-size:0.88rem;color:var(--text-dim);margin-top:10px;line-height:1.5}
 .ptier-discount{color:var(--bull);font-family:var(--ui);font-size:0.85rem;margin:8px 0;font-weight:600;letter-spacing:0.3px}
-.ptier-plat{display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:8px 0 2px;padding:4px 11px;border-radius:12px;border:1px solid rgba(232,201,106,0.3);color:var(--gold)}.ptier-best .ptier-plat,.ptier-lifetime .ptier-plat{color:var(--bull);border-color:rgba(93,202,165,0.4)}
 .ptier-note{display:inline-block;font-family:var(--ui);font-size:0.78rem;letter-spacing:1px;color:var(--bull);margin-top:14px;border:1px solid rgba(93,202,165,0.3);padding:5px 12px;border-radius:14px;background:rgba(93,202,165,0.08)}
 .price-trial{display:inline-block;background:rgba(93,202,165,0.15);color:var(--bull);padding:5px 12px;border-radius:14px;font-family:var(--ui);font-size:11px;letter-spacing:1.5px;margin-top:14px;border:1px solid rgba(93,202,165,0.3);text-transform:uppercase;font-weight:600}
 .pricing-features{max-width:520px;margin:0 auto}
@@ -461,43 +460,12 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-  .p-sun{transform:rotate(0deg) translateX(min(14vw,56px)) rotate(0deg)}
-  .p-moon{transform:rotate(45deg) translateX(min(18vw,72px)) rotate(-45deg)}
-  .p-mercury{transform:rotate(90deg) translateX(min(22vw,86px)) rotate(-90deg)}
-  .p-venus{transform:rotate(135deg) translateX(min(26vw,100px)) rotate(-135deg)}
-  .p-mars{transform:rotate(180deg) translateX(min(30vw,116px)) rotate(-180deg)}
-  .p-jupiter{transform:rotate(225deg) translateX(min(34vw,130px)) rotate(-225deg)}
-  .p-saturn{transform:rotate(270deg) translateX(min(38vw,146px)) rotate(-270deg)}
-  .p-uranus{transform:rotate(315deg) translateX(min(31vw,122px)) rotate(-315deg)}
-  .p-neptune{transform:rotate(20deg) translateX(min(37vw,140px)) rotate(-20deg)}
-  .p-pluto{transform:rotate(160deg) translateX(min(41vw,156px)) rotate(-160deg)}
-  .p-chiron{transform:rotate(70deg) translateX(min(28vw,108px)) rotate(-70deg)}
-  .p-northnode{transform:rotate(290deg) translateX(min(21vw,80px)) rotate(-290deg)}
-  .p-lilith{transform:rotate(110deg) translateX(min(17vw,66px)) rotate(-110deg)}
+  .planet{display:none}
   .zodiac-ring{opacity:0.4}
   .how-bar-bull,.how-bar-neut,.how-bar-bear{transform:scaleX(var(--w,0.85))!important}
   .how-svg-line{stroke-dashoffset:0!important}
 }
 </style>
-
-<!-- SEO/AI boost: keywords, hreflang, Organization+WebSite JSON-LD -->
-<meta name="keywords" content="astrologia finanziaria, financial astrology, astrologia, esoterismo, tema natale, transiti planetari, oroscopo finanziario, astrologia mundana, cicli planetari mercati, esoteric astrology, natal chart, planetary transits, zodiac trading, AstroTrader Pro">
-<link rel="alternate" hreflang="en" href="https://astrotraderpro.com/">
-<link rel="alternate" hreflang="it" href="https://astrotraderpro.com/?lang=it">
-<link rel="alternate" hreflang="es" href="https://astrotraderpro.com/?lang=es">
-<link rel="alternate" hreflang="fr" href="https://astrotraderpro.com/?lang=fr">
-<link rel="alternate" hreflang="de" href="https://astrotraderpro.com/?lang=de">
-<link rel="alternate" hreflang="pt" href="https://astrotraderpro.com/?lang=pt">
-<link rel="alternate" hreflang="nl" href="https://astrotraderpro.com/?lang=nl">
-<link rel="alternate" hreflang="ru" href="https://astrotraderpro.com/?lang=ru">
-<link rel="alternate" hreflang="zh" href="https://astrotraderpro.com/?lang=zh">
-<link rel="alternate" hreflang="ja" href="https://astrotraderpro.com/?lang=ja">
-<link rel="alternate" hreflang="ko" href="https://astrotraderpro.com/?lang=ko">
-<link rel="alternate" hreflang="ar" href="https://astrotraderpro.com/?lang=ar">
-<link rel="alternate" hreflang="hi" href="https://astrotraderpro.com/?lang=hi">
-<link rel="alternate" hreflang="x-default" href="https://astrotraderpro.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","logo":"https://astrotraderpro.com/assets/icon-512.png","description":"Astrologia finanziaria classica ed astrologia esoterica: ruota planetaria, transiti, tema natale e mappatura di 200+ asset ai pianeti governatori.","founder":{"@type":"Person","name":"Alberto Nicola Lanzafame"},"sameAs":["https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro","https://astrotraderpro.lanzafamea2001.workers.dev/"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","inLanguage":["en","it","es","fr","de","pt","nl","ru","zh","ja","ko","ar","hi"],"description":"Financial astrology and esoteric astrology: planetary wheel, transits, natal chart, 200+ assets mapped to ruling planets. Educational tool."}</script>
 </head>
 <body>
 
@@ -847,12 +815,10 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div class="hero-tagline" data-i18n="tagline">Ancient wisdom for modern markets</div>
     <p class="hero-pitch" data-i18n="hero_pitch">The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" data-i18n="cta_webapp" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
-      <a id="cta-primary" class="btn btn-primary" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro" data-i18n="cta_download">Get it on Google Play</a>
-      <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://x.com/Astrotraderpro" data-i18n="cta_follow">Follow on X</a>
+      <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
-    <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199 &middot; 7-day free trial</p>
+    <p class="btn-note" data-i18n="cta_note">Premium €9.99/month</p>
   </div>
 </section>
 
@@ -1058,7 +1024,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div style="text-align:center">
       <span class="section-eyebrow" data-i18n="screens_eyebrow">Sneak peek</span>
       <h2 data-i18n="screens_title">A look inside the app</h2>
-      <p class="dim" data-i18n="screens_intro" style="max-width:620px;margin:0 auto">Real screens — five core views of AstroTrader Pro, now live on Google Play.</p>
+      <p class="dim" data-i18n="screens_intro" style="max-width:620px;margin:0 auto">Real screens from the build currently in final approval — five core views of AstroTrader Pro.</p>
     </div>
     <div class="screens">
       <div class="screens-track">
@@ -1134,33 +1100,27 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div style="text-align:center">
       <span class="section-eyebrow" data-i18n="pricing_eyebrow">Pricing</span>
       <h2 data-i18n="pricing_title">Simple, transparent</h2>
-      <p class="dim" data-i18n="pricing_intro" style="max-width:580px;margin:0 auto">All plans include the same Premium features. Choose the cadence that fits you. 7-day free trial on all subscriptions.</p>
+      <p class="dim" data-i18n="pricing_intro" style="max-width:580px;margin:0 auto">All plans include the same Premium features. Choose the cadence that fits you.</p>
     </div>
     <div class="pricing-grid">
       <div class="ptier">
         <span class="ptier-badge" data-i18n="ptier_monthly_badge">Monthly</span>
         <div class="ptier-price">€9.99 <small data-i18n="per_month">/month</small></div>
-        <span class="ptier-plat" data-i18n="plat_app">📱 Android app only</span>
         <p class="ptier-sub" data-i18n="ptier_monthly_sub">Flexible. Cancel anytime.</p>
-        <span class="price-trial" data-i18n="trial_badge">7-day free trial</span>
-      </div>
+        </div>
       <div class="ptier ptier-best">
         <span class="ptier-badge" data-i18n="ptier_annual_badge">Annual · Best value</span>
         <div class="ptier-price">€69.99 <small data-i18n="per_year">/year</small></div>
-        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-discount" data-i18n="ptier_annual_save">Save 42% — equivalent to €5.83/month</p>
         <p class="ptier-sub" data-i18n="ptier_annual_sub">For long-term explorers.</p>
-        <span class="price-trial" data-i18n="trial_badge">7-day free trial</span>
-      </div>
+        </div>
       <div class="ptier ptier-lifetime">
         <span class="ptier-badge" data-i18n="ptier_lifetime_badge">Lifetime supporter</span>
         <div class="ptier-price">€199 <small data-i18n="one_time">once</small></div>
-        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-sub" data-i18n="ptier_lifetime_sub">All future updates included. Support indie development.</p>
         <span class="ptier-note" data-i18n="ptier_lifetime_note">Pay once. Use forever.</span>
       </div>
     </div>
-    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px"><strong>Monthly &euro;9.99/month</strong> is available <strong>only in the Android app</strong> (Google Play). The <strong>Annual</strong> and <strong>Lifetime</strong> plans are available <strong>only on the web app</strong>.</p>
     <div class="pricing-features">
       <p class="dim" data-i18n="pricing_sub" style="text-align:center;font-size:0.95rem;margin:32px 0 14px">All plans include:</p>
       <ul class="price-list">
@@ -1170,7 +1130,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
         <li data-i18n="pli4">Customizable transit notifications</li>
         <li data-i18n="pli5">Complete glossary in 13 languages</li>
       </ul>
-      <p class="dim" style="font-size:0.83rem;margin-top:18px;text-align:center" data-i18n="pricing_cancel">Cancel anytime from Google Play settings. No auto-renewal during trial.</p>
+      <p class="dim" style="font-size:0.83rem;margin-top:18px;text-align:center" data-i18n="pricing_cancel">Cancel anytime from Google Play settings.</p>
     </div>
   </div>
 </section>
@@ -1236,10 +1196,10 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <details><summary data-i18n="faq1_q">Does the app predict markets?</summary><p data-i18n="faq1_a">No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven.</p></details>
       <details><summary data-i18n="faq2_q">Does it work offline?</summary><p data-i18n="faq2_a">Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription (Google Play). The wheel, projections, and glossary work fully offline.</p></details>
       <details><summary data-i18n="faq3_q">How many languages are available?</summary><p data-i18n="faq3_a">13: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), Hindi.</p></details>
-      <details><summary data-i18n="faq4_q">Does the subscription auto-renew?</summary><p data-i18n="faq4_a">Yes, but you can cancel anytime from Google Play settings. If you cancel during the 7-day trial, you are not charged. After the trial, billing is €9.99 per month.</p></details>
+      <details><summary data-i18n="faq4_q">Does the subscription auto-renew?</summary><p data-i18n="faq4_a">Yes, but you can cancel anytime from Google Play settings. Billing is €9.99 per month.</p></details>
       <details><summary data-i18n="faq5_q">What data does the app collect?</summary><p data-i18n="faq5_a">No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.</p></details>
       <details><summary data-i18n="faq6_q">Who is the app for?</summary><p data-i18n="faq6_a">For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+.</p></details>
-      <details><summary data-i18n="faq7_q">Is AstroTrader Pro on Google Play?</summary><p data-i18n="faq7_a">Yes — AstroTrader Pro is available now on Google Play. Tap the download button at the top of this page, or search for it by name.</p></details>
+      <details><summary data-i18n="faq7_q">When will it be available on Google Play?</summary><p data-i18n="faq7_a">The app is complete and in final approval phase at Google Play. The actual release date depends on Google's verification timelines and the mandatory closed testing phase for new developers (minimum 14 days).</p></details>
     </div>
   </div>
 </section>
@@ -1283,10 +1243,10 @@ var I18N={
     title:"AstroTrader Pro — Ancient wisdom for modern markets",
     tagline:"Ancient wisdom for modern markets",
     hero_pitch:"The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.",
-    cta_primary:"Coming soon on Google Play",cta_follow:"Follow on X",
+    cta_primary:"Coming soon on Google Play",
     cta_download:"Get it on Google Play",
     cta_secondary:"See how it works",
-    cta_note:"7-day free trial · Premium €9.99/month",
+    cta_note:"Premium €9.99/month",
     value_eyebrow:"What it does, in three points",
     value_title:"Three traditions, one reading",
     value_intro:"Precise astronomy, classical symbolism, market mapping. All transparent, all built on public sources.",
@@ -1311,10 +1271,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"No tracking, no analytics, no advertising. Only data strictly necessary for subscription.",
     feat8_t:"Native dark mode",feat8_b:"Designed for night use and long sessions without eye strain.",
     pricing_eyebrow:"Pricing",pricing_title:"Simple, transparent",
-    trial_badge:"7-day free trial",per_month:"/month",pricing_sub:"All Premium features included",
-    pricing_intro:"All plans include the same Premium features. Choose the cadence that fits you. 7-day free trial on all subscriptions.",
+    trial_badge:"",per_month:"/month",pricing_sub:"All Premium features included",
+    pricing_intro:"All plans include the same Premium features. Choose the cadence that fits you.",
     ptier_monthly_badge:"Monthly",
-    plat_app:"📱 Android app only",plat_web:"🌐 Web app only",
     ptier_monthly_sub:"Flexible. Cancel anytime.",
     ptier_annual_badge:"Annual · Best value",
     ptier_annual_save:"Save 42% — equivalent to €5.83/month",
@@ -1325,8 +1284,8 @@ var I18N={
     per_year:"/year",
     one_time:"once",
     pli1:"Full wheel with all 13 planets",pli2:"Projections up to 5 years ahead",pli3:"Unlimited cached dates",pli4:"Customizable transit notifications",pli5:"Complete glossary in 13 languages",
-    pricing_cancel:"Cancel anytime from Google Play settings. No auto-renewal during trial.",
-    screens_eyebrow:"Sneak peek",screens_title:"A look inside the app",screens_intro:"Real screens — five core views of AstroTrader Pro, now live on Google Play.",
+    pricing_cancel:"Cancel anytime from Google Play settings.",
+    screens_eyebrow:"Sneak peek",screens_title:"A look inside the app",screens_intro:"Real screens from the build currently in final approval — five core views of AstroTrader Pro.",
     shot1_t:"Dashboard",shot1_s:"Live planetary wheel and current sky",
     shot2_t:"Projections",shot2_s:"Move forward in time, watch the sky evolve",
     shot3_t:"Glossary",shot3_s:"Every term explained, from aspect to retrograde",
@@ -1344,10 +1303,10 @@ var I18N={
     faq1_q:"Does the app predict markets?",faq1_a:"No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven.",
     faq2_q:"Does it work offline?",faq2_a:"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription (Google Play). The wheel, projections, and glossary work fully offline.",
     faq3_q:"How many languages are available?",faq3_a:"13: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), Hindi.",
-    faq4_q:"Does the subscription auto-renew?",faq4_a:"Yes, but you can cancel anytime from Google Play settings. If you cancel during the 7-day trial, you are not charged. After the trial, billing is €9.99 per month.",
+    faq4_q:"Does the subscription auto-renew?",faq4_a:"Yes, but you can cancel anytime from Google Play settings.",
     faq5_q:"What data does the app collect?",faq5_a:"No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.",
     faq6_q:"Who is the app for?",faq6_a:"For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+.",
-    faq7_q:"Is AstroTrader Pro on Google Play?",faq7_a:"Yes — AstroTrader Pro is available now on Google Play. Tap the download button at the top of this page, or search for it by name.",
+    faq7_q:"When will it be available on Google Play?",faq7_a:"The app is complete and in final approval phase at Google Play. The actual release date depends on Google's verification timelines and the mandatory closed testing phase for new developers (minimum 14 days).",
     foot_brand_line:"Classical financial astrology for mobile.",
     foot_legal:"Legal",foot_contact:"Contact",foot_privacy:"Privacy policy",foot_terms:"Terms of service",
     foot_trademark:"<strong>AstroTrader Pro™</strong> — trademark application filed with UIBM Italy, application no. 2026000082570 of 05/05/2026, Nice classes 9, 41, 42. Application pending examination.",
@@ -1357,7 +1316,7 @@ var I18N={
     title:"AstroTrader Pro — Antica saggezza per i mercati moderni",
     tagline:"Antica saggezza per i mercati moderni",
     hero_pitch:"Lo strumento educativo che applica la tradizione astrologica classica ai mercati finanziari. Ruota planetaria in tempo reale, transiti, asset Bull / Neutral / Bear — in un'unica app elegante, offline e privacy-first.",
-    cta_primary:"In arrivo su Google Play",cta_download:"Disponibile su Google Play",cta_secondary:"Scopri come funziona",cta_note:"Trial gratuito 7 giorni · Premium €9,99/mese",
+    cta_primary:"In arrivo su Google Play",cta_download:"Disponibile su Google Play",cta_secondary:"Scopri come funziona",cta_note:"Premium €9,99/mese",
     value_eyebrow:"Cosa fa, in tre punti",value_title:"Tre tradizioni, un'unica lettura",
     value_intro:"Astronomia precisa, simbologia classica, mappatura ai mercati. Tutto trasparente, tutto basato su fonti pubbliche.",
     vc1_title:"Cielo preciso",vc1_body:"12 segni × 13 pianeti. Posizioni planetarie aggiornate al secondo d'arco con algoritmi open-source di pubblico dominio (VSOP87, IAU).",
@@ -1382,10 +1341,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Niente tracciamento, niente analitica, niente pubblicità. Solo i dati necessari all'abbonamento.",
     feat8_t:"Dark mode nativo",feat8_b:"Pensata per l'uso notturno e per non stancare la vista durante sessioni lunghe.",
     pricing_eyebrow:"Prezzo",pricing_title:"Semplice, trasparente",
-    trial_badge:"7 giorni gratis",per_month:"/mese",pricing_sub:"Tutte le funzioni Premium incluse",
-    pricing_intro:"Tutti i piani includono le stesse funzioni Premium. Scegli la cadenza più adatta a te. 7 giorni gratis su tutte le sottoscrizioni.",
+    trial_badge:"",per_month:"/mese",pricing_sub:"Tutte le funzioni Premium incluse",
+    pricing_intro:"Tutti i piani includono le stesse funzioni Premium. Scegli la cadenza più adatta a te.",
     ptier_monthly_badge:"Mensile",
-    plat_app:"📱 Solo app Android",plat_web:"🌐 Solo web-app",
     ptier_monthly_sub:"Flessibile. Cancella in qualsiasi momento.",
     ptier_annual_badge:"Annuale · Best value",
     ptier_annual_save:"Risparmi 42% — equivale a €5,83/mese",
@@ -1396,8 +1354,8 @@ var I18N={
     per_year:"/anno",
     one_time:"una tantum",
     pli1:"Ruota completa con tutti i 13 pianeti",pli2:"Proiezioni fino a 5 anni nel futuro",pli3:"Date in cache illimitate",pli4:"Notifiche transiti personalizzabili",pli5:"Glossario completo in 13 lingue",
-    pricing_cancel:"Cancellabile in qualunque momento dalle impostazioni di Google Play. Nessun rinnovo automatico durante il trial.",
-    screens_eyebrow:"In anteprima",screens_title:"Uno sguardo dentro l'app",screens_intro:"Schermate reali — cinque viste centrali di AstroTrader Pro, ora disponibile su Google Play.",
+    pricing_cancel:"Cancellabile in qualunque momento dalle impostazioni di Google Play.",
+    screens_eyebrow:"In anteprima",screens_title:"Uno sguardo dentro l'app",screens_intro:"Schermate reali dalla build attualmente in approvazione finale — cinque viste centrali di AstroTrader Pro.",
     shot1_t:"Dashboard",shot1_s:"Ruota planetaria live e cielo del momento",
     shot2_t:"Proiezioni",shot2_s:"Avanza nel tempo, guarda il cielo evolvere",
     shot3_t:"Glossario",shot3_s:"Ogni termine spiegato, da aspetto a retrogrado",
@@ -1415,10 +1373,10 @@ var I18N={
     faq1_q:"L'app predice i mercati?",faq1_a:"No. AstroTrader Pro è uno strumento simbolico ed educativo. Mostra correlazioni della tradizione astrologica classica con i settori finanziari, ma non offre previsioni operative né garanzie di alcun tipo. L'efficacia predittiva dell'astrologia non è scientificamente provata.",
     faq2_q:"Funziona offline?",faq2_a:"Sì. Tutti i calcoli astronomici e i dati sono inclusi nell'app. L'unica connessione richiesta è per la gestione dell'abbonamento Premium (Google Play). La ruota, le proiezioni e il glossario funzionano completamente offline.",
     faq3_q:"Quante lingue sono disponibili?",faq3_a:"13: italiano, inglese, spagnolo, francese, tedesco, portoghese, olandese, russo, cinese, giapponese, coreano, arabo (con supporto RTL completo), hindi.",
-    faq4_q:"L'abbonamento si rinnova automaticamente?",faq4_a:"Sì, ma puoi cancellarlo in qualunque momento dalle impostazioni di Google Play. Se cancelli durante i 7 giorni di trial, non ti viene addebitato nulla. Dopo il trial, l'addebito è di €9,99 al mese.",
+    faq4_q:"L'abbonamento si rinnova automaticamente?",faq4_a:"Sì, ma puoi cancellarlo in qualunque momento dalle impostazioni di Google Play.",
     faq5_q:"Quali dati raccoglie l'app?",faq5_a:"Nessun tracciamento, nessuna analitica, nessuna pubblicità. L'unico dato trattato è quello strettamente necessario alla gestione dell'abbonamento (identificativo pseudonimo gestito da RevenueCat, metadati transazione gestiti da Google Play). Dettagli completi nella privacy policy.",
     faq6_q:"Per chi è pensata l'app?",faq6_a:"Per chi è interessato a esplorare il rapporto simbolico tra cicli planetari e mercati: trader curiosi della teoria classica dei cicli, astrologi con interesse finanziario, studenti di astrologia mondana ed esoterica. Età consigliata: 18+.",
-    faq7_q:"AstroTrader Pro è su Google Play?",faq7_a:"Sì, AstroTrader Pro è disponibile ora su Google Play. Tocca il pulsante di download in cima alla pagina oppure cercala per nome.",
+    faq7_q:"Quando sarà disponibile su Google Play?",faq7_a:"L'app è completa e in fase finale di approvazione presso Google Play. La data di pubblicazione effettiva dipende dai tempi di verifica Google e dalla fase di closed testing obbligatoria per i nuovi sviluppatori (14 giorni minimi).",
     foot_brand_line:"Astrologia finanziaria classica per mobile.",
     foot_legal:"Legale",foot_contact:"Contatti",foot_privacy:"Privacy policy",foot_terms:"Termini di servizio",
     foot_trademark:"<strong>AstroTrader Pro™</strong> — marchio depositato presso UIBM Italia, domanda n. 2026000082570 del 05/05/2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame.",
@@ -1428,7 +1386,7 @@ var I18N={
     title:"AstroTrader Pro — Sabiduría antigua para mercados modernos",
     tagline:"Sabiduría antigua para mercados modernos",
     hero_pitch:"La herramienta educativa que aplica la tradición astrológica clásica a los mercados financieros. Rueda planetaria en vivo, tránsitos, activos Bull / Neutral / Bear — en una sola app elegante, sin conexión y privacy-first.",
-    cta_primary:"Próximamente en Google Play",cta_download:"Disponible en Google Play",cta_secondary:"Cómo funciona",cta_note:"7 días de prueba gratis · Premium €9,99/mes",
+    cta_primary:"Próximamente en Google Play",cta_download:"Disponible en Google Play",cta_secondary:"Cómo funciona",cta_note:"Premium €9,99/mes",
     value_eyebrow:"Qué hace, en tres puntos",value_title:"Tres tradiciones, una lectura",
     value_intro:"Astronomía precisa, simbología clásica, mapeo de mercados. Todo transparente, todo basado en fuentes públicas.",
     vc1_title:"Cielo preciso",vc1_body:"12 signos × 13 planetas. Posiciones planetarias precisas al segundo de arco, calculadas con algoritmos open-source de dominio público (VSOP87, IAU).",
@@ -1453,10 +1411,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Sin seguimiento, sin analíticas, sin publicidad. Solo datos estrictamente necesarios para la suscripción.",
     feat8_t:"Modo oscuro nativo",feat8_b:"Diseñado para uso nocturno y sesiones largas sin cansar la vista.",
     pricing_eyebrow:"Precio",pricing_title:"Simple, transparente",
-    trial_badge:"7 días gratis",per_month:"/mes",pricing_sub:"Todas las funciones Premium incluidas",
-    pricing_intro:"Todos los planes incluyen las mismas funciones Premium. Elige la cadencia que más te convenga. 7 días gratis en todas las suscripciones.",
+    trial_badge:"",per_month:"/mes",pricing_sub:"Todas las funciones Premium incluidas",
+    pricing_intro:"Todos los planes incluyen las mismas funciones Premium. Elige la cadencia que más te convenga.",
     ptier_monthly_badge:"Mensual",
-    plat_app:"📱 Solo en la app Android",plat_web:"🌐 Solo en la web app",
     ptier_monthly_sub:"Flexible. Cancela en cualquier momento.",
     ptier_annual_badge:"Anual · Mejor valor",
     ptier_annual_save:"Ahorra 42% — equivale a €5,83/mes",
@@ -1467,7 +1424,7 @@ var I18N={
     per_year:"/año",
     one_time:"una vez",
     pli1:"Rueda completa con los 13 planetas",pli2:"Proyecciones hasta 5 años en el futuro",pli3:"Fechas en caché ilimitadas",pli4:"Notificaciones de tránsito personalizables",pli5:"Glosario completo en 13 idiomas",
-    pricing_cancel:"Cancelable en cualquier momento desde los ajustes de Google Play. Sin renovación automática durante el trial.",
+    pricing_cancel:"Cancelable en cualquier momento desde los ajustes de Google Play.",
     screens_eyebrow:"Vista previa",screens_title:"Un vistazo dentro de la app",screens_intro:"Pantallas reales de la build actualmente en aprobación final — cinco vistas principales de AstroTrader Pro.",
     shot1_t:"Panel",shot1_s:"Rueda planetaria en vivo y cielo actual",
     shot2_t:"Proyecciones",shot2_s:"Avanza en el tiempo, observa el cielo evolucionar",
@@ -1486,7 +1443,7 @@ var I18N={
     faq1_q:"¿La app predice los mercados?",faq1_a:"No. AstroTrader Pro es una herramienta simbólica y educativa. Muestra correlaciones de la tradición astrológica clásica con los sectores financieros, pero no ofrece previsiones operativas ni garantías. La eficacia predictiva de la astrología no está científicamente probada.",
     faq2_q:"¿Funciona sin conexión?",faq2_a:"Sí. Todos los cálculos astronómicos y datos están incluidos en la app. La única conexión requerida es para la gestión de la suscripción Premium (Google Play). La rueda, las proyecciones y el glosario funcionan totalmente sin conexión.",
     faq3_q:"¿Cuántos idiomas hay disponibles?",faq3_a:"13: italiano, inglés, español, francés, alemán, portugués, holandés, ruso, chino, japonés, coreano, árabe (con soporte RTL completo), hindi.",
-    faq4_q:"¿La suscripción se renueva automáticamente?",faq4_a:"Sí, pero puedes cancelarla en cualquier momento desde los ajustes de Google Play. Si cancelas durante los 7 días de prueba, no se te cobra nada. Después del trial, el coste es €9,99 al mes.",
+    faq4_q:"¿La suscripción se renueva automáticamente?",faq4_a:"Sí, pero puedes cancelarla en cualquier momento desde los ajustes de Google Play.",
     faq5_q:"¿Qué datos recopila la app?",faq5_a:"Sin seguimiento, sin analíticas, sin publicidad. El único dato procesado es el estrictamente necesario para la gestión de la suscripción (identificador pseudónimo gestionado por RevenueCat, metadatos de transacción gestionados por Google Play). Detalles completos en la política de privacidad.",
     faq6_q:"¿Para quién es la app?",faq6_a:"Para quien esté interesado en explorar la relación simbólica entre ciclos planetarios y mercados: traders curiosos de la teoría clásica de ciclos, astrólogos con interés financiero, estudiantes de astrología mundial y esotérica. Edad recomendada: 18+.",
     faq7_q:"¿Cuándo estará disponible en Google Play?",faq7_a:"La app está completa y en fase final de aprobación en Google Play. La fecha de publicación efectiva depende de los tiempos de verificación de Google y de la fase de closed testing obligatoria para nuevos desarrolladores (mínimo 14 días).",
@@ -1499,7 +1456,7 @@ var I18N={
     title:"AstroTrader Pro — Sagesse ancienne pour les marchés modernes",
     tagline:"Sagesse ancienne pour les marchés modernes",
     hero_pitch:"L'outil éducatif qui applique la tradition astrologique classique aux marchés financiers. Roue planétaire en direct, transits, actifs Bull / Neutral / Bear — dans une seule application élégante, hors-ligne et privacy-first.",
-    cta_primary:"Bientôt sur Google Play",cta_download:"Disponible sur Google Play",cta_secondary:"Comment ça marche",cta_note:"Essai gratuit 7 jours · Premium €9,99/mois",
+    cta_primary:"Bientôt sur Google Play",cta_download:"Disponible sur Google Play",cta_secondary:"Comment ça marche",cta_note:"Premium €9,99/mois",
     value_eyebrow:"Ce qu'il fait, en trois points",value_title:"Trois traditions, une lecture",
     value_intro:"Astronomie précise, symbolique classique, cartographie des marchés. Tout transparent, tout fondé sur des sources publiques.",
     vc1_title:"Ciel précis",vc1_body:"12 signes × 13 planètes. Positions planétaires précises à la seconde d'arc, calculées via des algorithmes open-source du domaine public (VSOP87, IAU).",
@@ -1524,10 +1481,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Pas de suivi, pas d'analytique, pas de publicité. Seulement les données strictement nécessaires à l'abonnement.",
     feat8_t:"Mode sombre natif",feat8_b:"Conçu pour l'usage nocturne et les longues sessions sans fatiguer les yeux.",
     pricing_eyebrow:"Prix",pricing_title:"Simple, transparent",
-    trial_badge:"7 jours gratuits",per_month:"/mois",pricing_sub:"Toutes les fonctions Premium incluses",
-    pricing_intro:"Tous les plans incluent les mêmes fonctions Premium. Choisissez la fréquence qui vous convient. 7 jours gratuits sur toutes les souscriptions.",
+    trial_badge:"",per_month:"/mois",pricing_sub:"Toutes les fonctions Premium incluses",
+    pricing_intro:"Tous les plans incluent les mêmes fonctions Premium. Choisissez la fréquence qui vous convient.",
     ptier_monthly_badge:"Mensuel",
-    plat_app:"📱 Appli Android uniquement",plat_web:"🌐 Web app uniquement",
     ptier_monthly_sub:"Flexible. Annulable à tout moment.",
     ptier_annual_badge:"Annuel · Meilleur prix",
     ptier_annual_save:"Économisez 42% — équivalent à €5,83/mois",
@@ -1538,7 +1494,7 @@ var I18N={
     per_year:"/an",
     one_time:"une fois",
     pli1:"Roue complète avec les 13 planètes",pli2:"Projections jusqu'à 5 ans dans le futur",pli3:"Dates en cache illimitées",pli4:"Notifications de transit personnalisables",pli5:"Glossaire complet en 13 langues",
-    pricing_cancel:"Annulable à tout moment depuis les paramètres Google Play. Pas de renouvellement automatique pendant l'essai.",
+    pricing_cancel:"Annulable à tout moment depuis les paramètres Google Play.",
     screens_eyebrow:"Aperçu",screens_title:"Un coup d'œil dans l'app",screens_intro:"Écrans réels du build actuellement en approbation finale — cinq vues centrales d'AstroTrader Pro.",
     shot1_t:"Tableau de bord",shot1_s:"Roue planétaire en direct et ciel actuel",
     shot2_t:"Projections",shot2_s:"Avancez dans le temps, voyez le ciel évoluer",
@@ -1557,7 +1513,7 @@ var I18N={
     faq1_q:"L'app prédit-elle les marchés ?",faq1_a:"Non. AstroTrader Pro est un outil symbolique et éducatif. Il montre des corrélations de la tradition astrologique classique avec les secteurs financiers, mais n'offre pas de prévisions opérationnelles ni de garanties. L'efficacité prédictive de l'astrologie n'est pas scientifiquement prouvée.",
     faq2_q:"Fonctionne-t-elle hors-ligne ?",faq2_a:"Oui. Tous les calculs astronomiques et données sont inclus dans l'app. La seule connexion requise est pour la gestion de l'abonnement Premium (Google Play). La roue, les projections et le glossaire fonctionnent entièrement hors-ligne.",
     faq3_q:"Combien de langues sont disponibles ?",faq3_a:"13 : italien, anglais, espagnol, français, allemand, portugais, néerlandais, russe, chinois, japonais, coréen, arabe (avec support RTL complet), hindi.",
-    faq4_q:"L'abonnement se renouvelle-t-il automatiquement ?",faq4_a:"Oui, mais vous pouvez l'annuler à tout moment depuis les paramètres Google Play. Si vous annulez pendant les 7 jours d'essai, rien ne vous est facturé. Après l'essai, la facturation est de €9,99 par mois.",
+    faq4_q:"L'abonnement se renouvelle-t-il automatiquement ?",faq4_a:"Oui, mais vous pouvez l'annuler à tout moment depuis les paramètres Google Play.",
     faq5_q:"Quelles données l'app collecte-t-elle ?",faq5_a:"Pas de suivi, pas d'analytique, pas de publicité. Les seules données traitées sont celles strictement nécessaires à la gestion de l'abonnement (identifiant pseudonyme géré par RevenueCat, métadonnées de transaction gérées par Google Play). Détails complets dans la politique de confidentialité.",
     faq6_q:"À qui s'adresse l'app ?",faq6_a:"À toute personne intéressée à explorer la relation symbolique entre cycles planétaires et marchés : traders curieux de la théorie classique des cycles, astrologues avec intérêt financier, étudiants d'astrologie mondiale et ésotérique. Âge recommandé : 18+.",
     faq7_q:"Quand sera-t-elle disponible sur Google Play ?",faq7_a:"L'app est complète et en phase finale d'approbation chez Google Play. La date de publication effective dépend des délais de vérification de Google et de la phase de closed testing obligatoire pour les nouveaux développeurs (minimum 14 jours).",
@@ -1570,7 +1526,7 @@ var I18N={
     title:"AstroTrader Pro — Alte Weisheit für moderne Märkte",
     tagline:"Alte Weisheit für moderne Märkte",
     hero_pitch:"Das Bildungswerkzeug, das klassische astrologische Tradition auf Finanzmärkte anwendet. Live-Planetenrad, Transite, Bull-/Neutral-/Bear-Vermögenswerte — in einer eleganten, offline-fähigen, datenschutzorientierten App.",
-    cta_primary:"Demnächst auf Google Play",cta_download:"Jetzt bei Google Play",cta_secondary:"So funktioniert's",cta_note:"7 Tage kostenlose Testphase · Premium €9,99/Monat",
+    cta_primary:"Demnächst auf Google Play",cta_download:"Jetzt bei Google Play",cta_secondary:"So funktioniert's",cta_note:"Premium €9,99/Monat",
     value_eyebrow:"Was es tut, in drei Punkten",value_title:"Drei Traditionen, eine Lesart",
     value_intro:"Präzise Astronomie, klassische Symbolik, Marktzuordnung. Alles transparent, alles auf öffentlichen Quellen basierend.",
     vc1_title:"Genauer Himmel",vc1_body:"12 Zeichen × 13 Planeten. Planetenpositionen bogensekundengenau, berechnet mit Open-Source-Algorithmen des öffentlichen Eigentums (VSOP87, IAU).",
@@ -1595,10 +1551,9 @@ var I18N={
     feat7_t:"Datenschutz zuerst",feat7_b:"Kein Tracking, keine Analytics, keine Werbung. Nur Daten, die unbedingt für das Abonnement nötig sind.",
     feat8_t:"Nativer Dark Mode",feat8_b:"Entwickelt für nächtliche Nutzung und lange Sitzungen ohne Augenermüdung.",
     pricing_eyebrow:"Preis",pricing_title:"Einfach, transparent",
-    trial_badge:"7 Tage kostenlos",per_month:"/Monat",pricing_sub:"Alle Premium-Funktionen enthalten",
-    pricing_intro:"Alle Pläne enthalten dieselben Premium-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt. 7 Tage kostenlos auf alle Abos.",
+    trial_badge:"",per_month:"/Monat",pricing_sub:"Alle Premium-Funktionen enthalten",
+    pricing_intro:"Alle Pläne enthalten dieselben Premium-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt.",
     ptier_monthly_badge:"Monatlich",
-    plat_app:"📱 Nur in der Android-App",plat_web:"🌐 Nur in der Web-App",
     ptier_monthly_sub:"Flexibel. Jederzeit kündbar.",
     ptier_annual_badge:"Jährlich · Bester Preis",
     ptier_annual_save:"42% sparen — entspricht €5,83/Monat",
@@ -1609,7 +1564,7 @@ var I18N={
     per_year:"/Jahr",
     one_time:"einmalig",
     pli1:"Vollständiges Rad mit allen 13 Planeten",pli2:"Projektionen bis 5 Jahre in der Zukunft",pli3:"Unbegrenzte zwischengespeicherte Daten",pli4:"Anpassbare Transit-Benachrichtigungen",pli5:"Vollständiges Glossar in 13 Sprachen",
-    pricing_cancel:"Jederzeit über Google Play-Einstellungen kündbar. Keine automatische Verlängerung während der Testphase.",
+    pricing_cancel:"Jederzeit über Google Play-Einstellungen kündbar.",
     screens_eyebrow:"Vorschau",screens_title:"Ein Blick in die App",screens_intro:"Echte Screens vom Build, der sich derzeit in der finalen Freigabe befindet — fünf zentrale Ansichten von AstroTrader Pro.",
     shot1_t:"Dashboard",shot1_s:"Live-Planetenrad und aktueller Himmel",
     shot2_t:"Projektionen",shot2_s:"In der Zeit vorrücken, den Himmel sich entwickeln sehen",
@@ -1628,7 +1583,7 @@ var I18N={
     faq1_q:"Sagt die App Märkte voraus?",faq1_a:"Nein. AstroTrader Pro ist ein symbolisches und Bildungswerkzeug. Es zeigt Korrelationen aus der klassischen astrologischen Tradition mit Finanzsektoren, bietet aber keine operativen Prognosen oder Garantien. Die prädiktive Wirksamkeit der Astrologie ist wissenschaftlich nicht bewiesen.",
     faq2_q:"Funktioniert sie offline?",faq2_a:"Ja. Alle astronomischen Berechnungen und Daten sind in der App enthalten. Die einzige erforderliche Verbindung ist für die Verwaltung des Premium-Abonnements (Google Play). Rad, Projektionen und Glossar funktionieren vollständig offline.",
     faq3_q:"Wie viele Sprachen sind verfügbar?",faq3_a:"13: Italienisch, Englisch, Spanisch, Französisch, Deutsch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Koreanisch, Arabisch (mit vollständigem RTL-Support), Hindi.",
-    faq4_q:"Verlängert sich das Abo automatisch?",faq4_a:"Ja, aber Sie können es jederzeit über Google Play-Einstellungen kündigen. Wenn Sie während der 7-tägigen Testphase kündigen, wird Ihnen nichts berechnet. Nach der Testphase beträgt die Abrechnung €9,99 pro Monat.",
+    faq4_q:"Verlängert sich das Abo automatisch?",faq4_a:"Ja, aber Sie können es jederzeit über Google Play-Einstellungen kündigen.",
     faq5_q:"Welche Daten sammelt die App?",faq5_a:"Kein Tracking, keine Analytics, keine Werbung. Die einzigen verarbeiteten Daten sind die für die Abonnementverwaltung unbedingt notwendigen (von RevenueCat verwaltete pseudonyme Kennung, von Google Play verwaltete Transaktions-Metadaten). Vollständige Details in der Datenschutzerklärung.",
     faq6_q:"Für wen ist die App?",faq6_a:"Für alle, die die symbolische Beziehung zwischen Planetenzyklen und Märkten erforschen möchten: Trader, die an klassischer Zyklustheorie interessiert sind, finanzaffine Astrologen, Studenten der Mundan- und Esoterik-Astrologie. Empfohlenes Alter: 18+.",
     faq7_q:"Wann ist sie auf Google Play verfügbar?",faq7_a:"Die App ist fertig und in der finalen Genehmigungsphase bei Google Play. Das tatsächliche Veröffentlichungsdatum hängt von Googles Verifizierungszeiten und der für neue Entwickler obligatorischen Closed-Testing-Phase (mindestens 14 Tage) ab.",
@@ -1641,7 +1596,7 @@ var I18N={
     title:"AstroTrader Pro — Sabedoria antiga para mercados modernos",
     tagline:"Sabedoria antiga para mercados modernos",
     hero_pitch:"A ferramenta educacional que aplica a tradição astrológica clássica aos mercados financeiros. Roda planetária ao vivo, trânsitos, ativos Bull / Neutral / Bear — num único app elegante, offline e privacy-first.",
-    cta_primary:"Em breve no Google Play",cta_download:"Disponível no Google Play",cta_secondary:"Como funciona",cta_note:"7 dias de teste grátis · Premium €9,99/mês",
+    cta_primary:"Em breve no Google Play",cta_download:"Disponível no Google Play",cta_secondary:"Como funciona",cta_note:"Premium €9,99/mês",
     value_eyebrow:"O que faz, em três pontos",value_title:"Três tradições, uma leitura",
     value_intro:"Astronomia precisa, simbologia clássica, mapeamento de mercados. Tudo transparente, tudo baseado em fontes públicas.",
     vc1_title:"Céu preciso",vc1_body:"12 signos × 13 planetas. Posições planetárias precisas ao segundo de arco, calculadas com algoritmos open-source de domínio público (VSOP87, IAU).",
@@ -1666,10 +1621,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Sem rastreamento, sem analytics, sem publicidade. Apenas dados estritamente necessários para a assinatura.",
     feat8_t:"Modo escuro nativo",feat8_b:"Projetado para uso noturno e sessões longas sem cansar a vista.",
     pricing_eyebrow:"Preço",pricing_title:"Simples, transparente",
-    trial_badge:"7 dias grátis",per_month:"/mês",pricing_sub:"Todos os recursos Premium incluídos",
-    pricing_intro:"Todos os planos incluem as mesmas funções Premium. Escolha a cadência que mais lhe convém. 7 dias grátis em todas as assinaturas.",
+    trial_badge:"",per_month:"/mês",pricing_sub:"Todos os recursos Premium incluídos",
+    pricing_intro:"Todos os planos incluem as mesmas funções Premium. Escolha a cadência que mais lhe convém.",
     ptier_monthly_badge:"Mensal",
-    plat_app:"📱 Apenas no app Android",plat_web:"🌐 Apenas na web app",
     ptier_monthly_sub:"Flexível. Cancele a qualquer momento.",
     ptier_annual_badge:"Anual · Melhor valor",
     ptier_annual_save:"Economize 42% — equivale a €5,83/mês",
@@ -1680,7 +1634,7 @@ var I18N={
     per_year:"/ano",
     one_time:"uma vez",
     pli1:"Roda completa com todos os 13 planetas",pli2:"Projeções até 5 anos no futuro",pli3:"Datas em cache ilimitadas",pli4:"Notificações de trânsito personalizáveis",pli5:"Glossário completo em 13 idiomas",
-    pricing_cancel:"Cancelável a qualquer momento nas configurações do Google Play. Sem renovação automática durante o teste.",
+    pricing_cancel:"Cancelável a qualquer momento nas configurações do Google Play.",
     screens_eyebrow:"Prévia",screens_title:"Um olhar dentro do app",screens_intro:"Telas reais do build atualmente em aprovação final — cinco visualizações centrais do AstroTrader Pro.",
     shot1_t:"Painel",shot1_s:"Roda planetária ao vivo e céu atual",
     shot2_t:"Projeções",shot2_s:"Avance no tempo, veja o céu evoluir",
@@ -1699,7 +1653,7 @@ var I18N={
     faq1_q:"O app prevê os mercados?",faq1_a:"Não. AstroTrader Pro é uma ferramenta simbólica e educacional. Mostra correlações da tradição astrológica clássica com setores financeiros, mas não oferece previsões operacionais ou garantias. A eficácia preditiva da astrologia não é cientificamente comprovada.",
     faq2_q:"Funciona offline?",faq2_a:"Sim. Todos os cálculos astronômicos e dados estão incluídos no app. A única conexão necessária é para gestão da assinatura Premium (Google Play). Roda, projeções e glossário funcionam totalmente offline.",
     faq3_q:"Quantos idiomas estão disponíveis?",faq3_a:"13: italiano, inglês, espanhol, francês, alemão, português, holandês, russo, chinês, japonês, coreano, árabe (com suporte RTL completo), hindi.",
-    faq4_q:"A assinatura se renova automaticamente?",faq4_a:"Sim, mas você pode cancelar a qualquer momento nas configurações do Google Play. Se cancelar durante os 7 dias de teste, nada é cobrado. Após o teste, a cobrança é de €9,99 por mês.",
+    faq4_q:"A assinatura se renova automaticamente?",faq4_a:"Sim, mas você pode cancelar a qualquer momento nas configurações do Google Play.",
     faq5_q:"Quais dados o app coleta?",faq5_a:"Sem rastreamento, sem analytics, sem publicidade. Os únicos dados processados são os estritamente necessários à gestão da assinatura (identificador pseudônimo gerenciado por RevenueCat, metadados de transação gerenciados por Google Play). Detalhes completos na política de privacidade.",
     faq6_q:"Para quem é o app?",faq6_a:"Para quem está interessado em explorar a relação simbólica entre ciclos planetários e mercados: traders curiosos da teoria clássica de ciclos, astrólogos com interesse financeiro, estudantes de astrologia mundial e esotérica. Idade recomendada: 18+.",
     faq7_q:"Quando estará disponível no Google Play?",faq7_a:"O app está completo e em fase final de aprovação no Google Play. A data de publicação efetiva depende dos prazos de verificação do Google e da fase de closed testing obrigatória para novos desenvolvedores (mínimo 14 dias).",
@@ -1712,7 +1666,7 @@ var I18N={
     title:"AstroTrader Pro — Oude wijsheid voor moderne markten",
     tagline:"Oude wijsheid voor moderne markten",
     hero_pitch:"De educatieve tool die klassieke astrologische traditie toepast op financiële markten. Live planetenwiel, transits, Bull / Neutraal / Bear activa — in één elegante, offline-fähige, privacy-first app.",
-    cta_primary:"Binnenkort op Google Play",cta_download:"Ontdek het op Google Play",cta_secondary:"Hoe het werkt",cta_note:"7 dagen gratis proefperiode · Premium €9,99/maand",
+    cta_primary:"Binnenkort op Google Play",cta_download:"Ontdek het op Google Play",cta_secondary:"Hoe het werkt",cta_note:"Premium €9,99/maand",
     value_eyebrow:"Wat het doet, in drie punten",value_title:"Drie tradities, één leeswijze",
     value_intro:"Precieze astronomie, klassieke symboliek, marktmapping. Alles transparant, alles gebaseerd op publieke bronnen.",
     vc1_title:"Precieze hemel",vc1_body:"12 tekens × 13 planeten. Planeetposities tot op de boogseconde nauwkeurig, berekend met open-source publieke-domein algoritmen (VSOP87, IAU).",
@@ -1737,10 +1691,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Geen tracking, geen analytics, geen advertenties. Alleen data strikt noodzakelijk voor abonnement.",
     feat8_t:"Native donkere modus",feat8_b:"Ontworpen voor nachtgebruik en lange sessies zonder oogvermoeidheid.",
     pricing_eyebrow:"Prijs",pricing_title:"Eenvoudig, transparant",
-    trial_badge:"7 dagen gratis",per_month:"/maand",pricing_sub:"Alle Premium-functies inbegrepen",
-    pricing_intro:"Alle plannen bevatten dezelfde Premium-functies. Kies de frequentie die bij je past. 7 dagen gratis op alle abonnementen.",
+    trial_badge:"",per_month:"/maand",pricing_sub:"Alle Premium-functies inbegrepen",
+    pricing_intro:"Alle plannen bevatten dezelfde Premium-functies. Kies de frequentie die bij je past.",
     ptier_monthly_badge:"Maandelijks",
-    plat_app:"📱 Alleen Android-app",plat_web:"🌐 Alleen web-app",
     ptier_monthly_sub:"Flexibel. Annuleer wanneer je wilt.",
     ptier_annual_badge:"Jaarlijks · Beste prijs",
     ptier_annual_save:"Bespaar 42% — gelijk aan €5,83/maand",
@@ -1751,7 +1704,7 @@ var I18N={
     per_year:"/jaar",
     one_time:"eenmalig",
     pli1:"Volledig wiel met alle 13 planeten",pli2:"Projecties tot 5 jaar vooruit",pli3:"Onbeperkte gecachte data",pli4:"Aanpasbare transit-meldingen",pli5:"Compleet woordenboek in 13 talen",
-    pricing_cancel:"Op elk moment opzegbaar via Google Play-instellingen. Geen automatische verlenging tijdens proefperiode.",
+    pricing_cancel:"Op elk moment opzegbaar via Google Play-instellingen.",
     screens_eyebrow:"Voorvertoning",screens_title:"Een kijkje in de app",screens_intro:"Echte schermen uit de build die momenteel in finale goedkeuring is — vijf centrale weergaven van AstroTrader Pro.",
     shot1_t:"Dashboard",shot1_s:"Live planetenwiel en huidige hemel",
     shot2_t:"Projecties",shot2_s:"Beweeg vooruit in de tijd, zie de hemel evolueren",
@@ -1770,7 +1723,7 @@ var I18N={
     faq1_q:"Voorspelt de app de markten?",faq1_a:"Nee. AstroTrader Pro is een symbolisch en educatief hulpmiddel. Het toont correlaties van klassieke astrologische traditie met financiële sectoren, maar biedt geen operationele voorspellingen of garanties. De voorspellende werkzaamheid van astrologie is wetenschappelijk niet bewezen.",
     faq2_q:"Werkt het offline?",faq2_a:"Ja. Alle astronomische berekeningen en data zijn met de app gebundeld. De enige vereiste verbinding is voor het beheer van het Premium-abonnement (Google Play). Wiel, projecties en woordenboek werken volledig offline.",
     faq3_q:"Hoeveel talen zijn beschikbaar?",faq3_a:"13: Italiaans, Engels, Spaans, Frans, Duits, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaans, Arabisch (met volledige RTL-ondersteuning), Hindi.",
-    faq4_q:"Wordt het abonnement automatisch verlengd?",faq4_a:"Ja, maar je kunt op elk moment opzeggen via Google Play-instellingen. Als je tijdens de 7-daagse proefperiode opzegt, wordt er niets in rekening gebracht. Na de proefperiode is de facturering €9,99 per maand.",
+    faq4_q:"Wordt het abonnement automatisch verlengd?",faq4_a:"Ja, maar je kunt op elk moment opzeggen via Google Play-instellingen.",
     faq5_q:"Welke data verzamelt de app?",faq5_a:"Geen tracking, geen analytics, geen advertenties. De enige verwerkte data is wat strikt noodzakelijk is voor abonnementbeheer (pseudonieme identifier beheerd door RevenueCat, transactie-metadata beheerd door Google Play). Volledige details in het privacybeleid.",
     faq6_q:"Voor wie is de app?",faq6_a:"Voor iedereen die de symbolische relatie tussen planetencycli en markten wil verkennen: traders nieuwsgierig naar klassieke cyclustheorie, financieel-georiënteerde astrologen, studenten van mundane en esoterische astrologie. Aanbevolen leeftijd: 18+.",
     faq7_q:"Wanneer is hij beschikbaar op Google Play?",faq7_a:"De app is compleet en in finale goedkeuringsfase bij Google Play. De daadwerkelijke releasedatum hangt af van Google's verificatietijden en de verplichte closed testing fase voor nieuwe ontwikkelaars (minimum 14 dagen).",
@@ -1783,7 +1736,7 @@ var I18N={
     title:"AstroTrader Pro — Древняя мудрость для современных рынков",
     tagline:"Древняя мудрость для современных рынков",
     hero_pitch:"Образовательный инструмент, применяющий классическую астрологическую традицию к финансовым рынкам. Живое планетарное колесо, транзиты, активы Bull / Neutral / Bear — в одном элегантном, офлайн, privacy-first приложении.",
-    cta_primary:"Скоро в Google Play",cta_download:"Доступно в Google Play",cta_secondary:"Как это работает",cta_note:"7 дней бесплатно · Premium €9,99/месяц",
+    cta_primary:"Скоро в Google Play",cta_download:"Доступно в Google Play",cta_secondary:"Как это работает",cta_note:"Premium €9,99/месяц",
     value_eyebrow:"Что делает, в трёх пунктах",value_title:"Три традиции, одно прочтение",
     value_intro:"Точная астрономия, классическая символика, картография рынков. Всё прозрачно, всё на публичных источниках.",
     vc1_title:"Точное небо",vc1_body:"12 знаков × 13 планет. Положения планет с точностью до угловой секунды, рассчитанные через open-source алгоритмы общественного достояния (VSOP87, IAU).",
@@ -1808,10 +1761,9 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Никакого трекинга, аналитики или рекламы. Только данные, строго необходимые для подписки.",
     feat8_t:"Тёмная тема",feat8_b:"Создано для ночного использования и длительных сессий без напряжения глаз.",
     pricing_eyebrow:"Цена",pricing_title:"Просто, прозрачно",
-    trial_badge:"7 дней бесплатно",per_month:"/месяц",pricing_sub:"Все Premium-функции включены",
-    pricing_intro:"Все планы включают одинаковые Premium-функции. Выберите подходящий ритм. 7 дней бесплатно на всех подписках.",
+    trial_badge:"",per_month:"/месяц",pricing_sub:"Все Premium-функции включены",
+    pricing_intro:"Все планы включают одинаковые Premium-функции. Выберите подходящий ритм.",
     ptier_monthly_badge:"Ежемесячно",
-    plat_app:"📱 Только в Android-приложении",plat_web:"🌐 Только в веб-приложении",
     ptier_monthly_sub:"Гибко. Отмена в любое время.",
     ptier_annual_badge:"Годовой · Лучшая цена",
     ptier_annual_save:"Экономия 42% — эквивалент €5,83/месяц",
@@ -1822,7 +1774,7 @@ var I18N={
     per_year:"/год",
     one_time:"единоразово",
     pli1:"Полное колесо со всеми 13 планетами",pli2:"Прогнозы на 5 лет вперёд",pli3:"Неограниченный кэш дат",pli4:"Настраиваемые уведомления о транзитах",pli5:"Полный глоссарий на 13 языках",
-    pricing_cancel:"Можно отменить в любой момент через настройки Google Play. Без автообновления во время пробного периода.",
+    pricing_cancel:"Можно отменить в любой момент через настройки Google Play.",
     screens_eyebrow:"Превью",screens_title:"Взгляд внутрь приложения",screens_intro:"Реальные экраны из сборки, находящейся на финальном утверждении — пять центральных видов AstroTrader Pro.",
     shot1_t:"Панель",shot1_s:"Живое планетарное колесо и текущее небо",
     shot2_t:"Проекции",shot2_s:"Двигайтесь вперёд во времени, смотрите, как небо эволюционирует",
@@ -1841,7 +1793,7 @@ var I18N={
     faq1_q:"Приложение предсказывает рынки?",faq1_a:"Нет. AstroTrader Pro — символический и образовательный инструмент. Он показывает корреляции классической астрологической традиции с финансовыми секторами, но не предлагает операционных прогнозов или гарантий. Прогностическая эффективность астрологии не доказана научно.",
     faq2_q:"Работает офлайн?",faq2_a:"Да. Все астрономические вычисления и данные включены в приложение. Единственное необходимое соединение — для управления подпиской Premium (Google Play). Колесо, прогнозы и глоссарий работают полностью офлайн.",
     faq3_q:"Сколько языков доступно?",faq3_a:"13: итальянский, английский, испанский, французский, немецкий, португальский, нидерландский, русский, китайский, японский, корейский, арабский (с полной RTL-поддержкой), хинди.",
-    faq4_q:"Подписка обновляется автоматически?",faq4_a:"Да, но вы можете отменить её в любой момент через настройки Google Play. Если отмените во время 7-дневного пробного периода, ничего не будет списано. После пробного периода оплата €9,99 в месяц.",
+    faq4_q:"Подписка обновляется автоматически?",faq4_a:"Да, но вы можете отменить её в любой момент через настройки Google Play.",
     faq5_q:"Какие данные собирает приложение?",faq5_a:"Никакого трекинга, аналитики или рекламы. Единственные обрабатываемые данные — строго необходимые для управления подпиской (псевдонимный идентификатор управляется RevenueCat, метаданные транзакций — Google Play). Полные детали в политике конфиденциальности.",
     faq6_q:"Для кого приложение?",faq6_a:"Для всех, кто заинтересован в исследовании символической связи между планетарными циклами и рынками: трейдеры, любознательные о классической теории циклов, финансово ориентированные астрологи, студенты мунданной и эзотерической астрологии. Рекомендуемый возраст: 18+.",
     faq7_q:"Когда будет доступно в Google Play?",faq7_a:"Приложение готово и находится в финальной фазе одобрения Google Play. Фактическая дата релиза зависит от сроков верификации Google и обязательной фазы closed testing для новых разработчиков (минимум 14 дней).",
@@ -1854,7 +1806,7 @@ var I18N={
     title:"AstroTrader Pro — 古老智慧赋能现代市场",
     tagline:"古老智慧赋能现代市场",
     hero_pitch:"将经典占星传统应用于金融市场的教育工具。实时行星轮、相位、Bull / Neutral / Bear 资产——尽在一款优雅、离线可用、隐私优先的应用中。",
-    cta_primary:"即将在 Google Play 上线",cta_download:"在 Google Play 下载",cta_secondary:"工作原理",cta_note:"7天免费试用 · Premium €9.99/月",
+    cta_primary:"即将在 Google Play 上线",cta_download:"在 Google Play 下载",cta_secondary:"工作原理",cta_note:"Premium €9.99/月",
     value_eyebrow:"三个要点",value_title:"三种传统，一种解读",
     value_intro:"精准天文学、经典符号学、市场映射。一切透明，一切基于公共资源。",
     vc1_title:"精准天空",vc1_body:"12 个星座 × 13 颗行星。行星位置精确到弧秒，使用开源公共领域算法（VSOP87、IAU）计算。",
@@ -1879,10 +1831,9 @@ var I18N={
     feat7_t:"隐私优先",feat7_b:"无追踪、无分析、无广告。仅订阅所需的最少数据。",
     feat8_t:"原生深色模式",feat8_b:"为夜间使用和长时间会话设计，不让眼睛疲劳。",
     pricing_eyebrow:"价格",pricing_title:"简单、透明",
-    trial_badge:"7天免费",per_month:"/月",pricing_sub:"包含所有 Premium 功能",
-    pricing_intro:"所有方案均包含相同的高级功能。选择适合您的频率。所有订阅均享7天免费试用。",
+    trial_badge:"",per_month:"/月",pricing_sub:"包含所有 Premium 功能",
+    pricing_intro:"所有方案均包含相同的高级功能。选择适合您的频率。",
     ptier_monthly_badge:"月付",
-    plat_app:"📱 仅限安卓应用",plat_web:"🌐 仅限网页版",
     ptier_monthly_sub:"灵活。随时取消。",
     ptier_annual_badge:"年付 · 最佳价值",
     ptier_annual_save:"节省42% — 相当于每月€5.83",
@@ -1893,7 +1844,7 @@ var I18N={
     per_year:"/年",
     one_time:"一次性",
     pli1:"完整轮盘，含全部 13 颗行星",pli2:"未来 5 年投影",pli3:"无限缓存日期",pli4:"可自定义过境通知",pli5:"13 种语言的完整词汇表",
-    pricing_cancel:"随时可通过 Google Play 设置取消。试用期间不自动续费。",
+    pricing_cancel:"随时可通过 Google Play 设置取消。",
     screens_eyebrow:"先睹为快",screens_title:"应用内一览",screens_intro:"目前处于最终审批阶段的构建版本的真实截图——AstroTrader Pro 的五个核心视图。",
     shot1_t:"仪表板",shot1_s:"实时行星轮和当前天空",
     shot2_t:"投影",shot2_s:"在时间中前进，观察天空演变",
@@ -1912,7 +1863,7 @@ var I18N={
     faq1_q:"应用预测市场吗？",faq1_a:"不。AstroTrader Pro 是符号和教育工具。它显示经典占星传统与金融行业的相关性，但不提供操作预测或任何保证。占星的预测有效性未经科学证实。",
     faq2_q:"离线工作吗？",faq2_a:"是。所有天文计算和数据都与应用捆绑。唯一需要的连接是管理 Premium 订阅（Google Play）。轮盘、投影和词汇表完全离线工作。",
     faq3_q:"有多少种语言可用？",faq3_a:"13 种：意大利语、英语、西班牙语、法语、德语、葡萄牙语、荷兰语、俄语、中文、日语、韩语、阿拉伯语（完整 RTL 支持）、印地语。",
-    faq4_q:"订阅自动续订吗？",faq4_a:"是的，但您可以随时通过 Google Play 设置取消。如果在 7 天试用期间取消，不会收取费用。试用后，账单为每月 €9.99。",
+    faq4_q:"订阅自动续订吗？",faq4_a:"是的，但您可以随时通过 Google Play 设置取消。",
     faq5_q:"应用收集哪些数据？",faq5_a:"无追踪、无分析、无广告。处理的唯一数据是订阅管理所严格必需的（由 RevenueCat 处理的伪名标识符，由 Google Play 处理的交易元数据）。完整详情见隐私政策。",
     faq6_q:"应用适合谁？",faq6_a:"适合所有有兴趣探索行星周期与市场之间符号关系的人：对经典周期理论好奇的交易者、有金融兴趣的占星师、世俗与神秘占星学的学生。建议年龄：18+。",
     faq7_q:"何时在 Google Play 上可用？",faq7_a:"应用已完成，正处于 Google Play 最终审批阶段。实际发布日期取决于 Google 的验证时间和新开发者强制性的封闭测试阶段（最少 14 天）。",
@@ -1925,7 +1876,7 @@ var I18N={
     title:"AstroTrader Pro — 古代の知恵で現代市場を読む",
     tagline:"古代の知恵で現代市場を読む",
     hero_pitch:"古典占星術の伝統を金融市場に応用する教育ツール。リアルタイムの天体ホイール、トランジット、Bull / Neutral / Bear アセット——エレガントでオフライン対応、プライバシー重視の一つのアプリで。",
-    cta_primary:"Google Play に近日登場",cta_download:"Google Play で手に入れよう",cta_secondary:"仕組み",cta_note:"7日間無料トライアル · Premium €9.99/月",
+    cta_primary:"Google Play に近日登場",cta_download:"Google Play で手に入れよう",cta_secondary:"仕組み",cta_note:"Premium €9.99/月",
     value_eyebrow:"3つの要点",value_title:"三つの伝統、一つの読み方",
     value_intro:"精密な天文学、古典的シンボリズム、市場マッピング。すべて透明、すべて公開ソースに基づく。",
     vc1_title:"正確な空",vc1_body:"12星座 × 13天体。弧秒精度の惑星位置を、オープンソースのパブリックドメイン・アルゴリズム（VSOP87、IAU）で計算。",
@@ -1950,10 +1901,9 @@ var I18N={
     feat7_t:"プライバシー優先",feat7_b:"追跡なし、分析なし、広告なし。サブスクリプションに厳密に必要なデータのみ。",
     feat8_t:"ネイティブダークモード",feat8_b:"夜間使用と目を疲れさせない長時間セッションのために設計。",
     pricing_eyebrow:"価格",pricing_title:"シンプル、透明",
-    trial_badge:"7日間無料",per_month:"/月",pricing_sub:"全 Premium 機能を含む",
-    pricing_intro:"すべてのプランは同じプレミアム機能を含みます。あなたに合うペースを選んでください。すべてのサブスクリプションで7日間無料体験。",
+    trial_badge:"",per_month:"/月",pricing_sub:"全 Premium 機能を含む",
+    pricing_intro:"すべてのプランは同じプレミアム機能を含みます。あなたに合うペースを選んでください。",
     ptier_monthly_badge:"月額",
-    plat_app:"📱 Androidアプリのみ",plat_web:"🌐 ウェブアプリのみ",
     ptier_monthly_sub:"柔軟。いつでもキャンセル可能。",
     ptier_annual_badge:"年額 · ベストバリュー",
     ptier_annual_save:"42%お得 — 月額€5.83相当",
@@ -1983,7 +1933,7 @@ var I18N={
     faq1_q:"アプリは市場を予測しますか？",faq1_a:"いいえ。AstroTrader Pro は象徴的・教育的ツールです。古典占星術伝統と金融セクターの相関を示しますが、運用予測や保証は提供しません。占星術の予測有効性は科学的に証明されていません。",
     faq2_q:"オフラインで動作しますか？",faq2_a:"はい。すべての天体計算とデータはアプリに同梱されています。必要な接続は Premium サブスクリプション管理（Google Play）のみ。ホイール、投影、用語集は完全にオフラインで動作します。",
     faq3_q:"何ヶ国語が利用可能ですか？",faq3_a:"13: イタリア語、英語、スペイン語、フランス語、ドイツ語、ポルトガル語、オランダ語、ロシア語、中国語、日本語、韓国語、アラビア語（完全 RTL サポート）、ヒンディー語。",
-    faq4_q:"サブスクリプションは自動更新されますか？",faq4_a:"はい、ただし Google Play 設定からいつでもキャンセルできます。7日間トライアル中にキャンセルすれば請求されません。トライアル後は月額 €9.99 です。",
+    faq4_q:"サブスクリプションは自動更新されますか？",faq4_a:"はい、ただし Google Play 設定からいつでもキャンセルできます。",
     faq5_q:"アプリはどのようなデータを収集しますか？",faq5_a:"追跡なし、分析なし、広告なし。処理される唯一のデータはサブスクリプション管理に厳密に必要なもの（RevenueCat が管理する仮名識別子、Google Play が管理する取引メタデータ）。完全な詳細はプライバシーポリシーで。",
     faq6_q:"アプリは誰のためですか？",faq6_a:"惑星サイクルと市場の象徴的関係を探求したい方：古典的サイクル理論に好奇心を持つトレーダー、金融志向の占星術師、マンデーンおよび秘教占星術の学徒。推奨年齢：18+。",
     faq7_q:"いつ Google Play で利用可能になりますか？",faq7_a:"アプリは完成し、Google Play で最終承認段階にあります。実際のリリース日は Google の検証時間と新規開発者向けの必須クローズドテスト段階（最低14日）に依存します。",
@@ -1996,7 +1946,7 @@ var I18N={
     title:"AstroTrader Pro — 고대 지혜로 보는 현대 시장",
     tagline:"고대 지혜로 보는 현대 시장",
     hero_pitch:"고전 점성술 전통을 금융 시장에 적용하는 교육 도구. 실시간 행성 휠, 트랜짓, Bull / Neutral / Bear 자산—우아하고 오프라인 가능한 프라이버시 우선 앱에서.",
-    cta_primary:"Google Play에 곧 출시",cta_download:"Google Play에서 다운로드",cta_secondary:"작동 방식",cta_note:"7일 무료 체험 · Premium €9.99/월",
+    cta_primary:"Google Play에 곧 출시",cta_download:"Google Play에서 다운로드",cta_secondary:"작동 방식",cta_note:"Premium €9.99/월",
     value_eyebrow:"세 가지 핵심",value_title:"세 전통, 하나의 해석",
     value_intro:"정확한 천문학, 고전적 상징, 시장 매핑. 모두 투명하게, 모두 공개 출처를 기반으로.",
     vc1_title:"정확한 하늘",vc1_body:"12 별자리 × 13 행성. 호초 정밀도의 행성 위치를, 공개 도메인 오픈소스 알고리즘(VSOP87, IAU)으로 계산.",
@@ -2021,10 +1971,9 @@ var I18N={
     feat7_t:"프라이버시 우선",feat7_b:"추적, 분석, 광고 없음. 구독에 엄격히 필요한 데이터만.",
     feat8_t:"네이티브 다크 모드",feat8_b:"야간 사용과 긴 세션 동안 눈의 피로를 줄이도록 설계.",
     pricing_eyebrow:"가격",pricing_title:"단순, 투명",
-    trial_badge:"7일 무료",per_month:"/월",pricing_sub:"모든 Premium 기능 포함",
-    pricing_intro:"모든 플랜은 동일한 프리미엄 기능을 포함합니다. 당신에게 맞는 주기를 선택하세요. 모든 구독에 7일 무료 체험.",
+    trial_badge:"",per_month:"/월",pricing_sub:"모든 Premium 기능 포함",
+    pricing_intro:"모든 플랜은 동일한 프리미엄 기능을 포함합니다. 당신에게 맞는 주기를 선택하세요.",
     ptier_monthly_badge:"월간",
-    plat_app:"📱 안드로이드 앱 전용",plat_web:"🌐 웹 앱 전용",
     ptier_monthly_sub:"유연함. 언제든지 취소.",
     ptier_annual_badge:"연간 · 최고 가치",
     ptier_annual_save:"42% 절약 — 월 €5.83 상당",
@@ -2035,7 +1984,7 @@ var I18N={
     per_year:"/년",
     one_time:"일회성",
     pli1:"전체 13 행성이 있는 완전한 휠",pli2:"최대 5년 미래 투영",pli3:"무제한 캐시된 날짜",pli4:"맞춤형 트랜짓 알림",pli5:"13개 언어의 완전한 용어집",
-    pricing_cancel:"Google Play 설정에서 언제든지 취소 가능. 체험 기간 중 자동 갱신 없음.",
+    pricing_cancel:"Google Play 설정에서 언제든지 취소 가능.",
     screens_eyebrow:"미리보기",screens_title:"앱 내부 살펴보기",screens_intro:"현재 최종 승인 중인 빌드의 실제 화면 — AstroTrader Pro의 5가지 핵심 화면.",
     shot1_t:"대시보드",shot1_s:"실시간 행성 휠과 현재 하늘",
     shot2_t:"프로젝션",shot2_s:"시간을 앞당겨 하늘의 변화를 관찰",
@@ -2054,7 +2003,7 @@ var I18N={
     faq1_q:"앱이 시장을 예측하나요?",faq1_a:"아닙니다. AstroTrader Pro는 상징적이고 교육적인 도구입니다. 고전 점성술 전통과 금융 부문의 상관관계를 보여주지만, 운영 예측이나 어떠한 보장도 제공하지 않습니다. 점성술의 예측 효과는 과학적으로 입증되지 않았습니다.",
     faq2_q:"오프라인에서 작동하나요?",faq2_a:"예. 모든 천체 계산과 데이터는 앱에 번들됩니다. 필요한 유일한 연결은 Premium 구독 관리(Google Play)용입니다. 휠, 투영, 용어집은 완전히 오프라인에서 작동합니다.",
     faq3_q:"몇 개의 언어를 사용할 수 있나요?",faq3_a:"13개: 이탈리아어, 영어, 스페인어, 프랑스어, 독일어, 포르투갈어, 네덜란드어, 러시아어, 중국어, 일본어, 한국어, 아랍어(완전 RTL 지원), 힌디어.",
-    faq4_q:"구독이 자동 갱신되나요?",faq4_a:"예, 하지만 Google Play 설정에서 언제든지 취소할 수 있습니다. 7일 체험 기간 동안 취소하면 청구되지 않습니다. 체험 후에는 월 €9.99입니다.",
+    faq4_q:"구독이 자동 갱신되나요?",faq4_a:"예, 하지만 Google Play 설정에서 언제든지 취소할 수 있습니다.",
     faq5_q:"앱은 어떤 데이터를 수집하나요?",faq5_a:"추적, 분석, 광고 없음. 처리되는 유일한 데이터는 구독 관리에 엄격히 필요한 것(RevenueCat이 관리하는 가명 식별자, Google Play가 관리하는 거래 메타데이터)입니다. 자세한 내용은 개인정보 보호정책에서.",
     faq6_q:"앱은 누구를 위한 것인가요?",faq6_a:"행성 주기와 시장 간의 상징적 관계를 탐구하고 싶은 모든 분: 고전 주기 이론에 호기심 있는 트레이더, 금융 지향 점성술사, 문데인과 비전 점성술의 학생. 권장 연령: 18+.",
     faq7_q:"Google Play에서 언제 사용할 수 있나요?",faq7_a:"앱은 완성되어 Google Play에서 최종 승인 단계에 있습니다. 실제 출시일은 Google의 검증 시간과 신규 개발자에게 필수인 클로즈드 테스팅 단계(최소 14일)에 달려 있습니다.",
@@ -2067,7 +2016,7 @@ var I18N={
     title:"AstroTrader Pro — حكمة قديمة للأسواق الحديثة",
     tagline:"حكمة قديمة للأسواق الحديثة",
     hero_pitch:"الأداة التعليمية التي تطبق التقاليد الفلكية الكلاسيكية على الأسواق المالية. عجلة كوكبية مباشرة، عبور، أصول Bull / Neutral / Bear — في تطبيق واحد أنيق، يعمل دون اتصال، يحترم الخصوصية.",
-    cta_primary:"قريبًا على Google Play",cta_download:"احصل عليه من Google Play",cta_secondary:"كيف يعمل",cta_note:"تجربة مجانية 7 أيام · Premium €9.99/شهر",
+    cta_primary:"قريبًا على Google Play",cta_download:"احصل عليه من Google Play",cta_secondary:"كيف يعمل",cta_note:"Premium €9.99/شهر",
     value_eyebrow:"ما يفعله، في ثلاث نقاط",value_title:"ثلاث تقاليد، قراءة واحدة",
     value_intro:"فلك دقيق، رموز كلاسيكية، رسم خرائط للأسواق. كل شيء شفاف، كل شيء مبني على مصادر عامة.",
     vc1_title:"سماء دقيقة",vc1_body:"12 برجًا × 13 كوكبًا. مواقع الكواكب دقيقة إلى الثانية القوسية، محسوبة بخوارزميات مفتوحة المصدر في الملكية العامة (VSOP87، IAU).",
@@ -2092,10 +2041,9 @@ var I18N={
     feat7_t:"الخصوصية أولاً",feat7_b:"بدون تتبع، بدون تحليلات، بدون إعلانات. فقط البيانات الضرورية للاشتراك.",
     feat8_t:"وضع داكن أصلي",feat8_b:"مصمم للاستخدام الليلي والجلسات الطويلة دون إجهاد العين.",
     pricing_eyebrow:"السعر",pricing_title:"بسيط، شفاف",
-    trial_badge:"7 أيام مجانًا",per_month:"/شهر",pricing_sub:"جميع ميزات Premium مضمنة",
-    pricing_intro:"جميع الخطط تتضمن نفس ميزات Premium. اختر الإيقاع المناسب لك. 7 أيام مجانية على جميع الاشتراكات.",
+    trial_badge:"",per_month:"/شهر",pricing_sub:"جميع ميزات Premium مضمنة",
+    pricing_intro:"جميع الخطط تتضمن نفس ميزات Premium. اختر الإيقاع المناسب لك.",
     ptier_monthly_badge:"شهري",
-    plat_app:"📱 تطبيق أندرويد فقط",plat_web:"🌐 تطبيق الويب فقط",
     ptier_monthly_sub:"مرن. إلغاء في أي وقت.",
     ptier_annual_badge:"سنوي · أفضل قيمة",
     ptier_annual_save:"وفّر 42% — ما يعادل €5.83/شهر",
@@ -2125,7 +2073,7 @@ var I18N={
     faq1_q:"هل يتنبأ التطبيق بالأسواق؟",faq1_a:"لا. AstroTrader Pro أداة رمزية وتعليمية. يعرض ارتباطات من التقاليد الفلكية الكلاسيكية مع القطاعات المالية، لكنه لا يقدم تنبؤات تشغيلية أو أي ضمانات. فعالية التنبؤ للتنجيم غير مثبتة علميًا.",
     faq2_q:"هل يعمل دون اتصال؟",faq2_a:"نعم. جميع الحسابات الفلكية والبيانات مدمجة مع التطبيق. الاتصال الوحيد المطلوب لإدارة اشتراك Premium (Google Play). العجلة، الإسقاطات، والقاموس تعمل بالكامل دون اتصال.",
     faq3_q:"كم عدد اللغات المتاحة؟",faq3_a:"13: الإيطالية، الإنجليزية، الإسبانية، الفرنسية، الألمانية، البرتغالية، الهولندية، الروسية، الصينية، اليابانية، الكورية، العربية (مع دعم RTL كامل)، الهندية.",
-    faq4_q:"هل يتجدد الاشتراك تلقائيًا؟",faq4_a:"نعم، لكن يمكنك الإلغاء في أي وقت من إعدادات Google Play. إذا ألغيت خلال فترة التجربة 7 أيام، لا يتم تحصيل أي رسوم. بعد التجربة، الفوترة €9.99 شهريًا.",
+    faq4_q:"هل يتجدد الاشتراك تلقائيًا؟",faq4_a:"نعم، لكن يمكنك الإلغاء في أي وقت من إعدادات Google Play.",
     faq5_q:"ما البيانات التي يجمعها التطبيق؟",faq5_a:"بدون تتبع، بدون تحليلات، بدون إعلانات. البيانات الوحيدة المعالجة هي ما يلزم بدقة لإدارة الاشتراك (معرف مستعار يديره RevenueCat، بيانات وصفية للمعاملات يديرها Google Play). التفاصيل الكاملة في سياسة الخصوصية.",
     faq6_q:"لمن التطبيق؟",faq6_a:"لكل من يهتم باستكشاف العلاقة الرمزية بين الدورات الكوكبية والأسواق: التجار الفضوليون حول نظرية الدورات الكلاسيكية، المنجمون المهتمون بالمال، طلاب علم التنجيم الأرضي والباطني. العمر الموصى به: 18+.",
     faq7_q:"متى سيكون متاحًا على Google Play؟",faq7_a:"التطبيق مكتمل وفي المرحلة النهائية من الموافقة في Google Play. تاريخ الإصدار الفعلي يعتمد على أوقات التحقق من Google ومرحلة الاختبار المغلق الإلزامية للمطورين الجدد (14 يومًا كحد أدنى).",
@@ -2138,7 +2086,7 @@ var I18N={
     title:"AstroTrader Pro — आधुनिक बाज़ारों के लिए प्राचीन ज्ञान",
     tagline:"आधुनिक बाज़ारों के लिए प्राचीन ज्ञान",
     hero_pitch:"शास्त्रीय ज्योतिषीय परंपरा को वित्तीय बाज़ारों पर लागू करने वाला शैक्षिक उपकरण। लाइव ग्रह चक्र, गोचर, Bull / Neutral / Bear संपत्तियाँ — एक सुरुचिपूर्ण, ऑफ़लाइन-सक्षम, गोपनीयता-प्रथम ऐप में।",
-    cta_primary:"जल्द ही Google Play पर",cta_download:"Google Play से प्राप्त करें",cta_secondary:"यह कैसे काम करता है",cta_note:"7 दिन का मुफ़्त परीक्षण · Premium €9.99/महीना",
+    cta_primary:"जल्द ही Google Play पर",cta_download:"Google Play से प्राप्त करें",cta_secondary:"यह कैसे काम करता है",cta_note:"Premium €9.99/महीना",
     value_eyebrow:"यह क्या करता है, तीन बिंदुओं में",value_title:"तीन परंपराएँ, एक पठन",
     value_intro:"सटीक खगोल विज्ञान, शास्त्रीय प्रतीकवाद, बाज़ार मानचित्रण। सब पारदर्शी, सब सार्वजनिक स्रोतों पर आधारित।",
     vc1_title:"सटीक आकाश",vc1_body:"12 राशियाँ × 13 ग्रह। चाप-सेकंड तक सटीक ग्रहीय स्थितियाँ, सार्वजनिक डोमेन ओपन-सोर्स एल्गोरिदम (VSOP87, IAU) से गणना की गई।",
@@ -2163,10 +2111,9 @@ var I18N={
     feat7_t:"गोपनीयता-प्रथम",feat7_b:"कोई ट्रैकिंग नहीं, कोई एनालिटिक्स नहीं, कोई विज्ञापन नहीं। केवल सदस्यता के लिए आवश्यक डेटा।",
     feat8_t:"नेटिव डार्क मोड",feat8_b:"रात के उपयोग और लंबी सत्रों के लिए डिज़ाइन, आँखों पर तनाव के बिना।",
     pricing_eyebrow:"मूल्य",pricing_title:"सरल, पारदर्शी",
-    trial_badge:"7 दिन मुफ़्त",per_month:"/महीना",pricing_sub:"सभी Premium सुविधाएँ शामिल",
-    pricing_intro:"सभी प्लान में समान प्रीमियम सुविधाएँ शामिल हैं। आपके लिए सही गति चुनें। सभी सब्सक्रिप्शन पर 7 दिन का मुफ्त परीक्षण।",
+    trial_badge:"",per_month:"/महीना",pricing_sub:"सभी Premium सुविधाएँ शामिल",
+    pricing_intro:"",
     ptier_monthly_badge:"मासिक",
-    plat_app:"📱 केवल Android ऐप",plat_web:"🌐 केवल वेब ऐप",
     ptier_monthly_sub:"लचीला। किसी भी समय रद्द करें।",
     ptier_annual_badge:"वार्षिक · सर्वोत्तम मूल्य",
     ptier_annual_save:"42% बचाएं — €5.83/महीना के बराबर",
@@ -2177,7 +2124,7 @@ var I18N={
     per_year:"/वर्ष",
     one_time:"एक बार",
     pli1:"सभी 13 ग्रहों के साथ पूर्ण चक्र",pli2:"भविष्य में 5 साल तक प्रक्षेपण",pli3:"असीमित कैश्ड तिथियाँ",pli4:"अनुकूलन योग्य गोचर सूचनाएँ",pli5:"13 भाषाओं में पूर्ण शब्दकोश",
-    pricing_cancel:"Google Play सेटिंग से कभी भी रद्द कर सकते हैं। परीक्षण के दौरान कोई स्वचालित नवीनीकरण नहीं।",
+    pricing_cancel:"",
     screens_eyebrow:"झलक",screens_title:"ऐप के अंदर एक नज़र",screens_intro:"वर्तमान में अंतिम अनुमोदन में निर्माण से असली स्क्रीन — AstroTrader Pro के पाँच मुख्य दृश्य।",
     shot1_t:"डैशबोर्ड",shot1_s:"लाइव ग्रह पहिया और वर्तमान आकाश",
     shot2_t:"प्रक्षेपण",shot2_s:"समय में आगे बढ़ें, आकाश को विकसित होते देखें",
@@ -2196,7 +2143,7 @@ var I18N={
     faq1_q:"क्या ऐप बाज़ारों की भविष्यवाणी करता है?",faq1_a:"नहीं। AstroTrader Pro एक प्रतीकात्मक और शैक्षिक उपकरण है। यह शास्त्रीय ज्योतिष परंपरा से वित्तीय क्षेत्रों के साथ सहसंबंध दिखाता है, लेकिन परिचालन पूर्वानुमान या कोई गारंटी नहीं देता। ज्योतिष की भविष्यवाणी प्रभावशीलता वैज्ञानिक रूप से सिद्ध नहीं है।",
     faq2_q:"क्या यह ऑफ़लाइन काम करता है?",faq2_a:"हाँ। सभी खगोलीय गणनाएँ और डेटा ऐप के साथ बंडल हैं। एकमात्र आवश्यक कनेक्शन Premium सदस्यता प्रबंधन (Google Play) के लिए है। चक्र, प्रक्षेपण, और शब्दकोश पूरी तरह ऑफ़लाइन काम करते हैं।",
     faq3_q:"कितनी भाषाएँ उपलब्ध हैं?",faq3_a:"13: इतालवी, अंग्रेज़ी, स्पेनिश, फ्रेंच, जर्मन, पुर्तगाली, डच, रूसी, चीनी, जापानी, कोरियाई, अरबी (पूर्ण RTL समर्थन के साथ), हिन्दी।",
-    faq4_q:"क्या सदस्यता स्वचालित रूप से नवीनीकृत होती है?",faq4_a:"हाँ, लेकिन आप Google Play सेटिंग से कभी भी रद्द कर सकते हैं। यदि आप 7 दिन के परीक्षण के दौरान रद्द करते हैं, तो आपसे कुछ नहीं लिया जाता। परीक्षण के बाद, बिलिंग €9.99 प्रति महीना है।",
+    faq4_q:"क्या सदस्यता स्वचालित रूप से नवीनीकृत होती है?",faq4_a:"हाँ, लेकिन आप किसी भी समय Google Play सेटिंग्स से रद्द कर सकते हैं।",
     faq5_q:"ऐप कौन सा डेटा एकत्र करता है?",faq5_a:"कोई ट्रैकिंग, एनालिटिक्स या विज्ञापन नहीं। संसाधित किया जाने वाला एकमात्र डेटा सदस्यता प्रबंधन के लिए सख्ती से आवश्यक है (RevenueCat द्वारा प्रबंधित छद्म पहचानकर्ता, Google Play द्वारा प्रबंधित लेनदेन मेटाडेटा)। पूर्ण विवरण गोपनीयता नीति में।",
     faq6_q:"ऐप किसके लिए है?",faq6_a:"उन सभी के लिए जो ग्रहीय चक्रों और बाज़ारों के बीच प्रतीकात्मक संबंध का पता लगाने में रुचि रखते हैं: शास्त्रीय चक्र सिद्धांत के बारे में जिज्ञासु ट्रेडर, वित्तीय रूप से इच्छुक ज्योतिषी, मुंडेन और गूढ़ ज्योतिष के छात्र। अनुशंसित आयु: 18+।",
     faq7_q:"यह Google Play पर कब उपलब्ध होगा?",faq7_a:"ऐप पूर्ण है और Google Play पर अंतिम अनुमोदन चरण में है। वास्तविक रिलीज़ तिथि Google की सत्यापन समय-सीमा और नए डेवलपर्स के लिए अनिवार्य क्लोज़्ड टेस्टिंग चरण (न्यूनतम 14 दिन) पर निर्भर करती है।",
@@ -2234,10 +2181,8 @@ var I18N={
   var sel=document.getElementById('lang-select');
   var saved=null;
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
-  var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
+  var nav='en'; // forced EN default for first-time visitors (was: navigator.language)
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
-  (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};var F={en:'Follow on X',it:'Segui su X',es:'Síguenos en X',fr:'Suivre sur X',de:'Auf X folgen',pt:'Seguir no X',nl:'Volg op X',ru:'Подписаться в X',zh:'在 X 关注',ja:'Xでフォロー',ko:'X에서 팔로우',ar:'تابعنا على X',hi:'X पर फ़ॉलो करें'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; if(F[k]) I18N[k].cta_follow=F[k]; } }})();
-  var LAUNCH_STATE='live', PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro'; // definito PRIMA di setLang(): applyLaunchState ora vede 'live'
     setLang(initial);
   sel.value=initial;
   sel.addEventListener('change',function(){setLang(sel.value)});
@@ -2261,6 +2206,8 @@ var I18N={
   }
   // === LAUNCH STATE ===
   // Change LAUNCH_STATE to 'live' when AstroTrader Pro is published on Google Play.
+  var LAUNCH_STATE='pre'; // 'pre' | 'live' — flip to 'live' on Play Store launch
+  var PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro';
   function applyLaunchState(dict){
     var cta=document.getElementById('cta-primary');
     if(!cta) return;
@@ -2286,94 +2233,5 @@ var I18N={
 })();
 </script>
 
-
-<!-- ===== LP 2026: launch bar + glow boost + sticky CTA (additivo) ===== -->
-<style id="lp2026">
-/* barra lancio sticky con countdown lunare */
-#lpBar{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 12px;background:linear-gradient(90deg,#0A1020,#16203A 50%,#0A1020);border-bottom:1px solid rgba(232,201,106,.45);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#ECE7DA;box-shadow:0 6px 24px rgba(0,0,0,.45)}
-#lpBar .dot{width:8px;height:8px;border-radius:50%;background:#5DCAA5;position:relative;flex:none}
-#lpBar .dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid #5DCAA5;opacity:.6;animation:lpPulse 2s ease-out infinite}
-@keyframes lpPulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.6);opacity:0}}
-#lpBar b{color:#F5E8B8}
-#lpBar .t{color:#E8C96A;font-weight:700;letter-spacing:.5px;min-width:104px;display:inline-block}
-#lpBar a{flex:none;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:700;text-decoration:none;padding:4px 14px;border-radius:999px;font-size:12px;box-shadow:0 4px 14px rgba(232,201,106,.4);transition:transform .15s ease}
-#lpBar a:active{transform:scale(.95)}
-body{padding-top:42px}
-@media(max-width:560px){#lpBar{font-size:11px;gap:8px}#lpBar .t{min-width:90px}}
-/* titolo hero in gradiente oro */
-.hero h1{background:linear-gradient(135deg,#F5E8B8,#E8C96A 55%,#C9A84C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 18px rgba(232,201,106,.25))}
-/* pianeti e segni più accesi (armonizzato con l'app) */
-.planet svg{filter:saturate(1.4) brightness(1.18) drop-shadow(0 0 12px rgba(232,201,106,.55))}
-.zodiac-ring use{filter:drop-shadow(0 0 7px currentColor);opacity:.95}
-.zodiac-ring circle:nth-of-type(2){filter:drop-shadow(0 0 8px rgba(232,201,106,.6))}
-/* card: lift + glow al passaggio (come l'app) */
-.features-grid>*,.pricing-box,.screen-frame{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
-@media(hover:hover){
-.features-grid>*:hover,.pricing-box:hover{transform:translateY(-3px);border-color:rgba(232,201,106,.55)!important;box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 22px rgba(232,201,106,.12)}
-.screen-frame:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 26px rgba(232,201,106,.2)}
-}
-/* CTA primaria: glow + shine + feedback tattile */
-.btn-primary{position:relative;overflow:hidden;box-shadow:0 8px 28px rgba(232,201,106,.4)!important;transition:transform .16s ease,box-shadow .16s ease}
-.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);transform:translateX(-110%);animation:lpShine 3.2s ease-in-out infinite}
-@keyframes lpShine{55%{transform:translateX(110%)}100%{transform:translateX(110%)}}
-@media(hover:hover){.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,201,106,.55)!important}}
-.btn-primary:active{transform:scale(.96)}
-/* CTA sticky mobile */
-#lpSticky{display:none}
-@media(max-width:740px){
-#lpSticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:998;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:800;font-family:ui-monospace,Menlo,monospace;font-size:14px;letter-spacing:.4px;padding:14px;border-radius:999px;justify-content:center;align-items:center;gap:8px;text-decoration:none;box-shadow:0 10px 34px rgba(232,201,106,.45),0 6px 18px rgba(0,0,0,.4);transition:transform .15s ease}
-#lpSticky:active{transform:scale(.97)}
-body{padding-bottom:74px}
-}
-@media (prefers-reduced-motion:reduce){#lpBar .dot::after,.btn-primary::after{animation:none}}
-</style>
-<script>
-(function(){
-'use strict';
-var L={
- en:{full:'Full Moon',nm:'New Moon',inw:'in',cta:'Open free',sticky:'Open the Webapp — free'},
- it:{full:'Luna Piena',nm:'Luna Nuova',inw:'tra',cta:'Apri gratis',sticky:'Apri la Webapp — gratis'},
- es:{full:'Luna llena',nm:'Luna nueva',inw:'en',cta:'Abrir gratis',sticky:'Abre la Webapp — gratis'},
- fr:{full:'Pleine lune',nm:'Nouvelle lune',inw:'dans',cta:'Ouvrir',sticky:'Ouvrir la Webapp — gratuit'},
- de:{full:'Vollmond',nm:'Neumond',inw:'in',cta:'Gratis öffnen',sticky:'Webapp öffnen — gratis'},
- pt:{full:'Lua cheia',nm:'Lua nova',inw:'em',cta:'Abrir grátis',sticky:'Abrir a Webapp — grátis'},
- nl:{full:'Volle maan',nm:'Nieuwe maan',inw:'over',cta:'Gratis openen',sticky:'Open de webapp — gratis'},
- ru:{full:'Полнолуние',nm:'Новолуние',inw:'через',cta:'Открыть',sticky:'Открыть веб-приложение — бесплатно'},
- zh:{full:'满月',nm:'新月',inw:'还有',cta:'免费打开',sticky:'打开网页版 — 免费'},
- ja:{full:'満月',nm:'新月',inw:'まで',cta:'無料で開く',sticky:'Webアプリを開く — 無料'},
- ko:{full:'보름달',nm:'신월',inw:'까지',cta:'무료로 열기',sticky:'웹앱 열기 — 무료'},
- ar:{full:'بدر',nm:'محاق',inw:'خلال',cta:'افتح مجاناً',sticky:'افتح تطبيق الويب — مجاناً'},
- hi:{full:'पूर्णिमा',nm:'अमावस्या',inw:'में',cta:'मुफ़्त खोलें',sticky:'वेबऐप खोलें — मुफ़्त'}
-};
-function lang(){ try{var l=localStorage.getItem('atpLandLang'); if(l&&L[l])return l;}catch(e){} return 'en'; }
-var APP='https://astrotraderpro.astrotraderproapp.workers.dev/';
-// prossima lunazione (sinodico medio, precisione ~ore: per countdown marketing è ok)
-var SYN=29.530588853*86400000, EPOCH=Date.UTC(2000,0,6,18,14,0); // luna nuova 06/01/2000
-function nextLun(){
- var n=Date.now(), k=(n-EPOCH)/SYN;
- var nextNew=EPOCH+Math.ceil(k)*SYN;
- var kf=k-Math.floor(k); var nextFull=EPOCH+(Math.floor(k)+(kf<0.5?0.5:1.5))*SYN;
- return (nextFull<nextNew)?{t:nextFull,type:'full'}:{t:nextNew,type:'nm'};
-}
-var bar=document.createElement('div'); bar.id='lpBar';
-bar.innerHTML='<span class="dot"></span><span id="lpBarTxt"></span><span class="t" id="lpBarT"></span><a id="lpBarCta" href="'+APP+'"></a>';
-document.body.appendChild(bar);
-var st=document.createElement('a'); st.id='lpSticky'; st.href=APP;
-document.body.appendChild(st);
-function fmt(ms){var d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000),s2=Math.floor(ms%60000/1000);
- return d>0?(d+'g '+h+'h '+m+'m'):(h>0?(h+'h '+m+'m '+s2+'s'):(m+'m '+s2+'s'));}
-var lun=nextLun();
-function tick(){
- var S=L[lang()];
- if(lun.t-Date.now()<=0) lun=nextLun();
- var emoji=lun.type==='full'?'\uD83C\uDF15':'\uD83C\uDF11';
- document.getElementById('lpBarTxt').innerHTML=emoji+' <b>'+(lun.type==='full'?S.full:S.nm)+'</b> '+S.inw;
- document.getElementById('lpBarT').textContent=fmt(lun.t-Date.now());
- document.getElementById('lpBarCta').textContent=S.cta+' \u2192';
- st.textContent='\uD83D\uDE80 '+S.sticky;
-}
-tick(); setInterval(tick,1000);
-})();
-</script>
 </body>
 </html>
