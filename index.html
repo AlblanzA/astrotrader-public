@@ -244,6 +244,7 @@ html[dir="rtl"] .step::before{left:auto;right:18px}
 .ptier-price small{font-size:0.95rem;color:var(--text-dim);font-family:var(--ui);font-weight:400;letter-spacing:1px}
 .ptier-sub{font-size:0.88rem;color:var(--text-dim);margin-top:10px;line-height:1.5}
 .ptier-discount{color:var(--bull);font-family:var(--ui);font-size:0.85rem;margin:8px 0;font-weight:600;letter-spacing:0.3px}
+.ptier-plat{display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:8px 0 2px;padding:4px 11px;border-radius:12px;border:1px solid rgba(232,201,106,0.3);color:var(--gold)}.ptier-best .ptier-plat,.ptier-lifetime .ptier-plat{color:var(--bull);border-color:rgba(93,202,165,0.4)}
 .ptier-note{display:inline-block;font-family:var(--ui);font-size:0.78rem;letter-spacing:1px;color:var(--bull);margin-top:14px;border:1px solid rgba(93,202,165,0.3);padding:5px 12px;border-radius:14px;background:rgba(93,202,165,0.08)}
 .price-trial{display:inline-block;background:rgba(93,202,165,0.15);color:var(--bull);padding:5px 12px;border-radius:14px;font-family:var(--ui);font-size:11px;letter-spacing:1.5px;margin-top:14px;border:1px solid rgba(93,202,165,0.3);text-transform:uppercase;font-weight:600}
 .pricing-features{max-width:520px;margin:0 auto}
@@ -460,12 +461,43 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-  .planet{display:none}
+  .p-sun{transform:rotate(0deg) translateX(min(14vw,56px)) rotate(0deg)}
+  .p-moon{transform:rotate(45deg) translateX(min(18vw,72px)) rotate(-45deg)}
+  .p-mercury{transform:rotate(90deg) translateX(min(22vw,86px)) rotate(-90deg)}
+  .p-venus{transform:rotate(135deg) translateX(min(26vw,100px)) rotate(-135deg)}
+  .p-mars{transform:rotate(180deg) translateX(min(30vw,116px)) rotate(-180deg)}
+  .p-jupiter{transform:rotate(225deg) translateX(min(34vw,130px)) rotate(-225deg)}
+  .p-saturn{transform:rotate(270deg) translateX(min(38vw,146px)) rotate(-270deg)}
+  .p-uranus{transform:rotate(315deg) translateX(min(31vw,122px)) rotate(-315deg)}
+  .p-neptune{transform:rotate(20deg) translateX(min(37vw,140px)) rotate(-20deg)}
+  .p-pluto{transform:rotate(160deg) translateX(min(41vw,156px)) rotate(-160deg)}
+  .p-chiron{transform:rotate(70deg) translateX(min(28vw,108px)) rotate(-70deg)}
+  .p-northnode{transform:rotate(290deg) translateX(min(21vw,80px)) rotate(-290deg)}
+  .p-lilith{transform:rotate(110deg) translateX(min(17vw,66px)) rotate(-110deg)}
   .zodiac-ring{opacity:0.4}
   .how-bar-bull,.how-bar-neut,.how-bar-bear{transform:scaleX(var(--w,0.85))!important}
   .how-svg-line{stroke-dashoffset:0!important}
 }
 </style>
+
+<!-- SEO/AI boost: keywords, hreflang, Organization+WebSite JSON-LD -->
+<meta name="keywords" content="astrologia finanziaria, financial astrology, astrologia, esoterismo, tema natale, transiti planetari, oroscopo finanziario, astrologia mundana, cicli planetari mercati, esoteric astrology, natal chart, planetary transits, zodiac trading, AstroTrader Pro">
+<link rel="alternate" hreflang="en" href="https://astrotraderpro.com/">
+<link rel="alternate" hreflang="it" href="https://astrotraderpro.com/?lang=it">
+<link rel="alternate" hreflang="es" href="https://astrotraderpro.com/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://astrotraderpro.com/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://astrotraderpro.com/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://astrotraderpro.com/?lang=pt">
+<link rel="alternate" hreflang="nl" href="https://astrotraderpro.com/?lang=nl">
+<link rel="alternate" hreflang="ru" href="https://astrotraderpro.com/?lang=ru">
+<link rel="alternate" hreflang="zh" href="https://astrotraderpro.com/?lang=zh">
+<link rel="alternate" hreflang="ja" href="https://astrotraderpro.com/?lang=ja">
+<link rel="alternate" hreflang="ko" href="https://astrotraderpro.com/?lang=ko">
+<link rel="alternate" hreflang="ar" href="https://astrotraderpro.com/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://astrotraderpro.com/?lang=hi">
+<link rel="alternate" hreflang="x-default" href="https://astrotraderpro.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","logo":"https://astrotraderpro.com/assets/icon-512.png","description":"Astrologia finanziaria classica ed astrologia esoterica: ruota planetaria, transiti, tema natale e mappatura di 200+ asset ai pianeti governatori.","founder":{"@type":"Person","name":"Alberto Nicola Lanzafame"},"sameAs":["https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro","https://astrotraderpro.lanzafamea2001.workers.dev/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","inLanguage":["en","it","es","fr","de","pt","nl","ru","zh","ja","ko","ar","hi"],"description":"Financial astrology and esoteric astrology: planetary wheel, transits, natal chart, 200+ assets mapped to ruling planets. Educational tool."}</script>
 </head>
 <body>
 
@@ -815,10 +847,12 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div class="hero-tagline" data-i18n="tagline">Ancient wisdom for modern markets</div>
     <p class="hero-pitch" data-i18n="hero_pitch">The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.</p>
     <div class="hero-cta">
-      <a id="cta-primary" class="btn btn-primary btn-disabled" aria-disabled="true" href="#screens" data-i18n="cta_primary">Coming soon on Google Play</a>
+      <a class="btn btn-primary" data-i18n="cta_webapp" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
+      <a id="cta-primary" class="btn btn-primary" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro" data-i18n="cta_download">Get it on Google Play</a>
+      <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://x.com/Astrotraderpro" data-i18n="cta_follow">Follow on X</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
     </div>
-    <p class="btn-note" data-i18n="cta_note">Premium €9.99/month</p>
+    <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199</p>
   </div>
 </section>
 
@@ -1024,7 +1058,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div style="text-align:center">
       <span class="section-eyebrow" data-i18n="screens_eyebrow">Sneak peek</span>
       <h2 data-i18n="screens_title">A look inside the app</h2>
-      <p class="dim" data-i18n="screens_intro" style="max-width:620px;margin:0 auto">Real screens from the build currently in final approval — five core views of AstroTrader Pro.</p>
+      <p class="dim" data-i18n="screens_intro" style="max-width:620px;margin:0 auto">Real screens — five core views of AstroTrader Pro, now live on Google Play.</p>
     </div>
     <div class="screens">
       <div class="screens-track">
@@ -1106,21 +1140,25 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <div class="ptier">
         <span class="ptier-badge" data-i18n="ptier_monthly_badge">Monthly</span>
         <div class="ptier-price">€9.99 <small data-i18n="per_month">/month</small></div>
+        <span class="ptier-plat" data-i18n="plat_app">📱 Android app only</span>
         <p class="ptier-sub" data-i18n="ptier_monthly_sub">Flexible. Cancel anytime.</p>
         </div>
       <div class="ptier ptier-best">
         <span class="ptier-badge" data-i18n="ptier_annual_badge">Annual · Best value</span>
         <div class="ptier-price">€69.99 <small data-i18n="per_year">/year</small></div>
+        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-discount" data-i18n="ptier_annual_save">Save 42% — equivalent to €5.83/month</p>
         <p class="ptier-sub" data-i18n="ptier_annual_sub">For long-term explorers.</p>
         </div>
       <div class="ptier ptier-lifetime">
         <span class="ptier-badge" data-i18n="ptier_lifetime_badge">Lifetime supporter</span>
         <div class="ptier-price">€199 <small data-i18n="one_time">once</small></div>
+        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
         <p class="ptier-sub" data-i18n="ptier_lifetime_sub">All future updates included. Support indie development.</p>
         <span class="ptier-note" data-i18n="ptier_lifetime_note">Pay once. Use forever.</span>
       </div>
     </div>
+    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px"><strong>Monthly &euro;9.99/month</strong> is available <strong>only in the Android app</strong> (Google Play). The <strong>Annual</strong> and <strong>Lifetime</strong> plans are available <strong>only on the web app</strong>.</p>
     <div class="pricing-features">
       <p class="dim" data-i18n="pricing_sub" style="text-align:center;font-size:0.95rem;margin:32px 0 14px">All plans include:</p>
       <ul class="price-list">
@@ -1199,7 +1237,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <details><summary data-i18n="faq4_q">Does the subscription auto-renew?</summary><p data-i18n="faq4_a">Yes, but you can cancel anytime from Google Play settings. Billing is €9.99 per month.</p></details>
       <details><summary data-i18n="faq5_q">What data does the app collect?</summary><p data-i18n="faq5_a">No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.</p></details>
       <details><summary data-i18n="faq6_q">Who is the app for?</summary><p data-i18n="faq6_a">For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+.</p></details>
-      <details><summary data-i18n="faq7_q">When will it be available on Google Play?</summary><p data-i18n="faq7_a">The app is complete and in final approval phase at Google Play. The actual release date depends on Google's verification timelines and the mandatory closed testing phase for new developers (minimum 14 days).</p></details>
+      <details><summary data-i18n="faq7_q">Is AstroTrader Pro on Google Play?</summary><p data-i18n="faq7_a">Yes — AstroTrader Pro is available now on Google Play. Tap the download button at the top of this page, or search for it by name.</p></details>
     </div>
   </div>
 </section>
@@ -1243,7 +1281,7 @@ var I18N={
     title:"AstroTrader Pro — Ancient wisdom for modern markets",
     tagline:"Ancient wisdom for modern markets",
     hero_pitch:"The educational tool that applies classical astrological tradition to financial markets. Live planetary wheel, transits, Bull / Neutral / Bear assets — in one elegant, offline-capable, privacy-first app.",
-    cta_primary:"Coming soon on Google Play",
+    cta_primary:"Coming soon on Google Play",cta_follow:"Follow on X",
     cta_download:"Get it on Google Play",
     cta_secondary:"See how it works",
     cta_note:"Premium €9.99/month",
@@ -1274,6 +1312,7 @@ var I18N={
     trial_badge:"",per_month:"/month",pricing_sub:"All Premium features included",
     pricing_intro:"All plans include the same Premium features. Choose the cadence that fits you.",
     ptier_monthly_badge:"Monthly",
+    plat_app:"📱 Android app only",plat_web:"🌐 Web app only",
     ptier_monthly_sub:"Flexible. Cancel anytime.",
     ptier_annual_badge:"Annual · Best value",
     ptier_annual_save:"Save 42% — equivalent to €5.83/month",
@@ -1285,7 +1324,7 @@ var I18N={
     one_time:"once",
     pli1:"Full wheel with all 13 planets",pli2:"Projections up to 5 years ahead",pli3:"Unlimited cached dates",pli4:"Customizable transit notifications",pli5:"Complete glossary in 13 languages",
     pricing_cancel:"Cancel anytime from Google Play settings.",
-    screens_eyebrow:"Sneak peek",screens_title:"A look inside the app",screens_intro:"Real screens from the build currently in final approval — five core views of AstroTrader Pro.",
+    screens_eyebrow:"Sneak peek",screens_title:"A look inside the app",screens_intro:"Real screens — five core views of AstroTrader Pro, now live on Google Play.",
     shot1_t:"Dashboard",shot1_s:"Live planetary wheel and current sky",
     shot2_t:"Projections",shot2_s:"Move forward in time, watch the sky evolve",
     shot3_t:"Glossary",shot3_s:"Every term explained, from aspect to retrograde",
@@ -1306,7 +1345,7 @@ var I18N={
     faq4_q:"Does the subscription auto-renew?",faq4_a:"Yes, but you can cancel anytime from Google Play settings.",
     faq5_q:"What data does the app collect?",faq5_a:"No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.",
     faq6_q:"Who is the app for?",faq6_a:"For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+.",
-    faq7_q:"When will it be available on Google Play?",faq7_a:"The app is complete and in final approval phase at Google Play. The actual release date depends on Google's verification timelines and the mandatory closed testing phase for new developers (minimum 14 days).",
+    faq7_q:"Is AstroTrader Pro on Google Play?",faq7_a:"Yes — AstroTrader Pro is available now on Google Play. Tap the download button at the top of this page, or search for it by name.",
     foot_brand_line:"Classical financial astrology for mobile.",
     foot_legal:"Legal",foot_contact:"Contact",foot_privacy:"Privacy policy",foot_terms:"Terms of service",
     foot_trademark:"<strong>AstroTrader Pro™</strong> — trademark application filed with UIBM Italy, application no. 2026000082570 of 05/05/2026, Nice classes 9, 41, 42. Application pending examination.",
@@ -1344,6 +1383,7 @@ var I18N={
     trial_badge:"",per_month:"/mese",pricing_sub:"Tutte le funzioni Premium incluse",
     pricing_intro:"Tutti i piani includono le stesse funzioni Premium. Scegli la cadenza più adatta a te.",
     ptier_monthly_badge:"Mensile",
+    plat_app:"📱 Solo app Android",plat_web:"🌐 Solo web-app",
     ptier_monthly_sub:"Flessibile. Cancella in qualsiasi momento.",
     ptier_annual_badge:"Annuale · Best value",
     ptier_annual_save:"Risparmi 42% — equivale a €5,83/mese",
@@ -1355,7 +1395,7 @@ var I18N={
     one_time:"una tantum",
     pli1:"Ruota completa con tutti i 13 pianeti",pli2:"Proiezioni fino a 5 anni nel futuro",pli3:"Date in cache illimitate",pli4:"Notifiche transiti personalizzabili",pli5:"Glossario completo in 13 lingue",
     pricing_cancel:"Cancellabile in qualunque momento dalle impostazioni di Google Play.",
-    screens_eyebrow:"In anteprima",screens_title:"Uno sguardo dentro l'app",screens_intro:"Schermate reali dalla build attualmente in approvazione finale — cinque viste centrali di AstroTrader Pro.",
+    screens_eyebrow:"In anteprima",screens_title:"Uno sguardo dentro l'app",screens_intro:"Schermate reali — cinque viste centrali di AstroTrader Pro, ora disponibile su Google Play.",
     shot1_t:"Dashboard",shot1_s:"Ruota planetaria live e cielo del momento",
     shot2_t:"Proiezioni",shot2_s:"Avanza nel tempo, guarda il cielo evolvere",
     shot3_t:"Glossario",shot3_s:"Ogni termine spiegato, da aspetto a retrogrado",
@@ -1376,7 +1416,7 @@ var I18N={
     faq4_q:"L'abbonamento si rinnova automaticamente?",faq4_a:"Sì, ma puoi cancellarlo in qualunque momento dalle impostazioni di Google Play.",
     faq5_q:"Quali dati raccoglie l'app?",faq5_a:"Nessun tracciamento, nessuna analitica, nessuna pubblicità. L'unico dato trattato è quello strettamente necessario alla gestione dell'abbonamento (identificativo pseudonimo gestito da RevenueCat, metadati transazione gestiti da Google Play). Dettagli completi nella privacy policy.",
     faq6_q:"Per chi è pensata l'app?",faq6_a:"Per chi è interessato a esplorare il rapporto simbolico tra cicli planetari e mercati: trader curiosi della teoria classica dei cicli, astrologi con interesse finanziario, studenti di astrologia mondana ed esoterica. Età consigliata: 18+.",
-    faq7_q:"Quando sarà disponibile su Google Play?",faq7_a:"L'app è completa e in fase finale di approvazione presso Google Play. La data di pubblicazione effettiva dipende dai tempi di verifica Google e dalla fase di closed testing obbligatoria per i nuovi sviluppatori (14 giorni minimi).",
+    faq7_q:"AstroTrader Pro è su Google Play?",faq7_a:"Sì, AstroTrader Pro è disponibile ora su Google Play. Tocca il pulsante di download in cima alla pagina oppure cercala per nome.",
     foot_brand_line:"Astrologia finanziaria classica per mobile.",
     foot_legal:"Legale",foot_contact:"Contatti",foot_privacy:"Privacy policy",foot_terms:"Termini di servizio",
     foot_trademark:"<strong>AstroTrader Pro™</strong> — marchio depositato presso UIBM Italia, domanda n. 2026000082570 del 05/05/2026, classi 9, 41, 42 (Nice Classification). Domanda in fase di esame.",
@@ -1414,6 +1454,7 @@ var I18N={
     trial_badge:"",per_month:"/mes",pricing_sub:"Todas las funciones Premium incluidas",
     pricing_intro:"Todos los planes incluyen las mismas funciones Premium. Elige la cadencia que más te convenga.",
     ptier_monthly_badge:"Mensual",
+    plat_app:"📱 Solo en la app Android",plat_web:"🌐 Solo en la web app",
     ptier_monthly_sub:"Flexible. Cancela en cualquier momento.",
     ptier_annual_badge:"Anual · Mejor valor",
     ptier_annual_save:"Ahorra 42% — equivale a €5,83/mes",
@@ -1484,6 +1525,7 @@ var I18N={
     trial_badge:"",per_month:"/mois",pricing_sub:"Toutes les fonctions Premium incluses",
     pricing_intro:"Tous les plans incluent les mêmes fonctions Premium. Choisissez la fréquence qui vous convient.",
     ptier_monthly_badge:"Mensuel",
+    plat_app:"📱 Appli Android uniquement",plat_web:"🌐 Web app uniquement",
     ptier_monthly_sub:"Flexible. Annulable à tout moment.",
     ptier_annual_badge:"Annuel · Meilleur prix",
     ptier_annual_save:"Économisez 42% — équivalent à €5,83/mois",
@@ -1554,6 +1596,7 @@ var I18N={
     trial_badge:"",per_month:"/Monat",pricing_sub:"Alle Premium-Funktionen enthalten",
     pricing_intro:"Alle Pläne enthalten dieselben Premium-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt.",
     ptier_monthly_badge:"Monatlich",
+    plat_app:"📱 Nur in der Android-App",plat_web:"🌐 Nur in der Web-App",
     ptier_monthly_sub:"Flexibel. Jederzeit kündbar.",
     ptier_annual_badge:"Jährlich · Bester Preis",
     ptier_annual_save:"42% sparen — entspricht €5,83/Monat",
@@ -1624,6 +1667,7 @@ var I18N={
     trial_badge:"",per_month:"/mês",pricing_sub:"Todos os recursos Premium incluídos",
     pricing_intro:"Todos os planos incluem as mesmas funções Premium. Escolha a cadência que mais lhe convém.",
     ptier_monthly_badge:"Mensal",
+    plat_app:"📱 Apenas no app Android",plat_web:"🌐 Apenas na web app",
     ptier_monthly_sub:"Flexível. Cancele a qualquer momento.",
     ptier_annual_badge:"Anual · Melhor valor",
     ptier_annual_save:"Economize 42% — equivale a €5,83/mês",
@@ -1694,6 +1738,7 @@ var I18N={
     trial_badge:"",per_month:"/maand",pricing_sub:"Alle Premium-functies inbegrepen",
     pricing_intro:"Alle plannen bevatten dezelfde Premium-functies. Kies de frequentie die bij je past.",
     ptier_monthly_badge:"Maandelijks",
+    plat_app:"📱 Alleen Android-app",plat_web:"🌐 Alleen web-app",
     ptier_monthly_sub:"Flexibel. Annuleer wanneer je wilt.",
     ptier_annual_badge:"Jaarlijks · Beste prijs",
     ptier_annual_save:"Bespaar 42% — gelijk aan €5,83/maand",
@@ -1764,6 +1809,7 @@ var I18N={
     trial_badge:"",per_month:"/месяц",pricing_sub:"Все Premium-функции включены",
     pricing_intro:"Все планы включают одинаковые Premium-функции. Выберите подходящий ритм.",
     ptier_monthly_badge:"Ежемесячно",
+    plat_app:"📱 Только в Android-приложении",plat_web:"🌐 Только в веб-приложении",
     ptier_monthly_sub:"Гибко. Отмена в любое время.",
     ptier_annual_badge:"Годовой · Лучшая цена",
     ptier_annual_save:"Экономия 42% — эквивалент €5,83/месяц",
@@ -1834,6 +1880,7 @@ var I18N={
     trial_badge:"",per_month:"/月",pricing_sub:"包含所有 Premium 功能",
     pricing_intro:"所有方案均包含相同的高级功能。选择适合您的频率。",
     ptier_monthly_badge:"月付",
+    plat_app:"📱 仅限安卓应用",plat_web:"🌐 仅限网页版",
     ptier_monthly_sub:"灵活。随时取消。",
     ptier_annual_badge:"年付 · 最佳价值",
     ptier_annual_save:"节省42% — 相当于每月€5.83",
@@ -1904,6 +1951,7 @@ var I18N={
     trial_badge:"",per_month:"/月",pricing_sub:"全 Premium 機能を含む",
     pricing_intro:"すべてのプランは同じプレミアム機能を含みます。あなたに合うペースを選んでください。",
     ptier_monthly_badge:"月額",
+    plat_app:"📱 Androidアプリのみ",plat_web:"🌐 ウェブアプリのみ",
     ptier_monthly_sub:"柔軟。いつでもキャンセル可能。",
     ptier_annual_badge:"年額 · ベストバリュー",
     ptier_annual_save:"42%お得 — 月額€5.83相当",
@@ -1974,6 +2022,7 @@ var I18N={
     trial_badge:"",per_month:"/월",pricing_sub:"모든 Premium 기능 포함",
     pricing_intro:"모든 플랜은 동일한 프리미엄 기능을 포함합니다. 당신에게 맞는 주기를 선택하세요.",
     ptier_monthly_badge:"월간",
+    plat_app:"📱 안드로이드 앱 전용",plat_web:"🌐 웹 앱 전용",
     ptier_monthly_sub:"유연함. 언제든지 취소.",
     ptier_annual_badge:"연간 · 최고 가치",
     ptier_annual_save:"42% 절약 — 월 €5.83 상당",
@@ -2044,6 +2093,7 @@ var I18N={
     trial_badge:"",per_month:"/شهر",pricing_sub:"جميع ميزات Premium مضمنة",
     pricing_intro:"جميع الخطط تتضمن نفس ميزات Premium. اختر الإيقاع المناسب لك.",
     ptier_monthly_badge:"شهري",
+    plat_app:"📱 تطبيق أندرويد فقط",plat_web:"🌐 تطبيق الويب فقط",
     ptier_monthly_sub:"مرن. إلغاء في أي وقت.",
     ptier_annual_badge:"سنوي · أفضل قيمة",
     ptier_annual_save:"وفّر 42% — ما يعادل €5.83/شهر",
@@ -2114,6 +2164,7 @@ var I18N={
     trial_badge:"",per_month:"/महीना",pricing_sub:"सभी Premium सुविधाएँ शामिल",
     pricing_intro:"",
     ptier_monthly_badge:"मासिक",
+    plat_app:"📱 केवल Android ऐप",plat_web:"🌐 केवल वेब ऐप",
     ptier_monthly_sub:"लचीला। किसी भी समय रद्द करें।",
     ptier_annual_badge:"वार्षिक · सर्वोत्तम मूल्य",
     ptier_annual_save:"42% बचाएं — €5.83/महीना के बराबर",
@@ -2181,8 +2232,10 @@ var I18N={
   var sel=document.getElementById('lang-select');
   var saved=null;
   try{saved=localStorage.getItem('atpLandLang')}catch(e){}
-  var nav='en'; // forced EN default for first-time visitors (was: navigator.language)
+  var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
+  (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};var F={en:'Follow on X',it:'Segui su X',es:'Síguenos en X',fr:'Suivre sur X',de:'Auf X folgen',pt:'Seguir no X',nl:'Volg op X',ru:'Подписаться в X',zh:'在 X 关注',ja:'Xでフォロー',ko:'X에서 팔로우',ar:'تابعنا على X',hi:'X पर फ़ॉलो करें'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; if(F[k]) I18N[k].cta_follow=F[k]; } }})();
+  var LAUNCH_STATE='live', PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro'; // definito PRIMA di setLang(): applyLaunchState ora vede 'live'
     setLang(initial);
   sel.value=initial;
   sel.addEventListener('change',function(){setLang(sel.value)});
@@ -2206,8 +2259,6 @@ var I18N={
   }
   // === LAUNCH STATE ===
   // Change LAUNCH_STATE to 'live' when AstroTrader Pro is published on Google Play.
-  var LAUNCH_STATE='pre'; // 'pre' | 'live' — flip to 'live' on Play Store launch
-  var PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro';
   function applyLaunchState(dict){
     var cta=document.getElementById('cta-primary');
     if(!cta) return;
@@ -2233,5 +2284,94 @@ var I18N={
 })();
 </script>
 
+
+<!-- ===== LP 2026: launch bar + glow boost + sticky CTA (additivo) ===== -->
+<style id="lp2026">
+/* barra lancio sticky con countdown lunare */
+#lpBar{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 12px;background:linear-gradient(90deg,#0A1020,#16203A 50%,#0A1020);border-bottom:1px solid rgba(232,201,106,.45);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#ECE7DA;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+#lpBar .dot{width:8px;height:8px;border-radius:50%;background:#5DCAA5;position:relative;flex:none}
+#lpBar .dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid #5DCAA5;opacity:.6;animation:lpPulse 2s ease-out infinite}
+@keyframes lpPulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+#lpBar b{color:#F5E8B8}
+#lpBar .t{color:#E8C96A;font-weight:700;letter-spacing:.5px;min-width:104px;display:inline-block}
+#lpBar a{flex:none;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:700;text-decoration:none;padding:4px 14px;border-radius:999px;font-size:12px;box-shadow:0 4px 14px rgba(232,201,106,.4);transition:transform .15s ease}
+#lpBar a:active{transform:scale(.95)}
+body{padding-top:42px}
+@media(max-width:560px){#lpBar{font-size:11px;gap:8px}#lpBar .t{min-width:90px}}
+/* titolo hero in gradiente oro */
+.hero h1{background:linear-gradient(135deg,#F5E8B8,#E8C96A 55%,#C9A84C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 18px rgba(232,201,106,.25))}
+/* pianeti e segni più accesi (armonizzato con l'app) */
+.planet svg{filter:saturate(1.4) brightness(1.18) drop-shadow(0 0 12px rgba(232,201,106,.55))}
+.zodiac-ring use{filter:drop-shadow(0 0 7px currentColor);opacity:.95}
+.zodiac-ring circle:nth-of-type(2){filter:drop-shadow(0 0 8px rgba(232,201,106,.6))}
+/* card: lift + glow al passaggio (come l'app) */
+.features-grid>*,.pricing-box,.screen-frame{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+@media(hover:hover){
+.features-grid>*:hover,.pricing-box:hover{transform:translateY(-3px);border-color:rgba(232,201,106,.55)!important;box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 22px rgba(232,201,106,.12)}
+.screen-frame:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 26px rgba(232,201,106,.2)}
+}
+/* CTA primaria: glow + shine + feedback tattile */
+.btn-primary{position:relative;overflow:hidden;box-shadow:0 8px 28px rgba(232,201,106,.4)!important;transition:transform .16s ease,box-shadow .16s ease}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);transform:translateX(-110%);animation:lpShine 3.2s ease-in-out infinite}
+@keyframes lpShine{55%{transform:translateX(110%)}100%{transform:translateX(110%)}}
+@media(hover:hover){.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,201,106,.55)!important}}
+.btn-primary:active{transform:scale(.96)}
+/* CTA sticky mobile */
+#lpSticky{display:none}
+@media(max-width:740px){
+#lpSticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:998;background:linear-gradient(135deg,#F5E8B8,#E8C96A);color:#19130a;font-weight:800;font-family:ui-monospace,Menlo,monospace;font-size:14px;letter-spacing:.4px;padding:14px;border-radius:999px;justify-content:center;align-items:center;gap:8px;text-decoration:none;box-shadow:0 10px 34px rgba(232,201,106,.45),0 6px 18px rgba(0,0,0,.4);transition:transform .15s ease}
+#lpSticky:active{transform:scale(.97)}
+body{padding-bottom:74px}
+}
+@media (prefers-reduced-motion:reduce){#lpBar .dot::after,.btn-primary::after{animation:none}}
+</style>
+<script>
+(function(){
+'use strict';
+var L={
+ en:{full:'Full Moon',nm:'New Moon',inw:'in',cta:'Open free',sticky:'Open the Webapp — free'},
+ it:{full:'Luna Piena',nm:'Luna Nuova',inw:'tra',cta:'Apri gratis',sticky:'Apri la Webapp — gratis'},
+ es:{full:'Luna llena',nm:'Luna nueva',inw:'en',cta:'Abrir gratis',sticky:'Abre la Webapp — gratis'},
+ fr:{full:'Pleine lune',nm:'Nouvelle lune',inw:'dans',cta:'Ouvrir',sticky:'Ouvrir la Webapp — gratuit'},
+ de:{full:'Vollmond',nm:'Neumond',inw:'in',cta:'Gratis öffnen',sticky:'Webapp öffnen — gratis'},
+ pt:{full:'Lua cheia',nm:'Lua nova',inw:'em',cta:'Abrir grátis',sticky:'Abrir a Webapp — grátis'},
+ nl:{full:'Volle maan',nm:'Nieuwe maan',inw:'over',cta:'Gratis openen',sticky:'Open de webapp — gratis'},
+ ru:{full:'Полнолуние',nm:'Новолуние',inw:'через',cta:'Открыть',sticky:'Открыть веб-приложение — бесплатно'},
+ zh:{full:'满月',nm:'新月',inw:'还有',cta:'免费打开',sticky:'打开网页版 — 免费'},
+ ja:{full:'満月',nm:'新月',inw:'まで',cta:'無料で開く',sticky:'Webアプリを開く — 無料'},
+ ko:{full:'보름달',nm:'신월',inw:'까지',cta:'무료로 열기',sticky:'웹앱 열기 — 무료'},
+ ar:{full:'بدر',nm:'محاق',inw:'خلال',cta:'افتح مجاناً',sticky:'افتح تطبيق الويب — مجاناً'},
+ hi:{full:'पूर्णिमा',nm:'अमावस्या',inw:'में',cta:'मुफ़्त खोलें',sticky:'वेबऐप खोलें — मुफ़्त'}
+};
+function lang(){ try{var l=localStorage.getItem('atpLandLang'); if(l&&L[l])return l;}catch(e){} return 'en'; }
+var APP='https://astrotraderpro.astrotraderproapp.workers.dev/';
+// prossima lunazione (sinodico medio, precisione ~ore: per countdown marketing è ok)
+var SYN=29.530588853*86400000, EPOCH=Date.UTC(2000,0,6,18,14,0); // luna nuova 06/01/2000
+function nextLun(){
+ var n=Date.now(), k=(n-EPOCH)/SYN;
+ var nextNew=EPOCH+Math.ceil(k)*SYN;
+ var kf=k-Math.floor(k); var nextFull=EPOCH+(Math.floor(k)+(kf<0.5?0.5:1.5))*SYN;
+ return (nextFull<nextNew)?{t:nextFull,type:'full'}:{t:nextNew,type:'nm'};
+}
+var bar=document.createElement('div'); bar.id='lpBar';
+bar.innerHTML='<span class="dot"></span><span id="lpBarTxt"></span><span class="t" id="lpBarT"></span><a id="lpBarCta" href="'+APP+'"></a>';
+document.body.appendChild(bar);
+var st=document.createElement('a'); st.id='lpSticky'; st.href=APP;
+document.body.appendChild(st);
+function fmt(ms){var d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000),s2=Math.floor(ms%60000/1000);
+ return d>0?(d+'g '+h+'h '+m+'m'):(h>0?(h+'h '+m+'m '+s2+'s'):(m+'m '+s2+'s'));}
+var lun=nextLun();
+function tick(){
+ var S=L[lang()];
+ if(lun.t-Date.now()<=0) lun=nextLun();
+ var emoji=lun.type==='full'?'\uD83C\uDF15':'\uD83C\uDF11';
+ document.getElementById('lpBarTxt').innerHTML=emoji+' <b>'+(lun.type==='full'?S.full:S.nm)+'</b> '+S.inw;
+ document.getElementById('lpBarT').textContent=fmt(lun.t-Date.now());
+ document.getElementById('lpBarCta').textContent=S.cta+' \u2192';
+ st.textContent='\uD83D\uDE80 '+S.sticky;
+}
+tick(); setInterval(tick,1000);
+})();
+</script>
 </body>
 </html>
