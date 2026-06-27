@@ -1,0 +1,9 @@
+{
+  "name": "atp-ig-bot",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@resvg/resvg-wasm": "^2.6.2",
+    "libsodium-wrappers": "^0.7.13"
+  }
+}
