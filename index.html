@@ -188,6 +188,12 @@ p{margin-bottom:1em}
 .btn-secondary{background:transparent;color:var(--gold);border-color:rgba(232,201,106,0.5)}
 .btn-secondary:hover{background:rgba(232,201,106,0.08);border-color:var(--gold);color:var(--gold-light)}
 .btn-note{font-size:11px;letter-spacing:1.5px;color:var(--text-dim);text-transform:uppercase;font-family:var(--ui)}
+.hero-social{display:flex;flex-direction:column;align-items:center;gap:10px;margin:2px 0 18px}
+.hero-social-label{font-family:var(--ui);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark)}
+.hero-social-icons{display:flex;gap:14px;justify-content:center}
+.social-btn{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(232,201,106,0.5);color:var(--gold);background:transparent;transition:all .2s}
+.social-btn:hover{background:rgba(232,201,106,0.1);border-color:var(--gold);color:var(--gold-light);transform:translateY(-2px)}
+.social-btn svg{width:22px;height:22px}
 
 section{padding:64px 0}
 section.alt{background:linear-gradient(180deg,transparent,rgba(22,32,56,0.4),transparent)}
@@ -849,8 +855,18 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div class="hero-cta">
       <a class="btn btn-primary" data-i18n="cta_webapp" href="https://astrotraderpro.astrotraderproapp.workers.dev/">Open the Webapp</a>
       <a id="cta-primary" class="btn btn-primary" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro" data-i18n="cta_download">Get it on Google Play</a>
-      <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://x.com/Astrotraderpro" data-i18n="cta_follow">Follow on X</a>
       <a class="btn btn-secondary" href="#how" data-i18n="cta_secondary">See how it works</a>
+    </div>
+    <div class="hero-social">
+      <span class="hero-social-label" data-i18n="follow_label">Follow us</span>
+      <div class="hero-social-icons">
+        <a class="social-btn" target="_blank" rel="noopener" aria-label="Instagram" href="https://www.instagram.com/astrotraderproapp/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" aria-label="X (Twitter)" href="https://x.com/Astrotraderpro">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
     </div>
     <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199</p>
   </div>
@@ -2235,6 +2251,7 @@ var I18N={
   var nav=(((navigator.languages&&navigator.languages[0])||navigator.language||'en')+'').slice(0,2).toLowerCase(); // auto-detect lingua browser (11/06); fallback EN se non supportata
   var initial=saved && I18N[saved] ? saved : (I18N[nav] ? nav : 'en');
   (function(){var W={en:'Open the Webapp',it:'Apri la Webapp',es:'Abre la Webapp',fr:'Ouvrir la Webapp',de:'Webapp öffnen',pt:'Abrir a Webapp',nl:'Open de webapp',ru:'Открыть веб-приложение',zh:'打开网页版',ja:'Webアプリを開く',ko:'웹앱 열기',ar:'افتح تطبيق الويب',hi:'वेबऐप खोलें'};var D={en:'Get it on Google Play',it:'Disponibile su Google Play',es:'Disponible en Google Play',fr:'Disponible sur Google Play',de:'Jetzt bei Google Play',pt:'Disponível no Google Play',nl:'Ontdek het op Google Play',ru:'Доступно в Google Play',zh:'在 Google Play 上下载',ja:'Google Play で手に入れよう',ko:'Google Play에서 받기',ar:'احصل عليه من Google Play',hi:'Google Play पर पाएं'};var F={en:'Follow on X',it:'Segui su X',es:'Síguenos en X',fr:'Suivre sur X',de:'Auf X folgen',pt:'Seguir no X',nl:'Volg op X',ru:'Подписаться в X',zh:'在 X 关注',ja:'Xでフォロー',ko:'X에서 팔로우',ar:'تابعنا على X',hi:'X पर फ़ॉलो करें'};for(var k in W){ if(I18N[k]){ I18N[k].cta_webapp=W[k]; if(D[k]) I18N[k].cta_download=D[k]; if(F[k]) I18N[k].cta_follow=F[k]; } }})();
+  (function(){var L={en:'Follow us',it:'Seguici',es:'Síguenos',fr:'Suivez-nous',de:'Folge uns',pt:'Siga-nos',nl:'Volg ons',ru:'Подписывайтесь',zh:'关注我们',ja:'フォローする',ko:'팔로우하기',ar:'تابعنا',hi:'हमें फ़ॉलो करें'};for(var k in L){ if(I18N[k]){ I18N[k].follow_label=L[k]; } }})();
   var LAUNCH_STATE='live', PLAY_STORE_URL='https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro'; // definito PRIMA di setLang(): applyLaunchState ora vede 'live'
     setLang(initial);
   sel.value=initial;
