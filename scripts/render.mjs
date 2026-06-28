@@ -2,7 +2,7 @@ import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { getSky, atpBuildCardSVG } from './lib.mjs';
+import { getSky, atpBuildCardSVG, buildCaption } from './lib.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const repo = join(__dir, '..');
@@ -20,3 +20,16 @@ function render(portrait,out){
 }
 render(false,'ig/card-feed.png');
 render(true,'ig/card-story.png');
+
+const RAW = 'https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig';
+const caption = buildCaption(data);
+writeFileSync(join(repo,'ig/caption.txt'), caption, 'utf8');
+console.log('wrote ig/caption.txt');
+writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
+  date: data.date || '',
+  image: RAW + '/card-feed.png',
+  story: RAW + '/card-story.png',
+  caption: caption,
+  updated: new Date().toISOString()
+}, null, 2), 'utf8');
+console.log('wrote ig/feed.json');
