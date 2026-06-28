@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name "atp-bot"
           git config user.email "bot@astrotraderpro.com"
-          git add ig/card-feed.png ig/card-story.png
+          git add ig/card-feed.png ig/card-story.png ig/caption.txt ig/feed.json
           git commit -m "daily card $(date -u +%F)" || echo "no change"
           git push
           echo "IMG_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
