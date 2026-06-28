@@ -13,10 +13,10 @@ export async function getSky(){
 export function buildCaption(d){
   const cb = String.fromCodePoint(0x1F52E), ch = String.fromCodePoint(0x1F4C8),
         lk = String.fromCodePoint(0x1F517), dash = String.fromCodePoint(0x2014),
-        arr = String.fromCodePoint(0x2192);
+        arr = String.fromCodePoint(0x2192), tm = String.fromCodePoint(0x2122);
   const sig = d.signal==='bull'?'Bull':d.signal==='bear'?'Bear':'Neutral';
   const L=[];
-  L.push(`${cb} AstroTrader Pro ${dash} Daily Sky ${ch}`);
+  L.push(`${cb} AstroTrader Pro${tm} ${dash} Daily Sky ${ch}`);
   L.push('');
   L.push(`${d.date||'Today'} ${dash} Short-term: ${d.shortHead||''}${d.orb?` (orb ${d.orb})`:''}.`);
   if(d.assets) L.push(`${d.assetsLabel||'Watch'}: ${d.assets}${d.sectors?` (${d.sectors})`:''}.`);

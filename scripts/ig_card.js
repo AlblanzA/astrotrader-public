@@ -72,7 +72,7 @@ function atpBuildCardSVG(data, opts){
   s+='<rect width="'+W+'" height="'+H+'" fill="url(#bg)"/>';
   s+=_stars(W,H,140,99173);
   s+='<path d="M '+(cx-150)+' '+topY+' A 150 150 0 0 1 '+(cx+150)+' '+topY+'" fill="none" stroke="'+GOLD+'" stroke-width="4"/>';
-  s+=ctext(topY+70,'ASTROTRADER PRO  '+DOT+'  DAILY SKY',30,GOLD,'IBMPlexMono',8);
+  s+=ctext(topY+70,'ASTROTRADER PRO'+String.fromCharCode(8482)+'  '+DOT+'  DAILY SKY',30,GOLD,'IBMPlexMono',8);
   s+='<line x1="'+(cx-70)+'" y1="'+(topY+92)+'" x2="'+(cx+70)+'" y2="'+(topY+92)+'" stroke="'+GOLD+'" stroke-width="3"/>';
   s+=ctext(topY+185, data.date||'', 96, CREAM, 'Gloock');
   var y = topY+300;
