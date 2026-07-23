@@ -75,6 +75,31 @@ function atpBuildCardSVG(data, opts){
   s+=ctext(topY+70,'ASTROTRADER PRO'+String.fromCharCode(8482)+'  '+DOT+'  DAILY SKY',30,GOLD,'IBMPlexMono',8);
   s+='<line x1="'+(cx-70)+'" y1="'+(topY+92)+'" x2="'+(cx+70)+'" y2="'+(topY+92)+'" stroke="'+GOLD+'" stroke-width="3"/>';
   s+=ctext(topY+185, data.date||'', 96, CREAM, 'Gloock');
+  if(data.group && data.group.items && data.group.items.length){
+    var G=data.group, items=G.items, n=items.length;
+    s+=ctext(topY+295,'ASTROLOGICAL '+String(G.label||'').toUpperCase()+' PREDICTION',34,GOLDL,'IBMPlexMono',3);
+    s+='<line x1="120" y1="'+(topY+330)+'" x2="'+(W-120)+'" y2="'+(topY+330)+'" stroke="#2a3556" stroke-width="2"/>';
+    var top=topY+366, bottom=H-170, gap=18;
+    var rowH=Math.min(210,(bottom-top-gap*(n-1))/n);
+    var nameSize=rowH>150?50:44, pw=210, ph=64, prx=W-90-40-pw;
+    var ry=top;
+    for(var gi=0;gi<n;gi++){
+      var it=items[gi];
+      var col = it.regime==='BULL'?GREEN : it.regime==='BEAR'?RED : GOLD;
+      var det = it.quiet?'quiet sky':(it.pl+' '+it.asp+' '+(it.other||''));
+      s+='<rect x="90" y="'+ry+'" width="'+(W-180)+'" height="'+rowH+'" rx="24" fill="#101832" stroke="#2a3556" stroke-width="2"/>';
+      s+='<text x="130" y="'+(ry+rowH*0.44)+'" font-family="Gloock" font-size="'+nameSize+'" fill="'+GOLDL+'">'+_xml(_ell(it.name||it.sym,22))+'</text>';
+      s+='<text x="130" y="'+(ry+rowH*0.76)+'" font-family="IBMPlexMono" font-size="26" fill="'+DIM+'">'+_xml(_ell(det,46))+'</text>';
+      var pry=ry+(rowH-ph)/2;
+      s+='<rect x="'+prx+'" y="'+pry+'" width="'+pw+'" height="'+ph+'" rx="32" fill="none" stroke="'+col+'" stroke-width="4"/>';
+      s+='<text x="'+(prx+pw/2)+'" y="'+(pry+ph*0.66)+'" font-family="IBMPlexMono" font-size="30" fill="'+col+'" text-anchor="middle" letter-spacing="3">'+it.regime+'</text>';
+      ry+=rowH+gap;
+    }
+    s+=ctext(H-110,'ASTROTRADERPRO.COM   '+DOT+'   @ASTROTRADERPROAPP',26,GOLD,'IBMPlexMono',4);
+    s+=ctext(H-70,'Educational / entertainment '+MDASH+' not financial advice',24,DIM,'CrimsonProItalic');
+    s+='</svg>';
+    return s;
+  }
   var y = topY+300;
   s+=ctext(y,'SHORT-TERM',30,GOLD,'IBMPlexMono',6); y+=70;
   s+=ctext(y, _ell(data.shortHead||'',30), 64, CREAM,'Gloock'); y+=58;

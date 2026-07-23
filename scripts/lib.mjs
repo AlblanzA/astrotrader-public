@@ -7,7 +7,9 @@ export const TG_PREVIEW = process.env.TG_PREVIEW_URL
 export async function getSky(){
   const r = await fetch(TG_PREVIEW);
   const j = await r.json();
-  return atpParseSky((j && j.text) || '');
+  const sky = atpParseSky((j && j.text) || '');
+  if (j && j.group) sky.group = j.group;
+  return sky;
 }
 
 export function buildCaption(d){
@@ -21,6 +23,15 @@ export function buildCaption(d){
   L.push(`${d.date||'Today'} ${dash} Short-term: ${d.shortHead||''}${d.orb?` (orb ${d.orb})`:''}.`);
   if(d.assets) L.push(`${d.assetsLabel||'Watch'}: ${d.assets}${d.sectors?` (${d.sectors})`:''}.`);
   L.push(`Read: ${sig} on indices, ETFs and commodities. Long-term: ${d.longTone||'-'}.`);
+  if(d.group && d.group.items && d.group.items.length){
+    L.push('');
+    L.push(`${String.fromCodePoint(0x1F3AF)} Astrological ${d.group.label} Prediction:`);
+    d.group.items.forEach(it=>{
+      const tag=(d.group.cash?'$':'')+it.sym;
+      const det=it.quiet?'quiet sky':`${it.pl} ${it.asp} ${it.other}`;
+      L.push(`${tag} ${dash} ${it.regime} (${det})`);
+    });
+  }
   L.push('');
   L.push(`${lk} App & world map ${arr} link in bio (astrotraderpro.com)`);
   L.push('');
