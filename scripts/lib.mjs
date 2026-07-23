@@ -28,7 +28,8 @@ export function buildCaption(d){
     L.push(`${String.fromCodePoint(0x1F3AF)} Astrological ${d.group.label} Prediction:`);
     d.group.items.forEach(it=>{
       const tag=(d.group.cash?'$':'')+it.sym;
-      const det=it.quiet?'quiet sky':`${it.pl} ${it.asp} ${it.other}`;
+      const win=(!it.quiet && it.start && it.end)?`, ${it.start}${String.fromCodePoint(0x2192)}${it.end}`:'';
+      const det=it.quiet?'quiet sky':`${it.pl} ${it.asp} ${it.other}${win}`;
       L.push(`${tag} ${dash} ${it.regime} (${det})`);
     });
   }

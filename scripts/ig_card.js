@@ -81,15 +81,19 @@ function atpBuildCardSVG(data, opts){
     s+='<line x1="120" y1="'+(topY+330)+'" x2="'+(W-120)+'" y2="'+(topY+330)+'" stroke="#2a3556" stroke-width="2"/>';
     var top=topY+366, bottom=H-170, gap=18;
     var rowH=Math.min(210,(bottom-top-gap*(n-1))/n);
-    var nameSize=rowH>150?50:44, pw=210, ph=64, prx=W-90-40-pw;
+    var big=rowH>150;
+    var nameSize=big?50:42, pw=210, ph=64, prx=W-90-40-pw;
+    var WINCOL='#C9B36A', ARROW=String.fromCharCode(0x2192);
     var ry=top;
     for(var gi=0;gi<n;gi++){
       var it=items[gi];
       var col = it.regime==='BULL'?GREEN : it.regime==='BEAR'?RED : GOLD;
       var det = it.quiet?'quiet sky':(it.pl+' '+it.asp+' '+(it.other||''));
+      var win = (!it.quiet && it.start && it.end) ? (it.start+'  '+ARROW+'  '+it.end) : '';
       s+='<rect x="90" y="'+ry+'" width="'+(W-180)+'" height="'+rowH+'" rx="24" fill="#101832" stroke="#2a3556" stroke-width="2"/>';
-      s+='<text x="130" y="'+(ry+rowH*0.44)+'" font-family="Gloock" font-size="'+nameSize+'" fill="'+GOLDL+'">'+_xml(_ell(it.name||it.sym,22))+'</text>';
-      s+='<text x="130" y="'+(ry+rowH*0.76)+'" font-family="IBMPlexMono" font-size="26" fill="'+DIM+'">'+_xml(_ell(det,46))+'</text>';
+      s+='<text x="130" y="'+(ry+rowH*(win?0.36:0.44))+'" font-family="Gloock" font-size="'+nameSize+'" fill="'+GOLDL+'">'+_xml(_ell(it.name||it.sym,22))+'</text>';
+      s+='<text x="130" y="'+(ry+rowH*(win?0.61:0.76))+'" font-family="IBMPlexMono" font-size="'+(big?26:24)+'" fill="'+DIM+'">'+_xml(_ell(det,44))+'</text>';
+      if(win){ s+='<text x="130" y="'+(ry+rowH*0.86)+'" font-family="IBMPlexMono" font-size="'+(big?24:22)+'" fill="'+WINCOL+'">'+_xml(win)+'</text>'; }
       var pry=ry+(rowH-ph)/2;
       s+='<rect x="'+prx+'" y="'+pry+'" width="'+pw+'" height="'+ph+'" rx="32" fill="none" stroke="'+col+'" stroke-width="4"/>';
       s+='<text x="'+(prx+pw/2)+'" y="'+(pry+ph*0.66)+'" font-family="IBMPlexMono" font-size="30" fill="'+col+'" text-anchor="middle" letter-spacing="3">'+it.regime+'</text>';
