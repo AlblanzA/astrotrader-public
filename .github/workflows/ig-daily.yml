@@ -2,6 +2,95 @@ name: IG Daily Post
 on:
   schedule:
     - cron: '0 8 * * *'
+    - cron: '0 11 * * *'   # backup se GitHub salta le 08:00
+    - cron: '0 14 * * *'   # secondo backup
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: ig-daily
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Guard - gia' postato oggi?
+        id: guard
+        run: |
+          TODAY=$(date -u +%F)
+          LAST=$(cat ig/.posted 2>/dev/null || echo "")
+          if [ "$LAST" = "$TODAY" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "Gia' postato per $TODAY -> skip."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install deps
+        if: steps.guard.outputs.skip != 'true'
+        run: npm install --no-audit --no-fund
+
+      - name: Render cards
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/render.mjs
+
+      - name: Commit cards
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          git config user.name "atp-bot"
+          git config user.email "bot@astrotraderpro.com"
+          git add ig/card-feed.png ig/card-story.png ig/caption.txt ig/feed.json
+          git commit -m "daily card $(date -u +%F)" || echo "no change"
+          git push
+          echo "IMG_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Publish to Instagram
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: node scripts/publish.mjs
+
+      - name: Publish to Facebook Page (Graph API, se configurato)
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: node scripts/publish-fb.mjs
+
+      - name: Trigger Make (Facebook via webhook)
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+        run: |
+          if [ -z "$MAKE_WEBHOOK_URL" ]; then
+            echo "MAKE_WEBHOOK_URL non impostato -> salto il trigger Make."
+            exit 0
+          fi
+          echo "Attendo la propagazione del feed (astrotraderpro.com)..."
+          sleep 120
+          curl -sS -X POST "$MAKE_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"date\":\"$(date -u +%F)\",\"ref\":\"${IMG_REF:-main}\"}" \
+            && echo "Make avvisato: pubblica la card di oggi su Facebook."
+
+      - name: Mark posted
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          date -u +%F > ig/.posted
+          git add ig/.posted
+          git commit -m "mark posted $(date -u +%F)" || echo "no change"
+          git push || echo "push mark failed (non bloccante)"
+name: IG Daily Post
+on:
+  schedule:
+    - cron: '0 8 * * *'
   workflow_dispatch:
 permissions:
   contents: write
