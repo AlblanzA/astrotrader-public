@@ -64,24 +64,29 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish-fb.mjs
 
-      - name: Trigger Make (Facebook via webhook)
+      - name: Trigger Make (Facebook + LinkedIn via webhook)
         if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
         run: |
-          if [ -z "$MAKE_WEBHOOK_URL" ]; then
+          URL=$(printf '%s' "$MAKE_WEBHOOK_URL" | tr -d '[:space:]')
+          if [ -z "$URL" ]; then
             echo "MAKE_WEBHOOK_URL non impostato -> salto il trigger Make."
             exit 0
           fi
           echo "Attendo la propagazione del feed (astrotraderpro.com)..."
           sleep 120
-          curl -sS -X POST "$MAKE_WEBHOOK_URL" \
-            -H "Content-Type: application/json" \
-            -d "{\"date\":\"$(date -u +%F)\",\"ref\":\"${IMG_REF:-main}\"}" \
-            && echo "Make avvisato: pubblica la card di oggi su Facebook."
+          if curl -sS -X POST "$URL" -H "Content-Type: application/json" -d "{\"date\":\"$(date -u +%F)\",\"ref\":\"${IMG_REF:-main}\"}"; then
+            echo ""
+            echo "Make avvisato: pubblica la card di oggi su Facebook e LinkedIn."
+          else
+            echo "ATTENZIONE: chiamata a Make fallita (non blocca il workflow)."
+          fi
 
       - name: Mark posted
         if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
         run: |
           date -u +%F > ig/.posted
           git add ig/.posted
