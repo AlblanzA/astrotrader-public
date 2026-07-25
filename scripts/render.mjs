@@ -23,6 +23,7 @@ render(true,'ig/card-story.png');
 
 const RAW = 'https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig';
 const caption = buildCaption(data);
+const captionLink = buildCaption(data,{clickableLink:true});
 writeFileSync(join(repo,'ig/caption.txt'), caption, 'utf8');
 console.log('wrote ig/caption.txt');
 writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
@@ -30,6 +31,7 @@ writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
   image: RAW + '/card-feed.png',
   story: RAW + '/card-story.png',
   caption: caption,
+  captionLink: captionLink,
   updated: new Date().toISOString()
 }, null, 2), 'utf8');
 console.log('wrote ig/feed.json');
