@@ -75,6 +75,33 @@ function atpBuildCardSVG(data, opts){
   s+=ctext(topY+70,'ASTROTRADER PRO'+String.fromCharCode(8482)+'  '+DOT+'  DAILY SKY',30,GOLD,'IBMPlexMono',8);
   s+='<line x1="'+(cx-70)+'" y1="'+(topY+92)+'" x2="'+(cx+70)+'" y2="'+(topY+92)+'" stroke="'+GOLD+'" stroke-width="3"/>';
   s+=ctext(topY+185, data.date||'', 96, CREAM, 'Gloock');
+  /* --- Card GEOPOLITICA (5o giorno del ciclo): nazioni in evidenza, transito sotto --- */
+  if(data.group && data.group.geo && data.group.items && data.group.items.length){
+    var GG=data.group, gi2=GG.items, gn=gi2.length;
+    var WINC='#C9B36A', ARR=String.fromCharCode(0x2192);
+    s+=ctext(topY+295,'GEOPOLITICAL OUTLOOK',34,GOLDL,'IBMPlexMono',3);
+    s+='<line x1="120" y1="'+(topY+330)+'" x2="'+(W-120)+'" y2="'+(topY+330)+'" stroke="#2a3556" stroke-width="2"/>';
+    var gtop=topY+366, gbot=H-170, ggap=20;
+    var grh=Math.min(250,(gbot-gtop-ggap*(gn-1))/gn);
+    var gy=gtop, gpw=200, gph=54, gprx=W-90-36-gpw;
+    for(var q=0;q<gn;q++){
+      var it2=gi2[q];
+      var gcol = it2.regime==='OPENING'?GREEN : it2.regime==='FRICTION'?RED : GOLD;
+      s+='<rect x="90" y="'+gy+'" width="'+(W-180)+'" height="'+grh+'" rx="24" fill="#101832" stroke="#2a3556" stroke-width="2"/>';
+      s+='<text x="130" y="'+(gy+grh*0.31)+'" font-family="Gloock" font-size="44" fill="'+GOLDL+'">'+_xml(_ell((it2.nations||[]).join(' · '),26))+'</text>';
+      s+='<text x="130" y="'+(gy+grh*0.55)+'" font-family="CrimsonPro" font-size="28" fill="'+CREAM+'">'+_xml(_ell(it2.theme||'',54))+'</text>';
+      s+='<text x="130" y="'+(gy+grh*0.74)+'" font-family="IBMPlexMono" font-size="24" fill="'+DIM+'">'+_xml(_ell(it2.aspect||'',44))+'</text>';
+      if(it2.start&&it2.end){ s+='<text x="130" y="'+(gy+grh*0.90)+'" font-family="IBMPlexMono" font-size="23" fill="'+WINC+'">'+_xml(it2.start+'  '+ARR+'  '+it2.end)+'</text>'; }
+      var gpy=gy+18;
+      s+='<rect x="'+gprx+'" y="'+gpy+'" width="'+gpw+'" height="'+gph+'" rx="27" fill="none" stroke="'+gcol+'" stroke-width="3"/>';
+      s+='<text x="'+(gprx+gpw/2)+'" y="'+(gpy+gph*0.66)+'" font-family="IBMPlexMono" font-size="24" fill="'+gcol+'" text-anchor="middle" letter-spacing="2">'+_xml(it2.regime)+'</text>';
+      gy+=grh+ggap;
+    }
+    s+=ctext(H-110,'ASTROTRADERPRO.COM   '+DOT+'   @ASTROTRADERPROAPP',26,GOLD,'IBMPlexMono',4);
+    s+=ctext(H-70,'Hypothetical themes '+MDASH+' not a forecast of real events',24,DIM,'CrimsonProItalic');
+    s+='</svg>';
+    return s;
+  }
   if(data.group && data.group.items && data.group.items.length){
     var G=data.group, items=G.items, n=items.length;
     s+=ctext(topY+295,'ASTROLOGICAL '+String(G.label||'').toUpperCase()+' PREDICTION',34,GOLDL,'IBMPlexMono',3);

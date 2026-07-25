@@ -12,7 +12,12 @@ export async function getSky(){
   return sky;
 }
 
-export function buildCaption(d){
+/* Il link cliccabile dipende dal canale:
+   - Instagram: nelle caption i link NON sono cliccabili -> "link in bio"
+   - Facebook / LinkedIn / Telegram / X: URL cliccabile nel testo
+   (Nelle STORIE Instagram lo sticker link non e' aggiungibile via API: Meta
+    blocca gli elementi interattivi alle app di terze parti. Va messo a mano.) */
+export function buildCaption(d, opts){
   const cb = String.fromCodePoint(0x1F52E), ch = String.fromCodePoint(0x1F4C8),
         lk = String.fromCodePoint(0x1F517), dash = String.fromCodePoint(0x2014),
         arr = String.fromCodePoint(0x2192), tm = String.fromCodePoint(0x2122);
@@ -23,7 +28,17 @@ export function buildCaption(d){
   L.push(`${d.date||'Today'} ${dash} Short-term: ${d.shortHead||''}${d.orb?` (orb ${d.orb})`:''}.`);
   if(d.assets) L.push(`${d.assetsLabel||'Watch'}: ${d.assets}${d.sectors?` (${d.sectors})`:''}.`);
   L.push(`Read: ${sig} on indices, ETFs and commodities. Long-term: ${d.longTone||'-'}.`);
-  if(d.group && d.group.items && d.group.items.length){
+  if(d.group && d.group.geo && d.group.items && d.group.items.length){
+    L.push('');
+    L.push(`${String.fromCodePoint(0x1F30D)} Geopolitical Outlook:`);
+    d.group.items.forEach(it=>{
+      const win=(it.start&&it.end)?`, ${it.start}${String.fromCodePoint(0x2192)}${it.end}`:'';
+      L.push(`${(it.nations||[]).join(' · ')} ${dash} ${it.regime}`);
+      L.push(`   ${it.theme} (${it.aspect}${win})`);
+    });
+    L.push('');
+    L.push('Hypothetical themes from mundane tradition — not a forecast of real events.');
+  } else if(d.group && d.group.items && d.group.items.length){
     L.push('');
     L.push(`${String.fromCodePoint(0x1F3AF)} Astrological ${d.group.label} Prediction:`);
     d.group.items.forEach(it=>{
@@ -34,7 +49,10 @@ export function buildCaption(d){
     });
   }
   L.push('');
-  L.push(`${lk} App & world map ${arr} link in bio (astrotraderpro.com)`);
+  const clickable = !!(opts && opts.clickableLink);
+  L.push(clickable
+    ? `${lk} App & world map ${arr} https://astrotraderpro.com`
+    : `${lk} App & world map ${arr} link in bio (astrotraderpro.com)`);
   L.push('');
   L.push('For educational and entertainment purposes only. Not investment advice.');
   L.push('');
