@@ -17,7 +17,7 @@
 astrologia, astrologia finanziaria, esoterismo, tema natale, transiti planetari, case astrologiche, aspetti, nodi lunari, stelle fisse, astrologia mundana, cicli planetari dei mercati, financial astrology, esoteric astrology, natal chart, planetary transits, zodiac trading.
 
 ## Links
-- Webapp: https://astrotraderpro.lanzafamea2001.workers.dev/
+- Webapp: https://astrotraderpro.astrotraderproapp.workers.dev/
 - Website: https://astrotraderpro.com/
 - Android: https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro
 
