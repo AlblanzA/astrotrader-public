@@ -1,22 +1,24 @@
 # =====================================================================
-#  IG Daily Post — carosello (6 schede), 6 storie, pagina Facebook
+#  IG Daily Post — Instagram: carosello (6 schede) + 6 storie
+#                  Facebook + LinkedIn: via Make (come prima)
 # =====================================================================
 #
-#  MIGRAZIONE 10 set 2026: dal single-card al carosello. Le immagini del
-#  giorno (ig/carousel, ig/stories, ig/social.json) sono preparate nel repo
-#  PRIVATO (`npm run social-giorno` + stage-social) e spinte qui PRIMA che il
-#  cron scatti. Questo workflow VERIFICA e PUBBLICA; se le immagini mancano o
-#  sono vecchie, lo dice forte invece di ripubblicare quelle di ieri.
+#  MIGRAZIONE 10 set 2026: Instagram passa dal single-card al CAROSELLO. Le
+#  immagini del giorno (ig/carousel, ig/stories, ig/social.json) sono preparate
+#  nel repo PRIVATO (`npm run social-giorno` + stage-social) e spinte qui PRIMA
+#  che il cron scatti.
+#
+#  Facebook e LinkedIn restano su MAKE, esattamente come prima: la pagina non
+#  usa la Graph API diretta (nessun FB_PAGE_TOKEN configurato), quindi la card
+#  singola (render.mjs) alimenta feed.json e Make la pubblica su FB + LinkedIn.
+#  NB: Instagram riceve il carosello; FB/LinkedIn ricevono la card singola via
+#  Make. Per portare il carosello anche su FB servirebbero i secret FB Graph e
+#  togliere FB dallo scenario Make (evita il doppio-post) — passo futuro.
 #
 #  ── PERCHE' FALLISCE RUMOROSAMENTE ─────────────────────────────────────
-#   - la prova a secco gira SEMPRE prima di pubblicare: manifesto vecchio o
-#     lessico non passato -> ci si ferma prima di toccare la rete;
-#   - `set -euo pipefail` implicito via bash; annotazioni `::error::` in rosso;
+#   - la prova a secco (solo Instagram) gira PRIMA di pubblicare: manifesto
+#     vecchio o lessico non passato -> stop prima di toccare la rete;
 #   - `Mark posted` solo su successo, cosi' i cron di backup non ripubblicano.
-#
-#  NB LinkedIn: il trigger Make e' stato rimosso (la pagina Facebook ora si
-#  pubblica direttamente via Graph API). LinkedIn passa al generatore dedicato
-#  (studio-ricerca) via un publisher gated su LINKEDIN_TOKEN — da collegare.
 
 name: IG Daily Post
 on:
@@ -56,27 +58,23 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: npm install --no-audit --no-fund
 
-      # Card singola (compatibilita'): alimenta ig/feed.json e ig/caption.txt.
-      # Non viene piu' pubblicata: il canale ora e' il carosello.
-      - name: Render card singola (compat)
+      # Card singola: alimenta ig/feed.json e ig/caption.txt, che Make usa per
+      # pubblicare su Facebook e LinkedIn. Non va su Instagram (li' c'e' il carosello).
+      - name: Render card singola (per Make: FB + LinkedIn)
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/render.mjs
 
-      # Il gate. Nessuna chiamata parte: legge il manifesto, costruisce gli URL,
-      # passa il lessico e stampa la sequenza esatta. Se qualcosa non va, esce
-      # con codice != 0 e NON si pubblica.
-      - name: Prova a secco (nessuna pubblicazione)
+      # Il gate, SOLO Instagram. Nessuna chiamata parte: legge il manifesto,
+      # costruisce gli URL, passa il lessico e stampa la sequenza. Se qualcosa
+      # non va, esce != 0 e NON si pubblica.
+      - name: Prova a secco Instagram (nessuna pubblicazione)
         if: steps.guard.outputs.skip != 'true'
         env:
           ATP_DRY_RUN: '1'
           GH_REPO: ${{ github.repository }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-        run: |
-          node scripts/publish.mjs
-          node scripts/publish-fb.mjs
+        run: node scripts/publish.mjs
 
       - name: Commit immagini del giorno
         id: commit
@@ -87,8 +85,7 @@ jobs:
           git add ig/
           git commit -m "daily social $(date -u +%F)" || echo "nessuna modifica da committare"
           git push
-          # URL appuntati alla SHA, non a "main": se arriva un altro commit
-          # mentre Meta scarica, con "main" scaricherebbe l'immagine sbagliata.
+          # URL appuntati alla SHA, non a "main".
           echo "IMG_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Instagram — carosello e storie
@@ -99,14 +96,28 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish.mjs
 
-      # Niente continue-on-error: una pagina muta e' un guasto, non un dettaglio.
-      - name: Facebook — post a piu' immagini e storie
+      # Facebook + LinkedIn: via Make, esattamente come prima. Riceve data e SHA;
+      # legge la card singola dal feed pubblico. continue-on-error: un problema di
+      # Make non deve invalidare un carosello Instagram gia' uscito.
+      - name: Trigger Make (Facebook + LinkedIn via webhook)
         if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
         env:
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        run: node scripts/publish-fb.mjs
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+        run: |
+          URL=$(printf '%s' "$MAKE_WEBHOOK_URL" | tr -d '[:space:]')
+          if [ -z "$URL" ]; then
+            echo "MAKE_WEBHOOK_URL non impostato -> salto il trigger Make."
+            exit 0
+          fi
+          echo "Attendo la propagazione del feed (astrotraderpro.com)..."
+          sleep 120
+          if curl -sS -X POST "$URL" -H "Content-Type: application/json" -d "{\"date\":\"$(date -u +%F)\",\"ref\":\"${IMG_REF:-main}\"}"; then
+            echo ""
+            echo "Make avvisato: pubblica la card di oggi su Facebook e LinkedIn."
+          else
+            echo "ATTENZIONE: chiamata a Make fallita (non blocca il workflow)."
+          fi
 
       - name: Mark posted
         if: steps.guard.outputs.skip != 'true' && success()
@@ -128,8 +139,8 @@ jobs:
             echo "1. **Immagini assenti o vecchie.** \`ig/social.json\` deve portare la"
             echo "   data di oggi con 6 schede + 6 storie, preparate nel repo privato"
             echo "   (\`npm run social-giorno\` + stage-social) e spinte qui."
-            echo "2. **Token scaduto.** \`IG_ACCESS_TOKEN\` dura 60 giorni; \`ig-refresh.yml\`"
-            echo "   lo rinnova ogni lunedi'. Il token di pagina Facebook va rifatto a mano."
+            echo "2. **Token IG scaduto.** \`IG_ACCESS_TOKEN\` dura 60 giorni; \`ig-refresh.yml\`"
+            echo "   lo rinnova ogni lunedi'."
             echo "3. **Quota.** 50 pubblicazioni/24h; la giornata ne costa 7 (1 carosello + 6 storie)."
             echo "4. **Lessico.** Una parola di mercato nella didascalia blocca prima di partire."
             echo ""
