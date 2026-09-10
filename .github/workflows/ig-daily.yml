@@ -27,6 +27,14 @@ on:
     - cron: '0 11 * * *'   # backup se GitHub salta le 08:00
     - cron: '0 14 * * *'   # secondo backup
   workflow_dispatch:
+  # Pubblica appena arrivano le immagini del giorno: il repo privato spinge
+  # ig/social.json + ig/carousel + ig/stories e il carosello esce da solo.
+  push:
+    branches: [main]
+    paths:
+      - 'ig/social.json'
+      - 'ig/carousel/**'
+      - 'ig/stories/**'
 permissions:
   contents: write
 concurrency: ig-daily
@@ -47,8 +55,8 @@ jobs:
         run: |
           TODAY=$(date -u +%F)
           LAST=$(cat ig/.posted 2>/dev/null || echo "")
-          if [ "$LAST" = "$TODAY" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            echo "Gia' postato per $TODAY -> skip (usa Run workflow per forzare)."
+          if [ "$LAST" = "$TODAY" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Gia' postato per $TODAY (run schedulato) -> skip."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
