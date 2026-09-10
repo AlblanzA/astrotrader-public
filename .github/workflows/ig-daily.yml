@@ -60,7 +60,7 @@ jobs:
 
       # Card singola: alimenta ig/feed.json e ig/caption.txt, che Make usa per
       # pubblicare su Facebook e LinkedIn. Non va su Instagram (li' c'e' il carosello).
-      - name: Render card singola (per Make: FB + LinkedIn)
+      - name: Render card singola (per Make — FB e LinkedIn)
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/render.mjs
 
