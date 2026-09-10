@@ -8,35 +8,80 @@ ATP_ASPECT_WORD['\u26B9']='sextile'; ATP_ASPECT_WORD['\u2736']='sextile'; ATP_AS
 var ATP_GLYPH_STRIP = /[\u2190-\u21FF\u2300-\u27BF\u2B00-\u2BFF\u25A0-\u25FF\u2600-\u26FF\uFE0F\u{1F1E6}-\u{1F1FF}\u{1F000}-\u{1FAFF}]/gu;
 function _clean(s){ return (s||'').replace(/\s+/g,' ').trim(); }
 function _hasLetters(s){ return /[A-Za-z0-9$]/.test(s||''); }
+/* Whitelist pubblica degli strumenti, la stessa del generatore: serve a
+   riconoscere la riga degli strumenti dal contenuto invece che dall'etichetta,
+   che cambia con il tono del giorno e con la lingua del canale. */
+var ATP_WL_RE = /\b(SPX|NDX|NVDA|AAPL|TSLA|BTC|ETH|GOLD|EURUSD|DAX|OIL)\b/;
+/* La riga della lettura per gruppo cita gli stessi simboli ma accanto a un
+   regime: senza questa esclusione verrebbe scambiata per la riga degli
+   strumenti e finirebbe sulla card al posto suo. */
+var ATP_REGIME_RE = /\b(BULL|BEAR|NEUTRAL|OPENING|FRICTION|RESET|QUIET)\b/;
 function atpParseSky(text){
   var lines = String(text||'').split('\n').filter(function(x){return x.trim();});
-  var out = { date:'', shortHead:'', shortTone:'', orb:'', assetsLabel:'', assets:'', sectors:'', longTone:'', nations:'', signal:'neutral' };
+  var out = { date:'', shortHead:'', shortTone:'', orb:'', weight:'', lunation:'', assetsLabel:'', assets:'', sectors:'', longTone:'', longHead:'', nations:'', signal:'neutral' };
   for (var i=0;i<lines.length;i++){
     var ln = lines[i];
     if (/Short-term/i.test(ln)){
+      /* Il generatore ora scrive: "Frase in lingua (glifi) DOT orb X° DOT
+         weight N/5 <emoji> tono". Due conseguenze per chi legge:
+         - la prima parentesi non contiene piu' l'orbe ma i glifi, quindi
+           l'orbe va cercato per etichetta e non per posizione;
+         - il peso 1-5 e' un dato nuovo e va portato fino alla card, perche'
+           serve proprio a far vedere quanto conta l'aspetto del giorno. */
       var c = ln.split(':').slice(1).join(':');
       for (var g in ATP_ASPECT_WORD){ if (c.indexOf(g)>=0){ c = c.split(g).join(' '+ATP_ASPECT_WORD[g]+' '); } }
-      var mo = c.match(/\(([^)]*)\)/); if (mo){ out.orb = _clean(mo[1].replace(ATP_GLYPH_STRIP,' ')); }
-      var tone = c.match(/\)\s*[^\w]*\s*([A-Za-z][A-Za-z\-]+)\s*$/);
-      out.shortTone = tone ? tone[1] : '';
-      c = c.replace(/\([^)]*\)/g,' ').replace(ATP_GLYPH_STRIP,' ');
-      if (out.shortTone){ c = c.replace(new RegExp('\\b'+out.shortTone+'\\b','i'),' '); }
-      out.shortHead = _clean(c);
-    } else if (/Favored|Under pressure/i.test(ln)){
+      var mo = c.match(/([\d.]+)\s*°/); out.orb = mo ? (mo[1]+'°') : '';
+      var mw = c.match(/(\d)\s*\/\s*5/); out.weight = mw ? mw[1] : '';
+      /* Il tono e' cio' che resta dopo il peso: funziona anche in giapponese o
+         in arabo, dove un'espressione regolare su [A-Za-z] non troverebbe nulla. */
+      var segs = c.split('·');
+      var tail = segs[segs.length-1] || '';
+      var afterW = tail.split(/\d\s*\/\s*5/);
+      out.shortTone = _clean((afterW.length>1?afterW[1]:tail).replace(ATP_GLYPH_STRIP,' '));
+      var head = (segs[0]||'').replace(/\([^)]*\)/g,' ').replace(ATP_GLYPH_STRIP,' ');
+      out.shortHead = _clean(head);
+      /* Giornata senza aspetti stretti: non c'e' orbe ne' peso da mostrare, e
+         la riga e' gia' una frase compiuta. */
+      if (/no aspect|background sky/i.test(c)){
+        out.shortHead = _clean(c.replace(ATP_GLYPH_STRIP,' '));
+        out.orb=''; out.weight=''; out.shortTone='';
+      }
+    } else if (!out.assets && ln.indexOf(':')>0 && ATP_WL_RE.test(ln)
+               && !/astrotraderpro/i.test(ln) && !ATP_REGIME_RE.test(ln)){
+      /* La riga degli strumenti cambia etichetta con il tono del giorno
+         (Favored / Under pressure / new cycle) e con la lingua, quindi cercarla
+         per etichetta significava perderla nei giorni di congiunzione. Si
+         riconosce invece da cio' che contiene: un simbolo della whitelist
+         pubblica. Il link e' escluso perche' e' l'altra riga con i due punti. */
       var parts = ln.split(':'); out.assetsLabel = _clean(parts[0].replace(ATP_GLYPH_STRIP,' '));
       var rest = parts.slice(1).join(':');
       var sect = rest.match(/\(([^)]*)\)/); out.sectors = sect ? _clean(sect[1]) : '';
       out.assets = _clean(rest.replace(/\([^)]*\)/g,' ').replace(ATP_GLYPH_STRIP,' '));
     } else if (/Long-term/i.test(ln)){
-      var lt = ln.split(/[\u00B7\u2022]/); out.longTone = _clean((lt[lt.length-1]||'').replace(ATP_GLYPH_STRIP,' '));
+      /* Il lungo termine ora esce solo quando cambia, e porta con se' la frase
+         dell'aspetto: buttarla via tenendo il solo tono ("risk-on") ricreerebbe
+         esattamente la riga senza contenuto che si voleva eliminare. */
+      var ltAll = ln.split(':').slice(1).join(':');
+      var lt = ltAll.split(/[\u00B7\u2022]/);
+      out.longTone = _clean((lt[lt.length-1]||'').replace(ATP_GLYPH_STRIP,' '));
+      out.longHead = _clean((lt[0]||'').replace(/\([^)]*\)/g,' ').replace(ATP_GLYPH_STRIP,' '));
     } else if (/Nations/i.test(ln)){
       var nt = _clean(ln.split(':').slice(1).join(':').replace(ATP_GLYPH_STRIP,' '));
       out.nations = _hasLetters(nt) ? nt : '';
     } else if (i===0){
-      out.date = _clean(ln.replace(ATP_GLYPH_STRIP,' '));
+      /* La prima riga puo' portare l'etichetta di sizigia ("Mar 3 · Eclipse").
+         Va tenuta separata dalla data: nella card la data e' in corpo 96 e non
+         e' troncata, quindi un'aggiunta la manderebbe fuori margine. */
+      var d0 = _clean(ln.replace(ATP_GLYPH_STRIP,' ')).split('·');
+      out.date = _clean(d0[0]);
+      out.lunation = d0.length>1 ? _clean(d0.slice(1).join('·')) : '';
     }
   }
-  if(!out.date) out.date = _clean((lines[0]||'').replace(ATP_GLYPH_STRIP,' '));
+  if(!out.date){
+    var d1 = _clean((lines[0]||'').replace(ATP_GLYPH_STRIP,' ')).split('·');
+    out.date = _clean(d1[0]);
+    if(!out.lunation && d1.length>1) out.lunation = _clean(d1.slice(1).join('·'));
+  }
   var t = (out.shortTone+' '+out.longTone).toLowerCase();
   if (/risk-on|lift|favored|bull/.test(t) && !/risk-off|tension|choppy/.test(t)) out.signal='bull';
   else if (/risk-off|tension|choppy|caution|pressure|bear/.test(t)) out.signal='bear';
@@ -75,6 +120,9 @@ function atpBuildCardSVG(data, opts){
   s+=ctext(topY+70,'ASTROTRADER PRO'+String.fromCharCode(8482)+'  '+DOT+'  DAILY SKY',30,GOLD,'IBMPlexMono',8);
   s+='<line x1="'+(cx-70)+'" y1="'+(topY+92)+'" x2="'+(cx+70)+'" y2="'+(topY+92)+'" stroke="'+GOLD+'" stroke-width="3"/>';
   s+=ctext(topY+185, data.date||'', 96, CREAM, 'Gloock');
+  /* Novilunio, plenilunio o eclissi: l'unico caso in cui la Luna e' il fatto
+     del giorno, quindi va detto in copertina e non nascosto nel testo. */
+  if(data.lunation){ s+=ctext(topY+232, String(data.lunation).toUpperCase(), 30, GOLD, 'IBMPlexMono', 6); }
   /* --- Card GEOPOLITICA (5o giorno del ciclo): nazioni in evidenza, transito sotto --- */
   if(data.group && data.group.geo && data.group.items && data.group.items.length){
     var GG=data.group, gi2=GG.items, gn=gi2.length;
@@ -104,7 +152,7 @@ function atpBuildCardSVG(data, opts){
   }
   if(data.group && data.group.items && data.group.items.length){
     var G=data.group, items=G.items, n=items.length;
-    s+=ctext(topY+295,'ASTROLOGICAL '+String(G.label||'').toUpperCase()+' PREDICTION',34,GOLDL,'IBMPlexMono',3);
+    s+=ctext(topY+295,'SYMBOLIC READING '+MDASH+' '+String(G.label||'').toUpperCase(),34,GOLDL,'IBMPlexMono',3);
     s+='<line x1="120" y1="'+(topY+330)+'" x2="'+(W-120)+'" y2="'+(topY+330)+'" stroke="#2a3556" stroke-width="2"/>';
     var top=topY+366, bottom=H-170, gap=18;
     var rowH=Math.min(210,(bottom-top-gap*(n-1))/n);
@@ -127,14 +175,17 @@ function atpBuildCardSVG(data, opts){
       ry+=rowH+gap;
     }
     s+=ctext(H-110,'ASTROTRADERPRO.COM   '+DOT+'   @ASTROTRADERPROAPP',26,GOLD,'IBMPlexMono',4);
-    s+=ctext(H-70,'Educational / entertainment '+MDASH+' not financial advice',24,DIM,'CrimsonProItalic');
+    s+=ctext(H-70,'Educational '+MDASH+' not advice, not a recommendation, not a trading signal',24,DIM,'CrimsonProItalic');
     s+='</svg>';
     return s;
   }
   var y = topY+300;
   s+=ctext(y,'SHORT-TERM',30,GOLD,'IBMPlexMono',6); y+=70;
   s+=ctext(y, _ell(data.shortHead||'',30), 64, CREAM,'Gloock'); y+=58;
-  if(data.orb){ s+=ctext(y,'orb '+data.orb,34,DIM,'CrimsonPro'); y+=66; } else { y+=10; }
+  /* Orbe e peso sulla stessa riga: separati, il peso sembrerebbe un'altra
+     misura dello stesso dato invece che la sua importanza. */
+  var orbLine = (data.orb?('orb '+data.orb):'') + ((data.orb&&data.weight)?'   '+DOT+'   ':'') + (data.weight?('weight '+data.weight+'/5'):'');
+  if(orbLine){ s+=ctext(y,orbLine,34,DIM,'CrimsonPro'); y+=66; } else { y+=10; }
   y+=30;
   s+='<g transform="translate('+cx+','+y+')">';
   s+='<rect x="-200" y="-46" width="400" height="92" rx="46" fill="none" stroke="'+sigColor+'" stroke-width="4"/>';
@@ -147,12 +198,18 @@ function atpBuildCardSVG(data, opts){
     if(data.sectors){ s+=ctext(y,_ell(data.sectors,40),34,DIM,'CrimsonProItalic'); y+=56; }
   }
   y+=24;
-  s+='<line x1="'+(cx-180)+'" y1="'+y+'" x2="'+(cx+180)+'" y2="'+y+'" stroke="#2a3556" stroke-width="2"/>'; y+=54;
-  s+=ctext(y,'LONG-TERM',26,GOLD,'IBMPlexMono',5); y+=50;
-  s+=ctext(y,_ell((data.longTone||MDASH),34),40,CREAM,'CrimsonPro'); y+=46;
+  /* Il blocco lungo termine compare solo quando c'e' qualcosa da dire: da
+     quando la riga esce unicamente nel giorno in cui l'aspetto generazionale
+     cambia, un'intestazione fissa seguita da un trattino occuperebbe un quarto
+     della card per dire niente. */
+  if(data.longTone){
+    s+='<line x1="'+(cx-180)+'" y1="'+y+'" x2="'+(cx+180)+'" y2="'+y+'" stroke="#2a3556" stroke-width="2"/>'; y+=54;
+    s+=ctext(y,'LONG-TERM',26,GOLD,'IBMPlexMono',5); y+=50;
+    s+=ctext(y,_ell(data.longTone,34),40,CREAM,'CrimsonPro'); y+=46;
+  }
   if(data.nations){ y+=20; s+=ctext(y,'Nations: '+_ell(data.nations,40),34,DIM,'CrimsonPro'); }
   s+=ctext(H-110,'ASTROTRADERPRO.COM   '+DOT+'   @ASTROTRADERPROAPP',26,GOLD,'IBMPlexMono',4);
-  s+=ctext(H-70,'Educational / entertainment '+MDASH+' not financial advice',24,DIM,'CrimsonProItalic');
+  s+=ctext(H-70,'Educational '+MDASH+' not advice, not a recommendation, not a trading signal',24,DIM,'CrimsonProItalic');
   s+='</svg>';
   return s;
 }

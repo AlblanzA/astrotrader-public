@@ -1,3 +1,23 @@
+# =====================================================================
+#  IG Daily Post — carosello (6 schede), 6 storie, pagina Facebook
+# =====================================================================
+#
+#  MIGRAZIONE 10 set 2026: dal single-card al carosello. Le immagini del
+#  giorno (ig/carousel, ig/stories, ig/social.json) sono preparate nel repo
+#  PRIVATO (`npm run social-giorno` + stage-social) e spinte qui PRIMA che il
+#  cron scatti. Questo workflow VERIFICA e PUBBLICA; se le immagini mancano o
+#  sono vecchie, lo dice forte invece di ripubblicare quelle di ieri.
+#
+#  ── PERCHE' FALLISCE RUMOROSAMENTE ─────────────────────────────────────
+#   - la prova a secco gira SEMPRE prima di pubblicare: manifesto vecchio o
+#     lessico non passato -> ci si ferma prima di toccare la rete;
+#   - `set -euo pipefail` implicito via bash; annotazioni `::error::` in rosso;
+#   - `Mark posted` solo su successo, cosi' i cron di backup non ripubblicano.
+#
+#  NB LinkedIn: il trigger Make e' stato rimosso (la pagina Facebook ora si
+#  pubblica direttamente via Graph API). LinkedIn passa al generatore dedicato
+#  (studio-ricerca) via un publisher gated su LINKEDIN_TOKEN — da collegare.
+
 name: IG Daily Post
 on:
   schedule:
@@ -8,6 +28,9 @@ on:
 permissions:
   contents: write
 concurrency: ig-daily
+defaults:
+  run:
+    shell: bash
 jobs:
   post:
     runs-on: ubuntu-latest
@@ -23,7 +46,7 @@ jobs:
           TODAY=$(date -u +%F)
           LAST=$(cat ig/.posted 2>/dev/null || echo "")
           if [ "$LAST" = "$TODAY" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            echo "Gia' postato per $TODAY -> skip."
+            echo "Gia' postato per $TODAY -> skip (usa Run workflow per forzare)."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -33,21 +56,42 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: npm install --no-audit --no-fund
 
-      - name: Render cards
+      # Card singola (compatibilita'): alimenta ig/feed.json e ig/caption.txt.
+      # Non viene piu' pubblicata: il canale ora e' il carosello.
+      - name: Render card singola (compat)
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/render.mjs
 
-      - name: Commit cards
+      # Il gate. Nessuna chiamata parte: legge il manifesto, costruisce gli URL,
+      # passa il lessico e stampa la sequenza esatta. Se qualcosa non va, esce
+      # con codice != 0 e NON si pubblica.
+      - name: Prova a secco (nessuna pubblicazione)
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          ATP_DRY_RUN: '1'
+          GH_REPO: ${{ github.repository }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          node scripts/publish.mjs
+          node scripts/publish-fb.mjs
+
+      - name: Commit immagini del giorno
+        id: commit
         if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "atp-bot"
           git config user.email "bot@astrotraderpro.com"
-          git add ig/card-feed.png ig/card-story.png ig/caption.txt ig/feed.json
-          git commit -m "daily card $(date -u +%F)" || echo "no change"
+          git add ig/
+          git commit -m "daily social $(date -u +%F)" || echo "nessuna modifica da committare"
           git push
+          # URL appuntati alla SHA, non a "main": se arriva un altro commit
+          # mentre Meta scarica, con "main" scaricherebbe l'immagine sbagliata.
           echo "IMG_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
-      - name: Publish to Instagram
+      - name: Instagram — carosello e storie
         if: steps.guard.outputs.skip != 'true'
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -55,40 +99,40 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish.mjs
 
-      - name: Publish to Facebook Page (Graph API, se configurato)
+      # Niente continue-on-error: una pagina muta e' un guasto, non un dettaglio.
+      - name: Facebook — post a piu' immagini e storie
         if: steps.guard.outputs.skip != 'true'
-        continue-on-error: true
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish-fb.mjs
 
-      - name: Trigger Make (Facebook + LinkedIn via webhook)
-        if: steps.guard.outputs.skip != 'true'
-        continue-on-error: true
-        env:
-          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-        run: |
-          URL=$(printf '%s' "$MAKE_WEBHOOK_URL" | tr -d '[:space:]')
-          if [ -z "$URL" ]; then
-            echo "MAKE_WEBHOOK_URL non impostato -> salto il trigger Make."
-            exit 0
-          fi
-          echo "Attendo la propagazione del feed (astrotraderpro.com)..."
-          sleep 120
-          if curl -sS -X POST "$URL" -H "Content-Type: application/json" -d "{\"date\":\"$(date -u +%F)\",\"ref\":\"${IMG_REF:-main}\"}"; then
-            echo ""
-            echo "Make avvisato: pubblica la card di oggi su Facebook e LinkedIn."
-          else
-            echo "ATTENZIONE: chiamata a Make fallita (non blocca il workflow)."
-          fi
-
       - name: Mark posted
-        if: steps.guard.outputs.skip != 'true'
-        continue-on-error: true
+        if: steps.guard.outputs.skip != 'true' && success()
         run: |
           date -u +%F > ig/.posted
           git add ig/.posted
           git commit -m "mark posted $(date -u +%F)" || echo "no change"
           git push || echo "push mark failed (non bloccante)"
+
+      - name: Riepilogo del guasto
+        if: failure()
+        run: |
+          {
+            echo "## Pubblicazione quotidiana NON riuscita"
+            echo ""
+            echo "Data UTC: $(date -u +%F)"
+            echo ""
+            echo "Cause piu' frequenti:"
+            echo "1. **Immagini assenti o vecchie.** \`ig/social.json\` deve portare la"
+            echo "   data di oggi con 6 schede + 6 storie, preparate nel repo privato"
+            echo "   (\`npm run social-giorno\` + stage-social) e spinte qui."
+            echo "2. **Token scaduto.** \`IG_ACCESS_TOKEN\` dura 60 giorni; \`ig-refresh.yml\`"
+            echo "   lo rinnova ogni lunedi'. Il token di pagina Facebook va rifatto a mano."
+            echo "3. **Quota.** 50 pubblicazioni/24h; la giornata ne costa 7 (1 carosello + 6 storie)."
+            echo "4. **Lessico.** Una parola di mercato nella didascalia blocca prima di partire."
+            echo ""
+            echo "L'errore preciso e' nell'annotazione rossa in cima al run."
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 1
