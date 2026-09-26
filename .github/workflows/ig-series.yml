@@ -1,0 +1,68 @@
+# =====================================================================
+#  IG Series Post — le serie «pianeti» (A, B, lunazioni)
+# =====================================================================
+#
+#  Si AGGIUNGE a «IG Daily Post» (carosello quotidiano), non lo tocca.
+#  Il calendario e le immagini stanno negli asset del Worker:
+#    https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json
+#  Gira ogni mezz'ora e pubblica al massimo UNA voce per giro (la più vecchia
+#  maturata e non ancora uscita), poi ne ripubblica la copertina in storia.
+#  Lo stato sta in ig/series-posted.json, committato qui.
+#
+#  Stesso gruppo di concorrenza di IG Daily Post: i due workflow committano
+#  nello stesso repository e non devono sovrapporsi.
+
+name: IG Series Post
+on:
+  schedule:
+    - cron: '5,35 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Prova a secco (nessuna pubblicazione)'
+        type: boolean
+        default: true
+      now:
+        description: 'Ora simulata ISO (solo per la prova a secco), es. 2026-10-01T17:05:00Z'
+        required: false
+permissions:
+  contents: write
+concurrency: ig-daily
+defaults:
+  run:
+    shell: bash
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+
+      - name: Serie — pubblicazione
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
+          ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+          ATP_SERIES_LANGS: 'en,hi'
+        run: |
+          set -euo pipefail
+          node scripts/publish-series.mjs
+
+      - name: Salva lo stato
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain ig/series-posted.json 2>/dev/null)" ]; then
+            git config user.name "atp-bot"
+            git config user.email "bot@astrotraderpro.com"
+            git add ig/series-posted.json
+            git commit -m "series posted $(date -u +%FT%H:%M)"
+            git pull --rebase || true
+            git push
+          else
+            echo "stato invariato"
+          fi
