@@ -1,0 +1,60 @@
+# =====================================================================
+#  LinkedIn Series Post — serie a immagini multiple (T, lunazioni, ritratti)
+# =====================================================================
+#  Si AGGIUNGE al post quotidiano che esce via Make: non lo tocca.
+#  Calendario e immagini: https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json
+#  Serve il secret LINKEDIN_ACCESS_TOKEN (creato dall'utente, dura 60 giorni).
+#  Finché il secret non c'è, il run si ferma subito con un messaggio chiaro.
+name: LinkedIn Series Post
+on:
+  schedule:
+    - cron: '20,50 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Prova a secco (nessuna pubblicazione)'
+        type: boolean
+        default: true
+      now:
+        description: 'Ora simulata ISO per la prova a secco'
+        required: false
+permissions:
+  contents: write
+concurrency: ig-daily
+defaults:
+  run:
+    shell: bash
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - name: Serie LinkedIn — pubblicazione
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
+          ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+        run: |
+          set -euo pipefail
+          if [ "$ATP_DRY_RUN" != "1" ] && [ -z "${LINKEDIN_ACCESS_TOKEN}" ]; then
+            echo "LINKEDIN_ACCESS_TOKEN non ancora impostato: nessuna pubblicazione (normale finché l'utente non lo crea)."
+            exit 0
+          fi
+          node scripts/publish-linkedin-series.mjs
+      - name: Salva lo stato
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain li/ 2>/dev/null)" ]; then
+            git config user.name "atp-bot"
+            git config user.email "bot@astrotraderpro.com"
+            git add li/
+            git commit -m "linkedin series posted $(date -u +%FT%H:%M)"
+            git pull --rebase || true
+            git push
+          else
+            echo "stato invariato"
+          fi
