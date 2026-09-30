@@ -92,6 +92,14 @@ async function caricaImmagine(owner, url, i) {
 
 async function main() {
   if (!DRY && !TOKEN) muori('LINKEDIN_ACCESS_TOKEN non impostato: serie LinkedIn non pubblicabili.');
+  // Le serie vanno sulla PAGINA AstroTrader Pro, mai sul profilo personale.
+  // Finché LinkedIn non concede il permesso pagina (Community Management API)
+  // e LINKEDIN_AUTHOR_URN non è urn:li:organization:…, non si pubblica nulla.
+  const AUTH = process.env.LINKEDIN_AUTHOR_URN || '';
+  if (!DRY && !AUTH.startsWith('urn:li:organization:')) {
+    console.log('LinkedIn: in attesa del permesso per la pagina aziendale (LINKEDIN_AUTHOR_URN non è una pagina): nessuna pubblicazione.');
+    return;
+  }
   const r = await fetch(MANIFEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) muori(`manifesto ${MANIFEST_URL} → HTTP ${r.status}`);
   const m = await r.json();
