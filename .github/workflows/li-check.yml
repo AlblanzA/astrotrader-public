@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "LINKEDIN_AUTHOR_URN impostato: $([ -n "$AUTHOR" ] && echo si || echo no)"
           echo "== userinfo"; curl -s https://api.linkedin.com/v2/userinfo -H "Authorization: Bearer $T" | jq '{sub, name, error: .message}'
-          echo "== pagine gestibili"; curl -s "https://api.linkedin.com/rest/organizationAcls?q=roleAssignee&role=ADMINISTRATOR&state=APPROVED" \
-            -H "Authorization: Bearer $T" -H "LinkedIn-Version: 202509" -H "X-Restli-Protocol-Version: 2.0.0" | jq '{n: (.elements|length), orgs: [.elements[]?.organization], status, message}'
-          echo "== token"; curl -s -X POST https://www.linkedin.com/oauth/v2/introspectToken -d "token=$T" | jq '{active, scope, expires_at, status, message}' 2>/dev/null || true
+          for V in 202609 202608 202607 202606 202603; do
+            R=$(curl -s -o /tmp/o.json -w "%{http_code}" "https://api.linkedin.com/rest/organizationAcls?q=roleAssignee&role=ADMINISTRATOR&state=APPROVED" \
+              -H "Authorization: Bearer $T" -H "LinkedIn-Version: $V" -H "X-Restli-Protocol-Version: 2.0.0")
+            echo "versione $V -> HTTP $R $(jq -c '{n: (.elements|length), orgs: [.elements[]?.organization], message}' /tmp/o.json)"
+          done
