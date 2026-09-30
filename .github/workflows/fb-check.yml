@@ -1,0 +1,23 @@
+# Controllo del token Facebook (solo lettura: non pubblica nulla).
+# Stampa nome/id della pagina, permessi e scadenza del token, mai il token.
+name: FB Check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/fb-check.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pagina, permessi, scadenza
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          set -u
+          G=https://graph.facebook.com/v21.0
+          echo "== pagina"; curl -s "$G/$FB_PAGE_ID?fields=id,name,fan_count&access_token=$FB_PAGE_TOKEN" | jq '{id,name,fan_count,error:.error.message}'
+          echo "== token"; curl -s "$G/debug_token?input_token=$FB_PAGE_TOKEN&access_token=$FB_PAGE_TOKEN" \
+            | jq '.data | {type, app_id, profile_id, is_valid, expires_at, data_access_expires_at, scopes}'
+          echo "== ultimi post"; curl -s "$G/$FB_PAGE_ID/posts?fields=created_time&limit=3&access_token=$FB_PAGE_TOKEN" | jq '[.data[]?.created_time], .error.message'
