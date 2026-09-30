@@ -1,5 +1,5 @@
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, copyFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { getSky, atpBuildCardSVG } from './lib.mjs';
@@ -18,8 +18,12 @@ function render(portrait,out){
   writeFileSync(join(repo,out), r.render().asPng());
   console.log('wrote',out);
 }
-render(false,'ig/card-feed.png');
-render(true,'ig/card-story.png');
+// La card con i mercati NON si rende più su card-feed.png / card-story.png:
+// Make (Facebook + LinkedIn) legge quei due file a indirizzo fisso, quindi lì
+// va la copertina del carosello del giorno (vedi sotto). La card resta solo
+// come file a parte, mai pubblicata.
+render(false,'ig/card-mercati-feed.png');
+render(true,'ig/card-mercati-story.png');
 
 const RAW = 'https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig';
 
@@ -47,3 +51,6 @@ writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
   updated: new Date().toISOString()
 }, null, 2), 'utf8');
 console.log('wrote ig/feed.json (testo e copertina del carosello, niente mercati)');
+copyFileSync(join(repo, 'ig', social.carousel[0]), join(repo, 'ig/card-feed.png'));
+copyFileSync(join(repo, 'ig', social.stories[0]), join(repo, 'ig/card-story.png'));
+console.log('card-feed.png / card-story.png = copertina del carosello (immagine fissa letta da Make)');
