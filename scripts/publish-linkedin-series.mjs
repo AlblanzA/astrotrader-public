@@ -28,7 +28,7 @@ import { fileURLToPath } from 'node:url';
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DRY = process.env.ATP_DRY_RUN === '1';
 const TOKEN = process.env.LINKEDIN_ACCESS_TOKEN || '';
-const VERSION = process.env.LINKEDIN_VERSION || '202509';
+const VERSION = process.env.LINKEDIN_VERSION || '202609';
 const MANIFEST_URL = process.env.ATP_LI_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json';
 const STATE = join(REPO, 'li', 'series-posted.json');
