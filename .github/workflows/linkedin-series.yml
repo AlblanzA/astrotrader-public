@@ -3,8 +3,9 @@
 # =====================================================================
 #  Si AGGIUNGE al post quotidiano che esce via Make: non lo tocca.
 #  Calendario e immagini: https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json
-#  Serve il secret LINKEDIN_ACCESS_TOKEN (creato dall'utente, dura 60 giorni).
-#  Finché il secret non c'è, il run si ferma subito con un messaggio chiaro.
+#  Strada attiva: secret MAKE_LI_SERIES_WEBHOOK → scenario Make che pubblica
+#  la copertina sulla PAGINA AstroTrader Pro. Strada API (LINKEDIN_ACCESS_TOKEN
+#  + LINKEDIN_AUTHOR_URN di pagina) solo quando LinkedIn concede il permesso.
 name: LinkedIn Series Post
 on:
   schedule:
@@ -36,12 +37,13 @@ jobs:
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          MAKE_LI_SERIES_WEBHOOK: ${{ secrets.MAKE_LI_SERIES_WEBHOOK }}
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
         run: |
           set -euo pipefail
-          if [ "$ATP_DRY_RUN" != "1" ] && [ -z "${LINKEDIN_ACCESS_TOKEN}" ]; then
-            echo "LINKEDIN_ACCESS_TOKEN non ancora impostato: nessuna pubblicazione (normale finché l'utente non lo crea)."
+          if [ "$ATP_DRY_RUN" != "1" ] && [ -z "${LINKEDIN_ACCESS_TOKEN}" ] && [ -z "${MAKE_LI_SERIES_WEBHOOK}" ]; then
+            echo "Né LINKEDIN_ACCESS_TOKEN né MAKE_LI_SERIES_WEBHOOK impostati: nessuna pubblicazione."
             exit 0
           fi
           node scripts/publish-linkedin-series.mjs

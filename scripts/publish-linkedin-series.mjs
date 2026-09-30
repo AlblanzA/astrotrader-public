@@ -19,6 +19,13 @@
  *                          ricava da /v2/userinfo (serve lo scope openid+profile)
  * Il token di LinkedIn dura 60 giorni: il run fallisce in rosso quando scade.
  *
+ * VIA MAKE (strada attiva finché manca il permesso pagina dell'API): se il
+ * secret MAKE_LI_SERIES_WEBHOOK c'è, lo script NON chiama LinkedIn: invia al
+ * webhook di Make {id, image, title, text, alt} e lo scenario Make
+ * «ATP LinkedIn serie pagina (da GitHub)» crea il post immagine sulla PAGINA
+ * AstroTrader Pro. Make accetta una sola immagine per i post aziendali: esce la
+ * copertina, e le frasi «Six slides: …» diventano «In this series: …».
+ *
  * Prova senza pubblicare: ATP_DRY_RUN=1 ATP_NOW=2026-10-07T06:40:00Z node scripts/publish-linkedin-series.mjs
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -33,6 +40,7 @@ const MANIFEST_URL = process.env.ATP_LI_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json';
 const STATE = join(REPO, 'li', 'series-posted.json');
 const WINDOW_H = Number(process.env.ATP_LI_WINDOW_H || 8);
+const MAKE_HOOK = process.env.MAKE_LI_SERIES_WEBHOOK || '';
 const NOW = process.env.ATP_NOW ? Date.parse(process.env.ATP_NOW) : Date.now();
 
 function annota(m) { console.error(`::error::${m}`); }
@@ -48,6 +56,12 @@ function lessico(t, id) {
     const m = riga.match(VIETATE);
     if (m) muori(`${id}: parola vietata «${m[0]}» in «${riga.slice(0, 70)}»`);
   }
+}
+
+/* Con Make esce solo la copertina: il testo non deve promettere N schede. */
+const NUMERI = 'Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|\\d+';
+function testoCopertina(t) {
+  return String(t).replace(new RegExp(`\\b(?:${NUMERI}) slides:`, 'g'), 'In this series:');
 }
 
 /* «little text»: questi caratteri vanno preceduti da \ o LinkedIn tronca. */
@@ -91,6 +105,7 @@ async function caricaImmagine(owner, url, i) {
 }
 
 async function main() {
+  if (MAKE_HOOK || (DRY && process.env.ATP_VIA_MAKE === '1')) return viaMake();
   if (!DRY && !TOKEN) muori('LINKEDIN_ACCESS_TOKEN non impostato: serie LinkedIn non pubblicabili.');
   // Le serie vanno sulla PAGINA AstroTrader Pro, mai sul profilo personale.
   // Finché LinkedIn non concede il permesso pagina (Community Management API)
@@ -145,6 +160,55 @@ async function main() {
   const postId = res.headers.get('x-restli-id') || '(id non restituito)';
   console.log(`  pubblicato: ${postId}`);
   stato[p.id] = { post: postId, at: new Date().toISOString() };
+  mkdirSync(dirname(STATE), { recursive: true });
+  writeFileSync(STATE, JSON.stringify(stato, null, 1) + '\n');
+}
+
+/* Voce matura più vecchia, o null (e stampa la prossima). */
+async function prossimaVoce() {
+  const r = await fetch(MANIFEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
+  if (!r.ok) muori(`manifesto ${MANIFEST_URL} → HTTP ${r.status}`);
+  const m = await r.json();
+  const base = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
+  const stato = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {};
+  const maturi = (m.posts || []).filter((p) => !stato[p.id]
+    && Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3)
+    .sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
+  if (!maturi.length) {
+    const next = (m.posts || []).filter((p) => !stato[p.id] && Date.parse(p.at) > NOW)
+      .sort((a, b) => Date.parse(a.at) - Date.parse(b.at))[0];
+    console.log(`Nessuna serie LinkedIn adesso. Prossima: ${next ? next.id + ' alle ' + next.at : 'nessuna'}`);
+    return null;
+  }
+  return { p: maturi[0], base, stato };
+}
+
+async function viaMake() {
+  const v = await prossimaVoce();
+  if (!v) return;
+  const { p, base, stato } = v;
+  const text = testoCopertina(p.text);
+  lessico(text, p.id);
+  const dati = {
+    id: p.id,
+    image: base + p.images[0],
+    title: text.split('\n')[0].trim(),
+    text,
+    alt: p.alt || 'AstroTrader Pro',
+  };
+  console.log(`LINKEDIN (pagina, via Make) — ${p.id}: copertina ${dati.image}`);
+  if (DRY) {
+    console.log('  testo:\n' + text.split('\n').map((l) => '    ' + l).join('\n'));
+    console.log('  (a secco: niente invio a Make)');
+    return;
+  }
+  const r = await fetch(MAKE_HOOK, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dati),
+  });
+  const risposta = (await r.text()).slice(0, 200);
+  if (!r.ok) muori(`webhook Make → ${r.status} ${risposta}`);
+  console.log(`  consegnato a Make: ${r.status} ${risposta}`);
+  stato[p.id] = { via: 'make', at: new Date().toISOString() };
   mkdirSync(dirname(STATE), { recursive: true });
   writeFileSync(STATE, JSON.stringify(stato, null, 1) + '\n');
 }
