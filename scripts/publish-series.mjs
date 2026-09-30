@@ -100,8 +100,18 @@ async function pubblicaFeed(p, urls) {
 async function ripubblicaInStoria(url) {
   const c = await post(GRAPH, `/${USER}/media`, { image_url: url, media_type: 'STORIES', access_token: TOKEN });
   await attendiPronto(GRAPH, TOKEN, c.id, 'storia');
-  const p = await post(GRAPH, `/${USER}/media_publish`, { creation_id: c.id, access_token: TOKEN });
-  return p.id;
+  // Meta a volte dà FINISHED ma poi rifiuta con «media not ready» (2207027):
+  // si riprova qualche volta invece di perdere la storia.
+  for (let i = 1; ; i++) {
+    try {
+      const p = await post(GRAPH, `/${USER}/media_publish`, { creation_id: c.id, access_token: TOKEN });
+      return p.id;
+    } catch (e) {
+      if (i >= 6 || !/2207027|not ready/i.test(String(e))) throw e;
+      console.log(`  storia non ancora pronta per Meta, riprovo (${i})`);
+      await new Promise((r) => setTimeout(r, 5000 * i));
+    }
+  }
 }
 
 async function main() {
