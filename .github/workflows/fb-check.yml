@@ -1,5 +1,6 @@
-# Controllo del token Facebook (solo lettura: non pubblica nulla).
-# Stampa nome/id della pagina, permessi e scadenza del token, mai il token.
+# Controllo del token Facebook. Non pubblica nulla di visibile: l'unica
+# scrittura è una foto NON pubblicata (published=false), che non compare
+# sulla pagina, per provare il permesso di pubblicazione. Mai stampato il token.
 name: FB Check
 on:
   workflow_dispatch:
@@ -10,14 +11,18 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Pagina, permessi, scadenza
+      - name: Pagina, token, prova di caricamento
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
         run: |
           set -u
           G=https://graph.facebook.com/v21.0
-          echo "== pagina"; curl -s "$G/$FB_PAGE_ID?fields=id,name,fan_count&access_token=$FB_PAGE_TOKEN" | jq '{id,name,fan_count,error:.error.message}'
-          echo "== token"; curl -s "$G/debug_token?input_token=$FB_PAGE_TOKEN&access_token=$FB_PAGE_TOKEN" \
-            | jq '.data | {type, app_id, profile_id, is_valid, expires_at, data_access_expires_at, scopes}'
-          echo "== ultimi post"; curl -s "$G/$FB_PAGE_ID/posts?fields=created_time&limit=3&access_token=$FB_PAGE_TOKEN" | jq '[.data[]?.created_time], .error.message'
+          PT=$(curl -s "$G/$FB_PAGE_ID?fields=access_token&access_token=$FB_PAGE_TOKEN" | jq -r '.access_token // empty')
+          if [ -n "$PT" ]; then echo "::add-mask::$PT"; echo "token di pagina: ricavato"; else echo "token di pagina: NON ricavato, uso il secret"; PT=$FB_PAGE_TOKEN; fi
+          echo "== token di pagina"; curl -s "$G/debug_token?input_token=$PT&access_token=$PT" | jq '.data | {type, is_valid, expires_at, data_access_expires_at, scopes}'
+          echo "== ultimi post"; curl -s "$G/$FB_PAGE_ID/posts?fields=created_time&limit=3&access_token=$PT" | jq '[.data[]?.created_time], .error.message'
+          echo "== prova caricamento (foto NON pubblicata)"
+          curl -s -X POST "$G/$FB_PAGE_ID/photos" \
+            --data-urlencode "url=https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/2026-10-01-A_sole-en/1.jpg" \
+            -d "published=false" -d "access_token=$PT" | jq '{id, error: .error.message}'

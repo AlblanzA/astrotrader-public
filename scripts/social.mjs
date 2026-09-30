@@ -364,3 +364,26 @@ export async function quotaResidua(base, user, token) {
     return null;
   }
 }
+
+/**
+ * Facebook: il secret FB_PAGE_TOKEN può contenere il token UTENTE (esteso) invece
+ * di quello di pagina. Per pubblicare come pagina serve il token di pagina: lo si
+ * ricava qui a ogni giro con GET /{page}?fields=access_token. Se il token è già
+ * di pagina, la risposta non ha `access_token` e si usa quello com'è.
+ * Il token non viene mai stampato.
+ */
+export async function tokenDiPagina(graph, page, token) {
+  try {
+    const r = await fetch(`${graph}/${page}?fields=access_token&access_token=${encodeURIComponent(token)}`);
+    const j = await r.json();
+    if (j && j.access_token) {
+      console.log(`::add-mask::${j.access_token}`);
+      console.log('  token di pagina ricavato dal token utente');
+      return j.access_token;
+    }
+    if (j && j.error) console.log(`  token di pagina non ricavato (${j.error.message}): uso il secret così com'è`);
+  } catch (e) {
+    console.log(`  token di pagina non ricavato (${String(e)}): uso il secret così com'è`);
+  }
+  return token;
+}

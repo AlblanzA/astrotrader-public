@@ -26,11 +26,11 @@
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { DRY, REPO_DIR, annota, muori, esigiLessico, post } from './social.mjs';
+import { DRY, REPO_DIR, annota, muori, esigiLessico, post, tokenDiPagina } from './social.mjs';
 
 const GRAPH = 'https://graph.facebook.com/v21.0';
 const PAGE = process.env.FB_PAGE_ID;
-const TOKEN = process.env.FB_PAGE_TOKEN;
+let TOKEN = process.env.FB_PAGE_TOKEN;
 const MANIFEST_URL = process.env.ATP_SERIES_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json';
 const STATE = join(REPO_DIR, 'fb', 'series-posted.json');
@@ -81,6 +81,7 @@ async function main() {
     console.log('  (a secco: niente chiamate a Facebook)');
     return;
   }
+  TOKEN = await tokenDiPagina(GRAPH, PAGE, TOKEN);
   let postId;
   if (urls.length === 1) {
     const j = await post(GRAPH, `/${PAGE}/photos`, { url: urls[0], message: testo, access_token: TOKEN });

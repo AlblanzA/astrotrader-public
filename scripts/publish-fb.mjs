@@ -46,12 +46,12 @@
  *     ATP_DRY_RUN=1 node scripts/publish-fb.mjs
  */
 import {
-  DRY, leggiManifesto, urlDi, esigiLessico, post, annota, muori,
+  DRY, leggiManifesto, urlDi, esigiLessico, post, annota, muori, tokenDiPagina,
 } from './social.mjs';
 
 const GRAPH = 'https://graph.facebook.com/v21.0';
 const PAGE = process.env.FB_PAGE_ID;
-const TOKEN = process.env.FB_PAGE_TOKEN;
+let TOKEN = process.env.FB_PAGE_TOKEN;
 
 if (!PAGE || !TOKEN) {
   // Prima usciva 0 con un «skipping» in mezzo al log. Se i secret non ci sono
@@ -125,6 +125,7 @@ async function pubblicaStorie(m) {
 
 async function main() {
   if (DRY) console.log('=== PROVA A SECCO: nessuna chiamata parte davvero ===\n');
+  else TOKEN = await tokenDiPagina(GRAPH, PAGE, TOKEN);
 
   // Come su Instagram: a secco la data si controlla lo stesso. Per provare un
   // giorno diverso serve ATP_ALLOW_STALE=1, esplicito.
