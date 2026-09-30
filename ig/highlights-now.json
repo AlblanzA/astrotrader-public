@@ -1,0 +1,86 @@
+{
+ "version": 1,
+ "posts": [
+  {
+   "id": "2026-10-02-HL_01-start",
+   "at": "2026-09-30T20:00:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_01-start/frame1.jpg",
+    "ig/2026-10-02-HL_01-start/frame2.jpg",
+    "ig/2026-10-02-HL_01-start/frame3.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-02-HL_02-natal-chart",
+   "at": "2026-09-30T20:01:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_02-natal-chart/frame1.jpg",
+    "ig/2026-10-02-HL_02-natal-chart/frame2.jpg",
+    "ig/2026-10-02-HL_02-natal-chart/frame3.jpg",
+    "ig/2026-10-02-HL_02-natal-chart/frame4.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-02-HL_03-archetype",
+   "at": "2026-09-30T20:02:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_03-archetype/frame1.jpg",
+    "ig/2026-10-02-HL_03-archetype/frame2.jpg",
+    "ig/2026-10-02-HL_03-archetype/frame3.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-02-HL_04-world",
+   "at": "2026-09-30T20:03:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_04-world/frame1.jpg",
+    "ig/2026-10-02-HL_04-world/frame2.jpg",
+    "ig/2026-10-02-HL_04-world/frame3.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-02-HL_05-premium",
+   "at": "2026-09-30T20:04:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_05-premium/frame1.jpg",
+    "ig/2026-10-02-HL_05-premium/frame2.jpg",
+    "ig/2026-10-02-HL_05-premium/frame3.jpg",
+    "ig/2026-10-02-HL_05-premium/frame4.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-02-HL_06-privacy",
+   "at": "2026-09-30T20:05:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "ig/2026-10-02-HL_06-privacy/frame1.jpg",
+    "ig/2026-10-02-HL_06-privacy/frame2.jpg",
+    "ig/2026-10-02-HL_06-privacy/frame3.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  }
+ ],
+ "note": "Storie per le in evidenza pubblicate subito su richiesta (30/9). Stessi id del 2/10: quelle del 2/10 non escono una seconda volta."
+}

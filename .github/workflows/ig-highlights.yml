@@ -1,0 +1,55 @@
+# Pubblica SUBITO le storie per le «in evidenza» (manifesto ig/highlights-now.json).
+# Solo a mano. Gli id sono gli stessi del calendario del 2/10: una volta uscite
+# qui, il 2/10 non escono una seconda volta (stato in ig/series-posted.json).
+name: IG Highlights Now
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Prova a secco (nessuna pubblicazione)'
+        type: boolean
+        default: true
+permissions:
+  contents: write
+concurrency: ig-series
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - name: Storie in evidenza (una voce per giro, fino a 6)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ATP_DRY_RUN: ${{ inputs.dry && '1' || '0' }}
+          ATP_SERIES_LANGS: 'en'
+          ATP_STORIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/ig/highlights-now.json
+        run: |
+          for i in 1 2 3 4 5 6; do
+            echo "=== giro $i"
+            node scripts/publish-series.mjs | tee giro.log
+            grep -q "Nessuna serie da pubblicare" giro.log && break
+            [ "$ATP_DRY_RUN" = "1" ] && break
+            sleep 20
+          done
+      - name: Salva lo stato
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain ig/series-posted.json 2>/dev/null)" ]; then
+            git config user.name "atp-bot"
+            git config user.email "bot@astrotraderpro.com"
+            git add ig/series-posted.json
+            git commit -m "highlights posted $(date -u +%FT%H:%M)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase && git push && break
+              sleep $((i*5))
+            done
+            [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::stato NON salvato"; exit 1; }
+          else
+            echo "stato invariato"
+          fi
