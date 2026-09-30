@@ -1,0 +1,54 @@
+# Controllo in sola lettura di cosa è davvero uscito sui social.
+# Nessuna pubblicazione, nessun token stampato. Si lancia a mano o al push di
+# questo file; gira anche ogni mattina e segnala in rosso se Instagram non ha
+# un post nelle ultime 36 ore.
+name: Social Check
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 21 * * *'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/social-check.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instagram — ultimi post e storie
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          set -u
+          G=https://graph.instagram.com/v21.0
+          echo "== ultimi post Instagram (UTC)"
+          curl -s "$G/$IG_USER_ID/media?fields=timestamp,media_type,caption&limit=12&access_token=$IG_ACCESS_TOKEN" \
+            | jq -r '.error.message // empty, (.data[]? | "\(.timestamp)  \(.media_type)  \((.caption // "") | gsub("\n";" ") | .[0:70])")'
+          echo "== storie attive"
+          curl -s "$G/$IG_USER_ID/stories?fields=timestamp&access_token=$IG_ACCESS_TOKEN" | jq -r '.error.message // empty, (.data | length | "storie: \(.)")'
+          echo "== token"
+          curl -s "$G/me?fields=username&access_token=$IG_ACCESS_TOKEN" | jq -r '.username // .error.message'
+          LAST=$(curl -s "$G/$IG_USER_ID/media?fields=timestamp&limit=1&access_token=$IG_ACCESS_TOKEN" | jq -r '.data[0].timestamp // empty')
+          if [ -z "$LAST" ] || [ $(( $(date +%s) - $(date -d "${LAST/+0000/Z}" +%s) )) -gt 129600 ]; then
+            echo "::error::Instagram: nessun post nelle ultime 36 ore (ultimo: ${LAST:-nessuno})"; exit 1
+          fi
+      - name: Facebook — ultimi post della pagina
+        if: always()
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          set -u
+          G=https://graph.facebook.com/v21.0
+          PT=$(curl -s "$G/$FB_PAGE_ID?fields=access_token&access_token=$FB_PAGE_TOKEN" | jq -r '.access_token // empty')
+          [ -n "$PT" ] && echo "::add-mask::$PT" || PT=$FB_PAGE_TOKEN
+          curl -s "$G/$FB_PAGE_ID/posts?fields=created_time,message&limit=10&access_token=$PT" \
+            | jq -r '.error.message // empty, (.data[]? | "\(.created_time)  \((.message // "") | gsub("\n";" ") | .[0:70])")'
+          echo "== scadenza accesso ai dati"
+          curl -s "$G/debug_token?input_token=$FB_PAGE_TOKEN&access_token=$PT" | jq -r '.data | "valido: \(.is_valid)  data_access_expires_at: \(.data_access_expires_at | todate)"'
+      - name: Feed pubblici (X via dlvr.it, Make)
+        if: always()
+        run: |
+          for U in https://astrotraderpro.com/ig/feed.json https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json; do
+            echo "$(curl -s -o /dev/null -w '%{http_code}' "$U")  $U"
+          done
