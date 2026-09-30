@@ -2,7 +2,7 @@ import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { getSky, atpBuildCardSVG, buildCaption } from './lib.mjs';
+import { getSky, atpBuildCardSVG } from './lib.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const repo = join(__dir, '..');
@@ -22,16 +22,28 @@ render(false,'ig/card-feed.png');
 render(true,'ig/card-story.png');
 
 const RAW = 'https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig';
-const caption = buildCaption(data);
-const captionLink = buildCaption(data,{clickableLink:true});
-writeFileSync(join(repo,'ig/caption.txt'), caption, 'utf8');
+
+/* FEED PER MAKE (Facebook + LinkedIn quotidiani) — dal 30/9/2026 NON usa più
+ * la card con i mercati (BULL/BEAR, ticker «Favored»): su Facebook e LinkedIn
+ * valgono le stesse regole di Instagram, zero indicazioni di mercato. Il feed
+ * porta quindi il testo del carosello del giorno (ig/social.json, captionLink)
+ * e la sua copertina. La card con i mercati resta solo come file, non esce.
+ * Se social.json manca, il feed non si scrive: meglio nessun post che un post
+ * fuori regola (la prova a secco successiva ferma comunque il workflow). */
+const social = JSON.parse(readFileSync(join(repo, 'ig/social.json'), 'utf8'));
+const VIETATE = /\b(BULL|BEAR|Favored|risk-on|risk-off|buy|sell)\b/i;
+for (const t of [social.caption, social.captionLink]) {
+  const riga = String(t || '').split('\n').find((l) => !l.includes('Not financial advice') && VIETATE.test(l));
+  if (!t || riga) { console.error(`::error::feed Make: testo mancante o fuori regola («${(riga || '').slice(0, 60)}»)`); process.exit(1); }
+}
+writeFileSync(join(repo,'ig/caption.txt'), social.caption, 'utf8');
 console.log('wrote ig/caption.txt');
 writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
-  date: data.date || '',
-  image: RAW + '/card-feed.png',
-  story: RAW + '/card-story.png',
-  caption: caption,
-  captionLink: captionLink,
+  date: social.date || data.date || '',
+  image: RAW + '/' + social.carousel[0],
+  story: RAW + '/' + social.stories[0],
+  caption: social.caption,
+  captionLink: social.captionLink,
   updated: new Date().toISOString()
 }, null, 2), 'utf8');
-console.log('wrote ig/feed.json');
+console.log('wrote ig/feed.json (testo e copertina del carosello, niente mercati)');

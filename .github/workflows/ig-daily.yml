@@ -10,7 +10,7 @@
 #
 #  Facebook e LinkedIn restano su MAKE, esattamente come prima: la pagina non
 #  usa la Graph API diretta (nessun FB_PAGE_TOKEN configurato), quindi la card
-#  singola (render.mjs) alimenta feed.json e Make la pubblica su FB + LinkedIn.
+#  feed.json (render.mjs: testo e copertina del carosello, zero mercati) e Make lo pubblica su FB + LinkedIn.
 #  NB: Instagram riceve il carosello; FB/LinkedIn ricevono la card singola via
 #  Make. Per portare il carosello anche su FB servirebbero i secret FB Graph e
 #  togliere FB dallo scenario Make (evita il doppio-post) — passo futuro.
@@ -66,8 +66,8 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: npm install --no-audit --no-fund
 
-      # Card singola: alimenta ig/feed.json e ig/caption.txt, che Make usa per
-      # pubblicare su Facebook e LinkedIn. Non va su Instagram (li' c'e' il carosello).
+      # Feed per Make (Facebook + LinkedIn): dal 30/9 porta il testo e la
+      # copertina del carosello (ig/social.json), NON piu' la card con i mercati.
       - name: Render card singola (per Make — FB e LinkedIn)
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/render.mjs
