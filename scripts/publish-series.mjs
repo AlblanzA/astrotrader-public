@@ -26,6 +26,9 @@
  * Il «repost automatico». Dopo il post nel feed la copertina esce anche come
  * storia (l'API non permette di condividere il post stesso nella storia).
  *
+ * Voci speciali: `storiesOnly: true` (solo storie, per le «in evidenza»),
+ * `windowH` (finestra in ore per quella voce, al posto di ATP_SERIES_WINDOW_H).
+ *
  * Prova senza pubblicare:  ATP_DRY_RUN=1 ATP_NOW=2026-10-01T17:05:00Z node scripts/publish-series.mjs
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -52,10 +55,20 @@ function leggiStato() {
   try { return JSON.parse(readFileSync(STATE, 'utf8')); } catch (_) { return {}; }
 }
 
+const STORIES_URL = process.env.ATP_STORIES_URL
+  || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/stories.json';
+
 async function leggiManifesto() {
   const r = await fetch(MANIFEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error(`manifesto ${MANIFEST_URL} → HTTP ${r.status}`);
-  return r.json();
+  const m = await r.json();
+  // Le voci «solo storie» stanno in un manifesto a parte: la versione 1 di
+  // questo script non le conosce e non deve vederle.
+  try {
+    const s = await fetch(STORIES_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (s.ok) { const j = await s.json(); m.posts = (m.posts || []).concat(j.posts || []); }
+  } catch (_) { /* manifesto storie assente: si prosegue */ }
+  return m;
 }
 
 async function figlio(url) {
@@ -98,10 +111,10 @@ async function main() {
   const maturi = (m.posts || [])
     .filter((p) => LANGS.includes(p.lang))
     .filter((p) => !stato[p.id])
-    .filter((p) => Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3)
+    .filter((p) => Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= (p.windowH || WINDOW_H) * 3600e3)
     .sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   const scaduti = (m.posts || []).filter((p) => LANGS.includes(p.lang) && !stato[p.id]
-    && NOW - Date.parse(p.at) > WINDOW_H * 3600e3);
+    && NOW - Date.parse(p.at) > (p.windowH || WINDOW_H) * 3600e3);
   if (scaduti.length) console.warn(`::warning::${scaduti.length} voci oltre la finestra di ${WINDOW_H}h, saltate: ${scaduti.map((p) => p.id).slice(0, 5).join(', ')}`);
   if (!maturi.length) {
     const prossimo = (m.posts || []).filter((p) => LANGS.includes(p.lang) && !stato[p.id] && Date.parse(p.at) > NOW)
@@ -111,11 +124,26 @@ async function main() {
   }
   const p = maturi[0];
   console.log(`\nSERIE ${p.series} — ${p.id} (${p.lang}), prevista ${p.at}, ${p.images.length} immagini`);
-  esigiLessico(p.caption, p.id);
+  if (p.caption) esigiLessico(p.caption, p.id);
   const residua = await quotaResidua(GRAPH, USER, TOKEN);
   if (residua !== null && residua < 2) muori(`quota Instagram insufficiente (${residua}): ${p.id} rimandata.`);
   const urls = p.images.map((rel) => base + rel);
   urls.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
+  if (p.storiesOnly) {
+    // Voce «solo storie»: ogni immagine esce come storia, nessun post nel feed.
+    // Serve alle storie in evidenza (le «in evidenza» si compongono poi dal
+    // profilo: l'API non le gestisce).
+    const ids = [];
+    for (let i = 0; i < urls.length; i++) {
+      try { ids.push(await ripubblicaInStoria(urls[i])); console.log(`  storia ${i + 1}/${urls.length} pubblicata`); }
+      catch (e) { annota(`${p.id}: storia ${i + 1} non pubblicata: ${String(e)}`); process.exitCode = 1; }
+    }
+    if (!DRY) {
+      stato[p.id] = { stories: ids, at: new Date().toISOString() };
+      writeFileSync(STATE, JSON.stringify(stato, null, 1) + '\n');
+    }
+    return;
+  }
   const feedId = await pubblicaFeed(p, urls);
   console.log(`  pubblicato nel feed, id ${feedId}`);
   let storyId = null;
