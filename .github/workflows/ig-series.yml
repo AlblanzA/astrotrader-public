@@ -53,13 +53,28 @@ jobs:
           set -euo pipefail
           node scripts/publish-series.mjs
 
+      # Facebook: stessa serie sulla pagina (solo EN). Si salta da sola se i
+      # secret FB_PAGE_ID / FB_PAGE_TOKEN non ci sono. Un guasto FB non deve
+      # invalidare un post Instagram gia' uscito.
+      - name: Serie — Facebook
+        if: always()
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
+          ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+          ATP_FB_SERIES_LANGS: 'en'
+        run: node scripts/publish-fb-series.mjs
+
       - name: Salva lo stato
         if: always()
         run: |
-          if [ -n "$(git status --porcelain ig/series-posted.json 2>/dev/null)" ]; then
+          if [ -n "$(git status --porcelain ig/series-posted.json fb/series-posted.json 2>/dev/null)" ]; then
             git config user.name "atp-bot"
             git config user.email "bot@astrotraderpro.com"
             git add ig/series-posted.json
+            [ -f fb/series-posted.json ] && git add fb/series-posted.json
             git commit -m "series posted $(date -u +%FT%H:%M)"
             git pull --rebase || true
             git push

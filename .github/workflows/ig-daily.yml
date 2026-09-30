@@ -104,6 +104,24 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish.mjs
 
+      # Facebook diretto (Graph API): il carosello e le storie di pagina.
+      # Parte SOLO se esiste il file fb/DIRECT e ci sono i secret FB: il file si
+      # aggiunge nello stesso momento in cui si toglie Facebook da Make, cosi'
+      # la pagina non riceve mai due post. Un guasto FB non blocca il resto.
+      - name: Facebook — post a piu' immagini e storie (diretto)
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ ! -f fb/DIRECT ] || [ -z "$FB_PAGE_ID" ] || [ -z "$FB_PAGE_TOKEN" ]; then
+            echo "Facebook diretto non attivo (manca fb/DIRECT o i secret): resta Make."
+            exit 0
+          fi
+          node scripts/publish-fb.mjs
+
       # Facebook + LinkedIn: via Make, esattamente come prima. Riceve data e SHA;
       # legge la card singola dal feed pubblico. continue-on-error: un problema di
       # Make non deve invalidare un carosello Instagram gia' uscito.
