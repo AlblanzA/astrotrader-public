@@ -10,6 +10,9 @@ name: LinkedIn Series Post
 on:
   schedule:
     - cron: '20,50 * * * *'
+  workflow_run:
+    workflows: ['IG Daily Post']
+    types: [completed]
   workflow_dispatch:
     inputs:
       dry:
@@ -21,7 +24,7 @@ on:
         required: false
 permissions:
   contents: write
-concurrency: ig-daily
+concurrency: li-series
 defaults:
   run:
     shell: bash
@@ -55,8 +58,11 @@ jobs:
             git config user.email "bot@astrotraderpro.com"
             git add li/
             git commit -m "linkedin series posted $(date -u +%FT%H:%M)"
-            git pull --rebase || true
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase && git push && break
+              echo "push non riuscito (tentativo $i), riprovo"; sleep $((i*5))
+            done
+            [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::stato NON salvato su GitHub: rischio doppio post"; exit 1; }
           else
             echo "stato invariato"
           fi

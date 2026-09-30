@@ -15,7 +15,7 @@
  * diventa l'indirizzo vero.
  *
  * Una voce per giro, la più vecchia maturata entro ATP_FB_WINDOW_H ore
- * (default 6). Stato in fb/series-posted.json, committato dal workflow.
+ * (default 18). Stato in fb/series-posted.json, committato dal workflow.
  *
  * Secret (li crea l'utente): FB_PAGE_ID, FB_PAGE_TOKEN (token di PAGINA con
  * pages_manage_posts + pages_read_engagement). Se mancano, il passo si salta
@@ -34,7 +34,7 @@ let TOKEN = process.env.FB_PAGE_TOKEN;
 const MANIFEST_URL = process.env.ATP_SERIES_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json';
 const STATE = join(REPO_DIR, 'fb', 'series-posted.json');
-const WINDOW_H = Number(process.env.ATP_FB_WINDOW_H || 6);
+const WINDOW_H = Number(process.env.ATP_FB_WINDOW_H || 18);
 const LANGS = String(process.env.ATP_FB_SERIES_LANGS || 'en').split(',').map((s) => s.trim()).filter(Boolean);
 const NOW = process.env.ATP_NOW ? Date.parse(process.env.ATP_NOW) : Date.now();
 const SITE = 'https://astrotraderpro.com';

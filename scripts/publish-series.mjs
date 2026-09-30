@@ -12,7 +12,7 @@
  *
  * Quando pubblica. Il workflow gira ogni mezz'ora. Si pubblica UNA voce per
  * giro: la più vecchia fra quelle «maturate» (at <= adesso) e non ancora
- * pubblicate, purché non più vecchia di ATP_SERIES_WINDOW_H ore (default 6):
+ * pubblicate, purché non più vecchia di ATP_SERIES_WINDOW_H ore (default 18: i cron di GitHub arrivano con ore di ritardo):
  * se GitHub resta fermo mezza giornata, un post delle 19 non esce alle 7 del
  * mattino dopo.
  *
@@ -44,7 +44,7 @@ const TOKEN = process.env.IG_ACCESS_TOKEN;
 const MANIFEST_URL = process.env.ATP_SERIES_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json';
 const STATE = join(REPO_DIR, 'ig', 'series-posted.json');
-const WINDOW_H = Number(process.env.ATP_SERIES_WINDOW_H || 6);
+const WINDOW_H = Number(process.env.ATP_SERIES_WINDOW_H || 18);
 const LANGS = String(process.env.ATP_SERIES_LANGS || 'en,hi').split(',').map((s) => s.trim()).filter(Boolean);
 const NOW = process.env.ATP_NOW ? Date.parse(process.env.ATP_NOW) : Date.now();
 

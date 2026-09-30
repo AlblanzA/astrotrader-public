@@ -92,6 +92,7 @@ jobs:
           git config user.email "bot@astrotraderpro.com"
           git add ig/
           git commit -m "daily social $(date -u +%F)" || echo "nessuna modifica da committare"
+          git pull --rebase
           git push
           # URL appuntati alla SHA, non a "main".
           echo "IMG_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
@@ -151,7 +152,10 @@ jobs:
           date -u +%F > ig/.posted
           git add ig/.posted
           git commit -m "mark posted $(date -u +%F)" || echo "no change"
-          git push || echo "push mark failed (non bloccante)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && break
+            echo "push mark non riuscito (tentativo $i), riprovo"; sleep $((i*5))
+          done
 
       - name: Riepilogo del guasto
         if: failure()

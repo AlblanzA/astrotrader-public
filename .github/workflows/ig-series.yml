@@ -9,13 +9,21 @@
 #  maturata e non ancora uscita), poi ne ripubblica la copertina in storia.
 #  Lo stato sta in ig/series-posted.json, committato qui.
 #
-#  Stesso gruppo di concorrenza di IG Daily Post: i due workflow committano
-#  nello stesso repository e non devono sovrapporsi.
+#  AFFIDABILITÀ (30/9): i cron di GitHub arrivano con ore di ritardo e molti
+#  giri vengono saltati (visti 3 giri al giorno invece di 48). Quindi:
+#   - finestra di 18 ore per voce (una voce in ritardo esce tardi, non si perde);
+#   - il workflow parte anche alla fine di «IG Daily Post» e «LinkedIn Series
+#     Post» (più occasioni di giro, senza cicli);
+#   - gruppo di concorrenza proprio + push dello stato con 5 tentativi: se lo
+#     stato non arriva su GitHub il run diventa rosso (evita doppi post).
 
 name: IG Series Post
 on:
   schedule:
     - cron: '5,35 * * * *'
+  workflow_run:
+    workflows: ['IG Daily Post', 'LinkedIn Series Post']
+    types: [completed]
   workflow_dispatch:
     inputs:
       dry:
@@ -27,7 +35,7 @@ on:
         required: false
 permissions:
   contents: write
-concurrency: ig-daily
+concurrency: ig-series
 defaults:
   run:
     shell: bash
@@ -76,8 +84,11 @@ jobs:
             git add ig/series-posted.json
             [ -f fb/series-posted.json ] && git add fb/series-posted.json
             git commit -m "series posted $(date -u +%FT%H:%M)"
-            git pull --rebase || true
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase && git push && break
+              echo "push non riuscito (tentativo $i), riprovo"; sleep $((i*5))
+            done
+            [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::stato NON salvato su GitHub: rischio doppio post"; exit 1; }
           else
             echo "stato invariato"
           fi

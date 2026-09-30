@@ -10,7 +10,7 @@
  *
  * Manifesto: /social/li/series.json sugli asset del Worker, stessa forma di
  * quello Instagram (id, at UTC, images[], text). Si pubblica UNA voce per giro,
- * la più vecchia maturata entro ATP_LI_WINDOW_H ore (default 8). Stato in
+ * la più vecchia maturata entro ATP_LI_WINDOW_H ore (default 18). Stato in
  * li/series-posted.json, committato dal workflow.
  *
  * Secret necessari (li crea l'utente, mai scritti qui né stampati):
@@ -39,7 +39,7 @@ const VERSION = process.env.LINKEDIN_VERSION || '202609';
 const MANIFEST_URL = process.env.ATP_LI_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/li/series.json';
 const STATE = join(REPO, 'li', 'series-posted.json');
-const WINDOW_H = Number(process.env.ATP_LI_WINDOW_H || 8);
+const WINDOW_H = Number(process.env.ATP_LI_WINDOW_H || 18);
 const MAKE_HOOK = process.env.MAKE_LI_SERIES_WEBHOOK || '';
 const NOW = process.env.ATP_NOW ? Date.parse(process.env.ATP_NOW) : Date.now();
 
