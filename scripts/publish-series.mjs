@@ -137,7 +137,7 @@ async function main() {
   if (p.caption) esigiLessico(p.caption, p.id);
   const residua = await quotaResidua(GRAPH, USER, TOKEN);
   if (residua !== null && residua < 2) muori(`quota Instagram insufficiente (${residua}): ${p.id} rimandata.`);
-  const urls = p.images.map((rel) => base + rel);
+  const urls = p.images.map((rel) => (/^https?:\/\//.test(rel) ? rel : base + rel));
   urls.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
   if (p.storiesOnly) {
     // Voce «solo storie»: ogni immagine esce come storia, nessun post nel feed.

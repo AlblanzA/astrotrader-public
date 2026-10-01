@@ -2,17 +2,35 @@
  "version": 1,
  "posts": [
   {
-   "id": "2026-10-02-HL_01-start-b",
-   "at": "2026-09-30T21:40:00Z",
+   "id": "2026-10-01-HL2_markets",
+   "at": "2026-10-01T00:30:00Z",
    "lang": "en",
    "series": "H",
    "images": [
-    "ig/2026-10-02-HL_01-start/frame2.jpg",
-    "ig/2026-10-02-HL_01-start/frame3.jpg"
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/markets-cover.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/markets-1.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/markets-2.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/markets-3.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/markets-4.jpg"
+   ],
+   "storiesOnly": true,
+   "windowH": 96
+  },
+  {
+   "id": "2026-10-01-HL2_covers",
+   "at": "2026-10-01T00:31:00Z",
+   "lang": "en",
+   "series": "H",
+   "images": [
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-01-start.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-02-natal-chart.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-03-archetype.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-04-world.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-05-premium.jpg",
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/main/ig/hl2/cover-06-privacy.jpg"
    ],
    "storiesOnly": true,
    "windowH": 96
   }
- ],
- "note": "Storie per le in evidenza pubblicate subito su richiesta (30/9). Stessi id del 2/10: quelle del 2/10 non escono una seconda volta."
+ ]
 }
