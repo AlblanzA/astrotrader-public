@@ -49,6 +49,32 @@ jobs:
           node-version: '20'
       - run: npm install --no-audit --no-fund
 
+      # Storie 9:16 (1/10/2026): la copertina 4:5 ripubblicata in storia veniva
+      # ritagliata ai lati. Si crea ig/story/<id>.jpg per le voci in uscita, si
+      # committa e si passa a publish-series.mjs l'indirizzo raw al sha del
+      # commit. Se qualcosa va storto si prosegue: la storia userà l'originale.
+      - name: Storie 9:16
+        id: frames
+        continue-on-error: true
+        env:
+          ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+        run: |
+          set -uo pipefail
+          node scripts/story-frames.mjs
+          if [ -n "$(git status --porcelain ig/story 2>/dev/null)" ] && [ "${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}" != "1" ]; then
+            git config user.name "atp-bot"
+            git config user.email "bot@astrotraderpro.com"
+            git add ig/story
+            git commit -m "story frames $(date -u +%FT%H:%M)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase && git push && break
+              sleep $((i*5))
+            done
+          fi
+          if [ -z "$(git log origin/main..HEAD --oneline)" ]; then
+            echo "base=https://raw.githubusercontent.com/${{ github.repository }}/$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Serie — pubblicazione
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -57,6 +83,7 @@ jobs:
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
           ATP_SERIES_LANGS: 'en,hi'
+          ATP_STORY_BASE: ${{ steps.frames.outputs.base }}
         run: |
           set -euo pipefail
           node scripts/publish-series.mjs

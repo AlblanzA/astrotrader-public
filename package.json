@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@resvg/resvg-wasm": "^2.6.2",
-    "libsodium-wrappers": "^0.7.13"
+    "libsodium-wrappers": "^0.7.13",
+    "sharp": "^0.33.5"
   }
 }

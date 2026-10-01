@@ -97,6 +97,27 @@ async function pubblicaFeed(p, urls) {
   return pub.id;
 }
 
+// Versione 9:16 della copertina (scripts/story-frames.mjs, committata dal
+// workflow): senza, Instagram ritaglia i lati dell'immagine 4:5 nella storia.
+// Se il file non è raggiungibile si usa l'originale, con un avviso.
+async function urlStoria(p, originale) {
+  const rel = `ig/story/${p.id}.jpg`;
+  const base = process.env.ATP_STORY_BASE;
+  if (!base || !existsSync(join(REPO_DIR, rel))) {
+    console.warn(`::warning::${p.id}: storia 9:16 assente, uso l'immagine 4:5 (verrà ritagliata)`);
+    return originale;
+  }
+  const url = base.replace(/\/?$/, '/') + rel;
+  try {
+    const h = await fetch(url, { method: 'HEAD' });
+    if (h.ok) { console.log(`  storia 9:16: ${url}`); return url; }
+    console.warn(`::warning::${p.id}: ${url} → HTTP ${h.status}, uso l'immagine 4:5`);
+  } catch (e) {
+    console.warn(`::warning::${p.id}: ${url} non raggiungibile (${e}), uso l'immagine 4:5`);
+  }
+  return originale;
+}
+
 async function ripubblicaInStoria(url) {
   const c = await post(GRAPH, `/${USER}/media`, { image_url: url, media_type: 'STORIES', access_token: TOKEN });
   await attendiPronto(GRAPH, TOKEN, c.id, 'storia');
@@ -159,7 +180,7 @@ async function main() {
   let storyId = null;
   if (p.story) {
     try {
-      storyId = await ripubblicaInStoria(urls[0]);
+      storyId = await ripubblicaInStoria(await urlStoria(p, urls[0]));
       console.log(`  copertina ripubblicata in storia, id ${storyId}`);
     } catch (e) {
       annota(`${p.id}: post pubblicato, ma la storia no: ${String(e)}`);
