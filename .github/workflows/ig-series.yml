@@ -43,7 +43,12 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      # ref: main (1/10/2026): con workflow_run/schedule il checkout predefinito è il
+      # commit dell'evento, che può precedere lo stato salvato dal run appena
+      # finito (concorrenza) → doppio post. Si prende sempre l'ultimo main.
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/setup-node@v5
         with:
           node-version: '20'
@@ -86,6 +91,8 @@ jobs:
           ATP_STORY_BASE: ${{ steps.frames.outputs.base }}
         run: |
           set -euo pipefail
+          # ultimo stato prima di pubblicare (difesa contro i doppioni)
+          git pull -q --ff-only origin main || echo "::warning::pull dello stato non riuscito"
           node scripts/publish-series.mjs
 
       # Facebook: stessa serie sulla pagina (solo EN). Si salta da sola se i
