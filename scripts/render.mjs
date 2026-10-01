@@ -40,6 +40,20 @@ for (const t of [social.caption, social.captionLink]) {
   const riga = String(t || '').split('\n').find((l) => !l.includes('Not financial advice') && VIETATE.test(l));
   if (!t || riga) { console.error(`::error::feed Make: testo mancante o fuori regola («${(riga || '').slice(0, 60)}»)`); process.exit(1); }
 }
+// LINKEDIN — post appositi: nei giorni in cui cambia la configurazione del
+// cielo, al posto del testo del carosello va lo «studio» (generatore
+// frontend/scripts/linkedin-studio.mjs nel repo privato, testi precalcolati in
+// li/studio.json, una voce solo quando il titolo cambia). Make pubblica
+// `captionLink` su LinkedIn e `caption` su Facebook: Facebook non cambia.
+let linkedinText = social.captionLink;
+try {
+  const studio = JSON.parse(readFileSync(join(repo, 'li/studio.json'), 'utf8'));
+  const v = studio[social.date];
+  if (v && v.text && !VIETATE.test(v.text.split('\n').filter((l) => !l.includes('Not financial advice')).join('\n'))) {
+    linkedinText = v.text;
+    console.log(`LinkedIn: studio del giorno (${v.headline})`);
+  } else console.log('LinkedIn: nessuno studio per oggi, testo del carosello');
+} catch (_) { console.log('LinkedIn: li/studio.json assente, testo del carosello'); }
 writeFileSync(join(repo,'ig/caption.txt'), social.caption, 'utf8');
 console.log('wrote ig/caption.txt');
 writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
@@ -47,7 +61,7 @@ writeFileSync(join(repo,'ig/feed.json'), JSON.stringify({
   image: RAW + '/' + social.carousel[0],
   story: RAW + '/' + social.stories[0],
   caption: social.caption,
-  captionLink: social.captionLink,
+  captionLink: linkedinText,
   updated: new Date().toISOString()
 }, null, 2), 'utf8');
 console.log('wrote ig/feed.json (testo e copertina del carosello, niente mercati)');
