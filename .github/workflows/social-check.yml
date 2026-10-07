@@ -12,7 +12,8 @@ on:
     paths: ['.github/workflows/social-check.yml']
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       - name: Instagram — ultimi post e storie
         env:

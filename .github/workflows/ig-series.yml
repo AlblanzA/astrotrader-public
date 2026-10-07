@@ -41,7 +41,8 @@ defaults:
     shell: bash
 jobs:
   post:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       # ref: main (1/10/2026): con workflow_run/schedule il checkout predefinito è il
       # commit dell'evento, che può precedere lo stato salvato dal run appena
