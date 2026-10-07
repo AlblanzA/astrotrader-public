@@ -64,6 +64,7 @@ jobs:
         continue-on-error: true
         env:
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+          ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
         run: |
           set -uo pipefail
           node scripts/story-frames.mjs
@@ -88,7 +89,8 @@ jobs:
           GH_REPO: ${{ github.repository }}
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
-          ATP_SERIES_LANGS: 'en,hi'
+          ATP_SERIES_LANGS: 'en,hi,es,pt,fr,ru,zh,ja'
+          ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
           ATP_STORY_BASE: ${{ steps.frames.outputs.base }}
         run: |
           set -euo pipefail
@@ -108,6 +110,7 @@ jobs:
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
           ATP_FB_SERIES_LANGS: 'en'
+          ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
         run: node scripts/publish-fb-series.mjs
 
       - name: Salva lo stato
