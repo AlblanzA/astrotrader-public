@@ -1,0 +1,65 @@
+// Mercurio nelle 12 case — en, hi, it (registro tradizionale e psicologico, niente trading).
+// Dignità per analogia casa-segno: I Ariete ... XII Pesci. Stesse sigle di case_i18n.js:
+// D domicilio, E esaltazione, X esilio (detrimento), F caduta, P peregrino.
+// Doppia dignità: la pillola resta quella della dignità principale (colori invariati) e ALSO_ME aggiunge il qualificatore
+// ("anche esaltato" in Vergine / VI, "anche in caduta" in Pesci / XII).
+// Mercurio: Gemelli D, Vergine D+E, Sagittario X, Pesci X+F; gioia nella I casa.
+const TME = {
+it:{dir:'ltr',title:'Mercurio nelle 12 case',sub:'Come pensa, come parla, dove impara',h:['Casa','Lettura','Dignità'],
+ d:{D:['Domicilio','molto forte'],E:['Esaltazione','forte'],X:['Esilio','debole'],F:['Caduta','molto debole'],P:['Peregrino','neutro']},joy:'gioia',
+ also:{E:'+ anche esaltato',F:'+ anche in caduta'},
+ signs:['Ariete','Toro','Gemelli','Cancro','Leone','Vergine','Bilancia','Scorpione','Sagittario','Capricorno','Acquario','Pesci'],
+ rows:[['Identità','Mente vivace e visibile: parla, osserva, si adatta. Qui la tradizione dice che Mercurio gioisce.'],
+ ['Denaro','Mente pratica, attenta al valore delle cose. Le competenze sono la sua risorsa.'],
+ ['Mente e parola','Il suo luogo naturale: curiosità, letture, messaggi, piccoli spostamenti. Fratelli importanti.'],
+ ['Casa e radici','Pensa meglio a casa. Ricordi di famiglia, libri in casa, discussioni a tavola.'],
+ ['Piacere e creatività','Gioca con le parole: ironia, enigmi, scrittura creativa, seduzione a parole.'],
+ ['Lavoro quotidiano','Mente precisa e ordinata. Liste, metodo, cura del dettaglio e della salute.'],
+ ['Legami e partner','Cerca un partner con cui parlare. Dialogo, contratti e accordi contano.'],
+ ['Crisi e trasformazione','Mente indagatrice. Attratta da segreti, psicologia, domande scomode.'],
+ ['Idee e orizzonti','Tante idee, poca pazienza per i dettagli. Studi, lingue, viaggi; opinioni forti.'],
+ ['Carriera','Un lavoro fatto di parole: comunicare, insegnare, organizzare. Fama di mente sveglia.'],
+ ['Amici e progetti','Amici brillanti, tante chat di gruppo. Idee condivise, reti di contatti.'],
+ ['Ciò che è nascosto','Mente più intuitiva che logica. Pensieri trattenuti, fatica a dirli a parole.']],
+ angT:'Mercurio sugli angoli',ang:['Presenza sveglia: curiosità e battuta pronta.','Mente legata alle origini; una casa piena di libri e voci.','Cerca nell\'altro un interlocutore alla pari.','Una carriera fatta di parole, idee e contatti.'],
+ leg:'Dignità di Mercurio nel segno naturale di ogni casa (I Ariete … XII Pesci). Nella tradizione le case non hanno dignità proprie: è l\'analogia casa-segno. Nella I casa Mercurio ha la sua gioia.',cta:'Tema natale gratuito'},
+en:{dir:'ltr',title:'Mercury in the 12 houses',sub:'How it thinks, how it speaks, where it learns',h:['House','Reading','Dignity'],
+ d:{D:['Domicile','very strong'],E:['Exaltation','strong'],X:['Detriment','weak'],F:['Fall','very weak'],P:['Peregrine','neutral']},joy:'joy',
+ also:{E:'+ also exalted',F:'+ also in fall'},
+ signs:['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'],
+ rows:[['Identity','A quick, visible mind: talks, watches, adapts. Tradition says Mercury rejoices here.'],
+ ['Money','A practical mind, alert to what things are worth. Skills are its main resource.'],
+ ['Mind and speech','Its natural place: curiosity, reading, messages, quick trips. Siblings matter.'],
+ ['Home and roots','Thinks best at home. Family memories, books everywhere, talk around the table.'],
+ ['Pleasure and play','Plays with words: irony, puzzles, creative writing, flirting through wit.'],
+ ['Daily work','A precise, orderly mind. Lists, method, detail, attention to health.'],
+ ['Partners and bonds','Needs a partner to talk to. Dialogue, contracts and agreements matter.'],
+ ['Crisis and change','A probing mind. Drawn to secrets, psychology, uncomfortable questions.'],
+ ['Ideas and horizons','Many ideas, little patience for detail. Study, languages, travel; strong opinions.'],
+ ['Career','Work made of words: communicating, teaching, organising. Known as a sharp mind.'],
+ ['Friends and plans','Bright friends, busy group chats. Shared ideas, wide networks.'],
+ ['What is hidden','A mind more intuitive than logical. Thoughts held back, hard to put into words.']],
+ angT:'Mercury on the angles',ang:['A lively presence: curiosity and a ready wit.','A mind tied to its origins; a home full of books and voices.','Looks for an equal to talk to in the other.','A career built on words, ideas and contacts.'],
+ leg:'Mercury\'s dignity in the natural sign of each house (1st Aries … 12th Pisces). In tradition houses have no dignities of their own: this is the house–sign analogy. In the 1st house Mercury has its joy.',cta:'Free natal chart'},
+hi:{dir:'ltr',cjk:'hi',title:'12 भावों में बुध',sub:'कैसे सोचता है, कैसे बोलता है, कहाँ सीखता है',h:['भाव','व्याख्या','गरिमा'],
+ d:{D:['स्वराशि','बहुत बलवान'],E:['उच्च','बलवान'],X:['प्रतिकूल राशि','दुर्बल'],F:['नीच','बहुत दुर्बल'],P:['तटस्थ','सम']},joy:'आनंद',
+ also:{E:'+ उच्च भी',F:'+ नीच भी'},
+ signs:['मेष','वृषभ','मिथुन','कर्क','सिंह','कन्या','तुला','वृश्चिक','धनु','मकर','कुंभ','मीन'],
+ rows:[['व्यक्तित्व','फुर्तीली, सजग बुद्धि: बोलना, परखना, ढल जाना। परंपरा के अनुसार यहाँ बुध आनंदित होता है।'],
+ ['धन','व्यावहारिक बुद्धि, चीज़ों के मूल्य पर नज़र। कौशल ही असली पूँजी।'],
+ ['विचार और संवाद','अपना स्वाभाविक स्थान: जिज्ञासा, पढ़ना, संदेश, छोटी यात्राएँ। सहोदरों का बड़ा प्रभाव।'],
+ ['घर और जड़ें','घर में सबसे अच्छा सोचता है। पारिवारिक यादें, किताबें, खाने की मेज़ पर बातें।'],
+ ['प्रेम और सृजन','शब्दों से खेलता है: हास्य-विनोद, पहेलियाँ, रचनात्मक लेखन, बातों से आकर्षण।'],
+ ['दैनिक कार्य','सटीक, व्यवस्थित बुद्धि। सूचियाँ, पद्धति, बारीकी, सेहत का ध्यान।'],
+ ['साझेदारी','बात करने को साथी चाहिए। संवाद, अनुबंध और समझौते अहम।'],
+ ['संकट और परिवर्तन','खोजी बुद्धि। रहस्य, मनोविज्ञान और असहज प्रश्न आकर्षित करते हैं।'],
+ ['दर्शन और क्षितिज','ढेरों विचार, बारीकी में धैर्य कम। अध्ययन, भाषाएँ, यात्रा; दृढ़ मत।'],
+ ['करियर','शब्दों से बना काम: संवाद, शिक्षण, व्यवस्था। तेज़ बुद्धि की प्रतिष्ठा।'],
+ ['मित्र और आकांक्षाएँ','प्रतिभाशाली मित्र, व्यस्त ग्रुप चैट। साझा विचार, संपर्कों का जाल।'],
+ ['जो छिपा है','तर्क से अधिक अंतर्ज्ञान। मन में रुके विचार, जिन्हें शब्द देना कठिन है।']],
+ angT:'केंद्रों पर बुध',ang:['सजग उपस्थिति: जिज्ञासा और हाज़िरजवाबी।','जड़ों से जुड़ी बुद्धि; किताबों और आवाज़ों से भरा घर।','दूसरे में बराबरी का संवादी खोजता है।','शब्दों, विचारों और संपर्कों से बना करियर।'],
+ leg:'हर भाव की प्राकृतिक राशि में बुध की गरिमा (पहला भाव मेष … बारहवाँ मीन)। परंपरा में भावों की अपनी गरिमा नहीं होती: यह भाव और राशि का साम्य है। पहले भाव में बुध अपने आनंद में होता है।',cta:'मुफ़्त जन्म कुंडली'}
+};
+const DIGN_ME = ['P','P','D','P','P','D','P','P','X','P','P','X'];
+const ALSO_ME = {5:'E',11:'F'}; // VI Vergine: anche esaltazione; XII Pesci: anche caduta
+const JOY_ME = 0; // indice 0-based della I casa: gioia di Mercurio

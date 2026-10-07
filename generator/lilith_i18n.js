@@ -1,0 +1,17 @@
+// Lilith (Luna Nera media) nelle 12 case — demo IT. Nessuna dignità tradizionale: parola chiave al posto della dignità.
+const TL = {it:{dir:'ltr',title:'Lilith nelle 12 case',sub:'La Luna Nera: desiderio, rifiuto, ciò che non si piega',h:['Casa','Lettura','Parola chiave'],
+ signs:['Ariete','Toro','Gemelli','Cancro','Leone','Vergine','Bilancia','Scorpione','Sagittario','Capricorno','Acquario','Pesci'],
+ rows:[['Identità','Presenza magnetica e non addomesticabile. Rifiuta i ruoli che le vengono imposti.','Autonomia'],
+ ['Denaro','Rapporto ambivalente con il possesso: desiderio e rifiuto del denaro insieme.','Ambivalenza'],
+ ['Mente e parola','Dice ciò che gli altri tacciono. La parola come provocazione.','Verità scomode'],
+ ['Casa e radici','Ferite antiche nella famiglia d\'origine; la casa come luogo da cui emanciparsi.','Emancipazione'],
+ ['Piacere e rischio','Passioni intense e fuori dagli schemi. Il desiderio che non chiede permesso.','Desiderio'],
+ ['Lavoro quotidiano','Insofferenza per gerarchie e routine imposte. Lavora bene solo a modo suo.','Ribellione'],
+ ['Legami e avversari','Relazioni intense e sbilanciate. Nell\'altro incontra la propria ombra.','Ombra'],
+ ['Crisi e trasformazione','Attrazione per il proibito e il nascosto. Si trasforma attraverso le crisi.','Tabù'],
+ ['Idee e orizzonti','Mette in discussione dogmi e credenze. Una fede eretica.','Eresia'],
+ ['Carriera','Rifiuta l\'autorità e costruisce una reputazione fuori dagli schemi.','Indipendenza'],
+ ['Amici e progetti','Si sente estranea ai gruppi, ma ispira chi cerca strade diverse.','Differenza'],
+ ['Ciò che è nascosto','Il desiderio rimosso lavora nell\'ombra. Qui Lilith è più interiore.','Rimosso']],
+ angT:'Lilith sugli angoli',ang:['Fascino inquieto: attira e mette a disagio.','Radici da cui liberarsi.','L\'altro come specchio dell\'ombra.','Immagine pubblica controcorrente.'],
+ leg:'Lilith qui è la Luna Nera media, l\'apogeo dell\'orbita lunare. Non ha dignità tradizionali: al loro posto, una parola chiave per casa.',cta:'Tema natale gratuito'}};

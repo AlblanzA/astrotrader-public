@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:wght@400;700&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<script src="glyphs.js"></script><script src="case_i18n.js"></script><script src="lilith_i18n.js"></script><script src="sole_i18n.js"></script><script src="luna_case_i18n.js"></script><script src="mercurio_case_i18n.js"></script><script src="venere_case_i18n.js"></script><script>var SB={sole:{},luna:{},mercurio:{},venere:{},marte:{},giove:{},saturno:{},urano:{},nettuno:{},plutone:{}},SB_UI={hi:{tpl:{},cta:{}},es:{tpl:{},cta:{}},pt:{tpl:{},cta:{}},fr:{tpl:{},cta:{}},ru:{tpl:{},cta:{}},zh:{tpl:{},cta:{}},ja:{tpl:{},cta:{}}};</script><script src="i18n_add/es.js"></script><script src="i18n_add/pt.js"></script><script src="i18n_add/fr.js"></script><script src="i18n_add/ru.js"></script><script src="i18n_add/zh.js"></script><script src="i18n_add/ja.js"></script><script src="case_more.js"></script><script src="i18n_add/hi_more.js"></script><script src="i18n_add/es_more.js"></script><script src="i18n_add/pt_more.js"></script><script src="i18n_add/fr_more.js"></script><script src="i18n_add/ru_more.js"></script><script src="i18n_add/zh_more.js"></script><script src="i18n_add/ja_more.js"></script>
+<style>
+:root{--bg1:#2E0C0F;--bg2:#140608;--rust:#B04A2E;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7CF;--mute:#CDB9A8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1440px;overflow:hidden;background:var(--bg2);font-family:Spectral,Georgia,serif;color:var(--parch)}
+body.rtl{font-family:Amiri,serif}
+body.sc{font-family:"Noto Serif SC",serif}body.jp{font-family:"Noto Serif JP",serif}body.kr{font-family:"Noto Serif KR",serif}body.hi{font-family:"Noto Serif Devanagari",serif}
+body.sc .ht h1,body.jp .ht h1,body.kr .ht h1,body.hi .ht h1,body.sc .ht p,body.jp .ht p,body.kr .ht p,body.hi .ht p,body.sc .th div,body.jp .th div,body.kr .th div,body.hi .th div,body.sc .ang h2,body.jp .ang h2,body.kr .ang h2,body.hi .ang h2{font-family:inherit;font-style:normal}
+body.sc .ht h1,body.jp .ht h1,body.kr .ht h1{font-size:62px;font-weight:600}body.hi .ht h1{font-size:60px;line-height:1.3}
+body.sc .ht p,body.jp .ht p,body.kr .ht p,body.hi .ht p{font-size:28px}
+body.sc .a small,body.jp .a small,body.kr .a small,body.hi .a small,body.sc .leg,body.jp .leg,body.kr .leg,body.hi .leg{font-style:normal}body.sc .r,body.jp .r,body.kr .r{font-size:20px;line-height:1.42}body.hi .r{font-size:20px;line-height:1.38}
+.s{position:relative;width:1080px;height:1440px;overflow:hidden;background:radial-gradient(120% 70% at 50% 0%,#4A1216 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.frame{position:absolute;inset:28px;border:1.5px solid rgba(201,163,78,.8);pointer-events:none;z-index:5}
+.head{position:absolute;left:62px;right:62px;top:52px;height:236px;display:flex;gap:34px;align-items:center}
+.port{flex:0 0 192px;height:236px;border-radius:96px 96px 6px 6px;border:2px solid var(--gold);background:url(/home/claude/dei/MARTE.png) 42% 3%/215% auto;position:relative}
+.port .m{position:absolute;width:92px;height:92px;right:-30px;bottom:-18px}
+.rtl .port .m{right:auto;left:-30px}
+.ht h1{font-family:"Cormorant Garamond";font-weight:600;font-size:72px;line-height:1;color:var(--parch)}
+.rtl .ht h1{font-family:Amiri;font-weight:700;font-size:62px;line-height:1.25}
+.ht p{font-family:"Cormorant Garamond";font-style:italic;font-size:34px;color:var(--gold2);margin-top:12px}
+.rtl .ht p{font-family:Amiri;font-style:normal;font-size:32px}
+.flow{position:absolute;left:62px;right:62px;top:306px;display:flex;flex-direction:column;gap:16px}
+.tr{display:grid;grid-template-columns:84px 212px 1fr 164px;align-items:center;min-height:58px;border-bottom:1px solid rgba(232,205,142,.18)}
+.tr:nth-child(even){background:rgba(232,205,142,.045)}
+.th{min-height:44px;border-bottom:2px solid var(--gold);background:none!important}
+.th div{font-family:"Cormorant Garamond";font-weight:600;font-size:25px;color:var(--gold2)}
+.rtl .th div{font-family:Amiri;font-weight:700;font-size:24px}
+.n{font-family:"Cormorant Garamond";font-weight:600;font-size:36px;color:var(--gold);text-align:center}
+.a{font-weight:600;font-size:21px;line-height:1.15;padding:0 12px 0 4px;color:var(--gold2)}.a small{display:block;font-weight:400;font-style:italic;font-size:16px;color:var(--mute);margin-top:3px}
+.r{font-size:19.5px;line-height:1.26;padding:5px 14px 5px 4px}
+.rtl .a{font-size:24px;font-weight:700}.rtl .r{font-size:23px;line-height:1.35}.rtl .ag b{text-align:right}.rtl .ag div{font-size:20px}
+.dg{justify-self:center;text-align:center;width:150px;padding:5px 6px;border-radius:8px;line-height:1.1}
+.dg b{display:block;font-size:17px;font-weight:600}.dg i{display:block;font-size:13.5px;font-style:normal;opacity:.85;margin-top:2px}
+.dg.D{background:linear-gradient(#E6C470,#C9A34E);color:#2A0B0D;box-shadow:0 0 12px rgba(230,196,112,.35)}
+.dg.E{background:#E8CD8E;color:#2A0B0D}
+.dg.P{border:1.5px solid rgba(232,205,142,.45);color:var(--gold2)}
+.dg.X{background:#6E2620;color:#F3C9B6;border:1px solid #9A3B2E}
+.dg.F{background:#3A0F0E;color:#E39C84;border:1.5px solid #B04A2E}
+.port.sym{background:radial-gradient(80% 70% at 50% 35%,#2A1840,#0B0710);display:flex;align-items:center;justify-content:center}
+.lil .s{background:radial-gradient(120% 70% at 50% 0%,#2A1638 0%,#150C22 38%,#08050C 100%)}
+.kw b{font-style:italic}
+.joy{display:block;margin-top:4px;font-size:12.5px;color:#FBE9DC;background:var(--rust);border-radius:10px;padding:1px 8px;width:max-content;margin-inline:auto}
+.ang{}
+.ang h2{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-size:28px;color:var(--gold2);margin-bottom:10px}
+.rtl .ang h2{font-family:Amiri;font-style:normal}
+.ag{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ag div{border:1px solid rgba(201,163,78,.55);padding:9px 11px;font-size:17px;line-height:1.28}
+.rtl .ag div{font-size:18.5px}
+.ag b{display:block;font-family:"Cormorant Garamond";font-weight:700;font-size:26px;color:var(--gold);line-height:1;margin-bottom:5px;direction:ltr;text-align:start}
+.leg{font-size:15.5px;line-height:1.3;color:var(--mute);font-style:italic}
+.rtl .leg{font-style:normal;font-size:17px}
+.foot{position:absolute;left:0;right:0;bottom:44px;text-align:center;font-family:"Cormorant Garamond";font-weight:600;font-size:30px;letter-spacing:.06em;color:var(--gold2)}
+.foot span{font-family:Spectral;font-weight:400;letter-spacing:0;font-size:22px;color:var(--parch);margin-inline-end:14px}
+.rtl .foot span{font-family:Amiri;font-size:24px}
+/* Sole: oro/ambra — Luna: argento/blu notte. Marte resta invariato (regole sopra). */
+body.sole{--bg1:#2E1A06;--bg2:#120A03;--rust:#C2621A;--gold:#D4A94A;--gold2:#F0D48E;--parch:#F7EBD2;--mute:#D8C3A0}
+.sole .s{background:radial-gradient(120% 70% at 50% 0%,#5A3A0E 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.sole .dg.D{background:linear-gradient(#F4D27A,#D4A94A);color:#2A1804;box-shadow:0 0 14px rgba(244,210,122,.45)}
+.sole .dg.E{background:#F0D48E;color:#2A1804}
+.sole .dg.X{background:#6A3510;color:#F8D2A8;border:1px solid #A0561E}
+.sole .dg.F{background:#2E1605;color:#EFA56A;border:1.5px solid #C2621A}
+.sole .joy{color:#FFF1DE}
+.sole .port{box-shadow:0 0 34px rgba(244,190,90,.28)}
+body.luna{--bg1:#0E1830;--bg2:#050910;--rust:#4E6FA8;--gold:#BFCBDE;--gold2:#E1E8F3;--parch:#F1F4F9;--mute:#A9B5C9}
+.luna .s{background:radial-gradient(120% 70% at 50% 0%,#1F3158 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.luna .frame{border-color:rgba(191,203,222,.75)}
+.luna .tr{border-bottom-color:rgba(225,232,243,.16)}.luna .tr:nth-child(even){background:rgba(225,232,243,.045)}.luna .th{border-bottom-color:var(--gold)}
+.luna .dg.D{background:linear-gradient(#F4F7FC,#C3CFE2);color:#0E1830;box-shadow:0 0 14px rgba(230,238,250,.45)}
+.luna .dg.E{background:#DCE4F0;color:#0E1830}
+.luna .dg.P{border-color:rgba(225,232,243,.45)}
+.luna .dg.X{background:#23355A;color:#D3DEF2;border:1px solid #4F6A9C}
+.luna .dg.F{background:#0B1222;color:#A7BCE0;border:1.5px solid #6F8FC4}
+.luna .ag div{border-color:rgba(191,203,222,.55)}
+.luna .joy{color:#fff}
+.luna .port .m{filter:grayscale(1) brightness(1.15) contrast(1.05)}
+.luna .port{box-shadow:0 0 34px rgba(200,215,240,.25)}
+/* Mercurio: verde-ottanio e ottone (mantello arancio del dipinto) — Venere: oro rosa su prugna, ritratto solo simbolo */
+body.mercurio{--bg1:#0E2226;--bg2:#050E10;--rust:#C9742E;--gold:#CDAE66;--gold2:#EAD6A0;--parch:#F2EEE3;--mute:#B4C3BF}
+.mercurio .s{background:radial-gradient(120% 70% at 50% 0%,#1C4348 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.mercurio .frame{border-color:rgba(205,174,102,.78)}
+.mercurio .tr{border-bottom-color:rgba(234,214,160,.16)}.mercurio .tr:nth-child(even){background:rgba(234,214,160,.04)}
+.mercurio .dg.D{background:linear-gradient(#EFD68E,#CDAE66);color:#0B1D20;box-shadow:0 0 14px rgba(239,214,142,.4)}
+.mercurio .dg.E{background:#EAD6A0;color:#0B1D20}
+.mercurio .dg.P{border-color:rgba(234,214,160,.45)}
+.mercurio .dg.X{background:#5A3416;color:#F5D2AE;border:1px solid #9A5A26}
+.mercurio .dg.F{background:#1E1208;color:#EBA774;border:1.5px solid #C9742E}
+.mercurio .ag div{border-color:rgba(205,174,102,.55)}
+.mercurio .joy{color:#FFF3E4}
+.mercurio .port{box-shadow:0 0 30px rgba(120,200,190,.18)}
+body.venere{--bg1:#2C1020;--bg2:#12060D;--rust:#C9607A;--gold:#DDA98C;--gold2:#F3D0BD;--parch:#FBEFE8;--mute:#D9B7B2}
+.venere .s{background:radial-gradient(120% 70% at 50% 0%,#5A2338 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.venere .frame{border-color:rgba(221,169,140,.78)}
+.venere .tr{border-bottom-color:rgba(243,208,189,.16)}.venere .tr:nth-child(even){background:rgba(243,208,189,.045)}
+.venere .dg.D{background:linear-gradient(#F8D9C4,#DDA98C);color:#2A0C18;box-shadow:0 0 14px rgba(248,210,190,.45)}
+.venere .dg.E{background:#F3D0BD;color:#2A0C18}
+.venere .dg.P{border-color:rgba(243,208,189,.45)}
+.venere .dg.X{background:#5C1E30;color:#F6CCD4;border:1px solid #9C3E58}
+.venere .dg.F{background:#22080F;color:#EE9BAE;border:1.5px solid #C9607A}
+.venere .ag div{border-color:rgba(221,169,140,.55)}
+.venere .joy{color:#FFF0F3}
+.venere .port.sym{background:radial-gradient(75% 65% at 50% 38%,#6A2A42 0%,#3A1224 55%,#14060C 100%);box-shadow:0 0 34px rgba(240,170,170,.28)}
+.dg .also{display:block;font-size:13.5px;font-style:italic;margin-top:3px;opacity:.95}
+body.giove{--bg1:#141C3A;--bg2:#070A18;--rust:#7FA0E8;--gold:#D4B35A;--gold2:#EED79A;--parch:#F2EFE6;--mute:#B9BFD6}
+body.saturno{--bg1:#1A1A1E;--bg2:#08080A;--rust:#B8A06A;--gold:#C9AE6A;--gold2:#E6D3A0;--parch:#EEEAE0;--mute:#B5B0A6}
+body.urano{--bg1:#0C2230;--bg2:#040E14;--rust:#5FC8D8;--gold:#C9B26A;--gold2:#E8D8A2;--parch:#EEF5F6;--mute:#A9C3C9}
+body.nettuno{--bg1:#06242A;--bg2:#020D10;--rust:#4FB8A8;--gold:#CDAF62;--gold2:#EAD49A;--parch:#EAF4F1;--mute:#9EC2BC}
+body.plutone{--bg1:#200A10;--bg2:#0A0306;--rust:#B0384A;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7DD;--mute:#C9B0AA}
+</style></head><body><div id="root"></div>
+<script>
+const Q=new URLSearchParams(location.search), PT=Q.get('p')||'marte'; const L=location.hash.slice(1)||'it', R=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
+// Tema per punto: dati, dignità, gioia, immagine del ritratto (Sole e Luna: mai figure umane, solo l'astro).
+const PTS={marte:{T:T,D:DIGN,J:JOY,img:'/home/claude/dei/MARTE.png',pos:'42% 3%/215% auto'},
+ sole:{T:TS,D:DIGN_S,J:JOY_S,img:'/home/claude/dei/SOLE_PAE.png',pos:'30% 31%/180% auto'},
+ luna:{T:TM,D:DIGN_M,J:JOY_M,img:'/home/claude/dei/LUNAPIENA_PAE.png',pos:'44% 9%/300% auto'},
+ mercurio:{T:TME,D:DIGN_ME,J:JOY_ME,A:ALSO_ME,img:'/home/claude/dei/MERCURIO.png',pos:'46% 1%/250% auto'},
+ venere:{T:TV,D:DIGN_V,J:JOY_V,sym:{g:'venere',c:'#F6D2BE',glow:'#E89AA8'}}, // venere.png ha una cornice ovale dipinta: solo simbolo
+ lilith:{T:TL,sym:{g:'lilith',c:'#D9C9F0',glow:'#B89BE0'}},
+ giove:{T:TG,D:DIGN_G,J:JOY_G,img:'/home/claude/dei/giove.png',pos:'50% 24%/270% auto'},saturno:{T:TSA,D:DIGN_SA,J:JOY_SA,img:'/home/claude/dei/saturno.png',pos:'50% 15%/270% auto'},urano:{T:TU,D:DIGN_U,J:JOY_U,img:'/home/claude/dei/urano.png',pos:'50% 27%/270% auto'},nettuno:{T:TN,D:DIGN_N,J:JOY_N,img:'/home/claude/dei/nettuno.png',pos:'48% 15%/270% auto'},plutone:{T:TP,D:DIGN_P,J:JOY_P,img:'/home/claude/dei/plutone.png',pos:'52% 13%/270% auto'}};
+const P=PTS[PT]||PTS.marte, t=P.T[L], DG=P.D||DIGN, JY=P.J??JOY;
+const IMG=Q.get('img')||P.img, POS=Q.get('pos')||P.pos;
+document.documentElement.lang=L; document.documentElement.dir=t.dir; if(t.dir==='rtl')document.body.classList.add('rtl'); if(t.cjk)document.body.classList.add(t.cjk); if(PT==='lilith')document.body.classList.add('lil'); if(['sole','luna','mercurio','venere','giove','saturno','urano','nettuno','plutone'].includes(PT))document.body.classList.add(PT); const AL=P.A||{};
+document.getElementById('root').innerHTML=`<div class="s">
+<div class="head blk">${P.sym?`<div class="port sym"><svg viewBox="0 0 100 100" width="${PT==='lilith'?92:78}%" height="${PT==='lilith'?92:78}%" fill="none" stroke="${P.sym.c}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 12px ${P.sym.glow})">${GLYPH[P.sym.g]}</svg></div>`:`<div class="port" style="background:url(${IMG}) ${POS}"><div class="m">${medal(PT in GLYPH?PT:'marte')}</div></div>`}
+ <div class="ht"><h1>${t.title}</h1><p>${t.sub}</p></div></div>
+<div class="flow"><div class="tbl blk"><div class="tr th"><div style="text-align:center">${t.h[0]}</div><div></div><div>${t.h[1]}</div><div style="text-align:center">${t.h[2]}</div></div>
+${t.rows.map((r,i)=>`<div class="tr"><div class="n">${R[i]}</div><div class="a">${r[0]}<small>${t.signs[i]}</small></div><div class="r">${r[1]}</div>${PT==='lilith'?`<div class="dg P kw"><b>${r[2]}</b></div>`:`<div class="dg ${DG[i]}"><b>${t.d[DG[i]][0]}</b><i>${t.d[DG[i]][1]}</i>${AL[i]?`<span class="also">${t.also[AL[i]]}</span>`:''}${i===JY?`<span class="joy">+ ${t.joy}</span>`:""}</div>`}</div>`).join('')}</div>
+<div class="ang blk"><h2>${t.angT}</h2><div class="ag">${['AC','IC','DC','MC'].map((k,i)=>`<div><b>${k}</b>${t.ang[i]}</div>`).join('')}</div></div>
+<div class="leg blk">${t.leg}</div></div>
+<div class="foot blk"><span>${t.cta}</span>astrotraderpro.com</div>
+<div class="frame"></div></div>`;
+// titolo su una riga sola: riduce il corpo finché non entra (min 50px)
+(()=>{const h=document.querySelector('.ht h1'); if(!h)return; let fs=parseFloat(getComputedStyle(h).fontSize); const lh=()=>parseFloat(getComputedStyle(h).lineHeight)||fs*1.1;
+ while(h.getBoundingClientRect().height>lh()*1.5&&fs>50){fs-=2;h.style.fontSize=fs+'px';}})();
+</script></body></html>
