@@ -33,4 +33,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://astrotraderpro.com/faq/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astrotraderpro.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://astrotraderpro.com/it/faq/"/>
+  </url>
+  <url>
+    <loc>https://astrotraderpro.com/it/faq/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astrotraderpro.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://astrotraderpro.com/it/faq/"/>
+  </url>
 </urlset>

@@ -16,10 +16,22 @@
 ## Topics
 astrologia, astrologia finanziaria, esoterismo, tema natale, transiti planetari, case astrologiche, aspetti, nodi lunari, stelle fisse, astrologia mundana, cicli planetari dei mercati, financial astrology, esoteric astrology, natal chart, planetary transits, zodiac trading.
 
+## FAQ (short factual answers)
+- FAQ (English): https://astrotraderpro.com/faq/
+- FAQ (Italiano): https://astrotraderpro.com/it/faq/
+- Is it financial advice? No — AstroTrader Pro is an educational tool, not financial advice.
+- Creator: Alberto Nicola Lanzafame (Palermo, Italy) — actor, trader and astrologer; IMDb nm8412826, MQL5 alb900, TradingView alblanz.
+- Markets covered: 211 instruments mapped to ruling planets — 39 indices, 80 stocks, 37 ETFs, 23 commodities, 18 forex pairs, 14 cryptocurrencies — plus world analysis by country.
+
 ## Links
 - Webapp: https://astrotraderpro.astrotraderproapp.workers.dev/
 - Website: https://astrotraderpro.com/
 - Android: https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro
+- Instagram: https://www.instagram.com/astrotraderproapp/
+- Facebook: https://www.facebook.com/1259161500606920
+- X: https://x.com/Astrotraderpro
+- LinkedIn: https://www.linkedin.com/company/134833923/
+- Telegram: https://t.me/AstroTraderProEN
 
 ## Note
 Educational and informational only. Astrology is not a substitute for financial advice.
