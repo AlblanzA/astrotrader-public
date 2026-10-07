@@ -73,7 +73,7 @@ async function main() {
   const p = maturi[0];
   const testo = testoFacebook(p.caption || '');
   esigiLessico(testo, p.id);
-  const urls = p.images.map((x) => base + x);
+  const urls = p.images.map((x) => (/^https?:\/\//.test(x) ? x : base + x));
   console.log(`FACEBOOK — ${p.id} (${p.lang}), ${urls.length} immagini`);
   urls.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
   if (DRY) {

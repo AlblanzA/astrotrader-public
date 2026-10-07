@@ -1,0 +1,39 @@
+# Prova SENZA pubblicare: Instagram accetta un carosello di 13 schede via API?
+# Crea i contenitori figli e il contenitore carosello, legge lo stato, NON chiama media_publish.
+# I contenitori non pubblicati scadono da soli dopo 24 ore.
+name: IG Carousel Test
+on:
+  workflow_dispatch:
+    inputs:
+      n:
+        description: 'Numero di schede da provare'
+        default: '13'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Contenitori senza pubblicazione
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          N: ${{ inputs.n }}
+        run: |
+          set -u
+          G=https://graph.instagram.com/v21.0
+          RAW=https://raw.githubusercontent.com/${{ github.repository }}/media/carousel/sole/en
+          ids=""
+          for i in $(seq 1 "$N"); do
+            f=$(printf '%02d' $(( (i-1) % 13 + 1 )))
+            id=$(curl -s -X POST "$G/$IG_USER_ID/media" -d "image_url=$RAW/$f.jpg" -d is_carousel_item=true -d "access_token=$IG_ACCESS_TOKEN" | jq -r '.id // .error.message')
+            echo "figlio $i: $id"; ids="$ids${ids:+,}$id"
+          done
+          sleep 20
+          echo "== contenitore carosello con $N figli"
+          curl -s -X POST "$G/$IG_USER_ID/media" -d media_type=CAROUSEL -d "children=$ids" -d "caption=test" -d "access_token=$IG_ACCESS_TOKEN" | tee c.json
+          echo
+          C=$(jq -r '.id // empty' c.json)
+          if [ -n "$C" ]; then sleep 15; curl -s "$G/$C?fields=status_code,status&access_token=$IG_ACCESS_TOKEN"; echo; fi
+          echo "NESSUNA pubblicazione eseguita."
