@@ -1,0 +1,214 @@
+{
+ "conjunction": {
+  "title": "The Conjunction",
+  "sub": "0° · two forces fused",
+  "secA": "What a conjunction does",
+  "rows": [
+   {
+    "t": "Two planets act as one; you feel their blend constantly."
+   },
+   {
+    "t": "You may struggle to tell the two energies apart within you."
+   },
+   {
+    "t": "Under transit, it tends to open a new cycle of experience."
+   },
+   {
+    "t": "It concentrates focus; you may pour yourself fully into one area."
+   },
+   {
+    "t": "Its tone depends on the planets; it can soothe or intensify."
+   },
+   {
+    "t": "You may not notice it, because it simply feels like you."
+   }
+  ],
+  "bridge": "A conjunction is a meeting, not a measurement.",
+  "secB": "Where it comes from",
+  "story": [
+   "Ptolemy's Tetrabiblos names four figures between signs.",
+   "Opposition, trine, square, sextile: shapes in the circle.",
+   "The conjunction is not one of those figures.",
+   "It was treated as a bodily joining, not a line of sight.",
+   "Hellenistic authors spoke of planets present together.",
+   "Two lights in one place, blending their natures."
+  ],
+  "close": "Where two meet, a new beginning tends to form."
+ },
+ "sextile": {
+  "title": "The Sextile",
+  "sub": "60° · open doors, quiet ease",
+  "secA": "What a sextile does",
+  "rows": [
+   {
+    "t": "It offers opportunities, but tends to ask you to act."
+   },
+   {
+    "t": "You connect two areas of life with natural, friendly ease."
+   },
+   {
+    "t": "Conversations and contacts may open doors when you reach out."
+   },
+   {
+    "t": "Its gifts are subtle; you may overlook them without attention."
+   },
+   {
+    "t": "Under transit, small efforts tend to bring encouraging results."
+   },
+   {
+    "t": "Too much comfort can leave its promise unused; take one step."
+   }
+  ],
+  "bridge": "A sextile knocks softly; you choose to open.",
+  "secB": "Where it comes from",
+  "story": [
+   "Ptolemy counts the sextile among his four configurations.",
+   "Sixty degrees: one sixth of the circle, signs two apart.",
+   "Same-gender signs: fire with air, earth with water.",
+   "He called it harmonious, a gentler kin of the trine.",
+   "Its figure is the hexagon traced inside the zodiac."
+  ],
+  "close": "An open door still asks you to walk through."
+ },
+ "square": {
+  "title": "The Square",
+  "sub": "90° · tension that builds",
+  "secA": "What a square does",
+  "rows": [
+   {
+    "t": "It creates friction between two needs that both want attention."
+   },
+   {
+    "t": "You may feel pushed to act, to build, or to decide."
+   },
+   {
+    "t": "Pressure tends to become drive when you work with it."
+   },
+   {
+    "t": "Under transit, it often marks a turning point or a test."
+   },
+   {
+    "t": "Avoiding the conflict tends to make it return in new forms."
+   },
+   {
+    "t": "Over time, it can forge your strongest skills and resilience."
+   }
+  ],
+  "bridge": "A square is friction that can become motion.",
+  "secB": "Where it comes from",
+  "story": [
+   "Ptolemy counts the square among his four configurations.",
+   "Ninety degrees: a quarter of the circle, signs three apart.",
+   "Its signs differ in gender yet share the same modality.",
+   "Ptolemy judged it disharmonious, a figure of strain.",
+   "Its figure is the square drawn within the zodiac."
+  ],
+  "close": "What resists you may be what shapes you."
+ },
+ "trine": {
+  "title": "The Trine",
+  "sub": "120° · flow and natural gifts",
+  "secA": "What a trine does",
+  "rows": [
+   {
+    "t": "It links planets in the same element; energy flows easily."
+   },
+   {
+    "t": "You may have talents that feel effortless, almost taken for granted."
+   },
+   {
+    "t": "Under transit, it tends to bring support, good timing, and grace."
+   },
+   {
+    "t": "Ease can turn into comfort that asks nothing of you."
+   },
+   {
+    "t": "Its gifts grow strongest when you consciously put them to use."
+   },
+   {
+    "t": "You tend to recover quickly where trines connect your chart."
+   }
+  ],
+  "bridge": "A trine is a gift; use keeps it alive.",
+  "secB": "Where it comes from",
+  "story": [
+   "Ptolemy counts the trine among his four configurations.",
+   "One hundred twenty degrees: a third of the circle.",
+   "It joins signs four apart, of the same triplicity.",
+   "He ranked it, with the sextile, as harmonious.",
+   "He grounded these figures in musical ratios of harmony."
+  ],
+  "close": "What comes easily still asks to be used well."
+ },
+ "opposition": {
+  "title": "The Opposition",
+  "sub": "180° · mirror and balance",
+  "secA": "What an opposition does",
+  "rows": [
+   {
+    "t": "Two planets face each other; you feel pulled in two directions."
+   },
+   {
+    "t": "You may meet one side of it through other people."
+   },
+   {
+    "t": "Relationships tend to mirror what you have not yet owned."
+   },
+   {
+    "t": "Under transit, it often brings matters to a visible peak."
+   },
+   {
+    "t": "Balance comes when you integrate both sides instead of choosing one."
+   },
+   {
+    "t": "Awareness is its gift; you learn yourself through the contrast."
+   }
+  ],
+  "bridge": "An opposition shows you yourself from across the room.",
+  "secB": "Where it comes from",
+  "story": [
+   "Ptolemy counts the opposition among his four configurations.",
+   "One hundred eighty degrees: the diameter of the circle.",
+   "It joins signs six apart, facing across the zodiac.",
+   "The circle halved, 2 to 1: the ratio of the octave.",
+   "Ptolemy judged it disharmonious, a figure of contrast."
+  ],
+  "close": "What stands opposite may be what completes you."
+ },
+ "quincunx": {
+  "title": "The Quincunx",
+  "sub": "150° · adjustment without ease",
+  "secA": "What a quincunx does",
+  "rows": [
+   {
+    "t": "It connects two planets that do not easily understand each other."
+   },
+   {
+    "t": "You may feel small adjustments are always needed between two areas."
+   },
+   {
+    "t": "There is no open conflict, just an awkward, persistent mismatch."
+   },
+   {
+    "t": "Under transit, it tends to ask for practical changes and recalibration."
+   },
+   {
+    "t": "Over time you learn flexibility, bridging what seems unrelated."
+   },
+   {
+    "t": "Ignoring it may leave a quiet sense that something is off."
+   }
+  ],
+  "bridge": "A quincunx asks you to adjust, not to choose.",
+  "secB": "Where it comes from",
+  "story": [
+   "A minor aspect of later astrology: 150 degrees.",
+   "It joins signs five apart, with nothing in common.",
+   "They share no element, no gender, no modality.",
+   "Hellenistic authors said such signs do not see each other.",
+   "Its Latin name means five twelfths of a whole.",
+   "Ptolemy's four figures do not include it."
+  ],
+  "close": "What does not fit may teach you to bend."
+ }
+}

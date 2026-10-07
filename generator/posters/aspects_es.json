@@ -1,0 +1,214 @@
+{
+ "conjunction": {
+  "title": "La conjunción",
+  "sub": "0° · dos fuerzas fundidas",
+  "secA": "Qué hace una conjunción",
+  "rows": [
+   {
+    "t": "Dos planetas actúan como uno; sientes su mezcla sin cesar."
+   },
+   {
+    "t": "Quizá te cueste distinguir en ti las dos energías."
+   },
+   {
+    "t": "En tránsito, suele abrir un nuevo ciclo de experiencia."
+   },
+   {
+    "t": "Concentra el foco; puedes volcarte por completo en un área."
+   },
+   {
+    "t": "Su tono depende de los planetas; puede calmar o intensificar."
+   },
+   {
+    "t": "Quizá no la notes, porque simplemente se siente como tú."
+   }
+  ],
+  "bridge": "Una conjunción es un encuentro, no una medida.",
+  "secB": "De dónde viene",
+  "story": [
+   "El Tetrabiblos de Ptolomeo nombra cuatro figuras entre signos.",
+   "Oposición, trígono, cuadratura, sextil: formas en el círculo.",
+   "La conjunción no es una de esas figuras.",
+   "Se trataba como una unión corporal, no como una línea de visión.",
+   "Los autores helenísticos hablaban de planetas presentes juntos.",
+   "Dos luces en un mismo lugar, mezclando sus naturalezas."
+  ],
+  "close": "Donde dos se encuentran, suele nacer un nuevo comienzo."
+ },
+ "sextile": {
+  "title": "El sextil",
+  "sub": "60° · puertas abiertas, soltura serena",
+  "secA": "Qué hace un sextil",
+  "rows": [
+   {
+    "t": "Ofrece oportunidades, pero suele pedirte que actúes."
+   },
+   {
+    "t": "Conectas dos áreas de la vida con soltura natural y amable."
+   },
+   {
+    "t": "Charlas y contactos pueden abrir puertas si das el paso."
+   },
+   {
+    "t": "Sus dones son sutiles; sin atención, puedes pasarlos por alto."
+   },
+   {
+    "t": "En tránsito, pequeños esfuerzos suelen dar resultados alentadores."
+   },
+   {
+    "t": "Demasiada comodidad puede desperdiciar su promesa; da un paso."
+   }
+  ],
+  "bridge": "Un sextil llama suave; tú decides abrir.",
+  "secB": "De dónde viene",
+  "story": [
+   "Ptolomeo cuenta el sextil entre sus cuatro configuraciones.",
+   "Sesenta grados: un sexto del círculo, signos a dos de distancia.",
+   "Signos del mismo género: fuego con aire, tierra con agua.",
+   "Lo llamó armónico, un pariente más suave del trígono.",
+   "Su figura es el hexágono trazado dentro del zodiaco."
+  ],
+  "close": "Una puerta abierta aún te pide cruzarla."
+ },
+ "square": {
+  "title": "La cuadratura",
+  "sub": "90° · tensión que se acumula",
+  "secA": "Qué hace una cuadratura",
+  "rows": [
+   {
+    "t": "Crea fricción entre dos necesidades que piden atención."
+   },
+   {
+    "t": "Puedes sentir el empuje de actuar, construir o decidir."
+   },
+   {
+    "t": "La presión suele volverse impulso si trabajas con ella."
+   },
+   {
+    "t": "En tránsito, a menudo marca un punto de inflexión o una prueba."
+   },
+   {
+    "t": "Evitar el conflicto suele hacerlo volver en nuevas formas."
+   },
+   {
+    "t": "Con el tiempo, puede forjar tus mayores destrezas y tu resiliencia."
+   }
+  ],
+  "bridge": "Una cuadratura es fricción que puede volverse movimiento.",
+  "secB": "De dónde viene",
+  "story": [
+   "Ptolomeo cuenta la cuadratura entre sus cuatro configuraciones.",
+   "Noventa grados: la cuarta parte del círculo, a tres signos.",
+   "Sus signos difieren en género pero comparten modalidad.",
+   "Ptolomeo la juzgó inarmónica, una figura de tensión.",
+   "Su figura es el cuadrado trazado dentro del zodiaco."
+  ],
+  "close": "Lo que se te resiste quizá sea lo que te da forma."
+ },
+ "trine": {
+  "title": "El trígono",
+  "sub": "120° · fluidez y dones naturales",
+  "secA": "Qué hace un trígono",
+  "rows": [
+   {
+    "t": "Une planetas del mismo elemento; la energía fluye con facilidad."
+   },
+   {
+    "t": "Puedes tener talentos que no cuestan esfuerzo, casi dados por sentado."
+   },
+   {
+    "t": "En tránsito, suele traer apoyo, buen momento y gracia."
+   },
+   {
+    "t": "La facilidad puede volverse comodidad que nada te pide."
+   },
+   {
+    "t": "Sus dones se fortalecen cuando los usas de forma consciente."
+   },
+   {
+    "t": "Sueles recuperarte rápido donde los trígonos unen tu carta."
+   }
+  ],
+  "bridge": "Un trígono es un don; usarlo lo mantiene vivo.",
+  "secB": "De dónde viene",
+  "story": [
+   "Ptolomeo cuenta el trígono entre sus cuatro configuraciones.",
+   "Ciento veinte grados: un tercio del círculo.",
+   "Une signos a cuatro de distancia, de la misma triplicidad.",
+   "Lo clasificó, junto al sextil, como armónico.",
+   "Fundó estas figuras en las proporciones musicales de la armonía."
+  ],
+  "close": "Lo que llega fácil aún pide ser bien usado."
+ },
+ "opposition": {
+  "title": "La oposición",
+  "sub": "180° · espejo y equilibrio",
+  "secA": "Qué hace una oposición",
+  "rows": [
+   {
+    "t": "Dos planetas se miran de frente; te sientes dividido en dos direcciones."
+   },
+   {
+    "t": "Quizá encuentres uno de sus lados en otras personas."
+   },
+   {
+    "t": "Las relaciones suelen reflejar lo que aún no asumes como tuyo."
+   },
+   {
+    "t": "En tránsito, a menudo lleva los asuntos a un clímax visible."
+   },
+   {
+    "t": "El equilibrio llega cuando integras ambos lados en vez de elegir uno."
+   },
+   {
+    "t": "La conciencia es su don; te conoces a través del contraste."
+   }
+  ],
+  "bridge": "Una oposición te muestra a ti mismo desde el otro lado de la sala.",
+  "secB": "De dónde viene",
+  "story": [
+   "Ptolomeo cuenta la oposición entre sus cuatro configuraciones.",
+   "Ciento ochenta grados: el diámetro del círculo.",
+   "Une signos a seis de distancia, enfrentados en el zodiaco.",
+   "El círculo partido en dos, 2 a 1: la proporción de la octava.",
+   "Ptolomeo la juzgó inarmónica, una figura de contraste."
+  ],
+  "close": "Lo que está enfrente quizá sea lo que te completa."
+ },
+ "quincunx": {
+  "title": "El quincuncio",
+  "sub": "150° · ajuste sin soltura",
+  "secA": "Qué hace un quincuncio",
+  "rows": [
+   {
+    "t": "Conecta dos planetas que no se entienden con facilidad."
+   },
+   {
+    "t": "Puedes sentir que siempre hacen falta pequeños ajustes entre dos áreas."
+   },
+   {
+    "t": "No hay conflicto abierto, solo un desajuste incómodo y persistente."
+   },
+   {
+    "t": "En tránsito, suele pedir cambios prácticos y recalibración."
+   },
+   {
+    "t": "Con el tiempo aprendes flexibilidad, uniendo lo que parece inconexo."
+   },
+   {
+    "t": "Ignorarlo puede dejar una sensación sorda de que algo falla."
+   }
+  ],
+  "bridge": "Un quincuncio te pide ajustar, no elegir.",
+  "secB": "De dónde viene",
+  "story": [
+   "Un aspecto menor de la astrología posterior: 150 grados.",
+   "Une signos a cinco de distancia, sin nada en común.",
+   "No comparten elemento, ni género, ni modalidad.",
+   "Los autores helenísticos decían que esos signos no se ven.",
+   "Su nombre latino significa cinco doceavos de un todo.",
+   "Las cuatro figuras de Ptolomeo no lo incluyen."
+  ],
+  "close": "Lo que no encaja quizá te enseñe a ceder."
+ }
+}

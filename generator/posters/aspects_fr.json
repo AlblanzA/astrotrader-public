@@ -1,0 +1,214 @@
+{
+ "conjunction": {
+  "title": "La conjonction",
+  "sub": "0° · deux forces fusionnées",
+  "secA": "Ce que fait une conjonction",
+  "rows": [
+   {
+    "t": "Deux planètes agissent en une ; tu sens sans cesse leur mélange."
+   },
+   {
+    "t": "Tu peux peiner à distinguer en toi les deux énergies."
+   },
+   {
+    "t": "En transit, elle tend à ouvrir un nouveau cycle d'expérience."
+   },
+   {
+    "t": "Elle concentre l'attention ; tu peux te donner tout entier à un domaine."
+   },
+   {
+    "t": "Son ton dépend des planètes ; elle peut apaiser ou intensifier."
+   },
+   {
+    "t": "Tu peux ne pas la voir : elle te semble simplement être toi."
+   }
+  ],
+  "bridge": "Une conjonction est une rencontre, pas une mesure.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Le Tétrabiblos de Ptolémée nomme quatre figures entre signes.",
+   "Opposition, trigone, carré, sextile : des formes dans le cercle.",
+   "La conjonction n'est pas l'une de ces figures.",
+   "On la voyait comme une union des corps, non une ligne de vue.",
+   "Les auteurs hellénistiques y voyaient des planètes coprésentes.",
+   "Deux lumières en un même lieu, mêlant leurs natures."
+  ],
+  "close": "Là où deux se rencontrent, un nouveau départ tend à naître."
+ },
+ "sextile": {
+  "title": "Le sextile",
+  "sub": "60° · portes ouvertes, aisance tranquille",
+  "secA": "Ce que fait un sextile",
+  "rows": [
+   {
+    "t": "Il offre des occasions, mais tend à te demander d'agir."
+   },
+   {
+    "t": "Tu relies deux pans de vie avec une aisance naturelle et amicale."
+   },
+   {
+    "t": "Échanges et contacts peuvent ouvrir des portes si tu tends la main."
+   },
+   {
+    "t": "Ses dons sont subtils ; sans attention, tu peux passer à côté."
+   },
+   {
+    "t": "En transit, de petits efforts tendent à porter des fruits encourageants."
+   },
+   {
+    "t": "Trop de confort peut laisser sa promesse inutilisée ; fais un pas."
+   }
+  ],
+  "bridge": "Un sextile frappe doucement ; à toi de choisir d'ouvrir.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Ptolémée compte le sextile parmi ses quatre configurations.",
+   "Soixante degrés : un sixième du cercle, signes distants de deux.",
+   "Signes de même genre : feu avec air, terre avec eau.",
+   "Il le disait harmonieux, cousin plus doux du trigone.",
+   "Sa figure est l'hexagone tracé dans le zodiaque."
+  ],
+  "close": "Une porte ouverte te demande encore de la franchir."
+ },
+ "square": {
+  "title": "Le carré",
+  "sub": "90° · une tension qui monte",
+  "secA": "Ce que fait un carré",
+  "rows": [
+   {
+    "t": "Il crée une friction entre deux besoins qui réclament attention."
+   },
+   {
+    "t": "Tu peux te sentir poussé à agir, à bâtir ou à décider."
+   },
+   {
+    "t": "La pression tend à devenir élan si tu travailles avec."
+   },
+   {
+    "t": "En transit, il marque souvent un tournant ou une épreuve."
+   },
+   {
+    "t": "Fuir le conflit tend à le faire revenir sous d'autres formes."
+   },
+   {
+    "t": "Avec le temps, il peut forger tes plus grands atouts et ta résilience."
+   }
+  ],
+  "bridge": "Un carré est une friction qui peut devenir mouvement.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Ptolémée compte le carré parmi ses quatre configurations.",
+   "Quatre-vingt-dix degrés : le quart du cercle, à trois signes.",
+   "Ses signes diffèrent de genre mais partagent la même modalité.",
+   "Ptolémée le jugeait disharmonieux, une figure de tension.",
+   "Sa figure est le carré tracé dans le zodiaque."
+  ],
+  "close": "Ce qui te résiste est peut-être ce qui te façonne."
+ },
+ "trine": {
+  "title": "Le trigone",
+  "sub": "120° · fluidité et dons naturels",
+  "secA": "Ce que fait un trigone",
+  "rows": [
+   {
+    "t": "Il unit des planètes du même élément ; l'énergie circule bien."
+   },
+   {
+    "t": "Tu as peut-être des talents qui semblent aller de soi, sans effort."
+   },
+   {
+    "t": "En transit, il tend à apporter soutien, à-propos et grâce."
+   },
+   {
+    "t": "L'aisance peut devenir un confort qui ne te demande rien."
+   },
+   {
+    "t": "Ses dons grandissent quand tu les mets consciemment à profit."
+   },
+   {
+    "t": "Tu récupères vite là où des trigones relient ton thème."
+   }
+  ],
+  "bridge": "Un trigone est un don ; l'usage le garde vivant.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Ptolémée compte le trigone parmi ses quatre configurations.",
+   "Cent vingt degrés : un tiers du cercle.",
+   "Il relie des signes distants de quatre, de même triplicité.",
+   "Il le rangeait, avec le sextile, parmi les harmonieux.",
+   "Il fondait ces figures sur les rapports musicaux de l'harmonie."
+  ],
+  "close": "Ce qui vient facilement demande encore à être bien employé."
+ },
+ "opposition": {
+  "title": "L'opposition",
+  "sub": "180° · miroir et équilibre",
+  "secA": "Ce que fait une opposition",
+  "rows": [
+   {
+    "t": "Deux planètes se font face ; tu te sens tiré dans deux directions."
+   },
+   {
+    "t": "Tu peux en rencontrer un versant à travers les autres."
+   },
+   {
+    "t": "Les relations reflètent souvent ce que tu n'as pas encore assumé."
+   },
+   {
+    "t": "En transit, elle porte souvent les choses à un sommet visible."
+   },
+   {
+    "t": "L'équilibre vient quand tu intègres les deux côtés au lieu d'en choisir un."
+   },
+   {
+    "t": "La conscience est son don ; tu te découvres par le contraste."
+   }
+  ],
+  "bridge": "Une opposition te montre à toi-même depuis l'autre bout de la pièce.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Ptolémée compte l'opposition parmi ses quatre configurations.",
+   "Cent quatre-vingts degrés : le diamètre du cercle.",
+   "Elle relie des signes à six d'écart, qui se font face.",
+   "Le cercle coupé en deux, 2 pour 1 : le rapport de l'octave.",
+   "Ptolémée la jugeait disharmonieuse, une figure de contraste."
+  ],
+  "close": "Ce qui te fait face est peut-être ce qui te complète."
+ },
+ "quincunx": {
+  "title": "Le quinconce",
+  "sub": "150° · ajustement sans aisance",
+  "secA": "Ce que fait un quinconce",
+  "rows": [
+   {
+    "t": "Il relie deux planètes qui ne se comprennent pas facilement."
+   },
+   {
+    "t": "Tu sens parfois qu'il faut sans cesse ajuster deux domaines entre eux."
+   },
+   {
+    "t": "Pas de conflit ouvert, juste un décalage gênant et persistant."
+   },
+   {
+    "t": "En transit, il tend à demander des changements concrets et un réajustement."
+   },
+   {
+    "t": "Avec le temps tu apprends la souplesse, reliant ce qui semble sans lien."
+   },
+   {
+    "t": "L'ignorer peut laisser le sentiment sourd que ça cloche."
+   }
+  ],
+  "bridge": "Un quinconce te demande de t'ajuster, pas de choisir.",
+  "secB": "D'où elle vient",
+  "story": [
+   "Un aspect mineur de l'astrologie plus tardive : 150 degrés.",
+   "Il relie des signes distants de cinq, sans rien en commun.",
+   "Ils ne partagent ni élément, ni genre, ni modalité.",
+   "Selon les auteurs hellénistiques, ces signes ne se voient pas.",
+   "Son nom latin signifie cinq douzièmes d'un tout.",
+   "Les quatre figures de Ptolémée ne l'incluent pas."
+  ],
+  "close": "Ce qui ne s'ajuste pas t'apprendra peut-être à plier."
+ }
+}

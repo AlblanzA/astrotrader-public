@@ -1,0 +1,616 @@
+{
+ "aries": {
+  "title": "Retrograde in Aries",
+  "kicker": "What each planet revisits when it turns back in Aries",
+  "secA": "The Aries review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "The words you fired too fast; say them again, slower."
+   },
+   {
+    "p": "venere",
+    "t": "How you chase what you desire; let attraction come closer on its own."
+   },
+   {
+    "p": "marte",
+    "t": "The fights you started by reflex; choose which ones still matter."
+   },
+   {
+    "p": "giove",
+    "t": "Your faith in bold leaps; check which ones truly helped you grow."
+   },
+   {
+    "p": "saturno",
+    "t": "The patience you skipped; rebuild your courage on firmer ground."
+   },
+   {
+    "p": "urano",
+    "t": "Your urge to break free; ask what you are freeing yourself for."
+   },
+   {
+    "p": "nettuno",
+    "t": "The heroic image you hold of yourself; let it soften into truth."
+   },
+   {
+    "p": "plutone",
+    "t": "Where your will turned into force; reclaim power without the push."
+   }
+  ],
+  "bridge": "Aries runs forward; retrograde lets it turn and look.",
+  "secB": "The story of Aries",
+  "story": [
+   "In the Greek telling, a golden ram flew to the rescue.",
+   "Nephele sent it to save Phrixus and Helle from Ino.",
+   "Helle slipped into the sea, ever after the Hellespont.",
+   "Phrixus reached Colchis and offered the ram to Zeus.",
+   "Its fleece, hung in a guarded grove, was the Golden Fleece.",
+   "The ram was raised among the stars, first sign of spring."
+  ],
+  "close": "What you rushed may ask to be begun again.",
+  "h1": "Retrograde",
+  "h2": "in Aries"
+ },
+ "taurus": {
+  "title": "Retrograde in Taurus",
+  "kicker": "What each planet revisits when it turns back in Taurus",
+  "secA": "The Taurus review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "The opinions you settled long ago; reopen them with fresh curiosity."
+   },
+   {
+    "p": "venere",
+    "t": "What you truly value; release comforts that no longer feel like yours."
+   },
+   {
+    "p": "marte",
+    "t": "Where stubbornness passed for strength; move steadily, but do move."
+   },
+   {
+    "p": "giove",
+    "t": "Your idea of abundance; notice how much enough already holds."
+   },
+   {
+    "p": "saturno",
+    "t": "What you hold on to out of fear; keep only what lasts."
+   },
+   {
+    "p": "urano",
+    "t": "The routines you call security; let one small change breathe in."
+   },
+   {
+    "p": "nettuno",
+    "t": "The dreams you placed in things; find the beauty that needs no owning."
+   },
+   {
+    "p": "plutone",
+    "t": "What you possess, and what quietly possesses you; loosen the grip."
+   }
+  ],
+  "bridge": "Taurus builds slowly; retrograde tends the foundations.",
+  "secB": "The story of Taurus",
+  "story": [
+   "In the Greek telling, Zeus became a gleaming white bull.",
+   "Europa, gathering flowers by the shore, climbed on his back.",
+   "He swam out across the sea and carried her to Crete.",
+   "Her son Minos would become the island's legendary king.",
+   "The bull's image was raised into the night sky.",
+   "The Hyades mark its face; the Pleiades ride its shoulder."
+  ],
+  "close": "What you keep may ask to be chosen again.",
+  "h1": "Retrograde",
+  "h2": "in Taurus"
+ },
+ "gemini": {
+  "title": "Retrograde in Gemini",
+  "kicker": "What each planet revisits when it turns back in Gemini",
+  "secA": "The Gemini review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "The messages left half-read; return to them with full attention."
+   },
+   {
+    "p": "venere",
+    "t": "How you flirt with ideas and people; notice which conversations truly connect."
+   },
+   {
+    "p": "marte",
+    "t": "The arguments you won with cleverness; ask whether they were worth winning."
+   },
+   {
+    "p": "giove",
+    "t": "Everything you wanted to learn at once; pick one thread and follow it."
+   },
+   {
+    "p": "saturno",
+    "t": "Your scattered plans; give one idea the structure it deserves."
+   },
+   {
+    "p": "urano",
+    "t": "Your restless mind; let the sudden insight land before you speak."
+   },
+   {
+    "p": "nettuno",
+    "t": "The stories you tell yourself; separate what you heard from what is true."
+   },
+   {
+    "p": "plutone",
+    "t": "Words that carried hidden weight; say what you really mean."
+   }
+  ],
+  "bridge": "Gemini asks questions; retrograde asks them twice.",
+  "secB": "The story of Gemini",
+  "story": [
+   "In the Greek telling, Castor and Pollux were Leda's twins.",
+   "Castor was mortal; Pollux, a son of Zeus, was immortal.",
+   "When Castor fell, Pollux refused to live on without him.",
+   "Zeus let them share one fate, between Olympus and Hades.",
+   "Set side by side in the sky, they became guides for sailors."
+  ],
+  "close": "What you said may ask to be heard again.",
+  "h1": "Retrograde",
+  "h2": "in Gemini"
+ },
+ "cancer": {
+  "title": "Retrograde in Cancer",
+  "kicker": "What each planet revisits when it turns back in Cancer",
+  "secA": "The Cancer review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Old family conversations; listen again for what was really meant."
+   },
+   {
+    "p": "venere",
+    "t": "How you care for others; let yourself be cared for too."
+   },
+   {
+    "p": "marte",
+    "t": "The way you defend your own; protect without closing the door."
+   },
+   {
+    "p": "giove",
+    "t": "What home means to you now; widen the circle you call family."
+   },
+   {
+    "p": "saturno",
+    "t": "The walls you built to feel safe; check which still serve you."
+   },
+   {
+    "p": "urano",
+    "t": "Habits inherited at home; keep the warmth, change the pattern."
+   },
+   {
+    "p": "nettuno",
+    "t": "The nostalgia that colors memory; honor the past without living there."
+   },
+   {
+    "p": "plutone",
+    "t": "Deep roots and old loyalties; release what was never yours to carry."
+   }
+  ],
+  "bridge": "Cancer remembers; retrograde helps it remember kindly.",
+  "secB": "The story of Cancer",
+  "story": [
+   "In the Greek telling, Hera sent a crab against Heracles.",
+   "He was fighting the Hydra in the marshes of Lerna.",
+   "The crab pinched his foot, and the hero crushed it.",
+   "Hera rewarded its loyalty with a place among the stars.",
+   "Its faint stars cradle the Beehive cluster, Praesepe."
+  ],
+  "close": "What you sheltered may ask to be felt again.",
+  "h1": "Retrograde",
+  "h2": "in Cancer"
+ },
+ "leo": {
+  "title": "Retrograde in Leo",
+  "kicker": "What each planet revisits when it turns back in Leo",
+  "secA": "The Leo review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "How you tell your own story; let other voices enter it."
+   },
+   {
+    "p": "venere",
+    "t": "Romance and play; love for the joy of it, not the applause."
+   },
+   {
+    "p": "marte",
+    "t": "Pride that turned into contest; lead with warmth instead of force."
+   },
+   {
+    "p": "giove",
+    "t": "Your generosity and grand gestures; give where it truly lands."
+   },
+   {
+    "p": "saturno",
+    "t": "Your need to be seen; build confidence that holds in the dark."
+   },
+   {
+    "p": "urano",
+    "t": "Your creative signature; let it surprise even you, once more."
+   },
+   {
+    "p": "nettuno",
+    "t": "The role you perform for approval; find the self beneath the costume."
+   },
+   {
+    "p": "plutone",
+    "t": "Where pride guards an old wound; let your heart lead, not your ego."
+   }
+  ],
+  "bridge": "Leo shines outward; retrograde turns the light within.",
+  "secB": "The story of Leo",
+  "story": [
+   "In the Greek telling, a lion terrorized the valley of Nemea.",
+   "Its golden hide could not be pierced by any weapon.",
+   "Heracles cornered it in its cave and strangled it.",
+   "He wore its skin ever after as cloak and armor.",
+   "Zeus set the lion in the sky, with Regulus at its heart."
+  ],
+  "close": "What you showed may ask to be felt again.",
+  "h1": "Retrograde",
+  "h2": "in Leo"
+ },
+ "virgo": {
+  "title": "Retrograde in Virgo",
+  "kicker": "What each planet revisits when it turns back in Virgo",
+  "secA": "The Virgo review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "The details you corrected in others; turn that care toward yourself."
+   },
+   {
+    "p": "venere",
+    "t": "How you show love through service; let gratitude flow both ways."
+   },
+   {
+    "p": "marte",
+    "t": "Your daily work; refine the method instead of pushing harder."
+   },
+   {
+    "p": "giove",
+    "t": "Your standards of improvement; leave generous room for good enough."
+   },
+   {
+    "p": "saturno",
+    "t": "Duties you took on silently; keep the ones that truly matter."
+   },
+   {
+    "p": "urano",
+    "t": "Rigid routines; invent a better way to do the everyday."
+   },
+   {
+    "p": "nettuno",
+    "t": "The perfection you keep chasing; trust that imperfect work still counts."
+   },
+   {
+    "p": "plutone",
+    "t": "The urge to control every detail; sift, and let the rest go."
+   }
+  ],
+  "bridge": "Virgo sorts the harvest; retrograde sorts it again.",
+  "secB": "The story of Virgo",
+  "story": [
+   "In the Greek telling, she is Astraea, maiden of justice.",
+   "She lived among humans through the Golden Age.",
+   "As people grew cruel, she was the last immortal to leave.",
+   "She rose into the sky holding an ear of wheat.",
+   "That ear is Spica, the bright star of the harvest."
+  ],
+  "close": "What you perfected may ask to be loosened.",
+  "h1": "Retrograde",
+  "h2": "in Virgo"
+ },
+ "libra": {
+  "title": "Retrograde in Libra",
+  "kicker": "What each planet revisits when it turns back in Libra",
+  "secA": "The Libra review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Agreements and promises; reread the terms you accepted to keep peace."
+   },
+   {
+    "p": "venere",
+    "t": "Your partnerships; ask whether the give and take still feels fair."
+   },
+   {
+    "p": "marte",
+    "t": "Conflicts you avoided for harmony; speak up, gently but clearly."
+   },
+   {
+    "p": "giove",
+    "t": "Your ideals of justice; apply them to yourself as well."
+   },
+   {
+    "p": "saturno",
+    "t": "Commitments made to others; weigh which ones are balanced and true."
+   },
+   {
+    "p": "urano",
+    "t": "The roles you play in relationships; give each other room to change."
+   },
+   {
+    "p": "nettuno",
+    "t": "The ideal partner you imagined; see the real person in front of you."
+   },
+   {
+    "p": "plutone",
+    "t": "Power hidden in politeness; restore balance where one side holds too much."
+   }
+  ],
+  "bridge": "Libra weighs; retrograde lets the scales settle.",
+  "secB": "The story of Libra",
+  "story": [
+   "Early Greek astronomers saw here the Scorpion's claws.",
+   "Its brightest stars are still named for the two claws.",
+   "The Romans read the figure as a pair of scales.",
+   "In antiquity the Sun passed here near the autumn equinox.",
+   "The only zodiac figure that is an object, not a creature."
+  ],
+  "close": "What you balanced may ask to be weighed again.",
+  "h1": "Retrograde",
+  "h2": "in Libra"
+ },
+ "scorpio": {
+  "title": "Retrograde in Scorpio",
+  "kicker": "What each planet revisits when it turns back in Scorpio",
+  "secA": "The Scorpio review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Secrets you kept and things left unsaid; decide what deserves daylight."
+   },
+   {
+    "p": "venere",
+    "t": "Intimacy and trust; ask who earned your depth, and who did not."
+   },
+   {
+    "p": "marte",
+    "t": "Old resentments and quiet grudges; turn that intensity toward renewal."
+   },
+   {
+    "p": "giove",
+    "t": "What you share with others; let trust grow where it is returned."
+   },
+   {
+    "p": "saturno",
+    "t": "Your fear of loss; build closeness on boundaries, not control."
+   },
+   {
+    "p": "urano",
+    "t": "Patterns of jealousy or suspicion; let sudden honesty clear the air."
+   },
+   {
+    "p": "nettuno",
+    "t": "Fantasies of merging completely; love deeply while staying yourself."
+   },
+   {
+    "p": "plutone",
+    "t": "What must end so something can begin; let the old skin go."
+   }
+  ],
+  "bridge": "Scorpio digs deep; retrograde returns to what is buried.",
+  "secB": "The story of Scorpio",
+  "story": [
+   "In the Greek telling, Orion boasted he could slay any beast.",
+   "Gaia sent a scorpion, and its sting brought the hunter down.",
+   "Both were placed in the sky, on opposite sides.",
+   "As Scorpius rises in the east, Orion sinks in the west.",
+   "At its heart burns red Antares, the rival of Ares."
+  ],
+  "close": "What you buried may ask to be faced again.",
+  "h1": "Retrograde",
+  "h2": "in Scorpio"
+ },
+ "sagittarius": {
+  "title": "Retrograde in Sagittarius",
+  "kicker": "What each planet revisits when it turns back in Sagittarius",
+  "secA": "The Sagittarius review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Bold claims you made with certainty; check your facts once more."
+   },
+   {
+    "p": "venere",
+    "t": "Love that lives on distance and dreams; bring it closer to home."
+   },
+   {
+    "p": "marte",
+    "t": "Crusades for your beliefs; aim your arrows with more care."
+   },
+   {
+    "p": "giove",
+    "t": "Your big philosophy of life; see if it still fits your experience."
+   },
+   {
+    "p": "saturno",
+    "t": "Promises larger than your reach; shape the vision into real steps."
+   },
+   {
+    "p": "urano",
+    "t": "Inherited beliefs; test which truths you chose and which you borrowed."
+   },
+   {
+    "p": "nettuno",
+    "t": "Teachers and gurus you idealized; let your own wisdom guide you."
+   },
+   {
+    "p": "plutone",
+    "t": "Convictions you hold too tightly; allow your truth to evolve."
+   }
+  ],
+  "bridge": "Sagittarius aims far; retrograde checks the aim.",
+  "secB": "The story of Sagittarius",
+  "story": [
+   "The Archer, often drawn as a centaur, aims at Scorpius.",
+   "In one Greek telling he is Crotus, raised among the Muses.",
+   "Said to have invented archery, he rode as well as he shot.",
+   "The Muses asked Zeus to honor him with a place in the sky.",
+   "Toward his bow lies the center of the Milky Way."
+  ],
+  "close": "What you believed may ask to be tested again.",
+  "h1": "Retrograde",
+  "h2": "in Sagittarius"
+ },
+ "capricorn": {
+  "title": "Retrograde in Capricorn",
+  "kicker": "What each planet revisits when it turns back in Capricorn",
+  "secA": "The Capricorn review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Long-term plans and formal commitments; revise the route before you climb."
+   },
+   {
+    "p": "venere",
+    "t": "Love you postponed for duty; make room for tenderness now."
+   },
+   {
+    "p": "marte",
+    "t": "Ambition that ran on discipline alone; climb at a sustainable pace."
+   },
+   {
+    "p": "giove",
+    "t": "Your definition of success; measure it by meaning, not status."
+   },
+   {
+    "p": "saturno",
+    "t": "Your relationship with authority and rules; keep the structures that support you."
+   },
+   {
+    "p": "urano",
+    "t": "Traditions you follow by default; renew them, or build new ones."
+   },
+   {
+    "p": "nettuno",
+    "t": "The image of the ideal achiever; let ambition serve your real dreams."
+   },
+   {
+    "p": "plutone",
+    "t": "Where control replaced responsibility; rebuild your authority on integrity."
+   }
+  ],
+  "bridge": "Capricorn climbs; retrograde checks every foothold.",
+  "secB": "The story of Capricorn",
+  "story": [
+   "The sea-goat is older than Greece: a Babylonian goat-fish.",
+   "In Mesopotamia it was linked to Ea, god of sweet waters.",
+   "In the Greek telling, Pan fled the monster Typhon.",
+   "He leapt into the river: his lower half became a fish.",
+   "Zeus set that clever escape among the stars."
+  ],
+  "close": "What you built may ask to be shaped again.",
+  "h1": "Retrograde",
+  "h2": "in Capricorn"
+ },
+ "aquarius": {
+  "title": "Retrograde in Aquarius",
+  "kicker": "What each planet revisits when it turns back in Aquarius",
+  "secA": "The Aquarius review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Ideas you shared with your circles; revisit them with a fresher mind."
+   },
+   {
+    "p": "venere",
+    "t": "Friendships and chosen family; notice which bonds still feel mutual."
+   },
+   {
+    "p": "marte",
+    "t": "Causes you fight for; make sure they still reflect your values."
+   },
+   {
+    "p": "giove",
+    "t": "Your hopes for the future; refresh the vision with present wisdom."
+   },
+   {
+    "p": "saturno",
+    "t": "Your role in the community; contribute without losing your own voice."
+   },
+   {
+    "p": "urano",
+    "t": "The rebel within; ask whether you resist from freedom or habit."
+   },
+   {
+    "p": "nettuno",
+    "t": "Utopian dreams; turn shared ideals into gestures you can actually make."
+   },
+   {
+    "p": "plutone",
+    "t": "Group pressure and collective power; stay true while you stay connected."
+   }
+  ],
+  "bridge": "Aquarius looks ahead; retrograde makes it look around.",
+  "secB": "The story of Aquarius",
+  "story": [
+   "In the Greek telling, he is Ganymede, a youth of Troy.",
+   "Zeus's eagle carried him up to Olympus.",
+   "There he became cupbearer to the gods.",
+   "In the sky he pours water from an urn toward the south.",
+   "The stream flows to the Southern Fish and bright Fomalhaut."
+  ],
+  "close": "What you envisioned may ask to be renewed.",
+  "h1": "Retrograde",
+  "h2": "in Aquarius"
+ },
+ "pisces": {
+  "title": "Retrograde in Pisces",
+  "kicker": "What each planet revisits when it turns back in Pisces",
+  "secA": "The Pisces review",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Thoughts that drifted unspoken; give your intuitions clear, simple words."
+   },
+   {
+    "p": "venere",
+    "t": "Love that dissolved your boundaries; offer compassion and keep yourself."
+   },
+   {
+    "p": "marte",
+    "t": "Battles you avoided by retreating; act gently, but do act."
+   },
+   {
+    "p": "giove",
+    "t": "Your faith and your generosity; give without emptying yourself."
+   },
+   {
+    "p": "saturno",
+    "t": "Your dreams without a shape; give them a simple, steady structure."
+   },
+   {
+    "p": "urano",
+    "t": "Your spiritual habits; let a sudden insight wake up your practice."
+   },
+   {
+    "p": "nettuno",
+    "t": "Illusions you swam in willingly; see clearly and still believe."
+   },
+   {
+    "p": "plutone",
+    "t": "What you surrendered too soon; reclaim it, or release it fully."
+   }
+  ],
+  "bridge": "Pisces dissolves; retrograde lets the waters clear.",
+  "secB": "The story of Pisces",
+  "story": [
+   "In the Greek telling, Aphrodite and Eros fled Typhon.",
+   "They leapt into a river and took the shape of fish.",
+   "They tied themselves with a cord so as not to be parted.",
+   "In the sky the two fishes swim apart, joined by that cord.",
+   "The knot is marked by the star Alrescha, 'the cord'."
+  ],
+  "close": "What you dreamed may ask to be seen clearly.",
+  "h1": "Retrograde",
+  "h2": "in Pisces"
+ }
+}

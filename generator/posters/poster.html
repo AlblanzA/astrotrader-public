@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="glyphs.js"></script><script src="glyphs_extra.js"></script><script src="data.js"></script>
+<style>
+:root{--ink:#33251A;--ink2:#5A4632;--gold:#A9822F;--gold2:#C9A65A;--paper:#F3EADB;--paper2:#E6D6BC;--line:rgba(120,90,50,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;font-family:Spectral,Georgia,serif;color:var(--ink);background:var(--paper)}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;background:radial-gradient(120% 80% at 20% 0%,#FBF5EA 0%,var(--paper) 45%,var(--paper2) 100%)}
+.s:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(90,70,40,.025) 0 2px,transparent 2px 4px);pointer-events:none}
+.frame{position:absolute;inset:26px;border:1.5px solid var(--gold2)}.frame:after{content:"";position:absolute;inset:7px;border:.8px solid rgba(169,130,47,.45)}
+.ttl{position:absolute;left:70px;top:62px;width:560px}
+
+.ttl h1{font-family:"Cormorant Garamond";font-weight:700;font-size:82px;line-height:.92;letter-spacing:.01em;text-transform:uppercase;color:var(--ink)}
+.ttl h2{font-family:"Cormorant Garamond";font-style:italic;font-weight:600;font-size:64px;line-height:1;color:var(--gold);margin-top:6px;display:flex;align-items:center;gap:16px}
+.ttl h2 svg{width:58px;height:58px}
+.ttl p{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-top:16px;line-height:1.35}
+.art{position:absolute;right:66px;top:66px;width:380px;height:560px;border-radius:180px 180px 10px 10px;overflow:hidden;border:2px solid var(--gold2);box-shadow:0 18px 40px rgba(60,40,20,.25);background-size:cover;background-position:center}
+.sec{position:absolute;left:70px;right:70px}
+.sec h3{font-family:"Cormorant Garamond";font-weight:700;font-size:34px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border-bottom:1.5px solid var(--gold2);padding-bottom:6px;margin-bottom:10px}
+.rows{list-style:none}
+.rows li{display:flex;align-items:center;gap:16px;padding:7px 0;border-bottom:1px solid var(--line);font-size:23px;line-height:1.25}
+.rows li .ic{flex:0 0 42px;height:42px;border-radius:50%;border:1.5px solid var(--gold2);display:flex;align-items:center;justify-content:center;background:rgba(255,250,240,.6)}
+.rows li .ic svg{width:30px;height:30px}
+.rows li b{font-weight:600;color:var(--ink)}
+.bridge{font-family:"Cormorant Garamond";font-weight:700;font-style:italic;font-size:34px;line-height:1.12;color:var(--gold);margin-top:12px}
+.story{display:flex;gap:30px}
+.story ul{list-style:none;flex:1}
+.story li{font-size:21px;line-height:1.36;color:var(--ink2);margin-bottom:6px}
+.story li:first-child{color:var(--ink)}
+.close{position:absolute;left:70px;right:70px;bottom:92px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.close .q{font-family:"Cormorant Garamond";font-weight:700;font-size:40px;line-height:1.05;text-transform:uppercase;color:var(--ink);max-width:760px}
+.close .q i{color:var(--gold);font-style:normal}
+.close .seal{flex:0 0 120px;height:120px;border-radius:50%;border:2px solid var(--gold2);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#FFF8E8,#EAD9B6)}
+.close .seal svg{width:66px;height:66px}
+.foot{position:absolute;left:0;right:0;bottom:44px;text-align:center;font-family:"Cormorant Garamond";font-weight:600;font-size:26px;letter-spacing:.12em;color:var(--ink2)}
+.foot span{color:var(--gold)}
+body.cjk .ttl h1{font-size:84px;letter-spacing:0}
+body.sc *{font-family:"Noto Serif SC",serif!important}body.jp *{font-family:"Noto Serif JP",serif!important}body.hi *{font-family:"Noto Serif Devanagari",serif!important}
+body.sc .ttl h2,body.jp .ttl h2,body.hi .ttl h2{font-style:normal}
+body.hi .rows li,body.sc .rows li,body.jp .rows li{font-size:23px;line-height:1.4}
+body.hi .ttl h1,body.sc .ttl h1,body.jp .ttl h1{font-size:76px;line-height:1.15}
+</style></head><body><div id="root"></div>
+<script>
+const [KIND,KEY,L]=(location.hash.slice(1)||'retro-aries-en').split('-');
+const SIGNG={aries:'ariete',taurus:'toro',gemini:'gemelli',cancer:'cancro',leo:'leone',virgo:'vergine',libra:'bilancia',scorpio:'scorpione',sagittarius:'sagittario',capricorn:'capricorno',aquarius:'acquario',pisces:'pesci'};
+const ASPG={conjunction:'congiunzione',sextile:'sestile',square:'quadrato',trine:'trigono',opposition:'opposizione',quincunx:'quinconce'};
+const D=(KIND==='retro'?RETRO:ASP)[L][KEY]; const UI=POSTER_UI[L]||POSTER_UI.en;
+const g=(n,c,sw=6)=>`<svg viewBox="0 0 100 100" fill="none" stroke="${c}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${GLYPH[n]}</svg>`;
+document.documentElement.lang=L; if(['zh'].includes(L))document.body.classList.add('sc','cjk'); if(L==='ja')document.body.classList.add('jp','cjk'); if(L==='hi')document.body.classList.add('hi');
+const mark=KIND==='retro'?SIGNG[KEY]:ASPG[KEY];
+const h1=D.h1||D.title, h2=D.h2||D.sub||'';
+document.getElementById('root').innerHTML=`<div class="s"><div class="frame"></div>
+<div class="ttl"><h1>${h1}</h1><h2>${g(mark,'#A9822F',7)}<span>${h2}</span></h2><p>${D.kicker||''}</p></div>
+<div class="art" style="background-image:url(img/${KEY}.jpg)"></div>
+<div class="sec" id="A" style="top:318px;right:auto;width:560px"><h3>${D.secA}</h3><ul class="rows">${D.rows.map(r=>`<li><span class="ic">${g(r.p||mark,'#5A4632',7)}</span><span>${r.t}</span></li>`).join('')}</ul><p class="bridge">${D.bridge}</p></div>
+<div class="sec" id="B" style="left:auto;right:66px;width:380px"><h3>${D.secB}</h3><div class="story"><ul>${D.story.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>
+<div class="close"><div class="q">${D.close}</div><div class="seal">${g(mark,'#A9822F',7)}</div></div>
+<div class="foot">${UI.free||'Free natal chart'} <span>astrotraderpro.com</span></div></div>`;
+// posizione della sezione B subito sotto A
+window.fit=()=>{const H1=document.querySelector('.ttl h1'); H1.style.whiteSpace='nowrap'; let hs=parseFloat(getComputedStyle(H1).fontSize); while(H1.scrollWidth>H1.clientWidth+1&&hs>44){hs-=2;H1.style.fontSize=hs+'px';}
+const A=document.getElementById('A'),B=document.getElementById('B'),C=document.querySelector('.close'),art=document.querySelector('.art');
+ B.style.top=(art.offsetTop+art.offsetHeight+20)+'px';
+ let fs=23, sf=21; const rows=[...document.querySelectorAll('.rows li')], st=[...document.querySelectorAll('.story li')];
+ const over=()=>Math.max(A.offsetTop+A.offsetHeight, B.offsetTop+B.offsetHeight)-(C.offsetTop-14);
+ let g=0; while(over()>0 && g++<10){ if(B.offsetTop+B.offsetHeight>C.offsetTop-14 && sf>17){sf-=1; st.forEach(r=>r.style.fontSize=sf+'px');} if(A.offsetTop+A.offsetHeight>C.offsetTop-14 && fs>18){fs-=1; rows.forEach(r=>r.style.fontSize=fs+'px');} }
+ return {fs, sf, over:over()};};
+</script></body></html>

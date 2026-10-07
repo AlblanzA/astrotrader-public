@@ -1,0 +1,616 @@
+{
+ "aries": {
+  "title": "Retrógrado em Áries",
+  "kicker": "O que cada planeta revisita ao retrogradar em Áries",
+  "secA": "A revisão de Áries",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Palavras ditas rápido demais; repita-as, mais devagar."
+   },
+   {
+    "p": "venere",
+    "t": "Como você persegue o que deseja; deixe a atração chegar sozinha."
+   },
+   {
+    "p": "marte",
+    "t": "As brigas que você começou por reflexo; escolha quais ainda importam."
+   },
+   {
+    "p": "giove",
+    "t": "Sua fé nos saltos ousados; veja quais realmente fizeram você crescer."
+   },
+   {
+    "p": "saturno",
+    "t": "A paciência que você pulou; reconstrua sua coragem em solo firme."
+   },
+   {
+    "p": "urano",
+    "t": "Seu impulso de se libertar; pergunte-se para que você se liberta."
+   },
+   {
+    "p": "nettuno",
+    "t": "A imagem heroica que você tem de si; deixe-a suavizar-se em verdade."
+   },
+   {
+    "p": "plutone",
+    "t": "Onde sua vontade virou força; recupere o poder sem empurrar."
+   }
+  ],
+  "bridge": "Áries corre para a frente; a retrogradação o deixa virar e olhar.",
+  "secB": "A história de Áries",
+  "story": [
+   "No relato grego, um carneiro de ouro voou ao resgate.",
+   "Néfele o enviou para salvar Frixo e Hele de Ino.",
+   "Hele caiu no mar, que desde então é o Helesponto.",
+   "Frixo chegou à Cólquida e ofereceu o carneiro a Zeus.",
+   "Seu tosão, num bosque vigiado, era o Velo de Ouro.",
+   "O carneiro subiu às estrelas, primeiro signo da primavera."
+  ],
+  "close": "O que você apressou talvez peça para recomeçar.",
+  "h1": "Retrógrado",
+  "h2": "em Áries"
+ },
+ "taurus": {
+  "title": "Retrógrado em Touro",
+  "kicker": "O que cada planeta revisita ao retrogradar em Touro",
+  "secA": "A revisão de Touro",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "As opiniões que você firmou há tempos; reabra-as com nova curiosidade."
+   },
+   {
+    "p": "venere",
+    "t": "O que você realmente valoriza; solte confortos que já não sente seus."
+   },
+   {
+    "p": "marte",
+    "t": "Onde a teimosia passou por força; avance com constância, mas avance."
+   },
+   {
+    "p": "giove",
+    "t": "Sua ideia de abundância; perceba quanto o suficiente já contém."
+   },
+   {
+    "p": "saturno",
+    "t": "O que você segura por medo; guarde só o que perdura."
+   },
+   {
+    "p": "urano",
+    "t": "As rotinas que você chama de segurança; deixe entrar uma pequena mudança."
+   },
+   {
+    "p": "nettuno",
+    "t": "Os sonhos que você pôs nas coisas; encontre a beleza que não se possui."
+   },
+   {
+    "p": "plutone",
+    "t": "O que você possui, e o que em silêncio possui você; afrouxe o aperto."
+   }
+  ],
+  "bridge": "Touro constrói devagar; a retrogradação cuida dos alicerces.",
+  "secB": "A história de Touro",
+  "story": [
+   "No relato grego, Zeus virou um touro branco e reluzente.",
+   "Europa, colhendo flores na praia, subiu em seu dorso.",
+   "Ele nadou mar adentro e a levou até Creta.",
+   "Seu filho Minos seria o lendário rei da ilha.",
+   "A imagem do touro foi elevada ao céu noturno.",
+   "As Híades marcam seu rosto; as Plêiades, seu ombro."
+  ],
+  "close": "O que você guarda talvez peça para ser escolhido de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Touro"
+ },
+ "gemini": {
+  "title": "Retrógrado em Gêmeos",
+  "kicker": "O que cada planeta revisita ao retrogradar em Gêmeos",
+  "secA": "A revisão de Gêmeos",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "As mensagens lidas pela metade; volte a elas com plena atenção."
+   },
+   {
+    "p": "venere",
+    "t": "Como você flerta com ideias e pessoas; note quais conversas conectam de verdade."
+   },
+   {
+    "p": "marte",
+    "t": "As discussões que você venceu com esperteza; pergunte-se se valiam a vitória."
+   },
+   {
+    "p": "giove",
+    "t": "Tudo o que você quis aprender de uma vez; escolha um fio e siga-o."
+   },
+   {
+    "p": "saturno",
+    "t": "Seus planos dispersos; dê a uma ideia a estrutura que ela merece."
+   },
+   {
+    "p": "urano",
+    "t": "Sua mente inquieta; deixe o insight súbito assentar antes de falar."
+   },
+   {
+    "p": "nettuno",
+    "t": "As histórias que você se conta; separe o que ouviu do que é verdade."
+   },
+   {
+    "p": "plutone",
+    "t": "Palavras com um peso oculto; diga o que você realmente quer dizer."
+   }
+  ],
+  "bridge": "Gêmeos faz perguntas; a retrogradação as faz duas vezes.",
+  "secB": "A história de Gêmeos",
+  "story": [
+   "No relato grego, Castor e Pólux eram os gêmeos de Leda.",
+   "Castor era mortal; Pólux, filho de Zeus, era imortal.",
+   "Quando Castor tombou, Pólux se recusou a viver sem ele.",
+   "Zeus os deixou partilhar um destino, entre Olimpo e Hades.",
+   "Lado a lado no céu, tornaram-se guias dos marinheiros."
+  ],
+  "close": "O que você disse talvez peça para ser ouvido de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Gêmeos"
+ },
+ "cancer": {
+  "title": "Retrógrado em Câncer",
+  "kicker": "O que cada planeta revisita ao retrogradar em Câncer",
+  "secA": "A revisão de Câncer",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Velhas conversas de família; ouça de novo o que realmente se quis dizer."
+   },
+   {
+    "p": "venere",
+    "t": "Como você cuida dos outros; deixe-se cuidar também."
+   },
+   {
+    "p": "marte",
+    "t": "Como você defende os seus; proteja sem fechar a porta."
+   },
+   {
+    "p": "giove",
+    "t": "O que é lar para você hoje; amplie o círculo que chama de família."
+   },
+   {
+    "p": "saturno",
+    "t": "Os muros que você ergueu por segurança; veja quais ainda servem."
+   },
+   {
+    "p": "urano",
+    "t": "Hábitos herdados em casa; mantenha o calor, mude o padrão."
+   },
+   {
+    "p": "nettuno",
+    "t": "A nostalgia que colore a memória; honre o passado sem morar nele."
+   },
+   {
+    "p": "plutone",
+    "t": "Raízes fundas e velhas lealdades; solte o que nunca foi seu para carregar."
+   }
+  ],
+  "bridge": "Câncer lembra; a retrogradação o ajuda a lembrar com ternura.",
+  "secB": "A história de Câncer",
+  "story": [
+   "No relato grego, Hera enviou um caranguejo contra Héracles.",
+   "Ele lutava contra a Hidra nos pântanos de Lerna.",
+   "O caranguejo beliscou seu pé, e o herói o esmagou.",
+   "Hera premiou sua lealdade com um lugar entre as estrelas.",
+   "Suas estrelas tênues embalam o aglomerado da Colmeia, Praesepe."
+  ],
+  "close": "O que você abrigou talvez peça para ser sentido de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Câncer"
+ },
+ "leo": {
+  "title": "Retrógrado em Leão",
+  "kicker": "O que cada planeta revisita ao retrogradar em Leão",
+  "secA": "A revisão de Leão",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Como você narra sua história; deixe entrar outras vozes."
+   },
+   {
+    "p": "venere",
+    "t": "Romance e diversão; ame pela alegria, não pelo aplauso."
+   },
+   {
+    "p": "marte",
+    "t": "Orgulho que virou disputa; lidere com calor, não com força."
+   },
+   {
+    "p": "giove",
+    "t": "Sua generosidade e seus grandes gestos; dê onde realmente chega."
+   },
+   {
+    "p": "saturno",
+    "t": "Sua necessidade de ser visto; crie confiança que resista no escuro."
+   },
+   {
+    "p": "urano",
+    "t": "Sua assinatura criativa; deixe que ela surpreenda até você, outra vez."
+   },
+   {
+    "p": "nettuno",
+    "t": "O papel que você encena por aprovação; encontre quem é sob o figurino."
+   },
+   {
+    "p": "plutone",
+    "t": "Onde o orgulho guarda uma velha ferida; guie-se pelo coração, não pelo ego."
+   }
+  ],
+  "bridge": "Leão brilha para fora; a retrogradação volta a luz para dentro.",
+  "secB": "A história de Leão",
+  "story": [
+   "No relato grego, um leão aterrorizava o vale de Nemeia.",
+   "Nenhuma arma conseguia perfurar sua pele dourada.",
+   "Héracles o encurralou na caverna e o estrangulou.",
+   "Desde então vestiu sua pele como manto e armadura.",
+   "Zeus pôs o leão no céu, com Régulo no coração."
+  ],
+  "close": "O que você mostrou talvez peça para ser sentido de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Leão"
+ },
+ "virgo": {
+  "title": "Retrógrado em Virgem",
+  "kicker": "O que cada planeta revisita ao retrogradar em Virgem",
+  "secA": "A revisão de Virgem",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Os detalhes que você corrigiu nos outros; volte esse cuidado para si."
+   },
+   {
+    "p": "venere",
+    "t": "Como você ama servindo; deixe a gratidão fluir nos dois sentidos."
+   },
+   {
+    "p": "marte",
+    "t": "Seu trabalho diário; refine o método em vez de forçar mais."
+   },
+   {
+    "p": "giove",
+    "t": "Seus padrões de melhoria; deixe espaço generoso para o bom o bastante."
+   },
+   {
+    "p": "saturno",
+    "t": "Deveres que você assumiu calado; mantenha os que realmente importam."
+   },
+   {
+    "p": "urano",
+    "t": "Rotinas rígidas; invente um jeito melhor de fazer o dia a dia."
+   },
+   {
+    "p": "nettuno",
+    "t": "A perfeição que você persegue; confie que o trabalho imperfeito também conta."
+   },
+   {
+    "p": "plutone",
+    "t": "A vontade de controlar cada detalhe; peneire, e deixe o resto ir."
+   }
+  ],
+  "bridge": "Virgem separa a colheita; a retrogradação a separa de novo.",
+  "secB": "A história de Virgem",
+  "story": [
+   "No relato grego, ela é Astreia, a donzela da justiça.",
+   "Ela viveu entre os humanos durante a Idade de Ouro.",
+   "Quando as pessoas ficaram cruéis, foi a última imortal a partir.",
+   "Ela subiu ao céu segurando uma espiga de trigo.",
+   "Essa espiga é Spica, a estrela brilhante da colheita."
+  ],
+  "close": "O que você aperfeiçoou talvez peça para se afrouxar.",
+  "h1": "Retrógrado",
+  "h2": "em Virgem"
+ },
+ "libra": {
+  "title": "Retrógrado em Libra",
+  "kicker": "O que cada planeta revisita ao retrogradar em Libra",
+  "secA": "A revisão de Libra",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Acordos e promessas; releia os termos que você aceitou pela paz."
+   },
+   {
+    "p": "venere",
+    "t": "Suas parcerias; pergunte-se se o dar e receber ainda parece justo."
+   },
+   {
+    "p": "marte",
+    "t": "Conflitos que você evitou pela harmonia; fale, com gentileza mas clareza."
+   },
+   {
+    "p": "giove",
+    "t": "Seus ideais de justiça; aplique-os também a você."
+   },
+   {
+    "p": "saturno",
+    "t": "Compromissos com os outros; pese quais são equilibrados e verdadeiros."
+   },
+   {
+    "p": "urano",
+    "t": "Os papéis que você vive nas relações; dê espaço para que ambos mudem."
+   },
+   {
+    "p": "nettuno",
+    "t": "O parceiro ideal que você imaginou; veja a pessoa real à sua frente."
+   },
+   {
+    "p": "plutone",
+    "t": "Poder escondido na cortesia; restaure o equilíbrio onde um lado pesa demais."
+   }
+  ],
+  "bridge": "Libra pesa; a retrogradação deixa os pratos assentarem.",
+  "secB": "A história de Libra",
+  "story": [
+   "No início, os gregos viam aqui as garras do Escorpião.",
+   "Suas estrelas mais brilhantes ainda levam o nome das garras.",
+   "Os romanos leram a figura como uma balança.",
+   "Na Antiguidade, o Sol passava aqui perto do equinócio de outono.",
+   "A única figura do zodíaco que é um objeto, não uma criatura."
+  ],
+  "close": "O que você equilibrou talvez peça para ser pesado de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Libra"
+ },
+ "scorpio": {
+  "title": "Retrógrado em Escorpião",
+  "kicker": "O que cada planeta revisita ao retrogradar em Escorpião",
+  "secA": "A revisão de Escorpião",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Segredos guardados e coisas não ditas; decida o que merece a luz do dia."
+   },
+   {
+    "p": "venere",
+    "t": "Intimidade e confiança; veja quem mereceu sua profundidade, e quem não."
+   },
+   {
+    "p": "marte",
+    "t": "Velhos ressentimentos e mágoas caladas; use essa intensidade para se renovar."
+   },
+   {
+    "p": "giove",
+    "t": "O que você compartilha; deixe a confiança crescer onde é retribuída."
+   },
+   {
+    "p": "saturno",
+    "t": "Seu medo da perda; construa proximidade com limites, não com controle."
+   },
+   {
+    "p": "urano",
+    "t": "Padrões de ciúme ou suspeita; deixe uma franqueza súbita limpar o ar."
+   },
+   {
+    "p": "nettuno",
+    "t": "Fantasias de fusão total; ame a fundo sem deixar de ser você."
+   },
+   {
+    "p": "plutone",
+    "t": "O que precisa acabar para algo começar; deixe a pele velha ir."
+   }
+  ],
+  "bridge": "Escorpião cava fundo; a retrogradação volta ao que está enterrado.",
+  "secB": "A história de Escorpião",
+  "story": [
+   "No relato grego, Órion se gabava de poder matar qualquer fera.",
+   "Gaia enviou um escorpião, e sua picada derrubou o caçador.",
+   "Ambos foram postos no céu, em lados opostos.",
+   "Quando Escorpião nasce no leste, Órion se põe no oeste.",
+   "Em seu coração arde a vermelha Antares, rival de Ares."
+  ],
+  "close": "O que você enterrou talvez peça para ser encarado de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Escorpião"
+ },
+ "sagittarius": {
+  "title": "Retrógrado em Sagitário",
+  "kicker": "O que cada planeta revisita ao retrogradar em Sagitário",
+  "secA": "A revisão de Sagitário",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Afirmações ousadas feitas com certeza; confira os fatos mais uma vez."
+   },
+   {
+    "p": "venere",
+    "t": "O amor que vive de distância e sonhos; traga-o para mais perto de casa."
+   },
+   {
+    "p": "marte",
+    "t": "Cruzadas por suas crenças; mire suas flechas com mais cuidado."
+   },
+   {
+    "p": "giove",
+    "t": "Sua grande filosofia de vida; veja se ela ainda cabe na sua experiência."
+   },
+   {
+    "p": "saturno",
+    "t": "Promessas maiores que seu alcance; transforme a visão em passos reais."
+   },
+   {
+    "p": "urano",
+    "t": "Crenças herdadas; teste quais verdades você escolheu e quais tomou emprestadas."
+   },
+   {
+    "p": "nettuno",
+    "t": "Mestres e gurus que você idealizou; deixe sua própria sabedoria guiá-lo."
+   },
+   {
+    "p": "plutone",
+    "t": "Convicções que você aperta demais; permita que sua verdade evolua."
+   }
+  ],
+  "bridge": "Sagitário mira longe; a retrogradação confere a mira.",
+  "secB": "A história de Sagitário",
+  "story": [
+   "O Arqueiro, muitas vezes um centauro, mira em Escorpião.",
+   "Num relato grego ele é Croto, criado entre as Musas.",
+   "Teria inventado o arco e flecha; montava tão bem quanto atirava.",
+   "As Musas pediram a Zeus que o honrasse com um lugar no céu.",
+   "Na direção de seu arco fica o centro da Via Láctea."
+  ],
+  "close": "Aquilo em que você acreditou talvez peça um novo teste.",
+  "h1": "Retrógrado",
+  "h2": "em Sagitário"
+ },
+ "capricorn": {
+  "title": "Retrógrado em Capricórnio",
+  "kicker": "O que cada planeta revisita ao retrogradar em Capricórnio",
+  "secA": "A revisão de Capricórnio",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Planos de longo prazo e compromissos formais; revise a rota antes de subir."
+   },
+   {
+    "p": "venere",
+    "t": "O amor adiado pelo dever; abra espaço para a ternura agora."
+   },
+   {
+    "p": "marte",
+    "t": "A ambição movida só pela disciplina; suba num ritmo sustentável."
+   },
+   {
+    "p": "giove",
+    "t": "Sua definição de sucesso; meça-a pelo sentido, não pelo status."
+   },
+   {
+    "p": "saturno",
+    "t": "Sua relação com a autoridade e as regras; mantenha as estruturas que o sustentam."
+   },
+   {
+    "p": "urano",
+    "t": "Tradições que você segue por inércia; renove-as, ou crie novas."
+   },
+   {
+    "p": "nettuno",
+    "t": "A imagem do realizador ideal; que a ambição sirva aos seus sonhos reais."
+   },
+   {
+    "p": "plutone",
+    "t": "Onde o controle substituiu a responsabilidade; funde sua autoridade na integridade."
+   }
+  ],
+  "bridge": "Capricórnio escala; a retrogradação confere cada apoio.",
+  "secB": "A história de Capricórnio",
+  "story": [
+   "A cabra-marinha precede a Grécia: um peixe-cabra babilônico.",
+   "Na Mesopotâmia, era ligada a Ea, deus das águas doces.",
+   "No relato grego, Pã fugiu do monstro Tifão.",
+   "Ele saltou no rio: sua metade inferior virou peixe.",
+   "Zeus pôs essa fuga engenhosa entre as estrelas."
+  ],
+  "close": "O que você construiu talvez peça para ser moldado de novo.",
+  "h1": "Retrógrado",
+  "h2": "em Capricórnio"
+ },
+ "aquarius": {
+  "title": "Retrógrado em Aquário",
+  "kicker": "O que cada planeta revisita ao retrogradar em Aquário",
+  "secA": "A revisão de Aquário",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Ideias que você partilhou com seus círculos; revisite-as com a mente fresca."
+   },
+   {
+    "p": "venere",
+    "t": "Amizades e família escolhida; note quais laços ainda parecem mútuos."
+   },
+   {
+    "p": "marte",
+    "t": "Causas pelas quais você luta; confira se ainda refletem seus valores."
+   },
+   {
+    "p": "giove",
+    "t": "Suas esperanças para o futuro; renove a visão com a sabedoria do presente."
+   },
+   {
+    "p": "saturno",
+    "t": "Seu papel na comunidade; contribua sem perder sua própria voz."
+   },
+   {
+    "p": "urano",
+    "t": "O rebelde interior; pergunte-se se resiste por liberdade ou hábito."
+   },
+   {
+    "p": "nettuno",
+    "t": "Sonhos utópicos; faça dos ideais comuns gestos realmente possíveis."
+   },
+   {
+    "p": "plutone",
+    "t": "Pressão do grupo e poder coletivo; seja fiel a si sem se desconectar."
+   }
+  ],
+  "bridge": "Aquário olha adiante; a retrogradação o faz olhar ao redor.",
+  "secB": "A história de Aquário",
+  "story": [
+   "No relato grego, ele é Ganimedes, um jovem de Troia.",
+   "A águia de Zeus o levou até o Olimpo.",
+   "Lá ele se tornou o copeiro dos deuses.",
+   "No céu, ele derrama água de uma urna rumo ao sul.",
+   "O jato corre até o Peixe Austral e a brilhante Fomalhaut."
+  ],
+  "close": "O que você imaginou talvez peça para ser renovado.",
+  "h1": "Retrógrado",
+  "h2": "em Aquário"
+ },
+ "pisces": {
+  "title": "Retrógrado em Peixes",
+  "kicker": "O que cada planeta revisita ao retrogradar em Peixes",
+  "secA": "A revisão de Peixes",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Pensamentos que ficaram sem voz; dê às suas intuições palavras claras e simples."
+   },
+   {
+    "p": "venere",
+    "t": "O amor que dissolveu seus limites; ofereça compaixão sem se perder."
+   },
+   {
+    "p": "marte",
+    "t": "Batalhas que você evitou recuando; aja com suavidade, mas aja."
+   },
+   {
+    "p": "giove",
+    "t": "Sua fé e sua generosidade; dê sem se esvaziar."
+   },
+   {
+    "p": "saturno",
+    "t": "Seus sonhos sem forma; dê a eles uma estrutura simples e estável."
+   },
+   {
+    "p": "urano",
+    "t": "Seus hábitos espirituais; deixe um insight súbito despertar sua prática."
+   },
+   {
+    "p": "nettuno",
+    "t": "Ilusões em que você nadou por vontade; veja claro e siga acreditando."
+   },
+   {
+    "p": "plutone",
+    "t": "O que você entregou cedo demais; recupere-o, ou solte-o de vez."
+   }
+  ],
+  "bridge": "Peixes dissolve; a retrogradação deixa as águas clarearem.",
+  "secB": "A história de Peixes",
+  "story": [
+   "No relato grego, Afrodite e Eros fugiram de Tifão.",
+   "Saltaram num rio e tomaram a forma de peixes.",
+   "Amarraram-se com um cordão para não se separarem.",
+   "No céu, os dois peixes nadam afastados, unidos por esse cordão.",
+   "O nó é marcado pela estrela Alrescha, 'o cordão'."
+  ],
+  "close": "O que você sonhou talvez peça para ser visto com clareza.",
+  "h1": "Retrógrado",
+  "h2": "em Peixes"
+ }
+}
