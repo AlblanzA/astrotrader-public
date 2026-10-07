@@ -180,7 +180,8 @@ async function main() {
   let storyId = null;
   if (p.story) {
     try {
-      storyId = await ripubblicaInStoria(await urlStoria(p, urls[0]));
+      const orig = p.storyImage ? (/^https?:\/\//.test(p.storyImage) ? p.storyImage : base + p.storyImage) : urls[0];
+      storyId = await ripubblicaInStoria(await urlStoria(p, orig));
       console.log(`  copertina ripubblicata in storia, id ${storyId}`);
     } catch (e) {
       annota(`${p.id}: post pubblicato, ma la storia no: ${String(e)}`);

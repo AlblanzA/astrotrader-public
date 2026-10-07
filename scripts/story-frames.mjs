@@ -69,7 +69,7 @@ async function main() {
   for (const p of voci) {
     const out = join(OUT_DIR, `${p.id}.jpg`);
     if (existsSync(out)) continue;
-    const rel = p.images[0];
+    const rel = p.storyImage || p.images[0];
     const url = /^https?:\/\//.test(rel) ? rel : base + rel;
     const img = await fetch(url);
     if (!img.ok) { console.warn(`::warning::${p.id}: immagine ${url} → HTTP ${img.status}`); continue; }

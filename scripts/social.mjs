@@ -79,7 +79,7 @@ export const CARDS = 6;
  *
  * Quindi la giornata costa 1 (carosello) + 6 (storie) = 7 pubblicazioni su 50.
  */
-export const IG_MAX_CAROUSEL = 10;
+export const IG_MAX_CAROUSEL = 20; // 7/10/2026: contenitore di 13 schede accettato (IG Carousel Test); l'app ne ammette 20
 export const IG_DAILY_QUOTA = 50;
 
 export const DRY =
