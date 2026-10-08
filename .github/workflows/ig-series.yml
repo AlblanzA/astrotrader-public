@@ -98,7 +98,7 @@ jobs:
           git pull -q --ff-only origin main || echo "::warning::pull dello stato non riuscito"
           node scripts/publish-series.mjs
 
-      # Facebook: stessa serie sulla pagina (solo EN). Si salta da sola se i
+      # Facebook: stessa serie sulla pagina, in tutte le 9 lingue (dall 8/10/2026). Si salta da sola se i
       # secret FB_PAGE_ID / FB_PAGE_TOKEN non ci sono. Un guasto FB non deve
       # invalidare un post Instagram gia' uscito.
       - name: Serie — Facebook
@@ -109,7 +109,7 @@ jobs:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
-          ATP_FB_SERIES_LANGS: 'en'
+          ATP_FB_SERIES_LANGS: 'en,hi,es,pt,fr,ru,zh,ja,it'
           ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
         run: node scripts/publish-fb-series.mjs
 

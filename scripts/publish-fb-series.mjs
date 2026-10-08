@@ -4,7 +4,7 @@
  *
  * Stesso calendario di Instagram (/social/ig/series.json sugli asset del
  * Worker), stesse immagini, ma sulla PAGINA Facebook e solo nelle lingue di
- * ATP_FB_SERIES_LANGS (default "en"). Si aggiunge al post quotidiano, non lo
+ * ATP_FB_SERIES_LANGS (default "en"; il workflow dal 8/10/2026 passa tutte le 9 lingue). Si aggiunge al post quotidiano, non lo
  * tocca. Le voci «solo storie» (in evidenza Instagram) non esistono su FB.
  *
  * Post a più immagini come in publish-fb.mjs: ogni foto caricata con
@@ -44,8 +44,12 @@ if (!DRY && (!PAGE || !TOKEN)) {
   process.exit(0);
 }
 
+// «→ link in bio (astrotraderpro.com)» in tutte le lingue (enlace en la bio,
+// lien en bio, ссылка в профиле, プロフィールのリンク（…）, ecc.): su Facebook
+// il link è cliccabile, quindi dopo la freccia resta solo l'indirizzo.
 function testoFacebook(caption) {
   return String(caption)
+    .replace(/→[^\n→]*?[(（]\s*astrotraderpro\.com\s*[)）]/g, '→ ' + SITE)
     .replace(/link in bio\s*\(astrotraderpro\.com\)/gi, SITE)
     .replace(/link in bio/gi, SITE);
 }
