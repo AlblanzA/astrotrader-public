@@ -1,0 +1,214 @@
+{
+ "conjunction": {
+  "title": "La congiunzione",
+  "sub": "0° · due forze fuse",
+  "secA": "Cosa fa una congiunzione",
+  "rows": [
+   {
+    "t": "Due pianeti agiscono come uno: senti di continuo la loro miscela."
+   },
+   {
+    "t": "Può esserti difficile distinguere le due energie dentro di te."
+   },
+   {
+    "t": "Sotto transito tende ad aprire un nuovo ciclo di esperienza."
+   },
+   {
+    "t": "Concentra l'attenzione: puoi riversarti tutto in un solo ambito."
+   },
+   {
+    "t": "Il tono dipende dai pianeti: può calmare o intensificare."
+   },
+   {
+    "t": "Puoi non accorgertene, perché ti sembra semplicemente te."
+   }
+  ],
+  "bridge": "Una congiunzione è un incontro, non una misura.",
+  "secB": "Da dove viene",
+  "story": [
+   "Il Tetrabiblos di Tolomeo nomina quattro figure tra i segni.",
+   "Opposizione, trigono, quadrato, sestile: forme nel cerchio.",
+   "La congiunzione non è una di queste figure.",
+   "Era vista come un'unione di corpi, non come uno sguardo.",
+   "Gli autori ellenistici parlavano di pianeti presenti insieme.",
+   "Due luci nello stesso luogo, che mescolano la loro natura."
+  ],
+  "close": "Dove due si incontrano, tende a nascere un nuovo inizio."
+ },
+ "sextile": {
+  "title": "Il sestile",
+  "sub": "60° · porte aperte, quieta facilità",
+  "secA": "Cosa fa un sestile",
+  "rows": [
+   {
+    "t": "Offre occasioni, ma tende a chiederti di agire."
+   },
+   {
+    "t": "Colleghi due ambiti della vita con facilità naturale e amichevole."
+   },
+   {
+    "t": "Conversazioni e contatti possono aprire porte quando ti fai avanti."
+   },
+   {
+    "t": "I suoi doni sono sottili: senza attenzione rischi di non vederli."
+   },
+   {
+    "t": "Sotto transito, piccoli sforzi tendono a dare risultati incoraggianti."
+   },
+   {
+    "t": "Troppa comodità può lasciarne inutilizzata la promessa: fai un passo."
+   }
+  ],
+  "bridge": "Un sestile bussa piano; sei tu a scegliere di aprire.",
+  "secB": "Da dove viene",
+  "story": [
+   "Tolomeo conta il sestile tra le sue quattro configurazioni.",
+   "Sessanta gradi: un sesto del cerchio, segni a due di distanza.",
+   "Segni dello stesso genere: fuoco con aria, terra con acqua.",
+   "Lo chiamava armonico, parente più mite del trigono.",
+   "La sua figura è l'esagono tracciato dentro lo zodiaco."
+  ],
+  "close": "Una porta aperta chiede comunque di essere attraversata."
+ },
+ "square": {
+  "title": "Il quadrato",
+  "sub": "90° · una tensione che cresce",
+  "secA": "Cosa fa un quadrato",
+  "rows": [
+   {
+    "t": "Crea attrito tra due bisogni che chiedono entrambi attenzione."
+   },
+   {
+    "t": "Puoi sentirti spinto ad agire, a costruire o a decidere."
+   },
+   {
+    "t": "La pressione tende a diventare slancio quando ci lavori."
+   },
+   {
+    "t": "Sotto transito segna spesso una svolta o una prova."
+   },
+   {
+    "t": "Evitare il conflitto tende a farlo tornare in forme nuove."
+   },
+   {
+    "t": "Col tempo può forgiare le tue capacità più forti e la tua resilienza."
+   }
+  ],
+  "bridge": "Un quadrato è attrito che può diventare movimento.",
+  "secB": "Da dove viene",
+  "story": [
+   "Tolomeo conta il quadrato tra le sue quattro configurazioni.",
+   "Novanta gradi: un quarto del cerchio, segni a tre di distanza.",
+   "I suoi segni hanno genere diverso ma la stessa modalità.",
+   "Tolomeo lo giudicava disarmonico, una figura di tensione.",
+   "La sua figura è il quadrato tracciato dentro lo zodiaco."
+  ],
+  "close": "Ciò che ti resiste può essere ciò che ti dà forma."
+ },
+ "trine": {
+  "title": "Il trigono",
+  "sub": "120° · flusso e doni naturali",
+  "secA": "Cosa fa un trigono",
+  "rows": [
+   {
+    "t": "Unisce pianeti dello stesso elemento: l'energia scorre facile."
+   },
+   {
+    "t": "Puoi avere talenti che sembrano senza sforzo, quasi scontati."
+   },
+   {
+    "t": "Sotto transito tende a portare sostegno, buon tempismo e grazia."
+   },
+   {
+    "t": "La facilità può diventare una comodità che non ti chiede nulla."
+   },
+   {
+    "t": "I suoi doni crescono quando li usi in modo consapevole."
+   },
+   {
+    "t": "Dove i trigoni collegano il tuo tema, tendi a riprenderti in fretta."
+   }
+  ],
+  "bridge": "Un trigono è un dono; usarlo lo tiene vivo.",
+  "secB": "Da dove viene",
+  "story": [
+   "Tolomeo conta il trigono tra le sue quattro configurazioni.",
+   "Centoventi gradi: un terzo del cerchio.",
+   "Unisce segni a quattro di distanza, della stessa triplicità.",
+   "Lo considerava armonico, insieme al sestile.",
+   "Fondava queste figure sui rapporti musicali dell'armonia."
+  ],
+  "close": "Ciò che arriva facile chiede comunque di essere usato bene."
+ },
+ "opposition": {
+  "title": "L'opposizione",
+  "sub": "180° · specchio ed equilibrio",
+  "secA": "Cosa fa un'opposizione",
+  "rows": [
+   {
+    "t": "Due pianeti si fronteggiano: ti senti tirato in due direzioni."
+   },
+   {
+    "t": "Puoi incontrarne un lato attraverso altre persone."
+   },
+   {
+    "t": "Le relazioni tendono a rispecchiare ciò che non hai ancora fatto tuo."
+   },
+   {
+    "t": "Sotto transito porta spesso le questioni a un culmine visibile."
+   },
+   {
+    "t": "L'equilibrio arriva integrando i due lati invece di sceglierne uno."
+   },
+   {
+    "t": "Il suo dono è la consapevolezza: ti conosci attraverso il contrasto."
+   }
+  ],
+  "bridge": "Un'opposizione ti mostra te stesso dall'altra parte della stanza.",
+  "secB": "Da dove viene",
+  "story": [
+   "Tolomeo conta l'opposizione tra le sue quattro configurazioni.",
+   "Centottanta gradi: il diametro del cerchio.",
+   "Unisce segni a sei di distanza, uno di fronte all'altro.",
+   "Il cerchio diviso a metà, 2 a 1: il rapporto dell'ottava.",
+   "Tolomeo la giudicava disarmonica, una figura di contrasto."
+  ],
+  "close": "Ciò che ti sta di fronte può essere ciò che ti completa."
+ },
+ "quincunx": {
+  "title": "Il quinconce",
+  "sub": "150° · aggiustamento senza facilità",
+  "secA": "Cosa fa un quinconce",
+  "rows": [
+   {
+    "t": "Collega due pianeti che non si capiscono facilmente."
+   },
+   {
+    "t": "Puoi sentire che tra due ambiti servono sempre piccoli aggiustamenti."
+   },
+   {
+    "t": "Non c'è conflitto aperto, solo uno sfasamento goffo e persistente."
+   },
+   {
+    "t": "Sotto transito tende a chiedere cambi pratici e nuove regolazioni."
+   },
+   {
+    "t": "Col tempo impari flessibilità, collegando ciò che sembra estraneo."
+   },
+   {
+    "t": "Ignorarlo può lasciare la quieta sensazione che qualcosa non torni."
+   }
+  ],
+  "bridge": "Un quinconce ti chiede di adattarti, non di scegliere.",
+  "secB": "Da dove viene",
+  "story": [
+   "Un aspetto minore dell'astrologia più tarda: 150 gradi.",
+   "Unisce segni a cinque di distanza, senza nulla in comune.",
+   "Non condividono elemento, genere né modalità.",
+   "Per gli autori ellenistici questi segni non si vedono.",
+   "Il nome latino significa cinque dodicesimi di un intero.",
+   "Le quattro figure di Tolomeo non lo includono."
+  ],
+  "close": "Ciò che non combacia può insegnarti a piegarti."
+ }
+}

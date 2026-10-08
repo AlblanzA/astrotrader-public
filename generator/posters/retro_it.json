@@ -1,0 +1,616 @@
+{
+ "aries": {
+  "title": "Retrogrado in Ariete",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Ariete",
+  "secA": "La revisione dell'Ariete",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Le parole sparate troppo in fretta: ripetile, più piano."
+   },
+   {
+    "p": "venere",
+    "t": "Il modo in cui insegui ciò che desideri: lascia che l'attrazione si avvicini da sola."
+   },
+   {
+    "p": "marte",
+    "t": "Le liti iniziate d'istinto: scegli quali contano ancora."
+   },
+   {
+    "p": "giove",
+    "t": "La fiducia nei salti audaci: verifica quali ti hanno fatto crescere davvero."
+   },
+   {
+    "p": "saturno",
+    "t": "La pazienza che hai saltato: ricostruisci il coraggio su basi più solide."
+   },
+   {
+    "p": "urano",
+    "t": "La voglia di liberarti: chiediti per cosa ti stai liberando."
+   },
+   {
+    "p": "nettuno",
+    "t": "L'immagine eroica che hai di te: lascia che si ammorbidisca nella verità."
+   },
+   {
+    "p": "plutone",
+    "t": "Dove la volontà è diventata forza: riprendi potere senza spingere."
+   }
+  ],
+  "bridge": "L'Ariete corre avanti; il moto retrogrado gli fa voltare lo sguardo.",
+  "secB": "La storia dell'Ariete",
+  "story": [
+   "Nel racconto greco, un ariete d'oro volò in soccorso.",
+   "Nefele lo mandò a salvare Frisso ed Elle da Ino.",
+   "Elle scivolò in mare, da allora chiamato Ellesponto.",
+   "Frisso giunse in Colchide e offrì l'ariete a Zeus.",
+   "Il suo vello, appeso in un bosco sorvegliato, fu il Vello d'oro.",
+   "L'ariete salì tra le stelle, primo segno della primavera."
+  ],
+  "close": "Ciò che hai affrettato può chiedere di ricominciare.",
+  "h1": "Retrogrado",
+  "h2": "in Ariete"
+ },
+ "taurus": {
+  "title": "Retrogrado in Toro",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Toro",
+  "secA": "La revisione del Toro",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Le opinioni che hai fissato da tempo: riaprile con curiosità nuova."
+   },
+   {
+    "p": "venere",
+    "t": "Ciò che per te ha davvero valore: lascia le comodità che non senti più tue."
+   },
+   {
+    "p": "marte",
+    "t": "Dove la testardaggine sembrava forza: muoviti con calma, ma muoviti."
+   },
+   {
+    "p": "giove",
+    "t": "La tua idea di abbondanza: nota quanto contiene già il «basta»."
+   },
+   {
+    "p": "saturno",
+    "t": "Ciò a cui ti aggrappi per paura: tieni solo ciò che dura."
+   },
+   {
+    "p": "urano",
+    "t": "Le abitudini che chiami sicurezza: lascia entrare un piccolo cambiamento."
+   },
+   {
+    "p": "nettuno",
+    "t": "I sogni che hai messo nelle cose: cerca la bellezza che non va posseduta."
+   },
+   {
+    "p": "plutone",
+    "t": "Ciò che possiedi, e ciò che in silenzio possiede te: allenta la presa."
+   }
+  ],
+  "bridge": "Il Toro costruisce piano; il moto retrogrado cura le fondamenta.",
+  "secB": "La storia del Toro",
+  "story": [
+   "Nel racconto greco, Zeus si fece toro bianco e splendente.",
+   "Europa, che coglieva fiori sulla riva, gli salì in groppa.",
+   "Lui nuotò attraverso il mare e la portò fino a Creta.",
+   "Suo figlio Minosse divenne il re leggendario dell'isola.",
+   "L'immagine del toro fu innalzata nel cielo notturno.",
+   "Le Iadi ne segnano il muso, le Pleiadi la spalla."
+  ],
+  "close": "Ciò che conservi può chiedere di essere scelto di nuovo.",
+  "h1": "Retrogrado",
+  "h2": "in Toro"
+ },
+ "gemini": {
+  "title": "Retrogrado in Gemelli",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Gemelli",
+  "secA": "La revisione dei Gemelli",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "I messaggi letti a metà: tornaci con piena attenzione."
+   },
+   {
+    "p": "venere",
+    "t": "Come flirti con idee e persone: nota quali conversazioni ti uniscono davvero."
+   },
+   {
+    "p": "marte",
+    "t": "Le discussioni vinte con l'astuzia: chiediti se valeva la pena vincerle."
+   },
+   {
+    "p": "giove",
+    "t": "Tutto ciò che volevi imparare insieme: scegli un filo e seguilo."
+   },
+   {
+    "p": "saturno",
+    "t": "I progetti sparsi: dai a un'idea la struttura che merita."
+   },
+   {
+    "p": "urano",
+    "t": "La mente irrequieta: lascia posare l'intuizione prima di parlare."
+   },
+   {
+    "p": "nettuno",
+    "t": "Le storie che ti racconti: separa ciò che hai sentito da ciò che è vero."
+   },
+   {
+    "p": "plutone",
+    "t": "Parole con un peso nascosto: di' ciò che intendi davvero."
+   }
+  ],
+  "bridge": "I Gemelli fanno domande; il moto retrogrado le fa due volte.",
+  "secB": "La storia dei Gemelli",
+  "story": [
+   "Nel racconto greco, Castore e Polluce erano i gemelli di Leda.",
+   "Castore era mortale; Polluce, figlio di Zeus, immortale.",
+   "Quando Castore cadde, Polluce non volle vivere senza di lui.",
+   "Zeus diede loro un destino comune, tra Olimpo e Ade.",
+   "Posti fianco a fianco nel cielo, guidano i marinai."
+  ],
+  "close": "Ciò che hai detto può chiedere di essere ascoltato di nuovo.",
+  "h1": "Retrogrado",
+  "h2": "in Gemelli"
+ },
+ "cancer": {
+  "title": "Retrogrado in Cancro",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Cancro",
+  "secA": "La revisione del Cancro",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Vecchi discorsi di famiglia: riascolta ciò che volevano dire davvero."
+   },
+   {
+    "p": "venere",
+    "t": "Come ti prendi cura degli altri: lascia che si prendano cura anche di te."
+   },
+   {
+    "p": "marte",
+    "t": "Il modo in cui difendi i tuoi: proteggi senza chiudere la porta."
+   },
+   {
+    "p": "giove",
+    "t": "Cosa significa casa per te oggi: allarga il cerchio che chiami famiglia."
+   },
+   {
+    "p": "saturno",
+    "t": "I muri costruiti per sentirti al sicuro: verifica quali ti servono ancora."
+   },
+   {
+    "p": "urano",
+    "t": "Abitudini ereditate in casa: tieni il calore, cambia lo schema."
+   },
+   {
+    "p": "nettuno",
+    "t": "La nostalgia che colora i ricordi: onora il passato senza viverci."
+   },
+   {
+    "p": "plutone",
+    "t": "Radici profonde e vecchie lealtà: lascia ciò che non era tuo da portare."
+   }
+  ],
+  "bridge": "Il Cancro ricorda; il moto retrogrado lo aiuta a ricordare con gentilezza.",
+  "secB": "La storia del Cancro",
+  "story": [
+   "Nel racconto greco, Era mandò un granchio contro Eracle.",
+   "L'eroe combatteva l'Idra nelle paludi di Lerna.",
+   "Il granchio gli pizzicò il piede, e lui lo schiacciò.",
+   "Era premiò la sua fedeltà con un posto tra le stelle.",
+   "Le sue stelle deboli custodiscono l'ammasso del Presepe."
+  ],
+  "close": "Ciò che hai protetto può chiedere di essere sentito di nuovo.",
+  "h1": "Retrogrado",
+  "h2": "in Cancro"
+ },
+ "leo": {
+  "title": "Retrogrado in Leone",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Leone",
+  "secA": "La revisione del Leone",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Come racconti la tua storia: lascia entrare altre voci."
+   },
+   {
+    "p": "venere",
+    "t": "Romanticismo e gioco: ama per la gioia, non per l'applauso."
+   },
+   {
+    "p": "marte",
+    "t": "L'orgoglio diventato sfida: guida con il calore, non con la forza."
+   },
+   {
+    "p": "giove",
+    "t": "Generosità e grandi gesti: dona dove arriva davvero."
+   },
+   {
+    "p": "saturno",
+    "t": "Il bisogno di essere visto: costruisci una fiducia che regga al buio."
+   },
+   {
+    "p": "urano",
+    "t": "La tua firma creativa: lascia che sorprenda anche te, ancora una volta."
+   },
+   {
+    "p": "nettuno",
+    "t": "Il ruolo che reciti per piacere: trova chi sei sotto il costume."
+   },
+   {
+    "p": "plutone",
+    "t": "Dove l'orgoglio difende una vecchia ferita: guida col cuore, non con l'ego."
+   }
+  ],
+  "bridge": "Il Leone brilla fuori; il moto retrogrado volge la luce dentro.",
+  "secB": "La storia del Leone",
+  "story": [
+   "Nel racconto greco, un leone terrorizzava la valle di Nemea.",
+   "Nessuna arma poteva trafiggere la sua pelle dorata.",
+   "Eracle lo chiuse nella sua grotta e lo strangolò.",
+   "Da allora ne indossò la pelle come mantello e armatura.",
+   "Zeus pose il leone nel cielo, con Regolo nel cuore."
+  ],
+  "close": "Ciò che hai mostrato può chiedere di essere sentito di nuovo.",
+  "h1": "Retrogrado",
+  "h2": "in Leone"
+ },
+ "virgo": {
+  "title": "Retrogrado in Vergine",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Vergine",
+  "secA": "La revisione della Vergine",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "I dettagli che correggevi negli altri: rivolgi quella cura a te."
+   },
+   {
+    "p": "venere",
+    "t": "Come mostri amore servendo: lascia che la gratitudine vada nei due sensi."
+   },
+   {
+    "p": "marte",
+    "t": "Il lavoro di ogni giorno: affina il metodo invece di spingere di più."
+   },
+   {
+    "p": "giove",
+    "t": "I tuoi standard di miglioramento: lascia spazio al «va bene così»."
+   },
+   {
+    "p": "saturno",
+    "t": "I doveri presi in silenzio: tieni quelli che contano davvero."
+   },
+   {
+    "p": "urano",
+    "t": "Routine rigide: inventa un modo migliore per fare le cose di sempre."
+   },
+   {
+    "p": "nettuno",
+    "t": "La perfezione che insegui: fidati che anche il lavoro imperfetto conta."
+   },
+   {
+    "p": "plutone",
+    "t": "Il bisogno di controllare ogni dettaglio: setaccia, e lascia andare il resto."
+   }
+  ],
+  "bridge": "La Vergine seleziona il raccolto; il moto retrogrado lo seleziona di nuovo.",
+  "secB": "La storia della Vergine",
+  "story": [
+   "Nel racconto greco è Astrea, la fanciulla della giustizia.",
+   "Visse tra gli esseri umani durante l'età dell'oro.",
+   "Quando divennero crudeli, fu l'ultima immortale ad andarsene.",
+   "Salì nel cielo con in mano una spiga di grano.",
+   "Quella spiga è Spica, la stella luminosa del raccolto."
+  ],
+  "close": "Ciò che hai perfezionato può chiedere di essere allentato.",
+  "h1": "Retrogrado",
+  "h2": "in Vergine"
+ },
+ "libra": {
+  "title": "Retrogrado in Bilancia",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Bilancia",
+  "secA": "La revisione della Bilancia",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Accordi e promesse: rileggi i patti accettati per quieto vivere."
+   },
+   {
+    "p": "venere",
+    "t": "Le tue relazioni: chiediti se il dare e l'avere sono ancora equi."
+   },
+   {
+    "p": "marte",
+    "t": "Conflitti evitati per armonia: parla, con gentilezza ma con chiarezza."
+   },
+   {
+    "p": "giove",
+    "t": "I tuoi ideali di giustizia: applicali anche a te."
+   },
+   {
+    "p": "saturno",
+    "t": "Impegni presi con gli altri: pesa quali sono equilibrati e veri."
+   },
+   {
+    "p": "urano",
+    "t": "I ruoli che reciti nelle relazioni: lasciatevi spazio per cambiare."
+   },
+   {
+    "p": "nettuno",
+    "t": "Il partner ideale che immaginavi: guarda la persona reale davanti a te."
+   },
+   {
+    "p": "plutone",
+    "t": "Il potere nascosto nella cortesia: riequilibra dove un lato pesa troppo."
+   }
+  ],
+  "bridge": "La Bilancia pesa; il moto retrogrado lascia che i piatti si fermino.",
+  "secB": "La storia della Bilancia",
+  "story": [
+   "I primi astronomi greci vedevano qui le chele dello Scorpione.",
+   "Le sue stelle più luminose portano ancora il nome delle due chele.",
+   "I Romani lessero la figura come un paio di piatti.",
+   "Nell'antichità il Sole passava qui vicino all'equinozio d'autunno.",
+   "È l'unica figura dello zodiaco che è un oggetto, non un essere."
+  ],
+  "close": "Ciò che hai bilanciato può chiedere di essere ripesato.",
+  "h1": "Retrogrado",
+  "h2": "in Bilancia"
+ },
+ "scorpio": {
+  "title": "Retrogrado in Scorpione",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Scorpione",
+  "secA": "La revisione dello Scorpione",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Segreti custoditi e cose non dette: decidi cosa merita la luce."
+   },
+   {
+    "p": "venere",
+    "t": "Intimità e fiducia: chiediti chi ha meritato la tua profondità, e chi no."
+   },
+   {
+    "p": "marte",
+    "t": "Vecchi rancori silenziosi: volgi quell'intensità al rinnovamento."
+   },
+   {
+    "p": "giove",
+    "t": "Ciò che condividi con gli altri: fa' crescere la fiducia dove è ricambiata."
+   },
+   {
+    "p": "saturno",
+    "t": "La paura di perdere: costruisci vicinanza sui confini, non sul controllo."
+   },
+   {
+    "p": "urano",
+    "t": "Gelosia e sospetto: lascia che un'onestà improvvisa schiarisca l'aria."
+   },
+   {
+    "p": "nettuno",
+    "t": "Il sogno di fonderti del tutto: ama a fondo restando te."
+   },
+   {
+    "p": "plutone",
+    "t": "Ciò che deve finire perché qualcosa cominci: lascia la vecchia pelle."
+   }
+  ],
+  "bridge": "Lo Scorpione scava a fondo; il moto retrogrado torna a ciò che è sepolto.",
+  "secB": "La storia dello Scorpione",
+  "story": [
+   "Nel racconto greco, Orione si vantava di poter uccidere ogni bestia.",
+   "Gaia mandò uno scorpione, e il suo pungiglione abbatté il cacciatore.",
+   "Entrambi furono posti nel cielo, ai lati opposti.",
+   "Quando lo Scorpione sorge a est, Orione tramonta a ovest.",
+   "Nel suo cuore arde la rossa Antares, «rivale di Ares»."
+  ],
+  "close": "Ciò che hai sepolto può chiedere di essere affrontato di nuovo.",
+  "h1": "Retrogrado",
+  "h2": "in Scorpione"
+ },
+ "sagittarius": {
+  "title": "Retrogrado in Sagittario",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Sagittario",
+  "secA": "La revisione del Sagittario",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Le affermazioni fatte con certezza: verifica i fatti ancora una volta."
+   },
+   {
+    "p": "venere",
+    "t": "L'amore che vive di distanza e sogni: avvicinalo a casa."
+   },
+   {
+    "p": "marte",
+    "t": "Le crociate per le tue idee: mira le frecce con più cura."
+   },
+   {
+    "p": "giove",
+    "t": "La tua grande filosofia di vita: vedi se si adatta ancora all'esperienza."
+   },
+   {
+    "p": "saturno",
+    "t": "Promesse più grandi della tua portata: trasforma la visione in passi reali."
+   },
+   {
+    "p": "urano",
+    "t": "Credenze ereditate: verifica quali verità hai scelto e quali hai preso in prestito."
+   },
+   {
+    "p": "nettuno",
+    "t": "Maestri e guru idealizzati: lascia che ti guidi la tua saggezza."
+   },
+   {
+    "p": "plutone",
+    "t": "Convinzioni strette troppo forte: lascia che la tua verità evolva."
+   }
+  ],
+  "bridge": "Il Sagittario mira lontano; il moto retrogrado controlla la mira.",
+  "secB": "La storia del Sagittario",
+  "story": [
+   "L'Arciere, spesso disegnato come centauro, mira allo Scorpione.",
+   "In un racconto greco è Croto, cresciuto tra le Muse.",
+   "Si dice inventò il tiro con l'arco; cavalcava bene quanto tirava.",
+   "Le Muse chiesero a Zeus di onorarlo con un posto nel cielo.",
+   "Verso il suo arco si trova il centro della Via Lattea."
+  ],
+  "close": "Ciò in cui hai creduto può chiedere di essere messo alla prova.",
+  "h1": "Retrogrado",
+  "h2": "in Sagittario"
+ },
+ "capricorn": {
+  "title": "Retrogrado in Capricorno",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Capricorno",
+  "secA": "La revisione del Capricorno",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Piani a lungo termine e impegni formali: rivedi la via prima di salire."
+   },
+   {
+    "p": "venere",
+    "t": "L'amore rimandato per dovere: fai spazio alla tenerezza adesso."
+   },
+   {
+    "p": "marte",
+    "t": "L'ambizione mossa solo dalla disciplina: sali a un ritmo sostenibile."
+   },
+   {
+    "p": "giove",
+    "t": "La tua idea di successo: misurala col significato, non con lo status."
+   },
+   {
+    "p": "saturno",
+    "t": "Il rapporto con autorità e regole: tieni le strutture che ti sostengono."
+   },
+   {
+    "p": "urano",
+    "t": "Tradizioni seguite per abitudine: rinnovale, o costruiscene di nuove."
+   },
+   {
+    "p": "nettuno",
+    "t": "L'immagine di chi ce la fa: lascia che l'ambizione serva i tuoi veri sogni."
+   },
+   {
+    "p": "plutone",
+    "t": "Dove il controllo ha preso il posto della responsabilità: fonda l'autorità sull'integrità."
+   }
+  ],
+  "bridge": "Il Capricorno sale; il moto retrogrado controlla ogni appiglio.",
+  "secB": "La storia del Capricorno",
+  "story": [
+   "La capra marina è più antica della Grecia: un pesce-capra babilonese.",
+   "In Mesopotamia era legata a Ea, dio delle acque dolci.",
+   "Nel racconto greco, Pan fuggì dal mostro Tifone.",
+   "Si gettò nel fiume: la sua metà inferiore divenne pesce.",
+   "Zeus pose quella fuga ingegnosa tra le stelle."
+  ],
+  "close": "Ciò che hai costruito può chiedere di essere riplasmato.",
+  "h1": "Retrogrado",
+  "h2": "in Capricorno"
+ },
+ "aquarius": {
+  "title": "Retrogrado in Acquario",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Acquario",
+  "secA": "La revisione dell'Acquario",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Le idee condivise con i tuoi gruppi: riprendile con mente più fresca."
+   },
+   {
+    "p": "venere",
+    "t": "Amicizie e famiglia scelta: nota quali legami sono ancora reciproci."
+   },
+   {
+    "p": "marte",
+    "t": "Le cause per cui lotti: verifica che riflettano ancora i tuoi valori."
+   },
+   {
+    "p": "giove",
+    "t": "Le speranze per il futuro: rinnova la visione con la saggezza di oggi."
+   },
+   {
+    "p": "saturno",
+    "t": "Il tuo ruolo nella comunità: contribuisci senza perdere la tua voce."
+   },
+   {
+    "p": "urano",
+    "t": "Il ribelle dentro di te: chiediti se resisti per libertà o per abitudine."
+   },
+   {
+    "p": "nettuno",
+    "t": "Sogni di utopia: trasforma gli ideali comuni in gesti che puoi fare davvero."
+   },
+   {
+    "p": "plutone",
+    "t": "Pressione del gruppo e potere collettivo: resta fedele a te restando in contatto."
+   }
+  ],
+  "bridge": "L'Acquario guarda avanti; il moto retrogrado gli fa guardare intorno.",
+  "secB": "La storia dell'Acquario",
+  "story": [
+   "Nel racconto greco è Ganimede, un giovane di Troia.",
+   "L'aquila di Zeus lo portò sull'Olimpo.",
+   "Lì divenne il coppiere degli dèi.",
+   "Nel cielo versa acqua da un'urna verso sud.",
+   "Il getto scorre verso il Pesce Australe e la luminosa Fomalhaut."
+  ],
+  "close": "Ciò che hai immaginato può chiedere di essere rinnovato.",
+  "h1": "Retrogrado",
+  "h2": "in Acquario"
+ },
+ "pisces": {
+  "title": "Retrogrado in Pesci",
+  "kicker": "Cosa rivede ogni pianeta quando torna indietro in Pesci",
+  "secA": "La revisione dei Pesci",
+  "rows": [
+   {
+    "p": "mercurio",
+    "t": "Pensieri rimasti a galla senza voce: dai alle intuizioni parole chiare e semplici."
+   },
+   {
+    "p": "venere",
+    "t": "L'amore che ha sciolto i tuoi confini: offri compassione e tieni te stesso."
+   },
+   {
+    "p": "marte",
+    "t": "Battaglie evitate ritirandoti: agisci con dolcezza, ma agisci."
+   },
+   {
+    "p": "giove",
+    "t": "La tua fede e la tua generosità: dona senza svuotarti."
+   },
+   {
+    "p": "saturno",
+    "t": "Sogni senza forma: dai loro una struttura semplice e costante."
+   },
+   {
+    "p": "urano",
+    "t": "Le abitudini spirituali: lascia che un'intuizione improvvisa risvegli la pratica."
+   },
+   {
+    "p": "nettuno",
+    "t": "Illusioni in cui nuotavi volentieri: vedi chiaro e continua a credere."
+   },
+   {
+    "p": "plutone",
+    "t": "Ciò a cui hai rinunciato troppo presto: riprendilo, o lascialo del tutto."
+   }
+  ],
+  "bridge": "I Pesci dissolvono; il moto retrogrado lascia schiarire le acque.",
+  "secB": "La storia dei Pesci",
+  "story": [
+   "Nel racconto greco, Afrodite ed Eros fuggirono da Tifone.",
+   "Si gettarono in un fiume e presero forma di pesci.",
+   "Si legarono con una corda per non separarsi.",
+   "Nel cielo i due pesci nuotano lontani, uniti da quella corda.",
+   "Il nodo è segnato dalla stella Alrescha, «la corda»."
+  ],
+  "close": "Ciò che hai sognato può chiedere di essere visto con chiarezza.",
+  "h1": "Retrogrado",
+  "h2": "in Pesci"
+ }
+}
