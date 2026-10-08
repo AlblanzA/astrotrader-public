@@ -89,7 +89,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
-          ATP_SERIES_LANGS: 'en,hi,es,pt,fr,ru,zh,ja'
+          ATP_SERIES_LANGS: 'en,hi,es,pt,fr,ru,zh,ja,it'
           ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
           ATP_STORY_BASE: ${{ steps.frames.outputs.base }}
         run: |
