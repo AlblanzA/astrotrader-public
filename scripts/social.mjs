@@ -387,3 +387,27 @@ export async function tokenDiPagina(graph, page, token) {
   }
   return token;
 }
+
+// 9/10/2026, richiesta dell'utente: su Facebook NON va la riga «Contenuto
+// educativo. Non è consulenza finanziaria.» in nessuna lingua (le serie sono
+// tema natale, la riga stona). Su Instagram resta com'è.
+export function senzaAvvertenza(testo) {
+  return String(testo)
+    .split('\n')
+    .filter((l) => !AVVERTENZE_FB.some((a) => l.trim() === a) && !AVVERTENZA_RE.test(l))
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+const AVVERTENZE_FB = [
+  'Educational content. Not financial advice.',
+  'Contenido educativo. No es asesoramiento financiero.',
+  'Contenu éducatif. Pas un conseil financier.',
+  'शैक्षिक सामग्री। वित्तीय सलाह नहीं।',
+  'Contenuto educativo. Non è consulenza finanziaria.',
+  '教育目的のコンテンツです。投資助言ではありません。',
+  'Conteúdo educativo. Não é aconselhamento financeiro.',
+  'Образовательный контент. Не является финансовой рекомендацией.',
+  '教育内容，不构成财务建议。',
+];
+const AVVERTENZA_RE = /not financial advice|consulenza finanziaria|asesoramiento financiero|conseil financier|aconselhamento financeiro|финансовой рекомендацией|投資助言|财务建议|वित्तीय सलाह/i;

@@ -1,0 +1,28 @@
+# Una tantum (9/10/2026): toglie «non è consulenza finanziaria» dai post FB già pubblicati delle serie.
+name: FB togli avvertenza
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Prova a secco'
+        type: boolean
+        default: true
+permissions:
+  contents: read
+jobs:
+  edit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          ATP_DRY_RUN: ${{ inputs.dry && '1' || '0' }}
+        run: node scripts/fb-strip-disclaimer.mjs

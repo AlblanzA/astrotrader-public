@@ -26,7 +26,7 @@
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { DRY, REPO_DIR, annota, muori, esigiLessico, post, tokenDiPagina } from './social.mjs';
+import { DRY, REPO_DIR, annota, muori, esigiLessico, post, tokenDiPagina, senzaAvvertenza } from './social.mjs';
 
 const GRAPH = 'https://graph.facebook.com/v21.0';
 const PAGE = process.env.FB_PAGE_ID;
@@ -48,10 +48,10 @@ if (!DRY && (!PAGE || !TOKEN)) {
 // lien en bio, ссылка в профиле, プロフィールのリンク（…）, ecc.): su Facebook
 // il link è cliccabile, quindi dopo la freccia resta solo l'indirizzo.
 function testoFacebook(caption) {
-  return String(caption)
+  return senzaAvvertenza(String(caption)
     .replace(/→[^\n→]*?[(（]\s*astrotraderpro\.com\s*[)）]/g, '→ ' + SITE)
     .replace(/link in bio\s*\(astrotraderpro\.com\)/gi, SITE)
-    .replace(/link in bio/gi, SITE);
+    .replace(/link in bio/gi, SITE));
 }
 
 function leggiStato() {
