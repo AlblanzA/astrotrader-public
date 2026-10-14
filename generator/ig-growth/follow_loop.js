@@ -1,7 +1,7 @@
 // AstroTrader Pro — follow automatico in pagina (dal 14/10/2026). Da eseguire con javascript_tool
 // in una scheda su https://www.instagram.com/ (qualsiasi pagina). Non ricarica la pagina: naviga
 // come l'app (history.pushState + popstate), preme il «Segui» dell'header del profilo, verifica con
-// friendships/show e registra in __atp_followed / __atp_fday. Pausa 90-150 s, max 50/giorno (UTC),
+// friendships/show e registra in __atp_followed / __atp_fday. Pausa 3-5 min (blocco IG il 14/10 dopo 16 follow in 35 min con unfollow in parallelo), max 50/giorno (UTC),
 // (una sola istanza attiva: ogni avvio incrementa window.__fgen e ferma la precedente)
 // salta chi non ha «astro» in username/nome/bio, si ferma dopo 2 «non seguito» di fila (blocco IG).
 // Avvio: incolla questo file, poi  window.__fl = window.__ffollow(48)
@@ -40,7 +40,7 @@ window.__ffollow = async function (target) {
       const d = L('__atp_fday') || {}; d[t] = (d[t] || 0) + 1; S('__atp_fday', d); drop(); k++; fails = 0;
       st('OK ' + d[t] + ' ' + x[0] + (s.outgoing_request ? ' (richiesta)' : ''));
     } else { fails++; drop(); st('NON SEGUITO ' + x[0] + ' (' + fails + ')'); if (fails >= 2) { st('STOP: probabile blocco follow'); break; } }
-    await sleep(90000 + Math.random() * 60000);
+    await sleep(180000 + Math.random() * 120000);
   }
   return window.__flast;
 };

@@ -1,6 +1,6 @@
 // AstroTrader Pro — crescita Instagram (follow/unfollow), da incollare nella scheda
 // https://www.instagram.com/robots.txt (stessa origine: cookie e localStorage di Instagram).
-// Regole utente (7-8/10/2026): unfollow max 100/giorno (usati 90 dal 14/10), follow 40/giorno,
+// Regole utente (7-8/10/2026): unfollow max 100/giorno (usati 60 dal 15/10: blocco IG a 72 il 14/10), follow 40/giorno,
 // unfollow di chi non ricambia SOLO dopo 72 h dal follow. Stop al primo errore.
 // Stato in localStorage: __atp_queue (unfollow), __atp_done, __atp_day, __atp_followed,
 // __atp_fday, __atp_fq (candidati), __atp_seeds2/__atp_hv2 (raccolta), __atp_fbchk, __atp_log.
@@ -14,7 +14,7 @@ const today = () => new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((z) => setTimeout(z, ms));
 const log = (m) => { const lg = L('__atp_log') || []; lg.push([new Date().toISOString(), m]); S('__atp_log', lg); };
 const show = async (pk) => (await fetch('/api/v1/friendships/show/' + pk + '/', { headers: H, credentials: 'include' })).json();
-const UNF_CAP = 90, FOL_CAP = 40, FOL_HOUR = 10;
+const UNF_CAP = 60, FOL_CAP = 40, FOL_HOUR = 10;
 
 // un unfollow dalla coda
 async function unfollowOne() {
@@ -65,7 +65,7 @@ async function unfollowLoop(target) {
   await sleep(Math.max(0, last + 65000 - Date.now()));
   while (k < target && !window.__ustop) {
     const r = await unfollowOne(); window.__ulast = new Date().toISOString().slice(11, 19) + ' ' + r;
-    if (!r.startsWith('OK')) break; k++; await sleep(60000 + Math.random() * 30000);
+    if (!r.startsWith('OK')) break; k++; await sleep(90000 + Math.random() * 60000);
   }
 }
 async function followLoop(target) {
