@@ -4,9 +4,9 @@
 // friendships/show e registra in __atp_followed / __atp_fday. Pausa 3-5 min (blocco IG il 14/10 dopo 16 follow in 35 min con unfollow in parallelo), max 50/giorno (UTC),
 // (una sola istanza attiva: ogni avvio incrementa window.__fgen e ferma la precedente)
 // salta chi non ha «astro» in username/nome/bio, si ferma dopo 2 «non seguito» di fila (blocco IG).
-// Avvio: incolla questo file, poi  window.__fl = window.__ffollow(48)
+// Avvio: incolla questo file, poi  window.__fl = window.__ffollow(48)   (maxFails=1 per una prova dopo un blocco)
 // Stato: window.__flast, localStorage.__atp_flog. Stop: window.__fhalt = true
-window.__ffollow = async function (target) {
+window.__ffollow = async function (target, maxFails = 2) {
   const L = (k) => JSON.parse(localStorage.getItem(k) || 'null'), S = (k, v) => localStorage.setItem(k, JSON.stringify(v));
   const sleep = (ms) => new Promise((z) => setTimeout(z, ms));
   const H = { 'X-IG-App-ID': '936619743392459', 'X-Requested-With': 'XMLHttpRequest' };
@@ -38,8 +38,8 @@ window.__ffollow = async function (target) {
     if (s.following || s.outgoing_request) {
       const f = L('__atp_followed') || []; f.push([x[0], x[1], new Date().toISOString(), x[2]]); S('__atp_followed', f);
       const d = L('__atp_fday') || {}; d[t] = (d[t] || 0) + 1; S('__atp_fday', d); drop(); k++; fails = 0;
-      st('OK ' + d[t] + ' ' + x[0] + (s.outgoing_request ? ' (richiesta)' : ''));
-    } else { fails++; drop(); st('NON SEGUITO ' + x[0] + ' (' + fails + ')'); if (fails >= 2) { st('STOP: probabile blocco follow'); break; } }
+      st('OK ' + d[t] + ' ' + x[0] + (s.outgoing_request ? ' (richiesta)' : '')); if (window.__onFollowOk) window.__onFollowOk();
+    } else { fails++; drop(); st('NON SEGUITO ' + x[0] + ' (' + fails + ')'); if (fails >= maxFails) { st('STOP: probabile blocco follow'); break; } }
     await sleep(180000 + Math.random() * 120000);
   }
   return window.__flast;
