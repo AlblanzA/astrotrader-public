@@ -2,16 +2,17 @@
 // in una scheda su https://www.instagram.com/ (qualsiasi pagina). Non ricarica la pagina: naviga
 // come l'app (history.pushState + popstate), preme il «Segui» dell'header del profilo, verifica con
 // friendships/show e registra in __atp_followed / __atp_fday. Pausa 90-150 s, max 50/giorno (UTC),
+// (una sola istanza attiva: ogni avvio incrementa window.__fgen e ferma la precedente)
 // salta chi non ha «astro» in username/nome/bio, si ferma dopo 2 «non seguito» di fila (blocco IG).
 // Avvio: incolla questo file, poi  window.__fl = window.__ffollow(48)
-// Stato: window.__flast, localStorage.__atp_flog. Stop: window.__fstop = true
+// Stato: window.__flast, localStorage.__atp_flog. Stop: window.__fhalt = true
 window.__ffollow = async function (target) {
   const L = (k) => JSON.parse(localStorage.getItem(k) || 'null'), S = (k, v) => localStorage.setItem(k, JSON.stringify(v));
   const sleep = (ms) => new Promise((z) => setTimeout(z, ms));
   const H = { 'X-IG-App-ID': '936619743392459', 'X-Requested-With': 'XMLHttpRequest' };
-  const CAP = 50; let k = 0, fails = 0; window.__fstop = false;
+  const CAP = 50; let k = 0, fails = 0; const gen = (window.__fgen = (window.__fgen || 0) + 1); 
   const st = (m) => { window.__flast = new Date().toISOString().slice(11, 19) + ' ' + m; const lg = L('__atp_flog') || []; lg.push(window.__flast); S('__atp_flog', lg.slice(-200)); };
-  while (k < target && !window.__fstop) {
+  while (k < target && !window.__fhalt && window.__fgen === gen) {
     const t = new Date().toISOString().slice(0, 10); const n = (L('__atp_fday') || {})[t] || 0;
     if (n >= CAP) { st('QUOTA ' + n); break; }
     const done = new Set((L('__atp_followed') || []).map((x) => x[1])); const q = (L('__atp_fq') || []).filter((x) => !done.has(x[1])); S('__atp_fq', q);
@@ -19,8 +20,10 @@ window.__ffollow = async function (target) {
     const x = q[0]; S('__atp_cur', x);
     history.pushState({}, '', '/' + x[0] + '/'); dispatchEvent(new PopStateEvent('popstate', { state: {} }));
     let b = null, hdr = '', ok = false;
-    for (let i = 0; i < 20; i++) {
-      await sleep(1000);
+    // poche attese lunghe: a scheda nascosta Chrome raggruppa i timer al minuto
+    await sleep(6000);
+    for (let i = 0; i < 4; i++) {
+      if (i) await sleep(5000);
       if (!location.pathname.startsWith('/' + x[0] + '/')) continue;
       const h = document.querySelector('header'); if (!h) continue; hdr = h.innerText;
       const bs = [...h.querySelectorAll('button, div[role=button]')];
