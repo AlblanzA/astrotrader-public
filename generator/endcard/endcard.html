@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<script src="glyphs.js"></script>
+<style>
+/* Scheda finale dei caroselli «<pianeta> nelle 12 case»: invita a salvare e a inviare (segnali che Instagram premia). 1080x1350. */
+:root{--bg1:#0E2226;--bg2:#050E10;--gold:#CDAE66;--gold2:#EAD6A0;--parch:#F2EEE3;--mute:#B4C3BF;--hi:#1C4348}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:var(--bg2);font-family:Spectral,Georgia,serif;color:var(--parch)}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;background:radial-gradient(120% 70% at 50% 0%,var(--hi) 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.frame{position:absolute;inset:28px;border:1.5px solid rgba(205,174,102,.8);pointer-events:none;z-index:5}
+.port{position:absolute;left:50%;top:92px;transform:translateX(-50%);width:250px;height:308px;border-radius:125px 125px 8px 8px;border:2px solid var(--gold);box-shadow:0 0 60px rgba(0,0,0,.45)}
+.port.sym{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.08),rgba(0,0,0,.25))}
+.blocks{position:absolute;left:90px;right:90px;top:500px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.it{display:flex;flex-direction:column;align-items:center}
+.ic{width:74px;height:74px;margin-bottom:18px}
+h2{font-family:"Cormorant Garamond";font-weight:600;font-size:76px;line-height:1.02;color:var(--parch)}
+p{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-size:38px;line-height:1.25;color:var(--gold2);margin-top:14px;max-width:820px}
+.orn{color:var(--gold);font-size:30px;letter-spacing:.6em;margin:46px 0 40px;padding-left:.6em}
+.foot{position:absolute;left:0;right:0;bottom:60px;text-align:center;font-family:"Cormorant Garamond";font-weight:600;font-size:34px;letter-spacing:.06em;color:var(--gold2)}
+.foot span{font-family:Spectral;font-weight:400;letter-spacing:0;font-size:25px;color:var(--parch);margin-inline-end:14px}
+body.cjk h2,body.cjk p,body.hi h2,body.hi p{font-family:inherit;font-style:normal}
+body.sc{font-family:"Noto Serif SC",serif}body.jp{font-family:"Noto Serif JP",serif}body.hi{font-family:"Noto Serif Devanagari",serif}
+body.cjk h2,body.hi h2{font-size:64px;font-weight:600;line-height:1.25}
+body.cjk p,body.hi p{font-size:32px;line-height:1.5}
+body.cjk .foot span,body.hi .foot span{font-family:inherit}
+body.sole{--bg1:#2E1A06;--bg2:#120A03;--gold:#D4A94A;--gold2:#F0D48E;--parch:#F7EBD2;--hi:#5A3A0E}
+body.luna{--bg1:#0E1830;--bg2:#050910;--gold:#BFCBDE;--gold2:#E1E8F3;--parch:#F1F4F9;--hi:#1F3158}
+body.mercurio{--bg1:#0E2226;--bg2:#050E10;--gold:#CDAE66;--gold2:#EAD6A0;--parch:#F2EEE3;--hi:#1C4348}
+body.venere{--bg1:#2C1020;--bg2:#12060D;--gold:#DDA98C;--gold2:#F3D0BD;--parch:#FBEFE8;--hi:#5A2338}
+body.marte{--bg1:#2E0C0F;--bg2:#140608;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7CF;--hi:#4A1216}
+body.giove{--bg1:#141C3A;--bg2:#070A18;--gold:#D4B35A;--gold2:#EED79A;--parch:#F2EFE6;--hi:#26346A}
+body.saturno{--bg1:#1A1A1E;--bg2:#08080A;--gold:#C9AE6A;--gold2:#E6D3A0;--parch:#EEEAE0;--hi:#2E2E36}
+body.urano{--bg1:#0C2230;--bg2:#040E14;--gold:#C9B26A;--gold2:#E8D8A2;--parch:#EEF5F6;--hi:#174156}
+body.nettuno{--bg1:#06242A;--bg2:#020D10;--gold:#CDAF62;--gold2:#EAD49A;--parch:#EAF4F1;--hi:#0E434B}
+body.plutone{--bg1:#200A10;--bg2:#0A0306;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7DD;--hi:#3E1420}
+</style></head><body><div id="root"></div>
+<script>
+const Q=new URLSearchParams(location.search), PT=Q.get('p')||'mercurio', L=Q.get('l')||location.hash.slice(1)||'it';
+// Ritratti come nella serie «nelle 12 case» (serieA_case.html); Venere solo simbolo.
+const IMG={sole:['SOLE_PAE.png','30% 31%/180% auto'],luna:['LUNAPIENA_PAE.png','44% 9%/300% auto'],mercurio:['MERCURIO.png','46% 1%/250% auto'],
+ marte:['MARTE.png','42% 3%/215% auto'],giove:['giove.png','50% 24%/270% auto'],saturno:['saturno.png','50% 15%/270% auto'],urano:['urano.png','50% 27%/270% auto'],
+ nettuno:['nettuno.png','48% 15%/270% auto'],plutone:['plutone.png','52% 13%/270% auto']};
+const NAMES={
+ it:{sole:'il Sole',luna:'la Luna',mercurio:'Mercurio',venere:'Venere',marte:'Marte',giove:'Giove',saturno:'Saturno',urano:'Urano',nettuno:'Nettuno',plutone:'Plutone'},
+ en:{sole:'the Sun',luna:'the Moon',mercurio:'Mercury',venere:'Venus',marte:'Mars',giove:'Jupiter',saturno:'Saturn',urano:'Uranus',nettuno:'Neptune',plutone:'Pluto'},
+ es:{sole:'el Sol',luna:'la Luna',mercurio:'Mercurio',venere:'Venus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Neptuno',plutone:'Plutón'},
+ pt:{sole:'o Sol',luna:'a Lua',mercurio:'Mercúrio',venere:'Vênus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Netuno',plutone:'Plutão'},
+ fr:{sole:'le Soleil',luna:'la Lune',mercurio:'Mercure',venere:'Vénus',marte:'Mars',giove:'Jupiter',saturno:'Saturne',urano:'Uranus',nettuno:'Neptune',plutone:'Pluton'},
+ ru:{sole:'Солнце',luna:'Луна',mercurio:'Меркурий',venere:'Венера',marte:'Марс',giove:'Юпитер',saturno:'Сатурн',urano:'Уран',nettuno:'Нептун',plutone:'Плутон'},
+ hi:{sole:'सूर्य',luna:'चंद्र',mercurio:'बुध',venere:'शुक्र',marte:'मंगल',giove:'गुरु',saturno:'शनि',urano:'यूरेनस',nettuno:'नेपच्यून',plutone:'प्लूटो'},
+ ja:{sole:'太陽',luna:'月',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星'},
+ zh:{sole:'太阳',luna:'月亮',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星'}};
+const TX={
+ it:{s:'Salvalo',sp:'Ti servirà quando guardi il tuo tema natale.',h:'Mandalo a un amico',hp:'e scoprite in che casa avete {P}.',cta:'Tema natale gratuito'},
+ en:{s:'Save it',sp:'You will want it when you look at your natal chart.',h:'Send it to a friend',hp:'and find out which house {P} is in for each of you.',cta:'Free natal chart'},
+ es:{s:'Guárdalo',sp:'Te servirá cuando mires tu carta natal.',h:'Envíaselo a un amigo',hp:'y descubran en qué casa tiene cada uno {P}.',cta:'Carta natal gratis'},
+ pt:{s:'Salve',sp:'Vai ser útil quando você olhar seu mapa natal.',h:'Envie para um amigo',hp:'e descubram em que casa cada um tem {P}.',cta:'Mapa natal grátis'},
+ fr:{s:'Enregistre-le',sp:'Il te servira quand tu regarderas ton thème natal.',h:'Envoie-le à un ami',hp:'et découvrez dans quelle maison chacun a {P}.',cta:'Thème natal gratuit'},
+ ru:{s:'Сохраните',sp:'Пригодится, когда будете смотреть свою натальную карту.',h:'Отправьте другу',hp:'и узнайте, в каком доме у каждого из вас {P}.',cta:'Натальная карта бесплатно'},
+ hi:{s:'सेव करें',sp:'अपनी जन्म कुंडली देखते समय यह काम आएगा।',h:'किसी दोस्त को भेजें',hp:'और जानिए कि आप दोनों का {P} किस भाव में है।',cta:'मुफ़्त जन्म कुंडली'},
+ ja:{s:'保存する',sp:'自分のネイタルチャートを見るときに役立ちます。',h:'友だちに送る',hp:'お互いの{P}が何ハウスにあるか比べてみて。',cta:'無料ネイタルチャート'},
+ zh:{s:'收藏',sp:'查看自己的本命盘时就能用上。',h:'发给朋友',hp:'看看你们的{P}各在第几宫。',cta:'免费本命盘'}};
+const t=TX[L], P=NAMES[L][PT];
+document.documentElement.lang=L; document.body.classList.add(PT);
+if(L==='zh')document.body.classList.add('cjk','sc'); if(L==='ja')document.body.classList.add('cjk','jp'); if(L==='hi')document.body.classList.add('hi');
+const ic={save:'<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"><path d="M6 3h12v18l-6-5-6 5z"/></svg>',
+ send:'<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-6.5 18-3.3-7.9L3 10.2z"/></svg>'};
+const port=IMG[PT]?`<div class="port" style="background:url(/home/claude/dei/${IMG[PT][0]}) ${IMG[PT][1]}"></div>`
+ :`<div class="port sym"><svg viewBox="0 0 100 100" width="70%" height="70%" fill="none" stroke="var(--gold2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 12px var(--gold))">${GLYPH[PT]||''}</svg></div>`;
+document.getElementById('root').innerHTML=`<div class="s">${port}
+<div class="blocks"><div class="it">${ic.save}<h2>${t.s}</h2><p>${t.sp}</p></div>
+<div class="orn">✦ ✦ ✦</div>
+<div class="it">${ic.send}<h2>${t.h}</h2><p>${t.hp.replace('{P}',P)}</p></div></div>
+<div class="foot"><span>${t.cta}</span>astrotraderpro.com</div><div class="frame"></div></div>`;
+</script></body></html>
