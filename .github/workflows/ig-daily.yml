@@ -111,6 +111,23 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: node scripts/publish.mjs
 
+      # Registro di cio' che e' uscito oggi (ig/.daily-state.json): si salva
+      # ANCHE se il passo Instagram fallisce, cosi' Auto Retry e i cron di
+      # backup pubblicano solo i pezzi mancanti (15/10/2026: una storia fallita
+      # aveva fatto ripubblicare carosello e storie).
+      - name: Salva stato pubblicazione Instagram
+        if: always() && steps.guard.outputs.skip != 'true'
+        run: |
+          [ -f ig/.daily-state.json ] || { echo "nessuno stato da salvare"; exit 0; }
+          git config user.name "atp-bot"
+          git config user.email "bot@astrotraderpro.com"
+          git add ig/.daily-state.json
+          git commit -m "ig daily state $(date -u +%F)" || { echo "stato invariato"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && break
+            echo "push stato non riuscito (tentativo $i), riprovo"; sleep $((i*5))
+          done
+
       # Facebook diretto (Graph API): il carosello e le storie di pagina.
       # Parte SOLO se esiste il file fb/DIRECT e ci sono i secret FB: il file si
       # aggiunge nello stesso momento in cui si toglie Facebook da Make, cosi'

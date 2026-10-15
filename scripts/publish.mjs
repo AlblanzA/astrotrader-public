@@ -61,6 +61,7 @@
  * Percorre tutto — manifesto, URL, lessico, sequenza delle chiamate — e stampa
  * le richieste che verrebbero fatte, senza toccare la rete.
  */
+import { readFileSync, writeFileSync } from 'node:fs';
 import { getSky, buildCaption } from './lib.mjs';
 import {
   DRY, CARDS, IG_MAX_CAROUSEL, leggiManifesto, urlDi, esigiLessico,
@@ -80,6 +81,29 @@ if (!USER || !TOKEN) {
 /* ------------------------------------------------------------------ *
  *  Rilanci sicuri
  * ------------------------------------------------------------------ */
+
+
+/**
+ * Registro di quello che è già uscito oggi: ig/.daily-state.json
+ * { date, carosello: id, storie: { "1": id, ... } }.
+ * Lo scrive questo script dopo ogni pubblicazione riuscita; il workflow lo
+ * committa anche quando il run fallisce (passo «Salva stato»). Un rilancio
+ * (Auto Retry, cron di backup delle 11 e 14, push) pubblica così SOLO i pezzi
+ * mancanti, senza doppioni.
+ */
+const STATO_FILE = 'ig/.daily-state.json';
+function leggiStato(date) {
+  try {
+    const j = JSON.parse(readFileSync(STATO_FILE, 'utf8'));
+    if (j && j.date === date) return { date, carosello: j.carosello || null, storie: j.storie || {} };
+  } catch (_) { /* nessuno stato: giornata nuova */ }
+  return { date, carosello: null, storie: {} };
+}
+function salvaStato(stato) {
+  if (DRY) return;
+  try { writeFileSync(STATO_FILE, JSON.stringify(stato, null, 1) + '\n'); }
+  catch (e) { console.warn(`::warning::stato non salvato (${String(e)})`); }
+}
 
 /**
  * Il carosello di oggi è già sul profilo?
@@ -215,13 +239,17 @@ async function pubblicaCarosello(m) {
  * zero. È il punto in cui il vecchio codice ingoiava tutto con un `catch` che
  * stampava «STORY skipped» e usciva 0.
  */
-async function pubblicaStorie(m) {
+async function pubblicaStorie(m, stato) {
   console.log(`\nSTORIE — ${m.stories.length} pagine`);
   console.log('  (lo sticker link non è pubblicabile via API: l’indirizzo è dentro il pixel)');
   const guasti = [];
   const ids = [];
   for (let i = 0; i < m.stories.length; i++) {
     const url = urlDi(m.stories[i]);
+    if (stato.storie[String(i + 1)]) {
+      console.log(`  storia ${i + 1}/${m.stories.length}: già pubblicata oggi (id ${stato.storie[String(i + 1)]}), salto`);
+      continue;
+    }
     console.log(`  storia ${i + 1}/${m.stories.length}: ${url}`);
     try {
       const c = await post(GRAPH, `/${USER}/media`, {
@@ -230,6 +258,8 @@ async function pubblicaStorie(m) {
       await attendiPronto(GRAPH, TOKEN, c.id, `storia ${i + 1}`);
       const p = await pubblicaConPazienza(c.id, `storia ${i + 1}`);
       ids.push(p.id);
+      stato.storie[String(i + 1)] = p.id || 'ok';
+      salvaStato(stato);
       console.log(`    pubblicata, id ${p.id}`);
     } catch (e) {
       guasti.push(`storia ${i + 1} (${m.stories[i]}): ${String(e)}`);
@@ -270,20 +300,30 @@ async function main() {
     catch (e) { guasti.push(`card singola: ${String(e)}`); annota(`Instagram — card singola: ${String(e)}`); }
   }
 
-  if (await carosellodiOggiGiaUscito(m)) {
-    console.log('\nIl carosello di oggi è già sul profilo: questo è un rilancio. Non si pubblica nulla per non fare doppioni.');
-    console.log('::warning::Instagram — rilancio: carosello di oggi già pubblicato, nessuna nuova pubblicazione. Se una storia mancava, va pubblicata a mano.');
+  const stato = leggiStato(m.date);
+
+  if (stato.carosello) {
+    console.log(`\nCarosello di oggi già pubblicato (id ${stato.carosello}): salto, restano solo le storie mancanti.`);
+  } else if (await carosellodiOggiGiaUscito(m)) {
+    // Carosello sul profilo ma nessun registro: non si sa quali storie siano
+    // uscite, quindi non se ne pubblica nessuna (meglio una storia in meno che
+    // sei doppie).
+    console.log('::warning::Instagram — il carosello di oggi è già sul profilo ma manca il registro delle storie: nessuna nuova pubblicazione per non fare doppioni.');
+    stato.carosello = 'trovato-sul-profilo';
+    for (let i = 1; i <= m.stories.length; i++) stato.storie[String(i)] = stato.storie[String(i)] || 'sconosciuta';
+    salvaStato(stato);
     return;
+  } else {
+    try {
+      stato.carosello = (await pubblicaCarosello(m)) || 'ok';
+      salvaStato(stato);
+    } catch (e) {
+      // Il carosello è il contenuto principale: se cade, cade la giornata.
+      muori(`Instagram — carosello non pubblicato: ${String(e)}`);
+    }
   }
 
-  try {
-    await pubblicaCarosello(m);
-  } catch (e) {
-    // Il carosello è il contenuto principale: se cade, cade la giornata.
-    muori(`Instagram — carosello non pubblicato: ${String(e)}`);
-  }
-
-  const st = await pubblicaStorie(m);
+  const st = await pubblicaStorie(m, stato);
   guasti.push(...st.guasti);
 
   if (guasti.length) {
