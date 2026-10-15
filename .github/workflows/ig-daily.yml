@@ -175,10 +175,14 @@ jobs:
           date -u +%F > ig/.posted
           git add ig/.posted
           git commit -m "mark posted $(date -u +%F)" || echo "no change"
+          ok=0
           for i in 1 2 3 4 5; do
-            git pull --rebase && git push && break
+            if git pull --rebase && git push; then ok=1; break; fi
             echo "push mark non riuscito (tentativo $i), riprovo"; sleep $((i*5))
           done
+          # 15/10/2026: il push era fallito in silenzio e il run era verde; senza
+          # .posted aggiornato i cron delle 11 e 14 avrebbero ripubblicato.
+          if [ "$ok" != 1 ]; then echo "::error::ig/.posted non salvato: i cron di backup potrebbero ripubblicare"; exit 1; fi
 
       - name: Riepilogo del guasto
         if: failure()
