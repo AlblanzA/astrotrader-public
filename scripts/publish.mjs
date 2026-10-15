@@ -64,7 +64,7 @@
 import { getSky, buildCaption } from './lib.mjs';
 import {
   DRY, CARDS, IG_MAX_CAROUSEL, leggiManifesto, urlDi, esigiLessico,
-  post, attendiPronto, quotaResidua, annota, muori,
+  post, get, attendiPronto, quotaResidua, annota, muori,
 } from './social.mjs';
 
 const GRAPH = 'https://graph.instagram.com/v21.0';
@@ -74,6 +74,63 @@ const TOKEN = process.env.IG_ACCESS_TOKEN;
 if (!USER || !TOKEN) {
   // Prima usciva 0 e nessuno se ne accorgeva. Adesso il run diventa rosso.
   muori('IG_USER_ID / IG_ACCESS_TOKEN non impostati: Instagram non è pubblicabile.');
+}
+
+
+/* ------------------------------------------------------------------ *
+ *  Rilanci sicuri
+ * ------------------------------------------------------------------ */
+
+/**
+ * Il carosello di oggi è già sul profilo?
+ *
+ * 15/10/2026: una sola storia su sette è fallita ("Media ID is not available"),
+ * Auto Retry ha rilanciato il job e il job ha RIPUBBLICATO carosello e storie
+ * già uscite (post doppi). Prima di pubblicare si guarda quindi il feed: se il
+ * carosello con la stessa didascalia è già uscito oggi (UTC), questo è un
+ * rilancio e non si pubblica più nulla. Se la lettura non riesce si procede
+ * come prima (meglio un'eventuale doppia pubblicazione che nessuna).
+ */
+async function carosellodiOggiGiaUscito(m) {
+  if (DRY) return false;
+  try {
+    const j = await get(
+      GRAPH,
+      `/${USER}/media?fields=caption,timestamp,media_type&limit=20&access_token=${encodeURIComponent(TOKEN)}`,
+    );
+    const oggi = String(m.date);
+    const chiave = String(m.caption || '').slice(0, 80);
+    return (j.data || []).some((x) =>
+      x.media_type === 'CAROUSEL_ALBUM' &&
+      String(x.timestamp || '').startsWith(oggi) &&
+      String(x.caption || '').slice(0, 80) === chiave);
+  } catch (e) {
+    console.warn(`::warning::controllo doppioni non riuscito (${String(e)}): si procede.`);
+    return false;
+  }
+}
+
+/**
+ * media_publish con pazienza. Meta a volte risponde FINISHED al contenitore e
+ * subito dopo rifiuta la pubblicazione con "Media ID is not available" /
+ * subcode 2207027 ("The media is not ready for publishing, please wait").
+ * Non è un errore definitivo: si aspetta e si riprova, fino a sei volte.
+ */
+async function pubblicaConPazienza(creationId, cosa) {
+  const tentativi = 6;
+  for (let i = 1; i <= tentativi; i++) {
+    try {
+      return await post(GRAPH, `/${USER}/media_publish`, {
+        creation_id: creationId, access_token: TOKEN,
+      });
+    } catch (e) {
+      const t = String(e);
+      const transitorio = t.includes('2207027') || t.includes('not ready for publishing') || t.includes('Media ID is not available');
+      if (!transitorio || i === tentativi || DRY) throw e;
+      console.log(`    ${cosa}: contenitore non ancora pubblicabile, riprovo fra 10 s (${i}/${tentativi - 1})`);
+      await new Promise((r) => setTimeout(r, 10000));
+    }
+  }
 }
 
 /* ------------------------------------------------------------------ *
@@ -171,9 +228,7 @@ async function pubblicaStorie(m) {
         image_url: url, media_type: 'STORIES', access_token: TOKEN,
       });
       await attendiPronto(GRAPH, TOKEN, c.id, `storia ${i + 1}`);
-      const p = await post(GRAPH, `/${USER}/media_publish`, {
-        creation_id: c.id, access_token: TOKEN,
-      });
+      const p = await pubblicaConPazienza(c.id, `storia ${i + 1}`);
       ids.push(p.id);
       console.log(`    pubblicata, id ${p.id}`);
     } catch (e) {
@@ -213,6 +268,12 @@ async function main() {
   if (process.env.ATP_LEGACY_CARD === '1') {
     try { await pubblicaCardSingola(); }
     catch (e) { guasti.push(`card singola: ${String(e)}`); annota(`Instagram — card singola: ${String(e)}`); }
+  }
+
+  if (await carosellodiOggiGiaUscito(m)) {
+    console.log('\nIl carosello di oggi è già sul profilo: questo è un rilancio. Non si pubblica nulla per non fare doppioni.');
+    console.log('::warning::Instagram — rilancio: carosello di oggi già pubblicato, nessuna nuova pubblicazione. Se una storia mancava, va pubblicata a mano.');
+    return;
   }
 
   try {
