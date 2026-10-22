@@ -63,7 +63,7 @@ body.lilith .port.sym{background:radial-gradient(75% 65% at 50% 38%,#3D2258 0%,#
 <script>
 const [PL,HS,L]=(location.hash.slice(1)||'sole-1-en').split('-'); const N=+HS;
 const IMGS={sole:['/home/claude/dei/SOLE_PAE.png','30% 31%/180% auto'],luna:['/home/claude/dei/LUNAPIENA_PAE.png','44% 9%/300% auto'],
- mercurio:['/home/claude/dei/MERCURIO.png','46% 1%/250% auto'],marte:['/home/claude/dei/MARTE.png','42% 3%/215% auto'],giove:['/home/claude/dei/giove.png','50% 24%/270% auto'],saturno:['/home/claude/dei/saturno.png','50% 15%/270% auto'],urano:['/home/claude/dei/urano.png','50% 27%/270% auto'],nettuno:['/home/claude/dei/nettuno.png','48% 15%/270% auto'],plutone:['/home/claude/dei/plutone.png','52% 13%/270% auto']};
+ mercurio:['/home/claude/dei/MERCURIO.png','46% 1%/250% auto'],marte:['/home/claude/dei/MARTE.png','42% 3%/215% auto'],giove:['/home/claude/dei/giove.png','49% 19%/270% auto'],saturno:['/home/claude/dei/saturno.png','51% 31%/270% auto'],urano:['/home/claude/dei/urano.png','80% 2%/240% auto'],nettuno:['/home/claude/dei/nettuno.png','48% 15%/270% auto'],plutone:['/home/claude/dei/plutone.png','34% 20%/270% auto']};
 // Venere: venere.png ha una cornice ovale dipinta, quindi ritratto solo simbolo (come Lilith), oro rosa.
 const SYM=Object.assign({venere:{g:'venere',c:'#F6D2BE',glow:'#E89AA8'}},POINT_SYM);
 const Q=new URLSearchParams(location.search); const img=Q.get('img')||(IMGS[PL]||[])[0], pos=Q.get('pos')||(IMGS[PL]||[])[1];
