@@ -1,6 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
-<script src="glyphs.js"></script>
+<script src="../glyphs.js"></script>
 <style>
 /* Scheda finale dei caroselli «<pianeta> nelle 12 case»: invita a salvare e a inviare (segnali che Instagram premia). 1080x1350. */
 :root{--bg1:#0E2226;--bg2:#050E10;--gold:#CDAE66;--gold2:#EAD6A0;--parch:#F2EEE3;--mute:#B4C3BF;--hi:#1C4348}
@@ -33,6 +33,10 @@ body.saturno{--bg1:#1A1A1E;--bg2:#08080A;--gold:#C9AE6A;--gold2:#E6D3A0;--parch:
 body.urano{--bg1:#0C2230;--bg2:#040E14;--gold:#C9B26A;--gold2:#E8D8A2;--parch:#EEF5F6;--hi:#174156}
 body.nettuno{--bg1:#06242A;--bg2:#020D10;--gold:#CDAF62;--gold2:#EAD49A;--parch:#EAF4F1;--hi:#0E434B}
 body.plutone{--bg1:#200A10;--bg2:#0A0306;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7DD;--hi:#3E1420}
+body.rahu{--bg1:#1C1634;--bg2:#09070F;--gold:#CDB57A;--gold2:#EAD9A8;--parch:#F1EDF7;--hi:#33285C}
+body.ketu{--bg1:#251B12;--bg2:#0C0805;--gold:#D0AE72;--gold2:#EDD5A6;--parch:#F5EADB;--hi:#46331F}
+body.fortuna{--bg1:#0E2618;--bg2:#050F09;--gold:#D2B56A;--gold2:#EBD8A2;--parch:#EEF5EE;--hi:#1E4C31}
+body.lilith{--bg1:#21122E;--bg2:#0B0610;--gold:#CDB07A;--gold2:#E9D6B0;--parch:#F3ECF6;--hi:#3D2258}
 </style></head><body><div id="root"></div>
 <script>
 const Q=new URLSearchParams(location.search), PT=Q.get('p')||'mercurio', L=Q.get('l')||location.hash.slice(1)||'it';
@@ -41,15 +45,15 @@ const IMG={sole:['SOLE_PAE.png','30% 31%/180% auto'],luna:['LUNAPIENA_PAE.png','
  marte:['MARTE.png','42% 3%/215% auto'],giove:['giove.png','50% 24%/270% auto'],saturno:['saturno.png','50% 15%/270% auto'],urano:['urano.png','50% 27%/270% auto'],
  nettuno:['nettuno.png','48% 15%/270% auto'],plutone:['plutone.png','52% 13%/270% auto']};
 const NAMES={
- it:{sole:'il Sole',luna:'la Luna',mercurio:'Mercurio',venere:'Venere',marte:'Marte',giove:'Giove',saturno:'Saturno',urano:'Urano',nettuno:'Nettuno',plutone:'Plutone'},
- en:{sole:'the Sun',luna:'the Moon',mercurio:'Mercury',venere:'Venus',marte:'Mars',giove:'Jupiter',saturno:'Saturn',urano:'Uranus',nettuno:'Neptune',plutone:'Pluto'},
- es:{sole:'el Sol',luna:'la Luna',mercurio:'Mercurio',venere:'Venus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Neptuno',plutone:'Plutón'},
- pt:{sole:'o Sol',luna:'a Lua',mercurio:'Mercúrio',venere:'Vênus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Netuno',plutone:'Plutão'},
- fr:{sole:'le Soleil',luna:'la Lune',mercurio:'Mercure',venere:'Vénus',marte:'Mars',giove:'Jupiter',saturno:'Saturne',urano:'Uranus',nettuno:'Neptune',plutone:'Pluton'},
- ru:{sole:'Солнце',luna:'Луна',mercurio:'Меркурий',venere:'Венера',marte:'Марс',giove:'Юпитер',saturno:'Сатурн',urano:'Уран',nettuno:'Нептун',plutone:'Плутон'},
- hi:{sole:'सूर्य',luna:'चंद्र',mercurio:'बुध',venere:'शुक्र',marte:'मंगल',giove:'गुरु',saturno:'शनि',urano:'यूरेनस',nettuno:'नेपच्यून',plutone:'प्लूटो'},
- ja:{sole:'太陽',luna:'月',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星'},
- zh:{sole:'太阳',luna:'月亮',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星'}};
+ it:{sole:'il Sole',luna:'la Luna',mercurio:'Mercurio',venere:'Venere',marte:'Marte',giove:'Giove',saturno:'Saturno',urano:'Urano',nettuno:'Nettuno',plutone:'Plutone',rahu:'Rahu',ketu:'Ketu',fortuna:'la Parte della Fortuna',lilith:'Lilith'},
+ en:{sole:'the Sun',luna:'the Moon',mercurio:'Mercury',venere:'Venus',marte:'Mars',giove:'Jupiter',saturno:'Saturn',urano:'Uranus',nettuno:'Neptune',plutone:'Pluto',rahu:'Rahu',ketu:'Ketu',fortuna:'the Part of Fortune',lilith:'Lilith'},
+ es:{sole:'el Sol',luna:'la Luna',mercurio:'Mercurio',venere:'Venus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Neptuno',plutone:'Plutón',rahu:'Rahu',ketu:'Ketu',fortuna:'la Parte de la Fortuna',lilith:'Lilith'},
+ pt:{sole:'o Sol',luna:'a Lua',mercurio:'Mercúrio',venere:'Vênus',marte:'Marte',giove:'Júpiter',saturno:'Saturno',urano:'Urano',nettuno:'Netuno',plutone:'Plutão',rahu:'Rahu',ketu:'Ketu',fortuna:'a Parte da Fortuna',lilith:'Lilith'},
+ fr:{sole:'le Soleil',luna:'la Lune',mercurio:'Mercure',venere:'Vénus',marte:'Mars',giove:'Jupiter',saturno:'Saturne',urano:'Uranus',nettuno:'Neptune',plutone:'Pluton',rahu:'Rahu',ketu:'Ketu',fortuna:'la Part de Fortune',lilith:'Lilith'},
+ ru:{sole:'Солнце',luna:'Луна',mercurio:'Меркурий',venere:'Венера',marte:'Марс',giove:'Юпитер',saturno:'Сатурн',urano:'Уран',nettuno:'Нептун',plutone:'Плутон',rahu:'Раху',ketu:'Кету',fortuna:'Парс Фортуны',lilith:'Лилит'},
+ hi:{sole:'सूर्य',luna:'चंद्र',mercurio:'बुध',venere:'शुक्र',marte:'मंगल',giove:'गुरु',saturno:'शनि',urano:'यूरेनस',nettuno:'नेपच्यून',plutone:'प्लूटो',rahu:'राहु',ketu:'केतु',fortuna:'भाग्य बिंदु',lilith:'लिलिथ'},
+ ja:{sole:'太陽',luna:'月',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星',rahu:'ラーフ',ketu:'ケートゥ',fortuna:'パート・オブ・フォーチュン',lilith:'リリス'},
+ zh:{sole:'太阳',luna:'月亮',mercurio:'水星',venere:'金星',marte:'火星',giove:'木星',saturno:'土星',urano:'天王星',nettuno:'海王星',plutone:'冥王星',rahu:'罗睺',ketu:'计都',fortuna:'福点',lilith:'莉莉丝'}};
 const TX={
  it:{s:'Salvalo',sp:'Ti servirà quando guardi il tuo tema natale.',h:'Mandalo a un amico',hp:'e scoprite in che casa avete {P}.',cta:'Tema natale gratuito'},
  en:{s:'Save it',sp:'You will want it when you look at your natal chart.',h:'Send it to a friend',hp:'and find out which house {P} is in for each of you.',cta:'Free natal chart'},

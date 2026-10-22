@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <!-- Serie B generalizzata: #<pianeta>-<casa>-<lingua>, es. #sole-3-en, #luna-12-hi, #mercurio-6-it, #venere-5-hi. Formato Instagram 1080x1350. -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="glyphs.js"></script><script src="serieB_i18n.js"></script><script>var TS={},TM={},TME={},TV={},TG={},TSA={},TU={},TN={},TP={};</script><script src="serieB_more.js"></script><script src="i18n_add/es.js"></script><script src="i18n_add/pt.js"></script><script src="i18n_add/fr.js"></script><script src="i18n_add/ru.js"></script><script src="i18n_add/zh.js"></script><script src="i18n_add/ja.js"></script><script src="i18n_add/hi_more.js"></script><script src="i18n_add/es_more.js"></script><script src="i18n_add/pt_more.js"></script><script src="i18n_add/fr_more.js"></script><script src="i18n_add/ru_more.js"></script><script src="i18n_add/zh_more.js"></script><script src="i18n_add/ja_more.js"></script>
+<script src="glyphs.js"></script><script src="serieB_i18n.js"></script><script>var TS={},TM={},TME={},TV={},TG={},TSA={},TU={},TN={},TP={};</script><script src="serieB_more.js"></script><script src="i18n_add/es.js"></script><script src="i18n_add/pt.js"></script><script src="i18n_add/fr.js"></script><script src="i18n_add/ru.js"></script><script src="i18n_add/zh.js"></script><script src="i18n_add/ja.js"></script><script src="i18n_add/hi_more.js"></script><script src="i18n_add/es_more.js"></script><script src="i18n_add/pt_more.js"></script><script src="i18n_add/fr_more.js"></script><script src="i18n_add/ru_more.js"></script><script src="i18n_add/zh_more.js"></script><script src="i18n_add/ja_more.js"></script><script src="points/core.js"></script><script src="points/it.js"></script><script src="points/en.js"></script><script src="points/es.js"></script><script src="points/pt.js"></script><script src="points/fr.js"></script><script src="points/ru.js"></script><script src="points/hi.js"></script><script src="points/zh.js"></script><script src="points/ja.js"></script>
 <style>
 :root{--bg1:#2E0C0F;--bg2:#140608;--glow:#4A1216;--rust:#B04A2E;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7CF;--mute:#CDB9A8;--line:rgba(232,205,142,.17);--frame:rgba(201,163,78,.8)}
 body.sole{--bg1:#2E1A06;--bg2:#120A03;--glow:#5A3A0E;--rust:#D0762A;--gold:#D4A94A;--gold2:#F0D48E;--parch:#F7EBD2;--mute:#D8C3A0;--line:rgba(240,212,142,.18);--frame:rgba(212,169,74,.8)}
@@ -51,13 +51,21 @@ body.saturno{--bg1:#1A1A1E;--bg2:#08080A;--glow:#34343C;--rust:#B8A06A;--gold:#C
 body.urano{--bg1:#0C2230;--bg2:#040E14;--glow:#174A5E;--rust:#5FC8D8;--gold:#C9B26A;--gold2:#E8D8A2;--parch:#EEF5F6;--mute:#A9C3C9;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
 body.nettuno{--bg1:#06242A;--bg2:#020D10;--glow:#0E4A50;--rust:#4FB8A8;--gold:#CDAF62;--gold2:#EAD49A;--parch:#EAF4F1;--mute:#9EC2BC;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
 body.plutone{--bg1:#200A10;--bg2:#0A0306;--glow:#43121E;--rust:#B0384A;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7DD;--mute:#C9B0AA;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
+body.rahu{--bg1:#1C1634;--bg2:#09070F;--glow:#33285C;--rust:#9C86D8;--gold:#CDB57A;--gold2:#EAD9A8;--parch:#F1EDF7;--mute:#BDB3D2;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
+body.rahu .port.sym{background:radial-gradient(75% 65% at 50% 38%,#33285C 0%,#1C1634 55%,#09070F 100%);box-shadow:0 0 34px #9C86D855}
+body.ketu{--bg1:#251B12;--bg2:#0C0805;--glow:#46331F;--rust:#C88A56;--gold:#D0AE72;--gold2:#EDD5A6;--parch:#F5EADB;--mute:#CDB89E;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
+body.ketu .port.sym{background:radial-gradient(75% 65% at 50% 38%,#46331F 0%,#251B12 55%,#0C0805 100%);box-shadow:0 0 34px #C88A5655}
+body.fortuna{--bg1:#0E2618;--bg2:#050F09;--glow:#1E4C31;--rust:#6FC08A;--gold:#D2B56A;--gold2:#EBD8A2;--parch:#EEF5EE;--mute:#AFC8B6;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
+body.fortuna .port.sym{background:radial-gradient(75% 65% at 50% 38%,#1E4C31 0%,#0E2618 55%,#050F09 100%);box-shadow:0 0 34px #6FC08A55}
+body.lilith{--bg1:#21122E;--bg2:#0B0610;--glow:#3D2258;--rust:#A784D6;--gold:#CDB07A;--gold2:#E9D6B0;--parch:#F3ECF6;--mute:#BFAFCC;--line:rgba(234,214,160,.16);--frame:rgba(201,170,100,.78)}
+body.lilith .port.sym{background:radial-gradient(75% 65% at 50% 38%,#3D2258 0%,#21122E 55%,#0B0610 100%);box-shadow:0 0 34px #A784D655}
 </style></head><body><div id="root"></div>
 <script>
 const [PL,HS,L]=(location.hash.slice(1)||'sole-1-en').split('-'); const N=+HS;
 const IMGS={sole:['/home/claude/dei/SOLE_PAE.png','30% 31%/180% auto'],luna:['/home/claude/dei/LUNAPIENA_PAE.png','44% 9%/300% auto'],
  mercurio:['/home/claude/dei/MERCURIO.png','46% 1%/250% auto'],marte:['/home/claude/dei/MARTE.png','42% 3%/215% auto'],giove:['/home/claude/dei/giove.png','50% 24%/270% auto'],saturno:['/home/claude/dei/saturno.png','50% 15%/270% auto'],urano:['/home/claude/dei/urano.png','50% 27%/270% auto'],nettuno:['/home/claude/dei/nettuno.png','48% 15%/270% auto'],plutone:['/home/claude/dei/plutone.png','52% 13%/270% auto']};
 // Venere: venere.png ha una cornice ovale dipinta, quindi ritratto solo simbolo (come Lilith), oro rosa.
-const SYM={venere:{g:'venere',c:'#F6D2BE',glow:'#E89AA8'}};
+const SYM=Object.assign({venere:{g:'venere',c:'#F6D2BE',glow:'#E89AA8'}},POINT_SYM);
 const Q=new URLSearchParams(location.search); const img=Q.get('img')||(IMGS[PL]||[])[0], pos=Q.get('pos')||(IMGS[PL]||[])[1];
 const R=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'], U=SB_UI[L], [S,G]=SB[PL][L][N-1];
 document.documentElement.lang=L; document.body.classList.add(PL,L);

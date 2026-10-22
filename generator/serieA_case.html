@@ -1,6 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:wght@400;700&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
-<script src="glyphs.js"></script><script src="case_i18n.js"></script><script src="lilith_i18n.js"></script><script src="sole_i18n.js"></script><script src="luna_case_i18n.js"></script><script src="mercurio_case_i18n.js"></script><script src="venere_case_i18n.js"></script><script>var SB={sole:{},luna:{},mercurio:{},venere:{},marte:{},giove:{},saturno:{},urano:{},nettuno:{},plutone:{}},SB_UI={hi:{tpl:{},cta:{}},es:{tpl:{},cta:{}},pt:{tpl:{},cta:{}},fr:{tpl:{},cta:{}},ru:{tpl:{},cta:{}},zh:{tpl:{},cta:{}},ja:{tpl:{},cta:{}}};</script><script src="i18n_add/es.js"></script><script src="i18n_add/pt.js"></script><script src="i18n_add/fr.js"></script><script src="i18n_add/ru.js"></script><script src="i18n_add/zh.js"></script><script src="i18n_add/ja.js"></script><script src="case_more.js"></script><script src="i18n_add/hi_more.js"></script><script src="i18n_add/es_more.js"></script><script src="i18n_add/pt_more.js"></script><script src="i18n_add/fr_more.js"></script><script src="i18n_add/ru_more.js"></script><script src="i18n_add/zh_more.js"></script><script src="i18n_add/ja_more.js"></script>
+<script src="glyphs.js"></script><script src="case_i18n.js"></script><script src="sole_i18n.js"></script><script src="luna_case_i18n.js"></script><script src="mercurio_case_i18n.js"></script><script src="venere_case_i18n.js"></script><script>var SB={sole:{},luna:{},mercurio:{},venere:{},marte:{},giove:{},saturno:{},urano:{},nettuno:{},plutone:{}},SB_UI={hi:{tpl:{},cta:{}},es:{tpl:{},cta:{}},pt:{tpl:{},cta:{}},fr:{tpl:{},cta:{}},ru:{tpl:{},cta:{}},zh:{tpl:{},cta:{}},ja:{tpl:{},cta:{}}};</script><script src="i18n_add/es.js"></script><script src="i18n_add/pt.js"></script><script src="i18n_add/fr.js"></script><script src="i18n_add/ru.js"></script><script src="i18n_add/zh.js"></script><script src="i18n_add/ja.js"></script><script src="case_more.js"></script><script src="i18n_add/hi_more.js"></script><script src="i18n_add/es_more.js"></script><script src="i18n_add/pt_more.js"></script><script src="i18n_add/fr_more.js"></script><script src="i18n_add/ru_more.js"></script><script src="i18n_add/zh_more.js"></script><script src="i18n_add/ja_more.js"></script><script src="points/core.js"></script><script src="points/it.js"></script><script src="points/en.js"></script><script src="points/es.js"></script><script src="points/pt.js"></script><script src="points/fr.js"></script><script src="points/ru.js"></script><script src="points/hi.js"></script><script src="points/zh.js"></script><script src="points/ja.js"></script>
 <style>
 :root{--bg1:#2E0C0F;--bg2:#140608;--rust:#B04A2E;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7CF;--mute:#CDB9A8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -107,6 +107,23 @@ body.saturno{--bg1:#1A1A1E;--bg2:#08080A;--rust:#B8A06A;--gold:#C9AE6A;--gold2:#
 body.urano{--bg1:#0C2230;--bg2:#040E14;--rust:#5FC8D8;--gold:#C9B26A;--gold2:#E8D8A2;--parch:#EEF5F6;--mute:#A9C3C9}
 body.nettuno{--bg1:#06242A;--bg2:#020D10;--rust:#4FB8A8;--gold:#CDAF62;--gold2:#EAD49A;--parch:#EAF4F1;--mute:#9EC2BC}
 body.plutone{--bg1:#200A10;--bg2:#0A0306;--rust:#B0384A;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7DD;--mute:#C9B0AA}
+body.rahu{--bg1:#1C1634;--bg2:#09070F;--rust:#9C86D8;--gold:#CDB57A;--gold2:#EAD9A8;--parch:#F1EDF7;--mute:#BDB3D2}
+.rahu .s{background:radial-gradient(120% 70% at 50% 0%,#33285C 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.rahu .port.sym{background:radial-gradient(75% 65% at 50% 38%,#33285C 0%,#1C1634 55%,#09070F 100%);box-shadow:0 0 34px #9C86D855}
+.rahu .dg.P{border-color:#9C86D899;color:var(--gold2)}
+body.ketu{--bg1:#251B12;--bg2:#0C0805;--rust:#C88A56;--gold:#D0AE72;--gold2:#EDD5A6;--parch:#F5EADB;--mute:#CDB89E}
+.ketu .s{background:radial-gradient(120% 70% at 50% 0%,#46331F 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.ketu .port.sym{background:radial-gradient(75% 65% at 50% 38%,#46331F 0%,#251B12 55%,#0C0805 100%);box-shadow:0 0 34px #C88A5655}
+.ketu .dg.P{border-color:#C88A5699;color:var(--gold2)}
+body.fortuna{--bg1:#0E2618;--bg2:#050F09;--rust:#6FC08A;--gold:#D2B56A;--gold2:#EBD8A2;--parch:#EEF5EE;--mute:#AFC8B6}
+.fortuna .s{background:radial-gradient(120% 70% at 50% 0%,#1E4C31 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.fortuna .port.sym{background:radial-gradient(75% 65% at 50% 38%,#1E4C31 0%,#0E2618 55%,#050F09 100%);box-shadow:0 0 34px #6FC08A55}
+.fortuna .dg.P{border-color:#6FC08A99;color:var(--gold2)}
+body.lilith{--bg1:#21122E;--bg2:#0B0610;--rust:#A784D6;--gold:#CDB07A;--gold2:#E9D6B0;--parch:#F3ECF6;--mute:#BFAFCC}
+.lilith .s{background:radial-gradient(120% 70% at 50% 0%,#3D2258 0%,var(--bg1) 38%,var(--bg2) 100%)}
+.lilith .port.sym{background:radial-gradient(75% 65% at 50% 38%,#3D2258 0%,#21122E 55%,#0B0610 100%);box-shadow:0 0 34px #A784D655}
+.lilith .dg.P{border-color:#A784D699;color:var(--gold2)}
+.kwp .dg.kw b{font-size:17px}
 </style></head><body><div id="root"></div>
 <script>
 const Q=new URLSearchParams(location.search), PT=Q.get('p')||'marte'; const L=location.hash.slice(1)||'it', R=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
@@ -116,16 +133,16 @@ const PTS={marte:{T:T,D:DIGN,J:JOY,img:'/home/claude/dei/MARTE.png',pos:'42% 3%/
  luna:{T:TM,D:DIGN_M,J:JOY_M,img:'/home/claude/dei/LUNAPIENA_PAE.png',pos:'44% 9%/300% auto'},
  mercurio:{T:TME,D:DIGN_ME,J:JOY_ME,A:ALSO_ME,img:'/home/claude/dei/MERCURIO.png',pos:'46% 1%/250% auto'},
  venere:{T:TV,D:DIGN_V,J:JOY_V,sym:{g:'venere',c:'#F6D2BE',glow:'#E89AA8'}}, // venere.png ha una cornice ovale dipinta: solo simbolo
- lilith:{T:TL,sym:{g:'lilith',c:'#D9C9F0',glow:'#B89BE0'}},
+ lilith:{T:TL,sym:POINT_SYM.lilith},rahu:{T:TR,sym:POINT_SYM.rahu},ketu:{T:TK,sym:POINT_SYM.ketu},fortuna:{T:TF,sym:POINT_SYM.fortuna},
  giove:{T:TG,D:DIGN_G,J:JOY_G,img:'/home/claude/dei/giove.png',pos:'50% 24%/270% auto'},saturno:{T:TSA,D:DIGN_SA,J:JOY_SA,img:'/home/claude/dei/saturno.png',pos:'50% 15%/270% auto'},urano:{T:TU,D:DIGN_U,J:JOY_U,img:'/home/claude/dei/urano.png',pos:'50% 27%/270% auto'},nettuno:{T:TN,D:DIGN_N,J:JOY_N,img:'/home/claude/dei/nettuno.png',pos:'48% 15%/270% auto'},plutone:{T:TP,D:DIGN_P,J:JOY_P,img:'/home/claude/dei/plutone.png',pos:'52% 13%/270% auto'}};
-const P=PTS[PT]||PTS.marte, t=P.T[L], DG=P.D||DIGN, JY=P.J??JOY;
+const KW=['lilith','rahu','ketu','fortuna'].includes(PT); const P=PTS[PT]||PTS.marte, t=P.T[L], DG=P.D||DIGN, JY=P.J??JOY;
 const IMG=Q.get('img')||P.img, POS=Q.get('pos')||P.pos;
-document.documentElement.lang=L; document.documentElement.dir=t.dir; if(t.dir==='rtl')document.body.classList.add('rtl'); if(t.cjk)document.body.classList.add(t.cjk); if(PT==='lilith')document.body.classList.add('lil'); if(['sole','luna','mercurio','venere','giove','saturno','urano','nettuno','plutone'].includes(PT))document.body.classList.add(PT); const AL=P.A||{};
+document.documentElement.lang=L; document.documentElement.dir=t.dir; if(t.dir==='rtl')document.body.classList.add('rtl'); if(t.cjk)document.body.classList.add(t.cjk); if(KW)document.body.classList.add('kwp',PT); if(['sole','luna','mercurio','venere','giove','saturno','urano','nettuno','plutone'].includes(PT))document.body.classList.add(PT); const AL=P.A||{};
 document.getElementById('root').innerHTML=`<div class="s">
 <div class="head blk">${P.sym?`<div class="port sym"><svg viewBox="0 0 100 100" width="${PT==='lilith'?92:78}%" height="${PT==='lilith'?92:78}%" fill="none" stroke="${P.sym.c}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 12px ${P.sym.glow})">${GLYPH[P.sym.g]}</svg></div>`:`<div class="port" style="background:url(${IMG}) ${POS}"><div class="m">${medal(PT in GLYPH?PT:'marte')}</div></div>`}
  <div class="ht"><h1>${t.title}</h1><p>${t.sub}</p></div></div>
 <div class="flow"><div class="tbl blk"><div class="tr th"><div style="text-align:center">${t.h[0]}</div><div></div><div>${t.h[1]}</div><div style="text-align:center">${t.h[2]}</div></div>
-${t.rows.map((r,i)=>`<div class="tr"><div class="n">${R[i]}</div><div class="a">${r[0]}<small>${t.signs[i]}</small></div><div class="r">${r[1]}</div>${PT==='lilith'?`<div class="dg P kw"><b>${r[2]}</b></div>`:`<div class="dg ${DG[i]}"><b>${t.d[DG[i]][0]}</b><i>${t.d[DG[i]][1]}</i>${AL[i]?`<span class="also">${t.also[AL[i]]}</span>`:''}${i===JY?`<span class="joy">+ ${t.joy}</span>`:""}</div>`}</div>`).join('')}</div>
+${t.rows.map((r,i)=>`<div class="tr"><div class="n">${R[i]}</div><div class="a">${r[0]}<small>${t.signs[i]}</small></div><div class="r">${r[1]}</div>${KW?`<div class="dg P kw"><b>${r[2]}</b></div>`:`<div class="dg ${DG[i]}"><b>${t.d[DG[i]][0]}</b><i>${t.d[DG[i]][1]}</i>${AL[i]?`<span class="also">${t.also[AL[i]]}</span>`:''}${i===JY?`<span class="joy">+ ${t.joy}</span>`:""}</div>`}</div>`).join('')}</div>
 <div class="ang blk"><h2>${t.angT}</h2><div class="ag">${['AC','IC','DC','MC'].map((k,i)=>`<div><b>${k}</b>${t.ang[i]}</div>`).join('')}</div></div>
 <div class="leg blk">${t.leg}</div></div>
 <div class="foot blk"><span>${t.cta}</span>astrotraderpro.com</div>
