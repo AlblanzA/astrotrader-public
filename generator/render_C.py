@@ -4,6 +4,7 @@ Uso: python3 render_C.py --langs it,en --points marte,sole"""
 import asyncio, io, os, sys
 from PIL import Image, ImageCms
 from playwright.async_api import async_playwright
+from hant import HANT, is_zh, hant
 SRGB = ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes()
 HERE = os.path.dirname(os.path.abspath(__file__))
 ALL = 'sole,luna,mercurio,venere,marte,giove,saturno,urano,nettuno,plutone,rahu,ketu,lilith'.split(',')
@@ -26,11 +27,12 @@ async def main():
         b = await p.chromium.launch(); pg = await b.new_page(viewport={'width': 1080, 'height': 1350})
         for pt in PT:
             for L in LG:
-                d = os.path.join(HERE, 'out', 'C', pt, L); os.makedirs(d, exist_ok=True)
+                d = os.path.join(HERE, 'out', 'C_zt' if HANT else 'C', pt, L); os.makedirs(d, exist_ok=True)
                 for n in range(1, 8):
                     await pg.goto(f'file://{HERE}/serieC.html#{pt}-{n}-{L}'); await pg.reload()
                     await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(500)
                     g = await pg.evaluate('window.fit&&window.fit()'); await pg.wait_for_timeout(80)
+                    if HANT and L=='zh': await hant(pg)
                     bad = await pg.evaluate(CHECK)
                     png = await pg.screenshot()
                     Image.open(io.BytesIO(png)).convert('RGB').save(f'{d}/c{n}.jpg', 'JPEG', quality=90, optimize=True, subsampling=0, icc_profile=SRGB)

@@ -3,6 +3,8 @@
 Uso: python3 render_endcard.py [--planets mercurio,venere] [--langs it,en] → out/endcard/<p>/<L>/14.jpg (1080x1350)."""
 import asyncio, io, os, sys
 from PIL import Image, ImageCms
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
+from hant import HANT, hant
 from playwright.async_api import async_playwright
 SRGB = ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes()
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -24,10 +26,11 @@ async def main():
             for L in LG:
                 await pg.goto(f'file://{HERE}/endcard.html?p={pl}&l={L}')
                 await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(300)
+                if HANT and L=='zh': await hant(pg)
                 r = await pg.evaluate(CHECK)
                 if r['bad']: bad += 1; print('KO', pl, L, r)
                 png = await pg.screenshot()
-                d = os.path.join(HERE, 'out', 'endcard', pl, L); os.makedirs(d, exist_ok=True)
+                d = os.path.join(HERE, 'out', 'endcard_zt' if HANT else 'endcard', pl, L); os.makedirs(d, exist_ok=True)
                 Image.open(io.BytesIO(png)).convert('RGB').save(os.path.join(d, '14.jpg'), 'JPEG', quality=90, optimize=True, subsampling=0, icc_profile=SRGB)
                 print('ok', pl, L, r['bottom'], r['foot'])
         await b.close()

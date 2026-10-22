@@ -12,8 +12,9 @@ SRGB = ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes()
 from playwright.async_api import async_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, 'out', 'serie')
+OUT = os.path.join(HERE, 'out', 'serie_zt' if os.environ.get('HANT')=='1' else 'serie')
 DEI = '/home/claude/dei'
+from hant import HANT, is_zh, hant
 
 # Controlli comuni: testo fuori dalla cornice, testo tagliato (overflow), testo che tocca il footer,
 # figli di riga che escono dalla propria riga, righe di tabella sovrapposte.
@@ -67,6 +68,7 @@ async def load(pg, url):
     await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(700)
     # fit di serie B (se presente) gira dopo i font
     await pg.evaluate('window.fit&&window.fit()'); await pg.wait_for_timeout(100)
+    if HANT and is_zh(url): await hant(pg)
 
 async def main():
     args = sys.argv[1:]
