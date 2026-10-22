@@ -39,6 +39,8 @@ window.__unfWatch = async function () {
 };
 
 window.__folWatch = async function () {
+  // 16/10 l'utente ha rinunciato ai follow automatici: nessun follow dal bot
+  window.__wgen_fol = (window.__wgen_fol || 0) + 1; return 'follow disattivato';
   const gen = (window.__wgen_fol = (window.__wgen_fol || 0) + 1);
   while (!window.__wstop && window.__wgen_fol === gen) {
     if (((L('__atp_fday') || {})[today()] || 0) >= 50) { wl('follow: quota del giorno, attendo mezzanotte UTC'); await sleep(toMidnight()); continue; }

@@ -1,7 +1,8 @@
 // AstroTrader Pro — crescita Instagram (follow/unfollow), da incollare nella scheda
 // https://www.instagram.com/robots.txt (stessa origine: cookie e localStorage di Instagram).
 // Regole utente (7-8/10/2026): unfollow max 100/giorno (usati 60 dal 15/10: blocco IG a 72 il 14/10), follow 40/giorno,
-// unfollow di chi non ricambia SOLO dopo 72 h dal follow. Stop al primo errore.
+// solo UNFOLLOW (dal 16/10 l'utente ha rinunciato ai follow automatici: i follow li fa lui a mano),
+// di chi non ricambia SOLO dopo almeno 48 h dal follow. Stop al primo errore.
 // Stato in localStorage: __atp_queue (unfollow), __atp_done, __atp_day, __atp_followed,
 // __atp_fday, __atp_fq (candidati), __atp_seeds2/__atp_hv2 (raccolta), __atp_fbchk, __atp_log.
 (() => {
@@ -22,6 +23,10 @@ async function unfollowOne() {
   if (n >= UNF_CAP) return 'QUOTA ' + n;
   const q = L('__atp_queue'); if (!q || !q.length) return 'VUOTA';
   const x = q[0]; let st = 0, tx = '';
+  // regola 48 h: mai togliere chi e' stato seguito da meno di 48 h; e chi ora ricambia esce dalla coda
+  const fl = (L('__atp_followed') || []).find((y) => y[1] === x[1]);
+  if (fl && Date.now() - Date.parse(fl[2]) < 48 * 3600e3) { q.push(q.shift()); S('__atp_queue', q); return 'OK 0 (rimandato <48h) ' + x[0]; }
+  try { const s0 = await show(x[1]); if (s0.followed_by || !(s0.following || s0.outgoing_request)) { q.shift(); S('__atp_queue', q); return 'OK ' + n + ' (gia a posto) ' + x[0]; } } catch (e) {}
   try {
     const r = await fetch('/api/v1/web/friendships/' + x[1] + '/unfollow/', { method: 'POST', credentials: 'include',
       headers: { ...H, 'X-CSRFToken': csrf(), 'Content-Type': 'application/x-www-form-urlencoded' }, body: '' });
@@ -109,12 +114,12 @@ async function harvest(maxReq) {
   return window.__hvlast;
 }
 
-// regola 72 h: chi non ricambia dopo 3 giorni va in testa alla coda unfollow
+// regola 48 h: chi non ricambia dopo 2 giorni va in testa alla coda unfollow
 async function followBackCheck(maxChecks) {
   const f = L('__atp_followed') || []; const chk = L('__atp_fbchk') || {}; let n = 0, back = 0, no = 0;
   for (const x of f) {
     if (n >= maxChecks) break; if (chk[x[1]]) continue;
-    if (Date.now() - Date.parse(x[2]) < 72 * 3600e3) continue;
+    if (Date.now() - Date.parse(x[2]) < 48 * 3600e3) continue;
     const s = await show(x[1]); n++;
     if (s.followed_by) { chk[x[1]] = 'ricambia'; back++; }
     else if (s.following || s.outgoing_request) { chk[x[1]] = 'in_coda_unfollow'; no++; const q = L('__atp_queue'); q.unshift([x[0], x[1], 0]); S('__atp_queue', q); }
