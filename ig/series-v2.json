@@ -1280,8 +1280,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/venere/zh/13.jpg"
   },
   {
-   "id": "2026-10-23-K_marte-ja",
-   "at": "2026-10-23T10:30:00Z",
+   "id": "2026-10-24-K_marte-ja",
+   "at": "2026-10-24T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -1305,8 +1305,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/ja/13.jpg"
   },
   {
-   "id": "2026-10-23-K_marte-zh",
-   "at": "2026-10-23T12:00:00Z",
+   "id": "2026-10-24-K_marte-zh",
+   "at": "2026-10-24T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -1331,7 +1331,7 @@
   },
   {
    "id": "2026-10-23-K_marte-hi",
-   "at": "2026-10-23T13:30:00Z",
+   "at": "2026-10-23T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -1355,8 +1355,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/hi/13.jpg"
   },
   {
-   "id": "2026-10-23-K_marte-ru",
-   "at": "2026-10-23T15:00:00Z",
+   "id": "2026-10-24-K_marte-ru",
+   "at": "2026-10-24T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -1381,7 +1381,7 @@
   },
   {
    "id": "2026-10-23-K_marte-en",
-   "at": "2026-10-23T17:00:00Z",
+   "at": "2026-10-23T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -1405,8 +1405,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/en/13.jpg"
   },
   {
-   "id": "2026-10-24-K_marte-fr",
-   "at": "2026-10-24T18:00:00Z",
+   "id": "2026-10-23-K_marte-fr",
+   "at": "2026-10-23T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -1430,8 +1430,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/fr/13.jpg"
   },
   {
-   "id": "2026-10-24-K_marte-it",
-   "at": "2026-10-24T19:30:00Z",
+   "id": "2026-10-23-K_marte-it",
+   "at": "2026-10-23T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -1455,8 +1455,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/it/13.jpg"
   },
   {
-   "id": "2026-10-24-K_marte-es",
-   "at": "2026-10-24T21:00:00Z",
+   "id": "2026-10-23-K_marte-es",
+   "at": "2026-10-23T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -1505,8 +1505,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/marte/pt/13.jpg"
   },
   {
-   "id": "2026-10-25-K_giove-ja",
-   "at": "2026-10-25T10:30:00Z",
+   "id": "2026-10-26-K_giove-ja",
+   "at": "2026-10-26T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -1530,8 +1530,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/giove/ja/13.jpg"
   },
   {
-   "id": "2026-10-25-K_giove-zh",
-   "at": "2026-10-25T12:00:00Z",
+   "id": "2026-10-26-K_giove-zh",
+   "at": "2026-10-26T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -1556,7 +1556,7 @@
   },
   {
    "id": "2026-10-25-K_giove-hi",
-   "at": "2026-10-25T13:30:00Z",
+   "at": "2026-10-25T23:41:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -1597,8 +1597,8 @@
    "story": true
   },
   {
-   "id": "2026-10-25-K_giove-ru",
-   "at": "2026-10-25T17:41:00Z",
+   "id": "2026-10-26-K_giove-ru",
+   "at": "2026-10-26T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -1623,7 +1623,7 @@
   },
   {
    "id": "2026-10-25-K_giove-en",
-   "at": "2026-10-25T19:11:00Z",
+   "at": "2026-10-25T17:41:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -1647,8 +1647,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/giove/en/13.jpg"
   },
   {
-   "id": "2026-10-26-K_giove-fr",
-   "at": "2026-10-26T18:00:00Z",
+   "id": "2026-10-25-K_giove-fr",
+   "at": "2026-10-25T22:11:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -1672,8 +1672,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/giove/fr/13.jpg"
   },
   {
-   "id": "2026-10-26-K_giove-it",
-   "at": "2026-10-26T19:30:00Z",
+   "id": "2026-10-25-K_giove-it",
+   "at": "2026-10-25T19:11:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -1697,8 +1697,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/giove/it/13.jpg"
   },
   {
-   "id": "2026-10-26-K_giove-es",
-   "at": "2026-10-26T21:00:00Z",
+   "id": "2026-10-25-K_giove-es",
+   "at": "2026-10-25T20:41:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -1747,8 +1747,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/giove/pt/13.jpg"
   },
   {
-   "id": "2026-10-27-K_saturno-ja",
-   "at": "2026-10-27T10:30:00Z",
+   "id": "2026-10-28-K_saturno-ja",
+   "at": "2026-10-28T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -1772,8 +1772,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/ja/13.jpg"
   },
   {
-   "id": "2026-10-27-K_saturno-zh",
-   "at": "2026-10-27T12:00:00Z",
+   "id": "2026-10-28-K_saturno-zh",
+   "at": "2026-10-28T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -1798,7 +1798,7 @@
   },
   {
    "id": "2026-10-27-K_saturno-hi",
-   "at": "2026-10-27T13:30:00Z",
+   "at": "2026-10-27T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -1822,8 +1822,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/hi/13.jpg"
   },
   {
-   "id": "2026-10-27-K_saturno-ru",
-   "at": "2026-10-27T15:00:00Z",
+   "id": "2026-10-28-K_saturno-ru",
+   "at": "2026-10-28T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -1848,7 +1848,7 @@
   },
   {
    "id": "2026-10-27-K_saturno-en",
-   "at": "2026-10-27T17:00:00Z",
+   "at": "2026-10-27T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -1872,8 +1872,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/en/13.jpg"
   },
   {
-   "id": "2026-10-28-K_saturno-fr",
-   "at": "2026-10-28T18:00:00Z",
+   "id": "2026-10-27-K_saturno-fr",
+   "at": "2026-10-27T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -1897,8 +1897,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/fr/13.jpg"
   },
   {
-   "id": "2026-10-28-K_saturno-it",
-   "at": "2026-10-28T19:30:00Z",
+   "id": "2026-10-27-K_saturno-it",
+   "at": "2026-10-27T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -1922,8 +1922,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/it/13.jpg"
   },
   {
-   "id": "2026-10-28-K_saturno-es",
-   "at": "2026-10-28T21:00:00Z",
+   "id": "2026-10-27-K_saturno-es",
+   "at": "2026-10-27T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -1972,8 +1972,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/saturno/pt/13.jpg"
   },
   {
-   "id": "2026-10-29-K_urano-ja",
-   "at": "2026-10-29T10:30:00Z",
+   "id": "2026-10-30-K_urano-ja",
+   "at": "2026-10-30T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -1997,8 +1997,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/ja/13.jpg"
   },
   {
-   "id": "2026-10-29-K_urano-zh",
-   "at": "2026-10-29T12:00:00Z",
+   "id": "2026-10-30-K_urano-zh",
+   "at": "2026-10-30T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -2023,7 +2023,7 @@
   },
   {
    "id": "2026-10-29-K_urano-hi",
-   "at": "2026-10-29T13:30:00Z",
+   "at": "2026-10-29T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -2047,8 +2047,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/hi/13.jpg"
   },
   {
-   "id": "2026-10-29-K_urano-ru",
-   "at": "2026-10-29T15:00:00Z",
+   "id": "2026-10-30-K_urano-ru",
+   "at": "2026-10-30T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -2073,7 +2073,7 @@
   },
   {
    "id": "2026-10-29-K_urano-en",
-   "at": "2026-10-29T17:00:00Z",
+   "at": "2026-10-29T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -2097,8 +2097,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/en/13.jpg"
   },
   {
-   "id": "2026-10-30-K_urano-fr",
-   "at": "2026-10-30T18:00:00Z",
+   "id": "2026-10-29-K_urano-fr",
+   "at": "2026-10-29T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -2122,8 +2122,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/fr/13.jpg"
   },
   {
-   "id": "2026-10-30-K_urano-it",
-   "at": "2026-10-30T19:30:00Z",
+   "id": "2026-10-29-K_urano-it",
+   "at": "2026-10-29T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -2147,8 +2147,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/it/13.jpg"
   },
   {
-   "id": "2026-10-30-K_urano-es",
-   "at": "2026-10-30T21:00:00Z",
+   "id": "2026-10-29-K_urano-es",
+   "at": "2026-10-29T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -2197,8 +2197,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/urano/pt/13.jpg"
   },
   {
-   "id": "2026-10-31-K_nettuno-ja",
-   "at": "2026-10-31T10:30:00Z",
+   "id": "2026-11-01-K_nettuno-ja",
+   "at": "2026-11-01T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -2222,8 +2222,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/ja/13.jpg"
   },
   {
-   "id": "2026-10-31-K_nettuno-zh",
-   "at": "2026-10-31T12:00:00Z",
+   "id": "2026-11-01-K_nettuno-zh",
+   "at": "2026-11-01T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -2248,7 +2248,7 @@
   },
   {
    "id": "2026-10-31-K_nettuno-hi",
-   "at": "2026-10-31T13:30:00Z",
+   "at": "2026-10-31T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -2272,8 +2272,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/hi/13.jpg"
   },
   {
-   "id": "2026-10-31-K_nettuno-ru",
-   "at": "2026-10-31T15:00:00Z",
+   "id": "2026-11-01-K_nettuno-ru",
+   "at": "2026-11-01T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -2298,7 +2298,7 @@
   },
   {
    "id": "2026-10-31-K_nettuno-en",
-   "at": "2026-10-31T17:00:00Z",
+   "at": "2026-10-31T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -2322,8 +2322,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/en/13.jpg"
   },
   {
-   "id": "2026-11-01-K_nettuno-fr",
-   "at": "2026-11-01T18:00:00Z",
+   "id": "2026-10-31-K_nettuno-fr",
+   "at": "2026-10-31T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -2347,8 +2347,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/fr/13.jpg"
   },
   {
-   "id": "2026-11-01-K_nettuno-it",
-   "at": "2026-11-01T19:30:00Z",
+   "id": "2026-10-31-K_nettuno-it",
+   "at": "2026-10-31T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -2372,8 +2372,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/it/13.jpg"
   },
   {
-   "id": "2026-11-01-K_nettuno-es",
-   "at": "2026-11-01T21:00:00Z",
+   "id": "2026-10-31-K_nettuno-es",
+   "at": "2026-10-31T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -2422,8 +2422,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/nettuno/pt/13.jpg"
   },
   {
-   "id": "2026-11-02-K_plutone-ja",
-   "at": "2026-11-02T10:30:00Z",
+   "id": "2026-11-03-K_plutone-ja",
+   "at": "2026-11-03T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -2447,8 +2447,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/ja/13.jpg"
   },
   {
-   "id": "2026-11-02-K_plutone-zh",
-   "at": "2026-11-02T12:00:00Z",
+   "id": "2026-11-03-K_plutone-zh",
+   "at": "2026-11-03T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -2473,7 +2473,7 @@
   },
   {
    "id": "2026-11-02-K_plutone-hi",
-   "at": "2026-11-02T13:30:00Z",
+   "at": "2026-11-02T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -2497,8 +2497,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/hi/13.jpg"
   },
   {
-   "id": "2026-11-02-K_plutone-ru",
-   "at": "2026-11-02T15:00:00Z",
+   "id": "2026-11-03-K_plutone-ru",
+   "at": "2026-11-03T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -2523,7 +2523,7 @@
   },
   {
    "id": "2026-11-02-K_plutone-en",
-   "at": "2026-11-02T17:00:00Z",
+   "at": "2026-11-02T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -2547,8 +2547,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/en/13.jpg"
   },
   {
-   "id": "2026-11-03-K_plutone-fr",
-   "at": "2026-11-03T18:00:00Z",
+   "id": "2026-11-02-K_plutone-fr",
+   "at": "2026-11-02T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -2572,8 +2572,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/fr/13.jpg"
   },
   {
-   "id": "2026-11-03-K_plutone-it",
-   "at": "2026-11-03T19:30:00Z",
+   "id": "2026-11-02-K_plutone-it",
+   "at": "2026-11-02T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -2597,8 +2597,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/it/13.jpg"
   },
   {
-   "id": "2026-11-03-K_plutone-es",
-   "at": "2026-11-03T21:00:00Z",
+   "id": "2026-11-02-K_plutone-es",
+   "at": "2026-11-02T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -2647,8 +2647,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/plutone/pt/13.jpg"
   },
   {
-   "id": "2026-11-04-K_rahu-ja",
-   "at": "2026-11-04T10:30:00Z",
+   "id": "2026-11-05-K_rahu-ja",
+   "at": "2026-11-05T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -2672,8 +2672,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/ja/13.jpg"
   },
   {
-   "id": "2026-11-04-K_rahu-zh",
-   "at": "2026-11-04T12:00:00Z",
+   "id": "2026-11-05-K_rahu-zh",
+   "at": "2026-11-05T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -2698,7 +2698,7 @@
   },
   {
    "id": "2026-11-04-K_rahu-hi",
-   "at": "2026-11-04T13:30:00Z",
+   "at": "2026-11-04T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -2722,8 +2722,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/hi/13.jpg"
   },
   {
-   "id": "2026-11-04-K_rahu-ru",
-   "at": "2026-11-04T15:00:00Z",
+   "id": "2026-11-05-K_rahu-ru",
+   "at": "2026-11-05T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -2748,7 +2748,7 @@
   },
   {
    "id": "2026-11-04-K_rahu-en",
-   "at": "2026-11-04T17:00:00Z",
+   "at": "2026-11-04T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -2772,8 +2772,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/en/13.jpg"
   },
   {
-   "id": "2026-11-05-K_rahu-fr",
-   "at": "2026-11-05T18:00:00Z",
+   "id": "2026-11-04-K_rahu-fr",
+   "at": "2026-11-04T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -2797,8 +2797,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/fr/13.jpg"
   },
   {
-   "id": "2026-11-05-K_rahu-it",
-   "at": "2026-11-05T19:30:00Z",
+   "id": "2026-11-04-K_rahu-it",
+   "at": "2026-11-04T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -2822,8 +2822,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/it/13.jpg"
   },
   {
-   "id": "2026-11-05-K_rahu-es",
-   "at": "2026-11-05T21:00:00Z",
+   "id": "2026-11-04-K_rahu-es",
+   "at": "2026-11-04T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -2872,8 +2872,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/rahu/pt/13.jpg"
   },
   {
-   "id": "2026-11-06-K_ketu-ja",
-   "at": "2026-11-06T10:30:00Z",
+   "id": "2026-11-07-K_ketu-ja",
+   "at": "2026-11-07T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -2897,8 +2897,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/ja/13.jpg"
   },
   {
-   "id": "2026-11-06-K_ketu-zh",
-   "at": "2026-11-06T12:00:00Z",
+   "id": "2026-11-07-K_ketu-zh",
+   "at": "2026-11-07T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -2923,7 +2923,7 @@
   },
   {
    "id": "2026-11-06-K_ketu-hi",
-   "at": "2026-11-06T13:30:00Z",
+   "at": "2026-11-06T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -2947,8 +2947,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/hi/13.jpg"
   },
   {
-   "id": "2026-11-06-K_ketu-ru",
-   "at": "2026-11-06T15:00:00Z",
+   "id": "2026-11-07-K_ketu-ru",
+   "at": "2026-11-07T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -2973,7 +2973,7 @@
   },
   {
    "id": "2026-11-06-K_ketu-en",
-   "at": "2026-11-06T17:00:00Z",
+   "at": "2026-11-06T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -2997,8 +2997,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/en/13.jpg"
   },
   {
-   "id": "2026-11-07-K_ketu-fr",
-   "at": "2026-11-07T18:00:00Z",
+   "id": "2026-11-06-K_ketu-fr",
+   "at": "2026-11-06T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -3022,8 +3022,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/fr/13.jpg"
   },
   {
-   "id": "2026-11-07-K_ketu-it",
-   "at": "2026-11-07T19:30:00Z",
+   "id": "2026-11-06-K_ketu-it",
+   "at": "2026-11-06T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -3047,8 +3047,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/it/13.jpg"
   },
   {
-   "id": "2026-11-07-K_ketu-es",
-   "at": "2026-11-07T21:00:00Z",
+   "id": "2026-11-06-K_ketu-es",
+   "at": "2026-11-06T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -3097,8 +3097,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/ketu/pt/13.jpg"
   },
   {
-   "id": "2026-11-08-K_fortuna-ja",
-   "at": "2026-11-08T10:30:00Z",
+   "id": "2026-11-09-K_fortuna-ja",
+   "at": "2026-11-09T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -3122,8 +3122,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/fortuna/ja/13.jpg"
   },
   {
-   "id": "2026-11-08-K_fortuna-zh",
-   "at": "2026-11-08T12:00:00Z",
+   "id": "2026-11-09-K_fortuna-zh",
+   "at": "2026-11-09T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -3148,7 +3148,7 @@
   },
   {
    "id": "2026-11-08-K_fortuna-hi",
-   "at": "2026-11-08T13:30:00Z",
+   "at": "2026-11-08T23:32:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -3172,8 +3172,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/fortuna/hi/13.jpg"
   },
   {
-   "id": "2026-11-08-K_fortuna-ru",
-   "at": "2026-11-08T15:00:00Z",
+   "id": "2026-11-09-K_fortuna-ru",
+   "at": "2026-11-09T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -3198,7 +3198,7 @@
   },
   {
    "id": "2026-11-08-K_fortuna-en",
-   "at": "2026-11-08T17:00:00Z",
+   "at": "2026-11-08T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -3239,8 +3239,8 @@
    "story": true
   },
   {
-   "id": "2026-11-09-K_fortuna-fr",
-   "at": "2026-11-09T18:00:00Z",
+   "id": "2026-11-08-K_fortuna-fr",
+   "at": "2026-11-08T22:02:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -3264,8 +3264,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/fortuna/fr/13.jpg"
   },
   {
-   "id": "2026-11-09-K_fortuna-it",
-   "at": "2026-11-09T19:30:00Z",
+   "id": "2026-11-08-K_fortuna-it",
+   "at": "2026-11-08T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -3289,8 +3289,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/fortuna/it/13.jpg"
   },
   {
-   "id": "2026-11-09-K_fortuna-es",
-   "at": "2026-11-09T21:00:00Z",
+   "id": "2026-11-08-K_fortuna-es",
+   "at": "2026-11-08T20:32:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -3339,8 +3339,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/fortuna/pt/13.jpg"
   },
   {
-   "id": "2026-11-10-K_lilith-ja",
-   "at": "2026-11-10T10:30:00Z",
+   "id": "2026-11-11-K_lilith-ja",
+   "at": "2026-11-11T10:30:00Z",
    "lang": "ja",
    "series": "K",
    "images": [
@@ -3364,8 +3364,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/ja/13.jpg"
   },
   {
-   "id": "2026-11-10-K_lilith-zh",
-   "at": "2026-11-10T12:00:00Z",
+   "id": "2026-11-11-K_lilith-zh",
+   "at": "2026-11-11T12:00:00Z",
    "lang": "zh",
    "series": "K",
    "images": [
@@ -3390,7 +3390,7 @@
   },
   {
    "id": "2026-11-10-K_lilith-hi",
-   "at": "2026-11-10T13:30:00Z",
+   "at": "2026-11-10T21:00:00Z",
    "lang": "hi",
    "series": "K",
    "images": [
@@ -3414,8 +3414,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/hi/13.jpg"
   },
   {
-   "id": "2026-11-10-K_lilith-ru",
-   "at": "2026-11-10T15:00:00Z",
+   "id": "2026-11-11-K_lilith-ru",
+   "at": "2026-11-11T14:30:00Z",
    "lang": "ru",
    "series": "K",
    "images": [
@@ -3440,7 +3440,7 @@
   },
   {
    "id": "2026-11-10-K_lilith-en",
-   "at": "2026-11-10T17:00:00Z",
+   "at": "2026-11-10T15:00:00Z",
    "lang": "en",
    "series": "K",
    "images": [
@@ -3464,8 +3464,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/en/13.jpg"
   },
   {
-   "id": "2026-11-11-K_lilith-fr",
-   "at": "2026-11-11T18:00:00Z",
+   "id": "2026-11-10-K_lilith-fr",
+   "at": "2026-11-10T19:30:00Z",
    "lang": "fr",
    "series": "K",
    "images": [
@@ -3489,8 +3489,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/fr/13.jpg"
   },
   {
-   "id": "2026-11-11-K_lilith-it",
-   "at": "2026-11-11T19:30:00Z",
+   "id": "2026-11-10-K_lilith-it",
+   "at": "2026-11-10T16:30:00Z",
    "lang": "it",
    "series": "K",
    "images": [
@@ -3514,8 +3514,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/it/13.jpg"
   },
   {
-   "id": "2026-11-11-K_lilith-es",
-   "at": "2026-11-11T21:00:00Z",
+   "id": "2026-11-10-K_lilith-es",
+   "at": "2026-11-10T18:00:00Z",
    "lang": "es",
    "series": "K",
    "images": [
@@ -3564,8 +3564,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/carousel/lilith/pt/13.jpg"
   },
   {
-   "id": "2026-11-12-C_sole-ja",
-   "at": "2026-11-12T10:30:00Z",
+   "id": "2026-11-13-C_sole-ja",
+   "at": "2026-11-13T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -3582,8 +3582,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/ja/c1.jpg"
   },
   {
-   "id": "2026-11-12-C_sole-zh",
-   "at": "2026-11-12T12:00:00Z",
+   "id": "2026-11-13-C_sole-zh",
+   "at": "2026-11-13T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -3601,7 +3601,7 @@
   },
   {
    "id": "2026-11-12-C_sole-hi",
-   "at": "2026-11-12T13:30:00Z",
+   "at": "2026-11-12T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -3618,8 +3618,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/hi/c1.jpg"
   },
   {
-   "id": "2026-11-12-C_sole-ru",
-   "at": "2026-11-12T15:00:00Z",
+   "id": "2026-11-13-C_sole-ru",
+   "at": "2026-11-13T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -3637,7 +3637,7 @@
   },
   {
    "id": "2026-11-12-C_sole-en",
-   "at": "2026-11-12T17:00:00Z",
+   "at": "2026-11-12T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -3654,8 +3654,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/en/c1.jpg"
   },
   {
-   "id": "2026-11-13-C_sole-fr",
-   "at": "2026-11-13T18:00:00Z",
+   "id": "2026-11-12-C_sole-fr",
+   "at": "2026-11-12T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -3672,8 +3672,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/fr/c1.jpg"
   },
   {
-   "id": "2026-11-13-C_sole-it",
-   "at": "2026-11-13T19:30:00Z",
+   "id": "2026-11-12-C_sole-it",
+   "at": "2026-11-12T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -3690,8 +3690,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/it/c1.jpg"
   },
   {
-   "id": "2026-11-13-C_sole-es",
-   "at": "2026-11-13T21:00:00Z",
+   "id": "2026-11-12-C_sole-es",
+   "at": "2026-11-12T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -3726,8 +3726,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/sole/pt/c1.jpg"
   },
   {
-   "id": "2026-11-14-C_luna-ja",
-   "at": "2026-11-14T10:30:00Z",
+   "id": "2026-11-15-C_luna-ja",
+   "at": "2026-11-15T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -3744,8 +3744,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/ja/c1.jpg"
   },
   {
-   "id": "2026-11-14-C_luna-zh",
-   "at": "2026-11-14T12:00:00Z",
+   "id": "2026-11-15-C_luna-zh",
+   "at": "2026-11-15T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -3763,7 +3763,7 @@
   },
   {
    "id": "2026-11-14-C_luna-hi",
-   "at": "2026-11-14T13:30:00Z",
+   "at": "2026-11-14T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -3780,8 +3780,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/hi/c1.jpg"
   },
   {
-   "id": "2026-11-14-C_luna-ru",
-   "at": "2026-11-14T15:00:00Z",
+   "id": "2026-11-15-C_luna-ru",
+   "at": "2026-11-15T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -3799,7 +3799,7 @@
   },
   {
    "id": "2026-11-14-C_luna-en",
-   "at": "2026-11-14T17:00:00Z",
+   "at": "2026-11-14T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -3816,8 +3816,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/en/c1.jpg"
   },
   {
-   "id": "2026-11-15-C_luna-fr",
-   "at": "2026-11-15T18:00:00Z",
+   "id": "2026-11-14-C_luna-fr",
+   "at": "2026-11-14T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -3834,8 +3834,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/fr/c1.jpg"
   },
   {
-   "id": "2026-11-15-C_luna-it",
-   "at": "2026-11-15T19:30:00Z",
+   "id": "2026-11-14-C_luna-it",
+   "at": "2026-11-14T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -3852,8 +3852,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/it/c1.jpg"
   },
   {
-   "id": "2026-11-15-C_luna-es",
-   "at": "2026-11-15T21:00:00Z",
+   "id": "2026-11-14-C_luna-es",
+   "at": "2026-11-14T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -3888,8 +3888,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/luna/pt/c1.jpg"
   },
   {
-   "id": "2026-11-16-C_mercurio-ja",
-   "at": "2026-11-16T10:30:00Z",
+   "id": "2026-11-17-C_mercurio-ja",
+   "at": "2026-11-17T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -3906,8 +3906,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/ja/c1.jpg"
   },
   {
-   "id": "2026-11-16-C_mercurio-zh",
-   "at": "2026-11-16T12:00:00Z",
+   "id": "2026-11-17-C_mercurio-zh",
+   "at": "2026-11-17T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -3925,7 +3925,7 @@
   },
   {
    "id": "2026-11-16-C_mercurio-hi",
-   "at": "2026-11-16T13:30:00Z",
+   "at": "2026-11-16T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -3942,8 +3942,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/hi/c1.jpg"
   },
   {
-   "id": "2026-11-16-C_mercurio-ru",
-   "at": "2026-11-16T15:00:00Z",
+   "id": "2026-11-17-C_mercurio-ru",
+   "at": "2026-11-17T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -3961,7 +3961,7 @@
   },
   {
    "id": "2026-11-16-C_mercurio-en",
-   "at": "2026-11-16T17:00:00Z",
+   "at": "2026-11-16T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -3978,8 +3978,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/en/c1.jpg"
   },
   {
-   "id": "2026-11-17-C_mercurio-fr",
-   "at": "2026-11-17T18:00:00Z",
+   "id": "2026-11-16-C_mercurio-fr",
+   "at": "2026-11-16T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -3996,8 +3996,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/fr/c1.jpg"
   },
   {
-   "id": "2026-11-17-C_mercurio-it",
-   "at": "2026-11-17T19:30:00Z",
+   "id": "2026-11-16-C_mercurio-it",
+   "at": "2026-11-16T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4014,8 +4014,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/it/c1.jpg"
   },
   {
-   "id": "2026-11-17-C_mercurio-es",
-   "at": "2026-11-17T21:00:00Z",
+   "id": "2026-11-16-C_mercurio-es",
+   "at": "2026-11-16T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4050,8 +4050,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/mercurio/pt/c1.jpg"
   },
   {
-   "id": "2026-11-18-C_venere-ja",
-   "at": "2026-11-18T10:30:00Z",
+   "id": "2026-11-19-C_venere-ja",
+   "at": "2026-11-19T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4068,8 +4068,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/ja/c1.jpg"
   },
   {
-   "id": "2026-11-18-C_venere-zh",
-   "at": "2026-11-18T12:00:00Z",
+   "id": "2026-11-19-C_venere-zh",
+   "at": "2026-11-19T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4087,7 +4087,7 @@
   },
   {
    "id": "2026-11-18-C_venere-hi",
-   "at": "2026-11-18T13:30:00Z",
+   "at": "2026-11-18T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4104,8 +4104,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/hi/c1.jpg"
   },
   {
-   "id": "2026-11-18-C_venere-ru",
-   "at": "2026-11-18T15:00:00Z",
+   "id": "2026-11-19-C_venere-ru",
+   "at": "2026-11-19T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4123,7 +4123,7 @@
   },
   {
    "id": "2026-11-18-C_venere-en",
-   "at": "2026-11-18T17:00:00Z",
+   "at": "2026-11-18T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4140,8 +4140,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/en/c1.jpg"
   },
   {
-   "id": "2026-11-19-C_venere-fr",
-   "at": "2026-11-19T18:00:00Z",
+   "id": "2026-11-18-C_venere-fr",
+   "at": "2026-11-18T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4158,8 +4158,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/fr/c1.jpg"
   },
   {
-   "id": "2026-11-19-C_venere-it",
-   "at": "2026-11-19T19:30:00Z",
+   "id": "2026-11-18-C_venere-it",
+   "at": "2026-11-18T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4176,8 +4176,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/it/c1.jpg"
   },
   {
-   "id": "2026-11-19-C_venere-es",
-   "at": "2026-11-19T21:00:00Z",
+   "id": "2026-11-18-C_venere-es",
+   "at": "2026-11-18T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4212,8 +4212,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/venere/pt/c1.jpg"
   },
   {
-   "id": "2026-11-20-C_marte-ja",
-   "at": "2026-11-20T10:30:00Z",
+   "id": "2026-11-21-C_marte-ja",
+   "at": "2026-11-21T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4230,8 +4230,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/ja/c1.jpg"
   },
   {
-   "id": "2026-11-20-C_marte-zh",
-   "at": "2026-11-20T12:00:00Z",
+   "id": "2026-11-21-C_marte-zh",
+   "at": "2026-11-21T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4249,7 +4249,7 @@
   },
   {
    "id": "2026-11-20-C_marte-hi",
-   "at": "2026-11-20T13:30:00Z",
+   "at": "2026-11-20T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4266,8 +4266,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/hi/c1.jpg"
   },
   {
-   "id": "2026-11-20-C_marte-ru",
-   "at": "2026-11-20T15:00:00Z",
+   "id": "2026-11-21-C_marte-ru",
+   "at": "2026-11-21T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4285,7 +4285,7 @@
   },
   {
    "id": "2026-11-20-C_marte-en",
-   "at": "2026-11-20T17:00:00Z",
+   "at": "2026-11-20T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4302,8 +4302,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/en/c1.jpg"
   },
   {
-   "id": "2026-11-21-C_marte-fr",
-   "at": "2026-11-21T18:00:00Z",
+   "id": "2026-11-20-C_marte-fr",
+   "at": "2026-11-20T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4320,8 +4320,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/fr/c1.jpg"
   },
   {
-   "id": "2026-11-21-C_marte-it",
-   "at": "2026-11-21T19:30:00Z",
+   "id": "2026-11-20-C_marte-it",
+   "at": "2026-11-20T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4338,8 +4338,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/it/c1.jpg"
   },
   {
-   "id": "2026-11-21-C_marte-es",
-   "at": "2026-11-21T21:00:00Z",
+   "id": "2026-11-20-C_marte-es",
+   "at": "2026-11-20T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4374,8 +4374,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/marte/pt/c1.jpg"
   },
   {
-   "id": "2026-11-22-C_giove-ja",
-   "at": "2026-11-22T10:30:00Z",
+   "id": "2026-11-23-C_giove-ja",
+   "at": "2026-11-23T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4392,8 +4392,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/giove/ja/c1.jpg"
   },
   {
-   "id": "2026-11-22-C_giove-zh",
-   "at": "2026-11-22T12:00:00Z",
+   "id": "2026-11-23-C_giove-zh",
+   "at": "2026-11-23T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4411,7 +4411,7 @@
   },
   {
    "id": "2026-11-22-C_giove-hi",
-   "at": "2026-11-22T13:30:00Z",
+   "at": "2026-11-22T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4428,8 +4428,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/giove/hi/c1.jpg"
   },
   {
-   "id": "2026-11-22-C_giove-ru",
-   "at": "2026-11-22T15:00:00Z",
+   "id": "2026-11-23-C_giove-ru",
+   "at": "2026-11-23T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4447,7 +4447,7 @@
   },
   {
    "id": "2026-11-22-C_giove-en",
-   "at": "2026-11-22T17:00:00Z",
+   "at": "2026-11-22T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4464,8 +4464,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/giove/en/c1.jpg"
   },
   {
-   "id": "2026-11-23-C_giove-fr",
-   "at": "2026-11-23T18:00:00Z",
+   "id": "2026-11-22-C_giove-fr",
+   "at": "2026-11-22T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4482,8 +4482,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/giove/fr/c1.jpg"
   },
   {
-   "id": "2026-11-23-C_giove-it",
-   "at": "2026-11-23T19:30:00Z",
+   "id": "2026-11-22-C_giove-it",
+   "at": "2026-11-22T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4500,8 +4500,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/giove/it/c1.jpg"
   },
   {
-   "id": "2026-11-23-C_giove-es",
-   "at": "2026-11-23T21:00:00Z",
+   "id": "2026-11-22-C_giove-es",
+   "at": "2026-11-22T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4553,8 +4553,8 @@
    "story": true
   },
   {
-   "id": "2026-11-24-C_saturno-ja",
-   "at": "2026-11-24T10:30:00Z",
+   "id": "2026-11-25-C_saturno-ja",
+   "at": "2026-11-25T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4571,8 +4571,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/ja/c1.jpg"
   },
   {
-   "id": "2026-11-24-C_saturno-zh",
-   "at": "2026-11-24T12:00:00Z",
+   "id": "2026-11-25-C_saturno-zh",
+   "at": "2026-11-25T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4590,7 +4590,7 @@
   },
   {
    "id": "2026-11-24-C_saturno-hi",
-   "at": "2026-11-24T13:30:00Z",
+   "at": "2026-11-24T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4607,8 +4607,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/hi/c1.jpg"
   },
   {
-   "id": "2026-11-24-C_saturno-ru",
-   "at": "2026-11-24T15:00:00Z",
+   "id": "2026-11-25-C_saturno-ru",
+   "at": "2026-11-25T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4626,7 +4626,7 @@
   },
   {
    "id": "2026-11-24-C_saturno-en",
-   "at": "2026-11-24T17:00:00Z",
+   "at": "2026-11-24T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4643,8 +4643,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/en/c1.jpg"
   },
   {
-   "id": "2026-11-25-C_saturno-fr",
-   "at": "2026-11-25T18:00:00Z",
+   "id": "2026-11-24-C_saturno-fr",
+   "at": "2026-11-24T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4661,8 +4661,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/fr/c1.jpg"
   },
   {
-   "id": "2026-11-25-C_saturno-it",
-   "at": "2026-11-25T19:30:00Z",
+   "id": "2026-11-24-C_saturno-it",
+   "at": "2026-11-24T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4679,8 +4679,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/it/c1.jpg"
   },
   {
-   "id": "2026-11-25-C_saturno-es",
-   "at": "2026-11-25T21:00:00Z",
+   "id": "2026-11-24-C_saturno-es",
+   "at": "2026-11-24T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4715,8 +4715,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/saturno/pt/c1.jpg"
   },
   {
-   "id": "2026-11-26-C_urano-ja",
-   "at": "2026-11-26T10:30:00Z",
+   "id": "2026-11-27-C_urano-ja",
+   "at": "2026-11-27T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4733,8 +4733,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/ja/c1.jpg"
   },
   {
-   "id": "2026-11-26-C_urano-zh",
-   "at": "2026-11-26T12:00:00Z",
+   "id": "2026-11-27-C_urano-zh",
+   "at": "2026-11-27T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4752,7 +4752,7 @@
   },
   {
    "id": "2026-11-26-C_urano-hi",
-   "at": "2026-11-26T13:30:00Z",
+   "at": "2026-11-26T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4769,8 +4769,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/hi/c1.jpg"
   },
   {
-   "id": "2026-11-26-C_urano-ru",
-   "at": "2026-11-26T15:00:00Z",
+   "id": "2026-11-27-C_urano-ru",
+   "at": "2026-11-27T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4788,7 +4788,7 @@
   },
   {
    "id": "2026-11-26-C_urano-en",
-   "at": "2026-11-26T17:00:00Z",
+   "at": "2026-11-26T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4805,8 +4805,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/en/c1.jpg"
   },
   {
-   "id": "2026-11-27-C_urano-fr",
-   "at": "2026-11-27T18:00:00Z",
+   "id": "2026-11-26-C_urano-fr",
+   "at": "2026-11-26T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4823,8 +4823,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/fr/c1.jpg"
   },
   {
-   "id": "2026-11-27-C_urano-it",
-   "at": "2026-11-27T19:30:00Z",
+   "id": "2026-11-26-C_urano-it",
+   "at": "2026-11-26T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -4841,8 +4841,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/it/c1.jpg"
   },
   {
-   "id": "2026-11-27-C_urano-es",
-   "at": "2026-11-27T21:00:00Z",
+   "id": "2026-11-26-C_urano-es",
+   "at": "2026-11-26T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -4877,8 +4877,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/urano/pt/c1.jpg"
   },
   {
-   "id": "2026-11-28-C_nettuno-ja",
-   "at": "2026-11-28T10:30:00Z",
+   "id": "2026-11-29-C_nettuno-ja",
+   "at": "2026-11-29T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -4895,8 +4895,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/ja/c1.jpg"
   },
   {
-   "id": "2026-11-28-C_nettuno-zh",
-   "at": "2026-11-28T12:00:00Z",
+   "id": "2026-11-29-C_nettuno-zh",
+   "at": "2026-11-29T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -4914,7 +4914,7 @@
   },
   {
    "id": "2026-11-28-C_nettuno-hi",
-   "at": "2026-11-28T13:30:00Z",
+   "at": "2026-11-28T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -4931,8 +4931,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/hi/c1.jpg"
   },
   {
-   "id": "2026-11-28-C_nettuno-ru",
-   "at": "2026-11-28T15:00:00Z",
+   "id": "2026-11-29-C_nettuno-ru",
+   "at": "2026-11-29T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -4950,7 +4950,7 @@
   },
   {
    "id": "2026-11-28-C_nettuno-en",
-   "at": "2026-11-28T17:00:00Z",
+   "at": "2026-11-28T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -4967,8 +4967,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/en/c1.jpg"
   },
   {
-   "id": "2026-11-29-C_nettuno-fr",
-   "at": "2026-11-29T18:00:00Z",
+   "id": "2026-11-28-C_nettuno-fr",
+   "at": "2026-11-28T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -4985,8 +4985,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/fr/c1.jpg"
   },
   {
-   "id": "2026-11-29-C_nettuno-it",
-   "at": "2026-11-29T19:30:00Z",
+   "id": "2026-11-28-C_nettuno-it",
+   "at": "2026-11-28T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -5003,8 +5003,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/it/c1.jpg"
   },
   {
-   "id": "2026-11-29-C_nettuno-es",
-   "at": "2026-11-29T21:00:00Z",
+   "id": "2026-11-28-C_nettuno-es",
+   "at": "2026-11-28T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -5039,8 +5039,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/nettuno/pt/c1.jpg"
   },
   {
-   "id": "2026-11-30-C_plutone-ja",
-   "at": "2026-11-30T10:30:00Z",
+   "id": "2026-12-01-C_plutone-ja",
+   "at": "2026-12-01T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -5057,8 +5057,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/ja/c1.jpg"
   },
   {
-   "id": "2026-11-30-C_plutone-zh",
-   "at": "2026-11-30T12:00:00Z",
+   "id": "2026-12-01-C_plutone-zh",
+   "at": "2026-12-01T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -5076,7 +5076,7 @@
   },
   {
    "id": "2026-11-30-C_plutone-hi",
-   "at": "2026-11-30T13:30:00Z",
+   "at": "2026-11-30T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -5093,8 +5093,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/hi/c1.jpg"
   },
   {
-   "id": "2026-11-30-C_plutone-ru",
-   "at": "2026-11-30T15:00:00Z",
+   "id": "2026-12-01-C_plutone-ru",
+   "at": "2026-12-01T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -5112,7 +5112,7 @@
   },
   {
    "id": "2026-11-30-C_plutone-en",
-   "at": "2026-11-30T17:00:00Z",
+   "at": "2026-11-30T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -5129,8 +5129,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/en/c1.jpg"
   },
   {
-   "id": "2026-12-01-C_plutone-fr",
-   "at": "2026-12-01T18:00:00Z",
+   "id": "2026-11-30-C_plutone-fr",
+   "at": "2026-11-30T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -5147,8 +5147,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/fr/c1.jpg"
   },
   {
-   "id": "2026-12-01-C_plutone-it",
-   "at": "2026-12-01T19:30:00Z",
+   "id": "2026-11-30-C_plutone-it",
+   "at": "2026-11-30T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -5165,8 +5165,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/it/c1.jpg"
   },
   {
-   "id": "2026-12-01-C_plutone-es",
-   "at": "2026-12-01T21:00:00Z",
+   "id": "2026-11-30-C_plutone-es",
+   "at": "2026-11-30T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -5201,8 +5201,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/plutone/pt/c1.jpg"
   },
   {
-   "id": "2026-12-02-C_rahu-ja",
-   "at": "2026-12-02T10:30:00Z",
+   "id": "2026-12-03-C_rahu-ja",
+   "at": "2026-12-03T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -5219,8 +5219,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/ja/c1.jpg"
   },
   {
-   "id": "2026-12-02-C_rahu-zh",
-   "at": "2026-12-02T12:00:00Z",
+   "id": "2026-12-03-C_rahu-zh",
+   "at": "2026-12-03T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -5238,7 +5238,7 @@
   },
   {
    "id": "2026-12-02-C_rahu-hi",
-   "at": "2026-12-02T13:30:00Z",
+   "at": "2026-12-02T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -5255,8 +5255,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/hi/c1.jpg"
   },
   {
-   "id": "2026-12-02-C_rahu-ru",
-   "at": "2026-12-02T15:00:00Z",
+   "id": "2026-12-03-C_rahu-ru",
+   "at": "2026-12-03T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -5274,7 +5274,7 @@
   },
   {
    "id": "2026-12-02-C_rahu-en",
-   "at": "2026-12-02T17:00:00Z",
+   "at": "2026-12-02T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -5291,8 +5291,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/en/c1.jpg"
   },
   {
-   "id": "2026-12-03-C_rahu-fr",
-   "at": "2026-12-03T18:00:00Z",
+   "id": "2026-12-02-C_rahu-fr",
+   "at": "2026-12-02T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -5309,8 +5309,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/fr/c1.jpg"
   },
   {
-   "id": "2026-12-03-C_rahu-it",
-   "at": "2026-12-03T19:30:00Z",
+   "id": "2026-12-02-C_rahu-it",
+   "at": "2026-12-02T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -5327,8 +5327,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/it/c1.jpg"
   },
   {
-   "id": "2026-12-03-C_rahu-es",
-   "at": "2026-12-03T21:00:00Z",
+   "id": "2026-12-02-C_rahu-es",
+   "at": "2026-12-02T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -5363,8 +5363,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/rahu/pt/c1.jpg"
   },
   {
-   "id": "2026-12-04-C_ketu-ja",
-   "at": "2026-12-04T10:30:00Z",
+   "id": "2026-12-05-C_ketu-ja",
+   "at": "2026-12-05T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -5381,8 +5381,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/ja/c1.jpg"
   },
   {
-   "id": "2026-12-04-C_ketu-zh",
-   "at": "2026-12-04T12:00:00Z",
+   "id": "2026-12-05-C_ketu-zh",
+   "at": "2026-12-05T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -5400,7 +5400,7 @@
   },
   {
    "id": "2026-12-04-C_ketu-hi",
-   "at": "2026-12-04T13:30:00Z",
+   "at": "2026-12-04T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -5417,8 +5417,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/hi/c1.jpg"
   },
   {
-   "id": "2026-12-04-C_ketu-ru",
-   "at": "2026-12-04T15:00:00Z",
+   "id": "2026-12-05-C_ketu-ru",
+   "at": "2026-12-05T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -5436,7 +5436,7 @@
   },
   {
    "id": "2026-12-04-C_ketu-en",
-   "at": "2026-12-04T17:00:00Z",
+   "at": "2026-12-04T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -5453,8 +5453,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/en/c1.jpg"
   },
   {
-   "id": "2026-12-05-C_ketu-fr",
-   "at": "2026-12-05T18:00:00Z",
+   "id": "2026-12-04-C_ketu-fr",
+   "at": "2026-12-04T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -5471,8 +5471,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/fr/c1.jpg"
   },
   {
-   "id": "2026-12-05-C_ketu-it",
-   "at": "2026-12-05T19:30:00Z",
+   "id": "2026-12-04-C_ketu-it",
+   "at": "2026-12-04T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -5489,8 +5489,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/it/c1.jpg"
   },
   {
-   "id": "2026-12-05-C_ketu-es",
-   "at": "2026-12-05T21:00:00Z",
+   "id": "2026-12-04-C_ketu-es",
+   "at": "2026-12-04T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
@@ -5525,8 +5525,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/ketu/pt/c1.jpg"
   },
   {
-   "id": "2026-12-06-C_lilith-ja",
-   "at": "2026-12-06T10:30:00Z",
+   "id": "2026-12-07-C_lilith-ja",
+   "at": "2026-12-07T10:30:00Z",
    "lang": "ja",
    "series": "C",
    "images": [
@@ -5543,8 +5543,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/lilith/ja/c1.jpg"
   },
   {
-   "id": "2026-12-06-C_lilith-zh",
-   "at": "2026-12-06T12:00:00Z",
+   "id": "2026-12-07-C_lilith-zh",
+   "at": "2026-12-07T12:00:00Z",
    "lang": "zh",
    "series": "C",
    "images": [
@@ -5562,7 +5562,7 @@
   },
   {
    "id": "2026-12-06-C_lilith-hi",
-   "at": "2026-12-06T13:30:00Z",
+   "at": "2026-12-06T21:00:00Z",
    "lang": "hi",
    "series": "C",
    "images": [
@@ -5579,8 +5579,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/lilith/hi/c1.jpg"
   },
   {
-   "id": "2026-12-06-C_lilith-ru",
-   "at": "2026-12-06T15:00:00Z",
+   "id": "2026-12-07-C_lilith-ru",
+   "at": "2026-12-07T14:30:00Z",
    "lang": "ru",
    "series": "C",
    "images": [
@@ -5598,7 +5598,7 @@
   },
   {
    "id": "2026-12-06-C_lilith-en",
-   "at": "2026-12-06T17:00:00Z",
+   "at": "2026-12-06T15:00:00Z",
    "lang": "en",
    "series": "C",
    "images": [
@@ -5615,8 +5615,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/lilith/en/c1.jpg"
   },
   {
-   "id": "2026-12-07-C_lilith-fr",
-   "at": "2026-12-07T18:00:00Z",
+   "id": "2026-12-06-C_lilith-fr",
+   "at": "2026-12-06T19:30:00Z",
    "lang": "fr",
    "series": "C",
    "images": [
@@ -5633,8 +5633,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/lilith/fr/c1.jpg"
   },
   {
-   "id": "2026-12-07-C_lilith-it",
-   "at": "2026-12-07T19:30:00Z",
+   "id": "2026-12-06-C_lilith-it",
+   "at": "2026-12-06T16:30:00Z",
    "lang": "it",
    "series": "C",
    "images": [
@@ -5651,8 +5651,8 @@
    "storyImage": "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/portrait/lilith/it/c1.jpg"
   },
   {
-   "id": "2026-12-07-C_lilith-es",
-   "at": "2026-12-07T21:00:00Z",
+   "id": "2026-12-06-C_lilith-es",
+   "at": "2026-12-06T18:00:00Z",
    "lang": "es",
    "series": "C",
    "images": [
