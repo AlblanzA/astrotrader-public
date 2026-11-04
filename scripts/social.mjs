@@ -287,15 +287,29 @@ export async function post(base, path, corpo) {
   }
   console.log(etichetta);
   const fd = new URLSearchParams(corpo);
-  const r = await fetch(base + path, { method: 'POST', body: fd });
-  let j = {};
-  try { j = await r.json(); } catch (_) { /* corpo non JSON: sotto diventa errore */ }
-  if (!r.ok || (j && j.error)) {
-    throw new Error(
-      `${path} ha risposto ${r.status}: ${JSON.stringify((j && j.error) || j || {})}`,
-    );
+  // 4/11/2026: Instagram a volte non riesce a scaricare un'immagine da
+  // raw.githubusercontent.com (errore 9004 / sottocodice 2207052, a caso su
+  // una delle 14 immagini) pur essendo il file corretto. Si riprova con pausa
+  // crescente prima di arrendersi: l'errore è del download, non del file.
+  const PAUSE = [8000, 20000, 45000, 90000];
+  for (let tentativo = 0; ; tentativo += 1) {
+    const r = await fetch(base + path, { method: 'POST', body: fd });
+    let j = {};
+    try { j = await r.json(); } catch (_) { /* corpo non JSON: sotto diventa errore */ }
+    if (!r.ok || (j && j.error)) {
+      const e = (j && j.error) || {};
+      const download = e.code === 9004 || e.error_subcode === 2207052 || e.error_subcode === 2207003;
+      if (download && tentativo < PAUSE.length) {
+        console.log(`        download immagine fallito, riprovo tra ${PAUSE[tentativo] / 1000}s (tentativo ${tentativo + 2})`);
+        await new Promise((res) => setTimeout(res, PAUSE[tentativo]));
+        continue;
+      }
+      throw new Error(
+        `${path} ha risposto ${r.status}: ${JSON.stringify((j && j.error) || j || {})}`,
+      );
+    }
+    return j;
   }
-  return j;
 }
 
 export async function get(base, path) {
