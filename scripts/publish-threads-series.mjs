@@ -130,12 +130,20 @@ async function pubblica(urls, testo) {
 }
 
 async function main() {
-  const r = await fetch(MANIFEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
-  if (!r.ok) muori(`manifesto ${MANIFEST_URL} → HTTP ${r.status}`);
-  const m = await r.json();
-  const base = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
+  // Fonte principale + eventuali manifesti aggiuntivi (ATP_THREADS_EXTRA_URLS, separati da virgola):
+  // servono a recuperare i vecchi post fuori dal calendario attuale. Ogni voce porta la propria base
+  // immagini; in caso di id uguale vince la fonte principale.
+  const sorgenti = [MANIFEST_URL, ...String(process.env.ATP_THREADS_EXTRA_URLS || '').split(',').map((x) => x.trim()).filter(Boolean)];
+  const tutte = new Map();
+  for (const url of sorgenti) {
+    const r = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) { if (url === MANIFEST_URL) muori(`manifesto ${url} → HTTP ${r.status}`); console.log(`manifesto extra ${url} → HTTP ${r.status}, saltato`); continue; }
+    const m = await r.json();
+    const b = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
+    for (const p of (m.posts || [])) if (!tutte.has(p.id)) tutte.set(p.id, { ...p, _base: b });
+  }
   const stato = leggiStato();
-  const voci = (m.posts || []).filter((p) => !p.storiesOnly && LANGS.includes(p.lang) && !stato[p.id]);
+  const voci = [...tutte.values()].filter((p) => !p.storiesOnly && LANGS.includes(p.lang) && !stato[p.id]);
   const ordinate = voci.slice().sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   const maturi = ordinate.filter((p) => Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3);
 
@@ -166,7 +174,7 @@ async function main() {
 
   const testo = testoThreads(p.caption);
   esigiLessico(testo, p.id);
-  const urls = p.images.map((x) => (/^https?:\/\//.test(x) ? x : base + x));
+  const urls = p.images.map((x) => (/^https?:\/\//.test(x) ? x : p._base + x));
   console.log(`THREADS (${motivo}) — ${p.id} (${p.lang}), ${urls.length} immagini, ${testo.length} caratteri`);
   urls.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
   if (DRY) {
