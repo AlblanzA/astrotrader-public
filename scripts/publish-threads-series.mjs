@@ -41,7 +41,8 @@ import { join, dirname } from 'node:path';
 import { DRY, REPO_DIR, annota, muori, esigiLessico, post, get, senzaAvvertenza } from './social.mjs';
 
 const GRAPH = 'https://graph.threads.net/v1.0';
-const USER = process.env.THREADS_USER_ID;
+// Senza THREADS_USER_ID l'API accetta «me»: l'ID si ricava dal token stesso.
+const USER = process.env.THREADS_USER_ID || 'me';
 const TOKEN = process.env.THREADS_ACCESS_TOKEN;
 const MANIFEST_URL = process.env.ATP_SERIES_URL
   || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json';
@@ -56,8 +57,8 @@ const TOPIC = process.env.ATP_THREADS_TOPIC || 'Astrology';
 const MAX_CHARS = 500;
 const MAX_CAROUSEL = 20;
 
-if (!DRY && (!USER || !TOKEN)) {
-  console.log('THREADS_USER_ID / THREADS_ACCESS_TOKEN non impostati: serie Threads saltate.');
+if (!DRY && !TOKEN) {
+  console.log('THREADS_ACCESS_TOKEN non impostato: serie Threads saltate.');
   process.exit(0);
 }
 
