@@ -113,14 +113,32 @@ jobs:
           ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
         run: node scripts/publish-fb-series.mjs
 
+      # Threads: stessa serie sul profilo @astrotraderproapp (solo inglese) e, finche'
+      # dura, recupero dell'arretrato a ritmo prudente (4 al giorno, 150 min fra
+      # due post). Si salta da solo se i secret THREADS_* non ci sono. Un guasto
+      # Threads non deve invalidare un post Instagram gia' uscito.
+      - name: Serie — Threads
+        if: always()
+        continue-on-error: true
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          ATP_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry) && '1' || '0' }}
+          ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
+          ATP_THREADS_LANGS: 'en'
+          ATP_THREADS_BACKFILL: '1'
+          ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
+        run: node scripts/publish-threads-series.mjs
+
       - name: Salva lo stato
         if: always()
         run: |
-          if [ -n "$(git status --porcelain ig/series-posted.json fb/series-posted.json 2>/dev/null)" ]; then
+          if [ -n "$(git status --porcelain ig/series-posted.json fb/series-posted.json threads/series-posted.json 2>/dev/null)" ]; then
             git config user.name "atp-bot"
             git config user.email "bot@astrotraderpro.com"
             git add ig/series-posted.json
             [ -f fb/series-posted.json ] && git add fb/series-posted.json
+            [ -f threads/series-posted.json ] && git add threads/series-posted.json
             git commit -m "series posted $(date -u +%FT%H:%M)"
             for i in 1 2 3 4 5; do
               git pull --rebase && git push && break
