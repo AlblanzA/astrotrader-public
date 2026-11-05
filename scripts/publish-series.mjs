@@ -93,8 +93,22 @@ async function pubblicaFeed(p, urls) {
     await attendiPronto(GRAPH, TOKEN, padre.id, 'carosello');
     creation = padre.id;
   }
-  const pub = await post(GRAPH, `/${USER}/media_publish`, { creation_id: creation, access_token: TOKEN });
-  return pub.id;
+  // 5/11/2026: Meta può dare FINISHED al contenitore e poi rifiutare
+  // media_publish con 9007/2207027 «Media ID is not available» (il carosello
+  // da 14 schede ci mette più tempo del solito). Non è un errore definitivo:
+  // si aspetta con pausa crescente e si riprova, come già per le storie.
+  // Il rischio doppio post non c'è: l'errore significa che NON ha pubblicato.
+  for (let i = 1; ; i++) {
+    try {
+      const pub = await post(GRAPH, `/${USER}/media_publish`, { creation_id: creation, access_token: TOKEN });
+      return pub.id;
+    } catch (e) {
+      if (i >= 8 || !/2207027|9007|not ready|not available/i.test(String(e))) throw e;
+      console.log(`  feed non ancora pronto per Meta, riprovo (${i}/7) tra ${10 * i}s`);
+      await new Promise((r) => setTimeout(r, 10000 * i));
+      try { await attendiPronto(GRAPH, TOKEN, creation, 'feed (ricontrollo)'); } catch (_) { /* si riprova comunque */ }
+    }
+  }
 }
 
 // Versione 9:16 della copertina (scripts/story-frames.mjs, committata dal
