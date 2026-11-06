@@ -54,6 +54,9 @@ const BACKFILL = process.env.ATP_THREADS_BACKFILL === '1';
 const BACKFILL_PER_DAY = Number(process.env.ATP_THREADS_BACKFILL_PER_DAY || 4);
 const GAP_MIN = Number(process.env.ATP_THREADS_GAP_MIN || 150);
 const TOPIC = process.env.ATP_THREADS_TOPIC || 'Astrology';
+// Decisione utente 06/11: su Threads solo caroselli completi (sfogliabili fino alla propria casa),
+// mai le schede singole di una casa. Minimo di immagini per post.
+const MIN_IMAGES = Number(process.env.ATP_THREADS_MIN_IMAGES || 6);
 // Un solo topic_tag per post, ma VARIATO: ogni serie usa il tag piu' cercato per
 // il suo tema (le pagine-tag di Threads sono il canale di scoperta). Fallback: TOPIC.
 const TAG_PER_TEMA = [
@@ -158,7 +161,7 @@ async function main() {
     for (const p of (m.posts || [])) if (!tutte.has(p.id)) tutte.set(p.id, { ...p, _base: b });
   }
   const stato = leggiStato();
-  const voci = [...tutte.values()].filter((p) => !p.storiesOnly && LANGS.includes(p.lang) && !stato[p.id]);
+  const voci = [...tutte.values()].filter((p) => !p.storiesOnly && LANGS.includes(p.lang) && !stato[p.id] && (p.images || []).length >= MIN_IMAGES);
   const ordinate = voci.slice().sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   const maturi = ordinate.filter((p) => Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3);
 

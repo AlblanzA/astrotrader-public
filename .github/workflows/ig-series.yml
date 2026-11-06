@@ -127,7 +127,6 @@ jobs:
           ATP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now || '' }}
           ATP_THREADS_LANGS: 'en'
           ATP_THREADS_BACKFILL: '1'
-          ATP_THREADS_EXTRA_URLS: https://astrotraderpro.astrotraderproapp.workers.dev/social/ig/series.json
           ATP_SERIES_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/ig/series-v2.json
         run: node scripts/publish-threads-series.mjs
 
