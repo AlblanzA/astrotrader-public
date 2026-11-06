@@ -54,6 +54,21 @@ const BACKFILL = process.env.ATP_THREADS_BACKFILL === '1';
 const BACKFILL_PER_DAY = Number(process.env.ATP_THREADS_BACKFILL_PER_DAY || 4);
 const GAP_MIN = Number(process.env.ATP_THREADS_GAP_MIN || 150);
 const TOPIC = process.env.ATP_THREADS_TOPIC || 'Astrology';
+// Un solo topic_tag per post, ma VARIATO: ogni serie usa il tag piu' cercato per
+// il suo tema (le pagine-tag di Threads sono il canale di scoperta). Fallback: TOPIC.
+const TAG_PER_TEMA = [
+  [/retro/, 'Mercury Retrograde'], [/aspects/, 'Birth Chart'], [/nuova|nov-nuova/, 'New Moon'],
+  [/piena|nov-piena/, 'Full Moon'], [/luna/, 'Moon Sign'], [/sole/, 'Zodiac'],
+  [/mercurio/, 'Mercury'], [/venere/, 'Venus'], [/marte/, 'Mars'], [/giove/, 'Jupiter'],
+  [/saturno/, 'Saturn'], [/urano/, 'Uranus'], [/nettuno/, 'Neptune'], [/plutone/, 'Pluto'],
+  [/rahu|ketu/, 'Vedic Astrology'], [/lilith/, 'Black Moon Lilith'], [/fortuna/, 'Natal Chart'],
+];
+function topicPer(p) {
+  if (process.env.ATP_THREADS_TOPIC) return TOPIC;
+  const id = String(p.id || '').toLowerCase();
+  const hit = TAG_PER_TEMA.find(([re]) => re.test(id));
+  return hit ? hit[1] : TOPIC;
+}
 const MAX_CHARS = 500;
 const MAX_CAROUSEL = 20;
 
@@ -101,7 +116,7 @@ async function attendiPronto(id, cosa) {
   throw new Error(`${cosa}: contenitore ${id} non pronto dopo 120 secondi`);
 }
 
-async function pubblica(urls, testo) {
+async function pubblica(urls, testo, TOPIC) {
   let creation;
   if (urls.length === 1) {
     const c = await post(GRAPH, `/${USER}/threads`, {
@@ -179,10 +194,10 @@ async function main() {
   urls.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
   if (DRY) {
     console.log('  testo:\n' + testo.split('\n').map((l) => '    ' + l).join('\n'));
-    console.log(`  topic_tag: ${TOPIC}\n  (a secco: niente chiamate a Threads, stato non scritto)`);
+    console.log(`  topic_tag: ${topicPer(p)}\n  (a secco: niente chiamate a Threads, stato non scritto)`);
     return;
   }
-  const id = await pubblica(urls, testo);
+  const id = await pubblica(urls, testo, topicPer(p));
   console.log(`  pubblicato: ${id}`);
   stato[p.id] = { post: id, at: new Date().toISOString(), via: motivo };
   mkdirSync(dirname(STATE), { recursive: true });
