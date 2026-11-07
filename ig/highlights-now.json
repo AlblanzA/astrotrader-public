@@ -2,14 +2,12 @@
  "version": 1,
  "posts": [
   {
-   "id": "2026-11-07-HL_cover-sole-luna-nodo",
+   "id": "2026-11-07-HL_cover-nodo-nord",
    "at": "2026-11-07T00:00:00Z",
    "lang": "en",
    "series": "A",
    "images": [
-    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/037001a0670b75c7d75057bb33f082247b9ec9e0/ig/hl3/cover-sole.jpg",
-    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/037001a0670b75c7d75057bb33f082247b9ec9e0/ig/hl3/cover-luna.jpg",
-    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/037001a0670b75c7d75057bb33f082247b9ec9e0/ig/hl3/cover-nodo-sud.jpg"
+    "https://raw.githubusercontent.com/AlblanzA/astrotrader-public/b23849496d971a0d2a58185b8cf493c0acc22825/ig/hl3/cover-nodo-nord.jpg"
    ],
    "storiesOnly": true,
    "windowH": 48
