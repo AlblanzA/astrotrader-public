@@ -304,7 +304,7 @@ def build_day(day):
     return items
 
 
-async def render(items_by_day, out, base, posts):
+async def render(items_by_day, out, base, posts, over=None):
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
         b = await p.chromium.launch()
@@ -320,7 +320,7 @@ async def render(items_by_day, out, base, posts):
                 await pg.screenshot(path=os.path.join(out, rel), type='jpeg', quality=90)
                 if any(x['id'] == pid for x in posts):
                     continue
-                h, m = it['at'].split(':')
+                h, m = (over or {}).get(k, it['at']).split(':')
                 e = dict(id=pid, at=f"{d}T{h}:{m}:00Z", lang='en', series=it['series'],
                          images=[base + rel], caption=it['cap'], igOnly=True)
                 if it['story']:
@@ -336,12 +336,14 @@ def main():
     ap.add_argument('--days', type=int, default=2)
     ap.add_argument('--out', required=True)
     ap.add_argument('--manifest', required=True)
+    ap.add_argument('--at', default='', help='orari diversi, es. moon=14:00,glance=12:30')
     ap.add_argument('--base', default='https://raw.githubusercontent.com/AlblanzA/astrotrader-public/media/')
     a = ap.parse_args()
     start = dt.date.fromisoformat(a.start)
     m = json.load(open(a.manifest))
     items = [(start + dt.timedelta(days=i), build_day(start + dt.timedelta(days=i))) for i in range(a.days)]
-    asyncio.run(render(items, a.out, a.base, m['posts']))
+    over = dict(x.split('=') for x in a.at.split(',') if x)
+    asyncio.run(render(items, a.out, a.base, m['posts'], over))
     m['generated'] = dt.datetime.now(UTC).isoformat()
     json.dump(m, open(a.manifest, 'w'), ensure_ascii=False, indent=1)
     print(f"ok: {a.days} giorni da {start}, {len(items) * 4} voci")
