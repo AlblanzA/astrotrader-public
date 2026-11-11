@@ -2,7 +2,7 @@
 <!-- Serie C «Il ritratto»: 7 schede 1080x1350. URL: serieC.html#<punto>-<scheda 1..7>-<lingua>. Dati in C/<lingua>.js. -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <script src="glyphs.js"></script><script>var CD={},CUI={};</script>
-<script src="C/it.js"></script><script src="C/en.js"></script><script src="C/es.js"></script><script src="C/pt.js"></script><script src="C/fr.js"></script><script src="C/de.js"></script><script src="C/nl.js"></script><script src="C/ru.js"></script><script src="C/zh.js"></script><script src="C/ja.js"></script><script src="C/ko.js"></script><script src="C/ar.js"></script><script src="C/hi.js"></script>
+<script src="C/it.js"></script><script src="C/en.js"></script><script src="C/more_en.js"></script><script src="C/es.js"></script><script src="C/pt.js"></script><script src="C/fr.js"></script><script src="C/de.js"></script><script src="C/nl.js"></script><script src="C/ru.js"></script><script src="C/zh.js"></script><script src="C/ja.js"></script><script src="C/ko.js"></script><script src="C/ar.js"></script><script src="C/hi.js"></script>
 <style>
 :root{--bg1:#2E0C0F;--bg2:#140608;--glow:#4A1216;--rust:#B04A2E;--neg:#E39C84;--gold:#C9A34E;--gold2:#E8CD8E;--parch:#F2E7CF;--mute:#CDB9A8;--line:rgba(232,205,142,.22);--frame:rgba(201,163,78,.8)}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -38,6 +38,9 @@ ul.ex li:before{content:"";position:absolute;left:6px;top:30px;width:16px;height
 .row b{font-family:"Cormorant Garamond";font-weight:600;font-size:34px;line-height:1.05;color:var(--gold2)}
 .row b small{display:block;font-family:Spectral;font-weight:400;font-style:italic;font-size:22px;line-height:1.2;color:var(--mute);margin-top:6px}
 .row span{font-size:27px;line-height:1.38;text-wrap:pretty}
+.sol .band:after{display:none}
+.sol .cta .img:after{background:linear-gradient(transparent 0,transparent 270px,color-mix(in srgb,var(--bg2) 80%,transparent) 560px,var(--bg2) 880px)}
+.row span em.mp{display:block;margin-top:8px;font-size:.82em;line-height:1.3;color:var(--mute)}
 .cta .img{position:absolute;inset:0;filter:saturate(.9)}
 .cta .img:after{content:"";position:absolute;inset:0;background:linear-gradient(color-mix(in srgb,var(--bg2) 55%,transparent),color-mix(in srgb,var(--bg2) 90%,transparent) 45%,var(--bg2))}
 .url{font-family:"Cormorant Garamond";font-weight:700;font-size:78px;color:var(--gold2);margin-top:40px;letter-spacing:.01em;direction:ltr}
@@ -64,10 +67,10 @@ body.rtl .lead,body.rtl li,body.rtl .row span{font-size:31px}
 <script>
 const [PT,NS,L]=(location.hash.slice(1)||'marte-1-it').split('-'); const N=+NS;
 // Aspetto per punto: ritratto (img + posizioni copertina/bande/chiusura) oppure solo simbolo (cielo stellato + glifo).
-const DEI='/home/claude/dei/';
+const DEI='/home/claude/atp-media/generator/dei_v3/';
 const V={
- sole:{img:'SOLE_PAE.png',cov:'50% 30%',bands:['50% 32%','50% 70%','30% 55%','60% 40%','50% 85%'],cta:'50% 30%/170% auto',c:['#2E1A06','#120A03','#5A3A0E','#D0762A','#EFA56A','#D4A94A','#F0D48E','#F7EBD2','#D8C3A0']},
- luna:{img:'LUNAPIENA_PAE.png',cov:'50% 20%',bands:['60% 12%','40% 60%','50% 35%','70% 25%','50% 80%'],cta:'60% 15%/220% auto',c:['#0E1830','#050910','#1F3158','#6F8FC4','#A7BCE0','#BFCBDE','#E1E8F3','#F1F4F9','#A9B5C9']},
+ sole:{img:'SOLE_SOLO.png',cov:'50% 0%',bands:['50% 22%','50% 22%','50% 22%','50% 22%','50% 22%'],cta:'50% -300px/100% auto',c:['#2E1A06','#120A03','#5A3A0E','#D0762A','#EFA56A','#D4A94A','#F0D48E','#F7EBD2','#D8C3A0']},
+ luna:{img:'LUNA_SOLO.png',cov:'50% 0%',bands:['50% 13%','50% 13%','50% 13%','50% 13%','50% 13%'],cta:'50% -190px/100% auto',c:['#0E1830','#050910','#1F3158','#6F8FC4','#A7BCE0','#BFCBDE','#E1E8F3','#F1F4F9','#A9B5C9']},
  mercurio:{img:'mercurio_v3.png',cov:'50% 0%',bands:['50% 8%','45% 22%','55% 34%','50% 15%','52% 28%'],cta:'55% 10%/180% auto',c:['#0E2226','#050E10','#1C4348','#C9742E','#EBA774','#CDAE66','#EAD6A0','#F2EEE3','#B4C3BF']},
  venere:{img:'venere_v3.png',cov:'50% 0%',bands:['50% 8%','45% 22%','55% 34%','50% 15%','52% 28%'],cta:'55% 8%/180% auto',c:['#2C1020','#12060D','#5A2338','#C9607A','#EE9BAE','#DDA98C','#F3D0BD','#FBEFE8','#D9B7B2']},
  marte:{img:'marte_v3.png',cov:'50% 0%',bands:['50% 8%','45% 22%','55% 34%','50% 15%','52% 28%'],cta:'50% 8%/180% auto',c:['#2E0C0F','#140608','#4A1216','#B04A2E','#E39C84','#C9A34E','#E8CD8E','#F2E7CF','#CDB9A8']},
@@ -79,9 +82,9 @@ const V={
  rahu:{sym:'rahu',sc:'#D8CCF4',sg:'#9A84E0',c:['#1C1634','#09070F','#33285C','#9C86D8','#C9B8F0','#CDB57A','#EAD9A8','#F1EDF7','#BDB3D2']},
  ketu:{sym:'ketu',sc:'#EED6B8',sg:'#C68A52',c:['#251B12','#0C0805','#46331F','#C88A56','#E8B88A','#D0AE72','#EDD5A6','#F5EADB','#CDB89E']},
  lilith:{sym:'lilith',sc:'#D9C9F0',sg:'#B89BE0',c:['#21122E','#0B0610','#3D2258','#A784D6','#D2B8F0','#CDB07A','#E9D6B0','#F3ECF6','#BFAFCC']}};
-const v=V[PT], t=CD[L][PT], U=CUI[L];
+const v=V[PT], t=CD[L][PT], U=CUI[L]; const TOT=t.r5b?8:7, NN=(TOT===8&&N>6)?N-1:N; // 8 schede: la 6 = altre scuole
 const k=['bg1','bg2','glow','rust','neg','gold','gold2','parch','mute']; k.forEach((n,i)=>document.documentElement.style.setProperty('--'+n,v.c[i]));
-document.documentElement.lang=L; if(U.dir==='rtl'){document.documentElement.dir='rtl';document.body.classList.add('rtl');} if(U.cjk)document.body.classList.add(U.cjk);
+if(PT==='sole'||PT==='luna')document.body.classList.add('sol'); document.documentElement.lang=L; if(U.dir==='rtl'){document.documentElement.dir='rtl';document.body.classList.add('rtl');} if(U.cjk)document.body.classList.add(U.cjk);
 // cielo stellato deterministico per i punti senza figura
 function stars(seed,n){let x=seed;const r=()=>((x=(x*16807)%2147483647)/2147483647);let s='';for(let i=0;i<n;i++){const a=r()*1080,b=r()*1350,z=r()<.08?2.4:r()<.3?1.6:1,o=(.25+r()*.6).toFixed(2);s+=`<circle cx="${a|0}" cy="${b|0}" r="${z}" fill="#fff" opacity="${o}"/>`;}return `<svg class="stars" viewBox="0 0 1080 1350" width="1080" height="1350">${s}</svg>`;}
 const SYM=(x,y,s)=>`<div class="sym" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;background:radial-gradient(circle at 50% 45%,var(--glow),var(--bg2) 72%);border:2px solid var(--gold);box-shadow:0 0 40px ${v.sg}66"><svg viewBox="0 0 100 100" width="64%" height="64%" fill="none" stroke="${v.sc}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 10px ${v.sg})">${GLYPH[v.sym]}</svg></div>`;
@@ -89,14 +92,14 @@ const M=(x,y,s=150)=>v.sym?SYM(x,y,s):`<div class="medal" style="left:${x}px;top
 const RX=(x,s)=>U.dir==='rtl'?1080-x-s:x;
 const band=(i)=>v.sym?stars(7+i*31,110):`<div class="band" style="background-image:url(${DEI+v.img});background-position:${v.bands[i]}"></div>`;
 const F=`<div class="frame"></div><div class="foot">astrotraderpro.com</div>`;
-const cnt=`<div class="count">${N} / 7</div>`;
-const row=(r)=>`<div class="row"><b>${r[0]}<small>${r[1]}</small></b><span>${r[2]}</span></div>`;
+const cnt='';
+const row=(r)=>`<div class="row"><b>${r[0]}<small>${r[1]}</small></b><span>${r[2]}${r[3]?`<em class="mp">${r[3]}</em>`:''}</span></div>`;
 let H='';
 if(N===1){
  const bg=v.sym?`${stars(3,260)}<div class="sym" style="left:240px;top:170px;width:600px;height:600px;background:radial-gradient(circle at 50% 45%,var(--glow),transparent 70%);"><svg viewBox="0 0 100 100" width="70%" height="70%" fill="none" stroke="${v.sc}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 22px ${v.sg}) drop-shadow(0 0 60px ${v.sg}88)">${GLYPH[v.sym]}</svg></div>`
    :`<div class="img" style="background-image:url(${DEI+v.img});background-position:${v.cov};${v.covsz?'background-size:'+v.covsz:''}"></div>${M(RX(820,190),110,190)}`;
  H=`<div class="s cover">${bg}<div class="tag">${U.tag}</div><div class="ttl"><h1>${t.name}</h1><p>${t.sub}</p></div>${F}</div>`;
-}else if(N===7){
+}else if(N===TOT){
  const bg=v.sym?stars(99,220):`<div class="img" style="background:url(${DEI+v.img}) ${v.cta}"></div>`;
  H=`<div class="s cta">${bg}${M(RX(840,160),110,160)}${cnt}<div class="body" style="top:420px;text-align:center"><h1 style="font-size:${U.cjk||U.dir==='rtl'?76:92}px">${t.h7}</h1>
  <p class="lead" style="margin-top:34px">${t.lead7}</p><div class="free">${U.free}</div><div class="url">astrotraderpro.com</div></div><div class="frame"></div></div>`;
@@ -106,8 +109,9 @@ if(N===1){
  if(N===3) inner=`<h1>${t.h3}</h1><p class="lead">${t.lead3}</p><div class="cols"><div><h3>${t.posT}</h3>${t.pos.map(x=>`<p>${x}</p>`).join('')}</div><div class="neg"><h3>${t.negT}</h3>${t.neg.map(x=>`<p>${x}</p>`).join('')}</div></div>`;
  if(N===4) inner=`<h1>${t.h4}</h1><div class="rows">${t.r4.map(row).join('')}</div>`;
  if(N===5) inner=`<h1>${t.h5}</h1><div class="rows">${t.r5.map(row).join('')}</div>`;
- if(N===6) inner=`<h1>${t.h6}</h1><div class="rows">${t.r6.map(row).join('')}</div>`;
- H=`<div class="s">${band(N-2)}${M(RX(860,130),262,130)}${cnt}<div class="body blk" style="top:410px">${inner}</div>${F}</div>`;
+ if(TOT===8&&N===6) inner=`<h1>${t.h5b}</h1><div class="rows">${t.r5b.map(row).join('')}</div>`;
+ if(NN===6&&!(TOT===8&&N===6)) inner=`<h1>${t.h6}</h1><div class="rows">${t.r6.map(row).join('')}</div>`;
+ H=`<div class="s">${band(NN-2)}${M(RX(860,130),262,130)}${cnt}<div class="body blk" style="top:410px">${inner}</div>${F}</div>`;
 }
 document.getElementById('root').innerHTML=H;
 // adattamento: se il testo tocca il footer riduce i corpi (max 14 passi)
@@ -117,6 +121,6 @@ window.fit=()=>{document.querySelectorAll('.row b,.cols h3').forEach(e=>{let fs=
  const els=[...b.querySelectorAll('h1,.lead,li,.cols p,.row span,.row b,.kick')];
  let g=0; while(b.getBoundingClientRect().bottom>lim()&&g++<14){els.forEach(e=>{const fs=parseFloat(getComputedStyle(e).fontSize);e.style.fontSize=(fs*0.96)+'px';});
   b.querySelectorAll('.row,li,.cols p').forEach(e=>{const p=parseFloat(getComputedStyle(e).paddingTop);e.style.paddingTop=e.style.paddingBottom=Math.max(8,p*0.9)+'px';});
-  if(N>1&&N<7){const top=parseFloat(b.style.top);if(top>370)b.style.top=(top-8)+'px';}}
+  if(N>1&&N<TOT){const top=parseFloat(b.style.top);if(top>370)b.style.top=(top-8)+'px';}}
  return g;};
 </script></body></html>

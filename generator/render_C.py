@@ -9,6 +9,7 @@ SRGB = ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes()
 HERE = os.path.dirname(os.path.abspath(__file__))
 ALL = 'sole,luna,mercurio,venere,marte,giove,saturno,urano,nettuno,plutone,rahu,ketu,lilith'.split(',')
 def opt(k, d): return sys.argv[sys.argv.index(k) + 1].split(',') if k in sys.argv else d
+MORE = set(ALL)
 LG = opt('--langs', ['it']); PT = opt('--points', ALL)
 CHECK = r'''()=>{const fr=document.querySelector('.frame').getBoundingClientRect(),bad=[];
  const ft=document.querySelector('.foot'); const lim=ft?ft.getBoundingClientRect().top-12:fr.bottom-10;
@@ -28,7 +29,7 @@ async def main():
         for pt in PT:
             for L in LG:
                 d = os.path.join(HERE, 'out', 'C_zt' if HANT else 'C', pt, L); os.makedirs(d, exist_ok=True)
-                for n in range(1, 8):
+                for n in range(1, (9 if (L=='en' and pt in MORE) else 8)):
                     await pg.goto(f'file://{HERE}/serieC.html#{pt}-{n}-{L}'); await pg.reload()
                     await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(500)
                     g = await pg.evaluate('window.fit&&window.fit()'); await pg.wait_for_timeout(80)
