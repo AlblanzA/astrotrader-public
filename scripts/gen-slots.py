@@ -217,7 +217,7 @@ def page(kicker, head, sub, body, glyph, n, total=1):
 <div class=g>{glyph}</div><div class=k>{kicker}</div><div class=h>{head}</div>
 <div class=s>{sub}</div>{body}
 <div class=f><span>AstroTrader Pro · astrotraderpro.com</span><span>@astrotraderproapp</span></div>
-<div class=d>Astrological interpretation, not financial advice</div></div></body></html>"""
+</div></body></html>"""
 
 
 def day_label(d):
@@ -244,7 +244,7 @@ def build_day(day):
             + "</div>")
     cap = (f"Moon today — {nice}\n\n{nm}, {illum:.0f}% lit, in {msign} at {int(mdeg)}°.\n"
            f"{MOON_SIGN[msign]}\n\nWhere does {msign} fall in your chart? Tell me the house below.\n"
-           f"\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n{TAGS} #moon #moonphase\n\n{AVVERTENZA}")
+           f"\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n{TAGS} #moon #moonphase")
     items['moon'] = dict(at='07:00', series='S', kicker=f"MOON TODAY · {day.strftime('%b %-d').upper()}",
                          head=f"Moon in {msign}", sub=sub, body=body, glyph=SIGN_GLYPH[SIGNS.index(msign)], cap=cap, story=True)
 
@@ -263,7 +263,7 @@ def build_day(day):
     body = f"<table>{rows}</table>"
     cap = (f"Sky at a glance — {nice}\n\nWhere every planet stands today, sign and degree (12:00 UTC).\n"
            f"{sub}.\n\nSave this as your daily reference, and check which houses these signs rule in your own chart.\n"
-           f"\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n{TAGS} #planets #retrograde\n\n{AVVERTENZA}")
+           f"\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n{TAGS} #planets #retrograde")
     items['glance'] = dict(at='11:00', series='S', kicker=f"SKY AT A GLANCE · {day.strftime('%b %-d').upper()}",
                            head='The planets today', sub=sub, body=body, glyph='☉', cap=cap, story=False)
 
@@ -283,7 +283,7 @@ def build_day(day):
             f"that is where {ruler} reports to you today.</div>")
     cap = (f"Sign spotlight — {sg}\n\n{sg}: {kw}\nRuler: {ruler}, today in {rsg} {int(rdg)}°{rx} — {dtxt}.\n\n"
            f"Which house does {sg} sit on in your chart? Write it below.\n\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n"
-           f"{TAGS} #{sg.lower()} #{ruler.lower()}\n\n{AVVERTENZA}")
+           f"{TAGS} #{sg.lower()} #{ruler.lower()}")
     items['spot'] = dict(at='15:30', series='S', kicker=f"SIGN SPOTLIGHT · {day.strftime('%b %-d').upper()}",
                          head=sg, sub=sub, body=body, glyph=SIGN_GLYPH[idx], cap=cap, story=False)
 
@@ -298,7 +298,7 @@ def build_day(day):
     sub = f"{day_label(noon)} → {day_label(noon + dt.timedelta(days=7))}"
     cap = (f"Next 7 days in the sky — {sub}\n\n" + '\n'.join(f"• {e[0].strftime('%a %b %-d')} — {e[2]}" for e in pick)
            + f"\n\nTimes in UTC. Which of these touches a planet in your chart?\n\nFree natal chart, no sign-up → link in bio (astrotraderpro.com)\n\n"
-           f"{TAGS} #retrograde #newmoon #fullmoon\n\n{AVVERTENZA}")
+           f"{TAGS} #retrograde #newmoon #fullmoon")
     items['week'] = dict(at='19:30', series='S', kicker=f"NEXT 7 DAYS · FROM {day.strftime('%b %-d').upper()}",
                          head='What is coming', sub=sub, body=f"<div style='margin-top:14px'>{lines}</div>", glyph='✦', cap=cap, story=False)
     return items
@@ -318,7 +318,9 @@ async def render(items_by_day, out, base, posts, over=None):
                 html = page(it['kicker'], it['head'], it['sub'], it['body'], it['glyph'], '1/1')
                 await pg.set_content(html)
                 await pg.screenshot(path=os.path.join(out, rel), type='jpeg', quality=90)
-                if any(x['id'] == pid for x in posts):
+                old = [x for x in posts if x['id'] == pid]
+                if old:
+                    old[0]['caption'] = it['cap']  # aggiorna il testo se non ancora uscito
                     continue
                 h, m = (over or {}).get(k, it['at']).split(':')
                 e = dict(id=pid, at=f"{d}T{h}:{m}:00Z", lang='en', series=it['series'],
