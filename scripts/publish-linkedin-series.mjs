@@ -120,11 +120,11 @@ async function main() {
   const m = await r.json();
   const base = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
   const stato = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {};
-  const maturi = (m.posts || []).filter((p) => !stato[p.id]
+  const maturi = (m.posts || []).filter((p) => !p.igOnly && !stato[p.id]
     && Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3)
     .sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   if (!maturi.length) {
-    const next = (m.posts || []).filter((p) => !stato[p.id] && Date.parse(p.at) > NOW)
+    const next = (m.posts || []).filter((p) => !p.igOnly && !stato[p.id] && Date.parse(p.at) > NOW)
       .sort((a, b) => Date.parse(a.at) - Date.parse(b.at))[0];
     console.log(`Nessuna serie LinkedIn adesso. Prossima: ${next ? next.id + ' alle ' + next.at : 'nessuna'}`);
     return;
@@ -171,11 +171,11 @@ async function prossimaVoce() {
   const m = await r.json();
   const base = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
   const stato = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {};
-  const maturi = (m.posts || []).filter((p) => !stato[p.id]
+  const maturi = (m.posts || []).filter((p) => !p.igOnly && !stato[p.id]
     && Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3)
     .sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   if (!maturi.length) {
-    const next = (m.posts || []).filter((p) => !stato[p.id] && Date.parse(p.at) > NOW)
+    const next = (m.posts || []).filter((p) => !p.igOnly && !stato[p.id] && Date.parse(p.at) > NOW)
       .sort((a, b) => Date.parse(a.at) - Date.parse(b.at))[0];
     console.log(`Nessuna serie LinkedIn adesso. Prossima: ${next ? next.id + ' alle ' + next.at : 'nessuna'}`);
     return null;

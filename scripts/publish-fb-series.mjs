@@ -65,7 +65,7 @@ async function main() {
   const m = await r.json();
   const base = m.base || 'https://astrotraderpro.astrotraderproapp.workers.dev/social/';
   const stato = leggiStato();
-  const voci = (m.posts || []).filter((p) => !p.storiesOnly && LANGS.includes(p.lang) && !stato[p.id]);
+  const voci = (m.posts || []).filter((p) => !p.storiesOnly && !p.igOnly && LANGS.includes(p.lang) && !stato[p.id]);
   const maturi = voci
     .filter((p) => Date.parse(p.at) <= NOW && NOW - Date.parse(p.at) <= WINDOW_H * 3600e3)
     .sort((a, b) => Date.parse(a.at) - Date.parse(b.at));

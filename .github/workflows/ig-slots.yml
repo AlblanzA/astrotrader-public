@@ -1,0 +1,73 @@
+# =====================================================================
+#  IG Slots — 4 post inglesi al giorno (si sommano al carosello di IG Daily Post)
+# =====================================================================
+#
+#  11/11/2026: su Instagram solo inglese e almeno 5 post al giorno.
+#  Ogni giorno scrive in anticipo i post dei prossimi 3 giorni:
+#    07:00Z Moon today · 11:00Z Sky at a glance · 15:30Z Sign spotlight ·
+#    19:30Z Next 7 days  (+ il carosello di «IG Daily Post» alle 08:00Z = 5).
+#  Tutto è calcolato con le efemeridi (scripts/gen-slots.py, pyswisseph):
+#  niente testi inventati. Le immagini vanno nel branch `media`, le voci in
+#  ig/series-v2.json con `igOnly: true` (FB, Threads e LinkedIn le ignorano).
+#  Le pubblica «IG Series Post» (una voce per giro, finestra di 18 ore).
+#  Idempotente: gli id già presenti non si duplicano.
+
+name: IG Slots
+on:
+  schedule:
+    - cron: '20 2 * * *'
+    - cron: '20 9 * * *'   # backup se GitHub salta il primo
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Quanti giorni generare (da domani)'
+        default: '3'
+permissions:
+  contents: write
+concurrency: ig-slots
+defaults:
+  run:
+    shell: bash
+jobs:
+  gen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          path: pub
+      - uses: actions/checkout@v5
+        with:
+          ref: media
+          path: media
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dipendenze (efemeridi, Chromium, font)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core fonts-noto-core
+          pip install --quiet pyswisseph playwright
+          python -m playwright install --with-deps chromium
+      - name: Genera i post
+        run: |
+          DAYS="${{ inputs.days || '3' }}"
+          START=$(date -u -d '+1 day' +%F)
+          python pub/scripts/gen-slots.py --start "$START" --days "$DAYS" \
+            --out media --manifest pub/ig/series-v2.json
+      - name: Salva le immagini (branch media)
+        run: |
+          cd media
+          git config user.name "atp-bot"; git config user.email "bot@astrotraderpro.com"
+          git add slots
+          if git diff --cached --quiet; then echo "nessuna immagine nuova"; exit 0; fi
+          git commit -m "slots IG $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin media && git push -q origin media && break; sleep $((i*5)); done
+      - name: Salva il manifesto (main)
+        run: |
+          cd pub
+          git config user.name "atp-bot"; git config user.email "bot@astrotraderpro.com"
+          git add ig/series-v2.json
+          if git diff --cached --quiet; then echo "manifesto invariato"; exit 0; fi
+          git commit -m "slots IG: voci $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin main && break; sleep $((i*5)); done
