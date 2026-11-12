@@ -14,13 +14,13 @@ CSS=f"""
 .frame{{position:absolute;inset:32px;border:1.5px solid rgba(212,169,74,.8);z-index:5}}
 .foot{{position:absolute;left:0;right:0;bottom:56px;text-align:center;font:600 34px CG;letter-spacing:.08em;color:var(--gold2);z-index:6}}
 .tag{{position:absolute;left:74px;top:66px;font:italic 500 30px CG;color:var(--mute);z-index:6}}
-.band{{position:absolute;left:0;right:0;top:0;height:545px;background:url({IMG}) 50% 12%/cover;z-index:1;-webkit-mask-image:linear-gradient(#000 92%,transparent 100%)}}
-.body{{position:absolute;left:84px;right:84px;top:545px;z-index:3}}
-h1{{font:600 88px/1 CG;color:var(--parch)}}
+.band{{position:absolute;left:0;right:0;top:0;height:520px;background:url({IMG}) 50% 12%/cover;z-index:1;-webkit-mask-image:linear-gradient(#000 92%,transparent 100%)}}
+.body{{position:absolute;left:84px;right:84px;top:515px;z-index:3}}
+h1{{font:600 84px/1 CG;color:var(--parch)}}
 .badge{{font:italic 500 38px CG;color:var(--gold2);margin-top:14px}}
 .badge small{{font:400 26px SP;color:var(--mute);font-style:normal;margin-left:14px}}
 .rule{{height:2px;background:var(--gold);margin:26px 0 24px;width:180px}}
-p{{font-size:34px;line-height:1.42}}
+p{{font-size:34px;line-height:1.4}}
 .cover .img{{position:absolute;inset:0;background:url({IMG}) 50% 0%/cover}}
 .cover .img:after{{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0) 40%,rgba(18,10,3,.78) 62%,rgba(18,10,3,.97) 80%)}}
 .cover .ttl{{position:absolute;left:84px;right:84px;top:830px;z-index:3}}
@@ -36,7 +36,7 @@ slides=[]
 slides.append(page(f'<div class="s cover"><div class="img"></div><div class="tag">The planets in the signs</div><div class="ttl"><h1>The {d.PLANET} in the 12 signs</h1><p>{d.COVER_SUB}</p></div>{FR}{FT}</div>'))
 for n,el,dig,t in d.S:
     slides.append(page(f'<div class="s"><div class="band"></div><div class="tag">{d.PLANET} in the signs</div><div class="body"><h1>{d.PLANET} in {n}</h1><div class="badge">{dig}<small>{el}</small></div><div class="rule"></div><p>{t}</p></div>{FR}{FT}</div>'))
-slides.append(page(f'<div class="s cta"><div class="img"></div><div class="body"><h1>Where is your {d.PLANET}?</h1><p style="margin-top:22px">The sign is only the start: the house and the aspects change how it plays out. Find your Sun, Moon and Ascendant in your free natal chart.</p><div class="free">The natal chart is free, no sign-up</div><div class="url">astrotraderpro.com</div></div>{FR}</div>'))
+slides.append(page(f'<div class="s cta"><div class="img"></div><div class="body"><h1>Where is your {d.PLANET}?</h1><p style="margin-top:22px">The sign is only the start: the house and the aspects change how it plays out. Find your Sun, Moon and Ascendant in your free natal chart. Sources: Ptolemy, Barbault, Volguine, Blavatsky, Bailey.</p><div class="free">The natal chart is free, no sign-up</div><div class="url">astrotraderpro.com</div></div>{FR}</div>'))
 async def main():
     out=D+'/out/D/sole/en'; os.makedirs(out,exist_ok=True)
     async with async_playwright() as p:
