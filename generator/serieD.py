@@ -36,7 +36,7 @@ slides=[]
 slides.append(page(f'<div class="s cover"><div class="img"></div><div class="tag">The planets in the signs</div><div class="ttl"><h1>The {d.PLANET} in the 12 signs</h1><p>{d.COVER_SUB}</p></div>{FR}{FT}</div>'))
 for n,el,dig,t in d.S:
     slides.append(page(f'<div class="s"><div class="band"></div><div class="tag">{d.PLANET} in the signs</div><div class="body"><h1>{d.PLANET} in {n}</h1><div class="badge">{dig}<small>{el}</small></div><div class="rule"></div><p>{t}</p></div>{FR}{FT}</div>'))
-slides.append(page(f'<div class="s cta"><div class="img"></div><div class="body"><h1>Where is your {d.PLANET}?</h1><p style="margin-top:22px">The sign is only the start: the house and the aspects change how it plays out. Find your Sun, Moon and Ascendant in your free natal chart. Sources: Ptolemy, Barbault, Volguine, Blavatsky, Bailey.</p><div class="free">The natal chart is free, no sign-up</div><div class="url">astrotraderpro.com</div></div>{FR}</div>'))
+slides.append(page(f'<div class="s cta"><div class="img"></div><div class="body"><h1>Where is your {d.PLANET}?</h1><p style="margin-top:22px">The sign is only the start: the house and the aspects change how it plays out. Find your Sun, Moon and Ascendant in your free natal chart.</p><div class="free">The natal chart is free, no sign-up</div><div class="url">astrotraderpro.com</div></div>{FR}</div>'))
 async def main():
     out=D+'/out/D/sole/en'; os.makedirs(out,exist_ok=True)
     async with async_playwright() as p:
