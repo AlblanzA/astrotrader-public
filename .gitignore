@@ -1,2 +1,3 @@
 generator/out/
 generator/endcard/out/
+__pycache__/
