@@ -10,6 +10,7 @@ const GLYPH = {
   rahu: '<path d="M30 72 C12 58 18 22 50 22 C82 22 88 58 70 72"/><circle cx="26" cy="79" r="8"/><circle cx="74" cy="79" r="8"/>',
   ketu: '<path d="M30 28 C12 42 18 78 50 78 C82 78 88 42 70 28"/><circle cx="26" cy="21" r="8"/><circle cx="74" cy="21" r="8"/>',
   fortuna: '<circle cx="50" cy="50" r="32"/><path d="M27 27 L73 73 M73 27 L27 73"/>',
+  chirone: '<path d="M44 12 V66 M44 36 L70 12 M44 36 L70 60"/><circle cx="44" cy="78" r="13"/>',
   lilith: '<path d="M62 10 A22 22 0 1 0 62 54 A16 22 0 1 1 62 10 Z M46 56 V92 M33 76 H59"/>',
   marte: '<circle cx="40" cy="60" r="22"/><path d="M56 44 L80 20 M60 20 H80 V40"/>',
   sole: '<circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="4" fill="currentColor"/>',

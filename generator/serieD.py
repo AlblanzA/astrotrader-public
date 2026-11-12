@@ -15,6 +15,7 @@ V={
 'saturno':('saturno_v3.png','50% 8%','50% 16%/190% auto',['#1A1A1E','#08080A','#34343C','#B8A06A','#D8C49A','#C9AE6A','#E6D3A0','#EEEAE0','#B5B0A6']),
 'urano':('urano_v3.png','50% 8%','50% 10%/180% auto',['#0C2230','#040E14','#174A5E','#5FC8D8','#9EDDE6','#C9B26A','#E8D8A2','#EEF5F6','#A9C3C9']),
 'nettuno':('nettuno_v3.png','50% 8%','55% 12%/190% auto',['#06242A','#020D10','#0E4A50','#4FB8A8','#8FD8CC','#CDAF62','#EAD49A','#EAF4F1','#9EC2BC']),
+'chirone':('CHIRONE_BAND.png','50% 0%','50% 0%/100% auto',['#0F2A2A','#061313','#1F5555','#6FB8B0','#9ED8CF','#D9B56E','#EED9A8','#EEF6F4','#A9C7C2']),
 'plutone':('plutone_v3.png','50% 8%','48% 10%/190% auto',['#16161B','#060608','#2C2C36','#A88C52','#D6BE86','#C9A34E','#E8CD8E','#F2EEE6','#B9B4AA']),
 }
 def load(pt):
