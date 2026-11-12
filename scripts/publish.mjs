@@ -61,7 +61,9 @@
  * Percorre tutto — manifesto, URL, lessico, sequenza delle chiamate — e stampa
  * le richieste che verrebbero fatte, senza toccare la rete.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { getSky, buildCaption } from './lib.mjs';
 import {
   DRY, CARDS, IG_MAX_CAROUSEL, leggiManifesto, urlDi, esigiLessico,
@@ -283,8 +285,13 @@ async function main() {
   console.log(`Manifesto del ${m.date}: ${m.carousel.length} schede, ${m.stories.length} storie`);
   esigiLessico(m.caption, 'didascalia Instagram');
 
+  // 12/11/2026: il cielo del giorno esce SOLO nelle storie (il feed resta ai
+  // caroselli delle serie). Si attiva con il file ig/STORIES_ONLY.
+  const SOLO_STORIE = process.env.ATP_STORIES_ONLY === '1' || existsSync(join(dirname(fileURLToPath(import.meta.url)), '..', 'ig', 'STORIES_ONLY'));
+  if (SOLO_STORIE) console.log('Modalità SOLO STORIE: il carosello del cielo non viene pubblicato.');
+
   // Il carosello vale 1 pubblicazione, ogni storia 1: sette in tutto.
-  const costo = 1 + m.stories.length;
+  const costo = (SOLO_STORIE ? 0 : 1) + m.stories.length;
   const residua = await quotaResidua(GRAPH, USER, TOKEN);
   if (residua != null && residua < costo) {
     muori(
@@ -302,7 +309,10 @@ async function main() {
 
   const stato = leggiStato(m.date);
 
-  if (stato.carosello) {
+  if (SOLO_STORIE) {
+    stato.carosello = stato.carosello || 'saltato-solo-storie';
+    salvaStato(stato);
+  } else if (stato.carosello) {
     console.log(`\nCarosello di oggi già pubblicato (id ${stato.carosello}): salto, restano solo le storie mancanti.`);
   } else if (await carosellodiOggiGiaUscito(m)) {
     // Carosello sul profilo ma nessun registro: non si sa quali storie siano
