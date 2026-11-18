@@ -62,19 +62,19 @@
   },
   "offers": {
     "@type": "AggregateOffer",
-    "lowPrice": "69.99",
-    "highPrice": "199.00",
+    "lowPrice": "14.99",
+    "highPrice": "99.00",
     "priceCurrency": "EUR",
-    "offerCount": "3",
+    "offerCount": "2",
     "offers": [
       {
         "@type": "Offer",
-        "name": "Monthly subscription",
-        "price": "9.99",
+        "name": "Markets Pro monthly subscription",
+        "price": "14.99",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "9.99",
+          "price": "14.99",
           "priceCurrency": "EUR",
           "billingDuration": "P1M",
           "unitText": "MONTH"
@@ -82,22 +82,16 @@
       },
       {
         "@type": "Offer",
-        "name": "Annual subscription",
-        "price": "69.99",
+        "name": "Markets Pro annual subscription",
+        "price": "99.00",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "69.99",
+          "price": "99.00",
           "priceCurrency": "EUR",
           "billingDuration": "P1Y",
           "unitText": "YEAR"
         }
-      },
-      {
-        "@type": "Offer",
-        "name": "Lifetime",
-        "price": "199.00",
-        "priceCurrency": "EUR"
       }
     ]
   },
@@ -113,9 +107,9 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type":"Question","name":"Does the app predict markets?","acceptedAnswer":{"@type":"Answer","text":"No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven."}},
-    {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription. The wheel, projections, and glossary work fully offline."}},
+    {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Markets Pro subscription. The wheel, projections, and glossary work fully offline."}},
     {"@type":"Question","name":"How many languages are available?","acceptedAnswer":{"@type":"Answer","text":"13 languages: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), and Hindi."}},
-    {"@type":"Question","name":"Does the subscription auto-renew?","acceptedAnswer":{"@type":"Answer","text":"Yes, but you can cancel anytime from Google Play settings. Billing is 9.99 EUR per month."}},
+    {"@type":"Question","name":"Does the subscription auto-renew?","acceptedAnswer":{"@type":"Answer","text":"Yes, but you can cancel anytime from Google Play or your account settings. Markets Pro is 14.99 EUR per month or 99 EUR per year, with a 7-day free trial."}},
     {"@type":"Question","name":"What data does the app collect?","acceptedAnswer":{"@type":"Answer","text":"No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy."}},
     {"@type":"Question","name":"Who is the app for?","acceptedAnswer":{"@type":"Answer","text":"For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+."}}
   ]
@@ -242,15 +236,12 @@ html[dir="rtl"] .step::before{left:auto;right:18px}
 .ptier{background:linear-gradient(160deg,rgba(22,32,56,0.5),rgba(22,32,56,0.3));border:1.5px solid rgba(232,201,106,0.25);border-radius:14px;padding:28px 22px;text-align:center;position:relative;transition:transform 0.2s,border-color 0.2s}
 .ptier:hover{transform:translateY(-3px);border-color:rgba(232,201,106,0.5)}
 .ptier-best{border:2px solid var(--gold);background:linear-gradient(160deg,rgba(232,201,106,0.08),rgba(22,32,56,0.4));box-shadow:0 8px 28px rgba(232,201,106,0.15)}
-.ptier-lifetime{border:1.5px solid rgba(93,202,165,0.35);background:linear-gradient(160deg,rgba(93,202,165,0.06),rgba(22,32,56,0.4))}
 .ptier-badge{display:inline-block;background:rgba(232,201,106,0.12);color:var(--gold);padding:5px 12px;border-radius:14px;font-family:var(--ui);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;font-weight:600;border:1px solid rgba(232,201,106,0.25)}
 .ptier-best .ptier-badge{background:rgba(232,201,106,0.25);color:var(--gold-light)}
-.ptier-lifetime .ptier-badge{background:rgba(93,202,165,0.15);color:var(--bull);border-color:rgba(93,202,165,0.35)}
 .ptier-price{font-family:var(--display);font-size:2.2rem;color:var(--gold-light);line-height:1;margin:6px 0}
 .ptier-price small{font-size:0.95rem;color:var(--text-dim);font-family:var(--ui);font-weight:400;letter-spacing:1px}
 .ptier-sub{font-size:0.88rem;color:var(--text-dim);margin-top:10px;line-height:1.5}
 .ptier-discount{color:var(--bull);font-family:var(--ui);font-size:0.85rem;margin:8px 0;font-weight:600;letter-spacing:0.3px}
-.ptier-plat{display:inline-block;font-family:var(--ui);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin:8px 0 2px;padding:4px 11px;border-radius:12px;border:1px solid rgba(232,201,106,0.3);color:var(--gold)}.ptier-best .ptier-plat,.ptier-lifetime .ptier-plat{color:var(--bull);border-color:rgba(93,202,165,0.4)}
 .ptier-note{display:inline-block;font-family:var(--ui);font-size:0.78rem;letter-spacing:1px;color:var(--bull);margin-top:14px;border:1px solid rgba(93,202,165,0.3);padding:5px 12px;border-radius:14px;background:rgba(93,202,165,0.08)}
 .price-trial{display:inline-block;background:rgba(93,202,165,0.15);color:var(--bull);padding:5px 12px;border-radius:14px;font-family:var(--ui);font-size:11px;letter-spacing:1.5px;margin-top:14px;border:1px solid rgba(93,202,165,0.3);text-transform:uppercase;font-weight:600}
 .pricing-features{max-width:520px;margin:0 auto}
@@ -484,6 +475,26 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
   .how-bar-bull,.how-bar-neut,.how-bar-bear{transform:scaleX(var(--w,0.85))!important}
   .how-svg-line{stroke-dashoffset:0!important}
 }
+
+/* ═══ MODALITÀ GIORNO (ottobre 2026) ═══════════════════════════════════════
+   Stessa regola dell'app: automatica dalle 7 alle 19 ora del dispositivo, o
+   forzata dal pulsante accanto alla lingua. Si ridefiniscono le variabili e
+   le poche regole che usano colori scritti a mano. */
+html[data-theme="day"]{--navy:#F7F4EC;--navy-deep:#EFEADF;--navy-mid:#FFFDF8;--gold:#7A6224;--gold-light:#5E4A16;--gold-dark:#6F5A20;--text:#1E2132;--text-dim:#4A4E62;--bull:#0F7A55;--bear:#B83236}
+html[data-theme="day"] body::before{opacity:0}
+html[data-theme="day"] body::after{background:radial-gradient(ellipse 60% 70% at 50% 0%,#FFFDF8 0%,#F7F4EC 55%,#EFEADF 100%);opacity:1}
+html[data-theme="day"] .topbar{background:rgba(247,244,236,0.9);border-bottom-color:rgba(122,98,36,0.25)}
+html[data-theme="day"] .brand{background:linear-gradient(180deg,#7A6224,#4E3D10);-webkit-background-clip:text;background-clip:text}
+html[data-theme="day"] .lang-current,html[data-theme="day"] .theme-toggle{background:rgba(122,98,36,0.08);border-color:rgba(122,98,36,0.35);color:#4E3D10}
+html[data-theme="day"] .btn-primary{background:linear-gradient(180deg,#8C7330,#5E4A16);color:#FFFDF8;box-shadow:0 8px 24px rgba(94,74,22,0.2)}
+html[data-theme="day"] .btn-secondary{border-color:rgba(122,98,36,0.5)}
+html[data-theme="day"] section.alt{background:linear-gradient(180deg,transparent,rgba(122,98,36,0.06),transparent)}
+html[data-theme="day"] .value-card,html[data-theme="day"] .feat,html[data-theme="day"] .aud,html[data-theme="day"] .price-card,html[data-theme="day"] .faq-item,html[data-theme="day"] details{background:rgba(255,253,248,0.85);border-color:rgba(122,98,36,0.22)}
+html[data-theme="day"] .market-bg{opacity:0.25}
+html[data-theme="day"] .hero-icon{filter:drop-shadow(0 0 30px rgba(122,98,36,0.25))}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:6px;border:1px solid rgba(232,201,106,0.3);background:rgba(232,201,106,0.08);color:var(--gold-light);cursor:pointer;font-size:16px;line-height:1;margin-inline-start:auto}
+.theme-toggle:hover{border-color:var(--gold)}
+.topbar-inner .theme-toggle + .lang-current{margin-inline-start:10px}
 </style>
 
 <!-- SEO/AI boost: keywords, hreflang, Organization+WebSite JSON-LD -->
@@ -504,6 +515,22 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
 <link rel="alternate" hreflang="x-default" href="https://astrotraderpro.com/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","logo":"https://astrotraderpro.com/assets/icon-512.png","description":"Astrologia finanziaria classica ed astrologia esoterica: ruota planetaria, transiti, tema natale e mappatura di 200+ asset ai pianeti governatori.","founder":{"@type":"Person","name":"Alberto Nicola Lanzafame"},"sameAs":["https://play.google.com/store/apps/details?id=com.lanzafamea.astrotraderpro","https://astrotraderpro.astrotraderproapp.workers.dev/","https://www.instagram.com/astrotraderproapp/","https://www.facebook.com/1259161500606920","https://x.com/Astrotraderpro","https://www.linkedin.com/company/134833923/","https://t.me/AstroTraderProEN"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AstroTrader Pro","url":"https://astrotraderpro.com/","inLanguage":["en","it","es","fr","de","pt","nl","ru","zh","ja","ko","ar","hi"],"description":"Financial astrology and esoteric astrology: planetary wheel, transits, natal chart, 200+ assets mapped to ruling planets. Educational tool."}</script>
+<script id="atp-theme">
+/* Giorno/notte: automatico 7-19, oppure scelto. ◐ automatico, ☀ giorno, ☾ notte. */
+(function(){
+  var KEY='atpTheme', root=document.documentElement;
+  function mode(){try{var v=localStorage.getItem(KEY);return v==='day'||v==='night'?v:'auto'}catch(e){return 'auto'}}
+  function resolve(m){if(m!=='auto')return m;var h=new Date().getHours();return h>=7&&h<19?'day':'night'}
+  function apply(){var m=mode();root.setAttribute('data-theme',resolve(m));
+    var meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.setAttribute('content',resolve(m)==='day'?'#F7F4EC':'#0A1020');
+    var b=document.getElementById('theme-toggle');if(b)b.textContent=m==='auto'?'\u25D0':(m==='day'?'\u2600':'\u263E');}
+  apply();
+  document.addEventListener('DOMContentLoaded',function(){apply();
+    var b=document.getElementById('theme-toggle');if(!b)return;
+    b.addEventListener('click',function(){var m=mode(),n=m==='auto'?'day':(m==='day'?'night':'auto');try{localStorage.setItem(KEY,n)}catch(e){}apply();});
+    setInterval(function(){if(mode()==='auto')apply()},60000);});
+})();
+</script>
 </head>
 <body>
 
@@ -665,6 +692,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
 <header class="topbar">
   <div class="container topbar-inner">
     <span class="brand">ASTROTRADER PRO™</span>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Colours: day or night" title="Colours: day or night" data-i18n-attr="theme_label">◐</button>
     <select id="lang-select" class="lang-current" aria-label="Language">
       <option value="en">English</option>
       <option value="it">Italiano</option>
@@ -874,7 +902,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
         </a>
       </div>
     </div>
-    <p class="btn-note">App Android (Google Play): Monthly &euro;9.99 &mdash; Web app: Annual &euro;69.99 &amp; Lifetime &euro;199</p>
+    <p class="btn-note">Markets Pro &mdash; &euro;14.99/month or &euro;99/year &middot; 7-day free trial</p>
   </div>
 </section>
 
@@ -884,7 +912,7 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
   <div class="container" style="text-align:center">
     <span class="section-eyebrow" data-i18n="nc_eyebrow">More than a market lens</span>
     <h2 data-i18n="nc_title">It starts with your own chart</h2>
-    <p class="dim" style="margin:0 auto;max-width:700px" data-i18n="nc_intro">The heart of the app is personal: your birth chart, read for money. The markets are still here, free — but they are no longer the point.</p>
+    <p class="dim" style="margin:0 auto;max-width:700px" data-i18n="nc_intro">The heart of the app is personal: calculate your natal chart and read it planet by planet, house by house. The markets are still here, free — but they are no longer the point.</p>
     <div class="value-grid" style="text-align:start">
       <div class="value-card">
         <h3 data-i18n="nc1_title">Your money archetype</h3>
@@ -909,6 +937,18 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
       <div class="value-card">
         <h3 data-i18n="nc6_title">Yours, and private</h3>
         <p data-i18n="nc6_body">Thirteen languages, offline-capable, and birth data that never leaves your device.</p>
+      </div>
+      <div class="value-card" data-added="2026-10">
+        <h3 data-i18n="nc7_title">The chart, planet by planet</h3>
+        <p data-i18n="nc7_body">Every planet in its sign and house, with Ptolemaic, karmic, esoteric and Vedic readings side by side. Each term explained, so anyone can read their own chart.</p>
+      </div>
+      <div class="value-card" data-added="2026-10">
+        <h3 data-i18n="nc8_title">Verified calculations</h3>
+        <p data-i18n="nc8_body">Sun, Moon, planets and Ascendant match Astrodienst to within one arcminute. True lunar node, local mean time for historical dates, Julian or Gregorian calendar, any year from 1 to 9999.</p>
+      </div>
+      <div class="value-card" data-added="2026-10">
+        <h3 data-i18n="nc9_title">Day and night</h3>
+        <p data-i18n="nc9_body">The colours follow the time of day: light by day, dark in the evening. Or choose with a tap.</p>
       </div>
     </div>
   </div>
@@ -1192,31 +1232,22 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     <div style="text-align:center">
       <span class="section-eyebrow" data-i18n="pricing_eyebrow">Pricing</span>
       <h2 data-i18n="pricing_title">Simple, transparent</h2>
-      <p class="dim" data-i18n="pricing_intro" style="max-width:580px;margin:0 auto">All plans include the same Premium features. Choose the cadence that fits you.</p>
+      <p class="dim" data-i18n="pricing_intro" style="max-width:580px;margin:0 auto">Both plans unlock all Markets Pro features. Choose the cadence that fits you.</p>
     </div>
     <div class="pricing-grid">
       <div class="ptier">
         <span class="ptier-badge" data-i18n="ptier_monthly_badge">Monthly</span>
-        <div class="ptier-price">€9.99 <small data-i18n="per_month">/month</small></div>
-        <span class="ptier-plat" data-i18n="plat_app">📱 Android app only</span>
+        <div class="ptier-price">€14.99 <small data-i18n="per_month">/month</small></div>
         <p class="ptier-sub" data-i18n="ptier_monthly_sub">Flexible. Cancel anytime.</p>
         </div>
       <div class="ptier ptier-best">
         <span class="ptier-badge" data-i18n="ptier_annual_badge">Annual · Best value</span>
-        <div class="ptier-price">€69.99 <small data-i18n="per_year">/year</small></div>
-        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
-        <p class="ptier-discount" data-i18n="ptier_annual_save">Save 42% — equivalent to €5.83/month</p>
+        <div class="ptier-price">€99 <small data-i18n="per_year">/year</small></div>
+        <p class="ptier-discount" data-i18n="ptier_annual_save">Save 45% — equivalent to €8.25/month</p>
         <p class="ptier-sub" data-i18n="ptier_annual_sub">For long-term explorers.</p>
         </div>
-      <div class="ptier ptier-lifetime">
-        <span class="ptier-badge" data-i18n="ptier_lifetime_badge">Lifetime supporter</span>
-        <div class="ptier-price">€199 <small data-i18n="one_time">once</small></div>
-        <span class="ptier-plat" data-i18n="plat_web">🌐 Web app only</span>
-        <p class="ptier-sub" data-i18n="ptier_lifetime_sub">All future updates included. Support indie development.</p>
-        <span class="ptier-note" data-i18n="ptier_lifetime_note">Pay once. Use forever.</span>
-      </div>
     </div>
-    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px"><strong>Monthly &euro;9.99/month</strong> is available <strong>only in the Android app</strong> (Google Play). The <strong>Annual</strong> and <strong>Lifetime</strong> plans are available <strong>only on the web app</strong>.</p>
+    <p class="dim" style="text-align:center;font-size:0.92rem;margin:20px auto 0;max-width:620px" data-i18n="pricing_trial"><strong>7-day free trial.</strong> Markets Pro is available on both the Android app and the web app. Cancel anytime.</p>
     <div class="pricing-features">
       <p class="dim" data-i18n="pricing_sub" style="text-align:center;font-size:0.95rem;margin:32px 0 14px">All plans include:</p>
       <ul class="price-list">
@@ -1290,9 +1321,9 @@ html[dir="rtl"] .how-bar-bull,html[dir="rtl"] .how-bar-neut,html[dir="rtl"] .how
     </div>
     <div class="faq">
       <details><summary data-i18n="faq1_q">Does the app predict markets?</summary><p data-i18n="faq1_a">No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven.</p></details>
-      <details><summary data-i18n="faq2_q">Does it work offline?</summary><p data-i18n="faq2_a">Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription (Google Play). The wheel, projections, and glossary work fully offline.</p></details>
+      <details><summary data-i18n="faq2_q">Does it work offline?</summary><p data-i18n="faq2_a">Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Markets Pro subscription. The wheel, projections, and glossary work fully offline.</p></details>
       <details><summary data-i18n="faq3_q">How many languages are available?</summary><p data-i18n="faq3_a">13: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), Hindi.</p></details>
-      <details><summary data-i18n="faq4_q">Does the subscription auto-renew?</summary><p data-i18n="faq4_a">Yes, but you can cancel anytime from Google Play settings. Billing is €9.99 per month.</p></details>
+      <details><summary data-i18n="faq4_q">Does the subscription auto-renew?</summary><p data-i18n="faq4_a">Yes, but you can cancel anytime from Google Play or your account settings.</p></details>
       <details><summary data-i18n="faq5_q">What data does the app collect?</summary><p data-i18n="faq5_a">No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.</p></details>
       <details><summary data-i18n="faq6_q">Who is the app for?</summary><p data-i18n="faq6_a">For anyone interested in exploring the symbolic relationship between planetary cycles and markets: traders curious about classical cycle theory, financially-minded astrologers, students of mundane and esoteric astrology. Recommended age: 18+.</p></details>
       <details><summary data-i18n="faq7_q">Is AstroTrader Pro on Google Play?</summary><p data-i18n="faq7_a">Yes — AstroTrader Pro is available now on Google Play. Tap the download button at the top of this page, or search for it by name.</p></details>
@@ -1353,17 +1384,17 @@ var I18N={
     hero_pitch:"Discover your money archetype from your birth chart — classical astrology, made clear. A free natal calculation, a ~26-page reading, personal seasons, and a live sky. Elegant, offline-capable, privacy-first. Plus the study of cycles and historical correlations on transit charts, with world and market analysis.",
     nc_eyebrow:"More than a market lens",
     nc_title:"It starts with your own chart",
-    nc_intro:"The heart of the app is personal: your birth chart, read for money. The markets are still here, free — but they are no longer the point.",
+    nc_intro:"The heart of the app is personal: calculate your natal chart and read it planet by planet, house by house. The markets are still here, free — but they are no longer the point.",
     nc1_title:"Your money archetype",nc1_body:"Twelve money archetypes drawn from the whole birth chart, not just your Sun sign. Free to calculate, in a couple of taps.",
     nc2_title:"A ~26-page reading",nc2_body:"Traditional, karmic and esoteric layers, with the money thread traced through all twelve Houses.",
     nc3_title:"Personal seasons",nc3_body:"The transits to your own chart, with a notification when a season opens or closes.",
     nc4_title:"World and markets, free",nc4_body:"Mundane cycles country by country, and the classical planet–sector map — kept free to explore.",
     nc5_title:"Real astrology, explained",nc5_body:"Genuine terms — aspects, dignities, Houses — each explained on first use, never dumbed down.",
-    nc6_title:"Yours, and private",nc6_body:"Thirteen languages, offline-capable, and birth data that never leaves your device.",
+    nc6_title:"Yours, and private",nc6_body:"Thirteen languages, offline-capable, and birth data that never leaves your device.",nc7_title:"The chart, planet by planet",nc7_body:"Every planet in its sign and house, with Ptolemaic, karmic, esoteric and Vedic readings side by side. Each term explained, so anyone can read their own chart.",nc8_title:"Verified calculations",nc8_body:"Sun, Moon, planets and Ascendant match Astrodienst to within one arcminute. True lunar node, local mean time for historical dates, Julian or Gregorian calendar, any year from 1 to 9999.",nc9_title:"Day and night",nc9_body:"The colours follow the time of day: light by day, dark in the evening. Or choose with a tap.",theme_label:"Colours: day or night",
     cta_primary:"Coming soon on Google Play",cta_follow:"Follow on X",
     cta_download:"Get it on Google Play",
     cta_secondary:"See how it works",
-    cta_note:"Premium €9.99/month",
+    cta_note:"Markets Pro €14.99/month",
     value_eyebrow:"What it does, in three points",
     value_title:"Three traditions, one reading",
     value_intro:"Precise astronomy, classical symbolism, market mapping. All transparent, all built on public sources.",
@@ -1388,17 +1419,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"No tracking, no analytics, no advertising. Only data strictly necessary for subscription.",
     feat8_t:"Native dark mode",feat8_b:"Designed for night use and long sessions without eye strain.",
     pricing_eyebrow:"Pricing",pricing_title:"Simple, transparent",
-    trial_badge:"",per_month:"/month",pricing_sub:"All Premium features included",
-    pricing_intro:"All plans include the same Premium features. Choose the cadence that fits you.",
+    trial_badge:"",per_month:"/month",pricing_sub:"All Markets Pro features included",
+    pricing_intro:"All plans include the same Markets Pro features. Choose the cadence that fits you.",
     ptier_monthly_badge:"Monthly",
     plat_app:"📱 Android app only",plat_web:"🌐 Web app only",
     ptier_monthly_sub:"Flexible. Cancel anytime.",
     ptier_annual_badge:"Annual · Best value",
-    ptier_annual_save:"Save 42% — equivalent to €5.83/month",
+    ptier_annual_save:"Save 45% — equivalent to €8.25/month",
     ptier_annual_sub:"For long-term explorers.",
-    ptier_lifetime_badge:"Lifetime supporter",
-    ptier_lifetime_sub:"All future updates included. Support indie development.",
-    ptier_lifetime_note:"Pay once. Use forever.",
+    pricing_trial:"7-day free trial. Markets Pro is available on both the Android app and the web app. Cancel anytime.",
     per_year:"/year",
     one_time:"once",
     pli1:"Full wheel with all 13 planets",pli2:"Projections up to 5 years ahead",pli3:"Unlimited cached dates",pli4:"Customizable transit notifications",pli5:"Complete glossary in 13 languages",
@@ -1419,7 +1448,7 @@ var I18N={
     sources_body:"Built on the classical Western tradition (Ptolemy, Tetrabiblos) and on early 20th-century financial astrology — including the work of W.D. Gann (Tunnel Thru the Air, 1927) and Louise McWhirter — plus the archeosophical and esoteric references of Tommaso Palamidessi and Alice Bailey (Esoteric Astrology). Astronomical calculations are based on open-source, public-domain algorithms: VSOP87 (Bureau des Longitudes, Paris, 1987) and IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"FAQ",faq_title:"Quick answers",
     faq1_q:"Does the app predict markets?",faq1_a:"No. AstroTrader Pro is a symbolic and educational tool. It shows correlations from classical astrological tradition with financial sectors, but does not offer operational forecasts or any guarantees. The predictive efficacy of astrology is not scientifically proven.",
-    faq2_q:"Does it work offline?",faq2_a:"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Premium subscription (Google Play). The wheel, projections, and glossary work fully offline.",
+    faq2_q:"Does it work offline?",faq2_a:"Yes. All astronomical calculations and data are bundled with the app. The only required connection is for managing the Markets Pro subscription (Google Play). The wheel, projections, and glossary work fully offline.",
     faq3_q:"How many languages are available?",faq3_a:"13: Italian, English, Spanish, French, German, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic (with full RTL support), Hindi.",
     faq4_q:"Does the subscription auto-renew?",faq4_a:"Yes, but you can cancel anytime from Google Play settings.",
     faq5_q:"What data does the app collect?",faq5_a:"No tracking, no analytics, no advertising. The only data processed is what is strictly necessary for subscription management (pseudonymous identifier handled by RevenueCat, transaction metadata handled by Google Play). Full details in the privacy policy.",
@@ -1436,14 +1465,14 @@ var I18N={
     hero_pitch:"Scopri il tuo archetipo del denaro dal tuo tema natale — l'astrologia classica, resa chiara. Un calcolo natale gratuito, una lettura di ~26 pagine, le stagioni personali e un cielo in tempo reale. Elegante, offline e privacy-first. E lo studio dei cicli e delle correlazioni storiche sulle carte dei transiti, con l'analisi del mondo e dei mercati.",
     nc_eyebrow:"Più di una lente sui mercati",
     nc_title:"Si parte dal tuo tema natale",
-    nc_intro:"Il cuore dell'app è personale: il tuo tema natale, letto in chiave di denaro. I mercati ci sono ancora, gratuiti — ma non sono più il centro.",
+    nc_intro:"Il cuore dell'app è personale: calcoli il tuo tema natale e lo leggi pianeta per pianeta, casa per casa. I mercati ci sono ancora, gratuiti — ma non sono più il centro.",
     nc1_title:"Il tuo archetipo del denaro",nc1_body:"Dodici archetipi del denaro ricavati dall'intero tema natale, non dal solo segno solare. Calcolo gratuito, in pochi tocchi.",
     nc2_title:"Una lettura di ~26 pagine",nc2_body:"Piani tradizionale, karmico ed esoterico, con il filo del denaro seguito in tutte e dodici le Case.",
     nc3_title:"Stagioni personali",nc3_body:"I transiti al tuo tema, con una notifica quando una stagione si apre o si chiude.",
     nc4_title:"Mondo e mercati, gratis",nc4_body:"Cicli mondiali paese per paese, e la mappa classica pianeta–settore — lasciati liberi da esplorare.",
     nc5_title:"Astrologia vera, spiegata",nc5_body:"Termini autentici — aspetti, dignità, Case — spiegati alla prima occorrenza, mai banalizzati.",
-    nc6_title:"Tua, e privata",nc6_body:"Tredici lingue, funziona offline, e i dati di nascita che non lasciano mai il dispositivo.",
-    cta_primary:"In arrivo su Google Play",cta_download:"Disponibile su Google Play",cta_secondary:"Scopri come funziona",cta_note:"Premium €9,99/mese",
+    nc6_title:"Tua, e privata",nc6_body:"Tredici lingue, funziona offline, e i dati di nascita che non lasciano mai il dispositivo.",nc7_title:"Il tema, pianeta per pianeta",nc7_body:"Ogni pianeta nel suo segno e nella sua casa, con le letture tolemaica, karmica, esoterica e vedica una accanto all'altra. Ogni termine è spiegato: il tema si legge anche da soli.",nc8_title:"Calcoli verificati",nc8_body:"Sole, Luna, pianeti e Ascendente coincidono con Astrodienst entro un primo d'arco. Nodo lunare vero, ora locale per le date storiche, calendario giuliano o gregoriano, qualsiasi anno dall'1 al 9999.",nc9_title:"Giorno e notte",nc9_body:"I colori seguono l'ora: chiari di giorno, scuri la sera. Oppure si sceglie con un tocco.",theme_label:"Colori: giorno o notte",
+    cta_primary:"In arrivo su Google Play",cta_download:"Disponibile su Google Play",cta_secondary:"Scopri come funziona",cta_note:"Markets Pro €14,99/mese",
     value_eyebrow:"Cosa fa, in tre punti",value_title:"Tre tradizioni, un'unica lettura",
     value_intro:"Astronomia precisa, simbologia classica, mappatura ai mercati. Tutto trasparente, tutto basato su fonti pubbliche.",
     vc1_title:"Cielo preciso",vc1_body:"12 segni × 13 pianeti. Posizioni planetarie aggiornate al secondo d'arco con algoritmi open-source di pubblico dominio (VSOP87, IAU).",
@@ -1468,17 +1497,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Niente tracciamento, niente analitica, niente pubblicità. Solo i dati necessari all'abbonamento.",
     feat8_t:"Dark mode nativo",feat8_b:"Pensata per l'uso notturno e per non stancare la vista durante sessioni lunghe.",
     pricing_eyebrow:"Prezzo",pricing_title:"Semplice, trasparente",
-    trial_badge:"",per_month:"/mese",pricing_sub:"Tutte le funzioni Premium incluse",
-    pricing_intro:"Tutti i piani includono le stesse funzioni Premium. Scegli la cadenza più adatta a te.",
+    trial_badge:"",per_month:"/mese",pricing_sub:"Tutte le funzioni Markets Pro incluse",
+    pricing_intro:"Tutti i piani includono le stesse funzioni Markets Pro. Scegli la cadenza più adatta a te.",
     ptier_monthly_badge:"Mensile",
     plat_app:"📱 Solo app Android",plat_web:"🌐 Solo web-app",
     ptier_monthly_sub:"Flessibile. Cancella in qualsiasi momento.",
     ptier_annual_badge:"Annuale · Best value",
-    ptier_annual_save:"Risparmi 42% — equivale a €5,83/mese",
+    ptier_annual_save:"Risparmi 45% — equivale a €8,25/mese",
     ptier_annual_sub:"Per chi guarda lontano.",
-    ptier_lifetime_badge:"Lifetime supporter",
-    ptier_lifetime_sub:"Tutti gli aggiornamenti futuri inclusi. Sostieni lo sviluppo indie.",
-    ptier_lifetime_note:"Paghi una volta. Usi per sempre.",
+    pricing_trial:"Prova gratuita di 7 giorni. Markets Pro è disponibile sia nell'app Android sia nella web app. Disdici quando vuoi.",
     per_year:"/anno",
     one_time:"una tantum",
     pli1:"Ruota completa con tutti i 13 pianeti",pli2:"Proiezioni fino a 5 anni nel futuro",pli3:"Date in cache illimitate",pli4:"Notifiche transiti personalizzabili",pli5:"Glossario completo in 13 lingue",
@@ -1499,7 +1526,7 @@ var I18N={
     sources_body:"Costruita sulla tradizione classica occidentale (Tolomeo, Tetrabiblos) e sull'astrologia finanziaria del primo Novecento — incluse le opere di W.D. Gann (Tunnel Thru the Air, 1927) e Louise McWhirter — oltre ai riferimenti archeosofici ed esoterici di Tommaso Palamidessi e Alice Bailey (Esoteric Astrology). I calcoli astronomici sono basati su algoritmi open-source di pubblico dominio: VSOP87 (Bureau des Longitudes, Parigi, 1987) e IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"Domande frequenti",faq_title:"Risposte rapide",
     faq1_q:"L'app predice i mercati?",faq1_a:"No. AstroTrader Pro è uno strumento simbolico ed educativo. Mostra correlazioni della tradizione astrologica classica con i settori finanziari, ma non offre previsioni operative né garanzie di alcun tipo. L'efficacia predittiva dell'astrologia non è scientificamente provata.",
-    faq2_q:"Funziona offline?",faq2_a:"Sì. Tutti i calcoli astronomici e i dati sono inclusi nell'app. L'unica connessione richiesta è per la gestione dell'abbonamento Premium (Google Play). La ruota, le proiezioni e il glossario funzionano completamente offline.",
+    faq2_q:"Funziona offline?",faq2_a:"Sì. Tutti i calcoli astronomici e i dati sono inclusi nell'app. L'unica connessione richiesta è per la gestione dell'abbonamento Markets Pro (Google Play). La ruota, le proiezioni e il glossario funzionano completamente offline.",
     faq3_q:"Quante lingue sono disponibili?",faq3_a:"13: italiano, inglese, spagnolo, francese, tedesco, portoghese, olandese, russo, cinese, giapponese, coreano, arabo (con supporto RTL completo), hindi.",
     faq4_q:"L'abbonamento si rinnova automaticamente?",faq4_a:"Sì, ma puoi cancellarlo in qualunque momento dalle impostazioni di Google Play.",
     faq5_q:"Quali dati raccoglie l'app?",faq5_a:"Nessun tracciamento, nessuna analitica, nessuna pubblicità. L'unico dato trattato è quello strettamente necessario alla gestione dell'abbonamento (identificativo pseudonimo gestito da RevenueCat, metadati transazione gestiti da Google Play). Dettagli completi nella privacy policy.",
@@ -1516,14 +1543,14 @@ var I18N={
     hero_pitch:"Descubre tu arquetipo del dinero a partir de tu carta natal — astrología clásica, explicada con claridad. Un cálculo natal gratuito, una lectura de ~26 páginas, estaciones personales y un cielo en vivo. Elegante, sin conexión y privacy-first. Y el estudio de los ciclos y de las correlaciones históricas en las cartas de tránsitos, con análisis del mundo y de los mercados.",
     nc_eyebrow:"Más que una lente sobre los mercados",
     nc_title:"Empieza por tu propia carta",
-    nc_intro:"El corazón de la app es personal: tu carta natal, leída en clave de dinero. Los mercados siguen aquí, gratis, pero ya no son el centro.",
+    nc_intro:"El corazón de la app es personal: calculas tu carta natal y la lees planeta por planeta, casa por casa. Los mercados siguen aquí, gratis, pero ya no son el centro.",
     nc1_title:"Tu arquetipo del dinero",nc1_body:"Doce arquetipos del dinero extraídos de toda la carta natal, no solo de tu signo solar. Cálculo gratuito, en un par de toques.",
     nc2_title:"Una lectura de ~26 páginas",nc2_body:"Planos tradicional, kármico y esotérico, con el hilo del dinero trazado por las doce Casas.",
     nc3_title:"Estaciones personales",nc3_body:"Los tránsitos a tu propia carta, con una notificación cuando una estación se abre o se cierra.",
     nc4_title:"Mundo y mercados, gratis",nc4_body:"Ciclos mundiales país por país, y el mapa clásico planeta–sector, libres para explorar.",
     nc5_title:"Astrología real, explicada",nc5_body:"Términos auténticos — aspectos, dignidades, Casas — explicados en su primera aparición, nunca simplificados.",
-    nc6_title:"Tuya, y privada",nc6_body:"Trece idiomas, funciona sin conexión, y datos de nacimiento que nunca salen de tu dispositivo.",
-    cta_primary:"Próximamente en Google Play",cta_download:"Disponible en Google Play",cta_secondary:"Cómo funciona",cta_note:"Premium €9,99/mes",
+    nc6_title:"Tuya, y privada",nc6_body:"Trece idiomas, funciona sin conexión, y datos de nacimiento que nunca salen de tu dispositivo.",nc7_title:"La carta, planeta por planeta",nc7_body:"Cada planeta en su signo y en su casa, con las lecturas ptolemaica, kármica, esotérica y védica una junto a otra. Cada término explicado: la carta se lee incluso sin saber astrología.",nc8_title:"Cálculos verificados",nc8_body:"Sol, Luna, planetas y Ascendente coinciden con Astrodienst con menos de un minuto de arco. Nodo lunar verdadero, hora local para fechas históricas, calendario juliano o gregoriano, cualquier año del 1 al 9999.",nc9_title:"Día y noche",nc9_body:"Los colores siguen la hora: claros de día, oscuros por la noche. O se elige con un toque.",theme_label:"Colores: día o noche",
+    cta_primary:"Próximamente en Google Play",cta_download:"Disponible en Google Play",cta_secondary:"Cómo funciona",cta_note:"Markets Pro €14,99/mes",
     value_eyebrow:"Qué hace, en tres puntos",value_title:"Tres tradiciones, una lectura",
     value_intro:"Astronomía precisa, simbología clásica, mapeo de mercados. Todo transparente, todo basado en fuentes públicas.",
     vc1_title:"Cielo preciso",vc1_body:"12 signos × 13 planetas. Posiciones planetarias precisas al segundo de arco, calculadas con algoritmos open-source de dominio público (VSOP87, IAU).",
@@ -1548,17 +1575,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Sin seguimiento, sin analíticas, sin publicidad. Solo datos estrictamente necesarios para la suscripción.",
     feat8_t:"Modo oscuro nativo",feat8_b:"Diseñado para uso nocturno y sesiones largas sin cansar la vista.",
     pricing_eyebrow:"Precio",pricing_title:"Simple, transparente",
-    trial_badge:"",per_month:"/mes",pricing_sub:"Todas las funciones Premium incluidas",
-    pricing_intro:"Todos los planes incluyen las mismas funciones Premium. Elige la cadencia que más te convenga.",
+    trial_badge:"",per_month:"/mes",pricing_sub:"Todas las funciones Markets Pro incluidas",
+    pricing_intro:"Todos los planes incluyen las mismas funciones Markets Pro. Elige la cadencia que más te convenga.",
     ptier_monthly_badge:"Mensual",
     plat_app:"📱 Solo en la app Android",plat_web:"🌐 Solo en la web app",
     ptier_monthly_sub:"Flexible. Cancela en cualquier momento.",
     ptier_annual_badge:"Anual · Mejor valor",
-    ptier_annual_save:"Ahorra 42% — equivale a €5,83/mes",
+    ptier_annual_save:"Ahorra 45% — equivale a €8,25/mes",
     ptier_annual_sub:"Para exploradores a largo plazo.",
-    ptier_lifetime_badge:"Soporte de por vida",
-    ptier_lifetime_sub:"Todas las actualizaciones futuras incluidas. Apoya el desarrollo indie.",
-    ptier_lifetime_note:"Paga una vez. Usa para siempre.",
+    pricing_trial:"Prueba gratuita de 7 días. Markets Pro está disponible tanto en la app de Android como en la web app. Cancela cuando quieras.",
     per_year:"/año",
     one_time:"una vez",
     pli1:"Rueda completa con los 13 planetas",pli2:"Proyecciones hasta 5 años en el futuro",pli3:"Fechas en caché ilimitadas",pli4:"Notificaciones de tránsito personalizables",pli5:"Glosario completo en 13 idiomas",
@@ -1579,7 +1604,7 @@ var I18N={
     sources_body:"Construida sobre la tradición occidental clásica (Ptolomeo, Tetrabiblos) y sobre la astrología financiera de principios del siglo XX — incluyendo los trabajos de W.D. Gann (Tunnel Thru the Air, 1927) y Louise McWhirter — además de las referencias arqueosóficas y esotéricas de Tommaso Palamidessi y Alice Bailey (Esoteric Astrology). Los cálculos astronómicos están basados en algoritmos open-source de dominio público: VSOP87 (Bureau des Longitudes, París, 1987) y IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"Preguntas frecuentes",faq_title:"Respuestas rápidas",
     faq1_q:"¿La app predice los mercados?",faq1_a:"No. AstroTrader Pro es una herramienta simbólica y educativa. Muestra correlaciones de la tradición astrológica clásica con los sectores financieros, pero no ofrece previsiones operativas ni garantías. La eficacia predictiva de la astrología no está científicamente probada.",
-    faq2_q:"¿Funciona sin conexión?",faq2_a:"Sí. Todos los cálculos astronómicos y datos están incluidos en la app. La única conexión requerida es para la gestión de la suscripción Premium (Google Play). La rueda, las proyecciones y el glosario funcionan totalmente sin conexión.",
+    faq2_q:"¿Funciona sin conexión?",faq2_a:"Sí. Todos los cálculos astronómicos y datos están incluidos en la app. La única conexión requerida es para la gestión de la suscripción Markets Pro (Google Play). La rueda, las proyecciones y el glosario funcionan totalmente sin conexión.",
     faq3_q:"¿Cuántos idiomas hay disponibles?",faq3_a:"13: italiano, inglés, español, francés, alemán, portugués, holandés, ruso, chino, japonés, coreano, árabe (con soporte RTL completo), hindi.",
     faq4_q:"¿La suscripción se renueva automáticamente?",faq4_a:"Sí, pero puedes cancelarla en cualquier momento desde los ajustes de Google Play.",
     faq5_q:"¿Qué datos recopila la app?",faq5_a:"Sin seguimiento, sin analíticas, sin publicidad. El único dato procesado es el estrictamente necesario para la gestión de la suscripción (identificador pseudónimo gestionado por RevenueCat, metadatos de transacción gestionados por Google Play). Detalles completos en la política de privacidad.",
@@ -1596,14 +1621,14 @@ var I18N={
     hero_pitch:"Découvrez votre archétype de l'argent à partir de votre thème natal — l'astrologie classique, rendue claire. Un calcul natal gratuit, une lecture de ~26 pages, des saisons personnelles et un ciel en direct. Élégant, hors-ligne et privacy-first. Et l'étude des cycles et des corrélations historiques sur les cartes de transits, avec l'analyse du monde et des marchés.",
     nc_eyebrow:"Plus qu'un regard sur les marchés",
     nc_title:"Tout commence par votre thème",
-    nc_intro:"Le cœur de l'app est personnel : votre thème natal, lu sous l'angle de l'argent. Les marchés sont toujours là, gratuits — mais ils ne sont plus l'essentiel.",
+    nc_intro:"Le cœur de l'app est personnel : vous calculez votre thème natal et le lisez planète par planète, maison par maison. Les marchés sont toujours là, gratuits — mais ils ne sont plus l'essentiel.",
     nc1_title:"Votre archétype de l'argent",nc1_body:"Douze archétypes de l'argent tirés du thème natal entier, pas seulement de votre signe solaire. Calcul gratuit, en quelques touches.",
     nc2_title:"Une lecture de ~26 pages",nc2_body:"Plans traditionnel, karmique et ésotérique, avec le fil de l'argent suivi à travers les douze Maisons.",
     nc3_title:"Saisons personnelles",nc3_body:"Les transits à votre propre thème, avec une notification quand une saison s'ouvre ou se referme.",
     nc4_title:"Monde et marchés, gratuits",nc4_body:"Cycles mondiaux pays par pays, et la carte classique planète–secteur — laissés libres à explorer.",
     nc5_title:"De la vraie astrologie, expliquée",nc5_body:"Des termes authentiques — aspects, dignités, Maisons — expliqués dès la première occurrence, jamais simplifiés.",
-    nc6_title:"Le vôtre, et privé",nc6_body:"Treize langues, fonctionne hors-ligne, et des données de naissance qui ne quittent jamais votre appareil.",
-    cta_primary:"Bientôt sur Google Play",cta_download:"Disponible sur Google Play",cta_secondary:"Comment ça marche",cta_note:"Premium €9,99/mois",
+    nc6_title:"Le vôtre, et privé",nc6_body:"Treize langues, fonctionne hors-ligne, et des données de naissance qui ne quittent jamais votre appareil.",nc7_title:"Le thème, planète par planète",nc7_body:"Chaque planète dans son signe et sa maison, avec les lectures ptoléméenne, karmique, ésotérique et védique côte à côte. Chaque terme est expliqué : le thème se lit même sans connaître l'astrologie.",nc8_title:"Calculs vérifiés",nc8_body:"Soleil, Lune, planètes et Ascendant concordent avec Astrodienst à moins d'une minute d'arc. Nœud lunaire vrai, heure locale pour les dates historiques, calendrier julien ou grégorien, toute année de 1 à 9999.",nc9_title:"Jour et nuit",nc9_body:"Les couleurs suivent l'heure : claires le jour, sombres le soir. Ou au choix, d'un geste.",theme_label:"Couleurs : jour ou nuit",
+    cta_primary:"Bientôt sur Google Play",cta_download:"Disponible sur Google Play",cta_secondary:"Comment ça marche",cta_note:"Markets Pro €14,99/mois",
     value_eyebrow:"Ce qu'il fait, en trois points",value_title:"Trois traditions, une lecture",
     value_intro:"Astronomie précise, symbolique classique, cartographie des marchés. Tout transparent, tout fondé sur des sources publiques.",
     vc1_title:"Ciel précis",vc1_body:"12 signes × 13 planètes. Positions planétaires précises à la seconde d'arc, calculées via des algorithmes open-source du domaine public (VSOP87, IAU).",
@@ -1628,17 +1653,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Pas de suivi, pas d'analytique, pas de publicité. Seulement les données strictement nécessaires à l'abonnement.",
     feat8_t:"Mode sombre natif",feat8_b:"Conçu pour l'usage nocturne et les longues sessions sans fatiguer les yeux.",
     pricing_eyebrow:"Prix",pricing_title:"Simple, transparent",
-    trial_badge:"",per_month:"/mois",pricing_sub:"Toutes les fonctions Premium incluses",
-    pricing_intro:"Tous les plans incluent les mêmes fonctions Premium. Choisissez la fréquence qui vous convient.",
+    trial_badge:"",per_month:"/mois",pricing_sub:"Toutes les fonctions Markets Pro incluses",
+    pricing_intro:"Tous les plans incluent les mêmes fonctions Markets Pro. Choisissez la fréquence qui vous convient.",
     ptier_monthly_badge:"Mensuel",
     plat_app:"📱 Appli Android uniquement",plat_web:"🌐 Web app uniquement",
     ptier_monthly_sub:"Flexible. Annulable à tout moment.",
     ptier_annual_badge:"Annuel · Meilleur prix",
-    ptier_annual_save:"Économisez 42% — équivalent à €5,83/mois",
+    ptier_annual_save:"Économisez 45% — équivalent à €8,25/mois",
     ptier_annual_sub:"Pour les explorateurs à long terme.",
-    ptier_lifetime_badge:"Soutien à vie",
-    ptier_lifetime_sub:"Toutes les mises à jour futures incluses. Soutenez le dev indépendant.",
-    ptier_lifetime_note:"Payez une fois. Utilisez pour toujours.",
+    pricing_trial:"Essai gratuit de 7 jours. Markets Pro est disponible à la fois sur l'app Android et la web app. Annulez à tout moment.",
     per_year:"/an",
     one_time:"une fois",
     pli1:"Roue complète avec les 13 planètes",pli2:"Projections jusqu'à 5 ans dans le futur",pli3:"Dates en cache illimitées",pli4:"Notifications de transit personnalisables",pli5:"Glossaire complet en 13 langues",
@@ -1659,7 +1682,7 @@ var I18N={
     sources_body:"Construite sur la tradition occidentale classique (Ptolémée, Tetrabiblos) et sur l'astrologie financière du début du XXe siècle — incluant les travaux de W.D. Gann (Tunnel Thru the Air, 1927) et Louise McWhirter — ainsi que les références archéosophiques et ésotériques de Tommaso Palamidessi et Alice Bailey (Esoteric Astrology). Les calculs astronomiques sont basés sur des algorithmes open-source du domaine public : VSOP87 (Bureau des Longitudes, Paris, 1987) et IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"FAQ",faq_title:"Réponses rapides",
     faq1_q:"L'app prédit-elle les marchés ?",faq1_a:"Non. AstroTrader Pro est un outil symbolique et éducatif. Il montre des corrélations de la tradition astrologique classique avec les secteurs financiers, mais n'offre pas de prévisions opérationnelles ni de garanties. L'efficacité prédictive de l'astrologie n'est pas scientifiquement prouvée.",
-    faq2_q:"Fonctionne-t-elle hors-ligne ?",faq2_a:"Oui. Tous les calculs astronomiques et données sont inclus dans l'app. La seule connexion requise est pour la gestion de l'abonnement Premium (Google Play). La roue, les projections et le glossaire fonctionnent entièrement hors-ligne.",
+    faq2_q:"Fonctionne-t-elle hors-ligne ?",faq2_a:"Oui. Tous les calculs astronomiques et données sont inclus dans l'app. La seule connexion requise est pour la gestion de l'abonnement Markets Pro (Google Play). La roue, les projections et le glossaire fonctionnent entièrement hors-ligne.",
     faq3_q:"Combien de langues sont disponibles ?",faq3_a:"13 : italien, anglais, espagnol, français, allemand, portugais, néerlandais, russe, chinois, japonais, coréen, arabe (avec support RTL complet), hindi.",
     faq4_q:"L'abonnement se renouvelle-t-il automatiquement ?",faq4_a:"Oui, mais vous pouvez l'annuler à tout moment depuis les paramètres Google Play.",
     faq5_q:"Quelles données l'app collecte-t-elle ?",faq5_a:"Pas de suivi, pas d'analytique, pas de publicité. Les seules données traitées sont celles strictement nécessaires à la gestion de l'abonnement (identifiant pseudonyme géré par RevenueCat, métadonnées de transaction gérées par Google Play). Détails complets dans la politique de confidentialité.",
@@ -1676,14 +1699,14 @@ var I18N={
     hero_pitch:"Entdecke deinen Geld-Archetyp aus deinem Geburtshoroskop — klassische Astrologie, klar erklärt. Eine kostenlose Horoskopberechnung, eine ~26-seitige Deutung, persönliche Zeiten und ein Live-Himmel. Elegant, offline-fähig, datenschutzorientiert. Dazu das Studium der Zyklen und historischen Korrelationen in Transitkarten, mit Welt- und Marktanalyse.",
     nc_eyebrow:"Mehr als ein Blick auf die Märkte",
     nc_title:"Es beginnt mit deinem Horoskop",
-    nc_intro:"Das Herz der App ist persönlich: dein Geburtshoroskop, gelesen im Zeichen des Geldes. Die Märkte sind weiter da, kostenlos — aber nicht mehr der Mittelpunkt.",
+    nc_intro:"Das Herz der App ist persönlich: Du berechnest dein Geburtshoroskop und liest es Planet für Planet, Haus für Haus. Die Märkte sind weiter da, kostenlos — aber nicht mehr der Mittelpunkt.",
     nc1_title:"Dein Geld-Archetyp",nc1_body:"Zwölf Geld-Archetypen aus dem gesamten Geburtshoroskop, nicht nur aus deinem Sonnenzeichen. Kostenlos zu berechnen, mit wenigen Tipps.",
     nc2_title:"Eine ~26-seitige Deutung",nc2_body:"Traditionelle, karmische und esoterische Ebenen, mit dem Geldfaden durch alle zwölf Häuser.",
     nc3_title:"Persönliche Zeiten",nc3_body:"Die Transite zu deinem eigenen Horoskop, mit einer Benachrichtigung, wenn eine Zeit beginnt oder endet.",
     nc4_title:"Welt und Märkte, kostenlos",nc4_body:"Mundane Zyklen Land für Land und die klassische Planet-Sektor-Karte — frei zum Erkunden.",
     nc5_title:"Echte Astrologie, erklärt",nc5_body:"Echte Begriffe — Aspekte, Würden, Häuser — beim ersten Auftreten erklärt, nie verflacht.",
-    nc6_title:"Deine, und privat",nc6_body:"Dreizehn Sprachen, offline-fähig, und Geburtsdaten, die dein Gerät nie verlassen.",
-    cta_primary:"Demnächst auf Google Play",cta_download:"Jetzt bei Google Play",cta_secondary:"So funktioniert's",cta_note:"Premium €9,99/Monat",
+    nc6_title:"Deine, und privat",nc6_body:"Dreizehn Sprachen, offline-fähig, und Geburtsdaten, die dein Gerät nie verlassen.",nc7_title:"Das Horoskop, Planet für Planet",nc7_body:"Jeder Planet in seinem Zeichen und Haus, mit ptolemäischer, karmischer, esoterischer und vedischer Deutung nebeneinander. Jeder Begriff wird erklärt: Das Horoskop liest sich auch ohne Vorkenntnisse.",nc8_title:"Geprüfte Berechnungen",nc8_body:"Sonne, Mond, Planeten und Aszendent stimmen mit Astrodienst auf eine Bogenminute überein. Wahrer Mondknoten, Ortszeit für historische Daten, julianischer oder gregorianischer Kalender, jedes Jahr von 1 bis 9999.",nc9_title:"Tag und Nacht",nc9_body:"Die Farben folgen der Uhrzeit: hell am Tag, dunkel am Abend. Oder per Fingertipp gewählt.",theme_label:"Farben: Tag oder Nacht",
+    cta_primary:"Demnächst auf Google Play",cta_download:"Jetzt bei Google Play",cta_secondary:"So funktioniert's",cta_note:"Markets Pro €14,99/Monat",
     value_eyebrow:"Was es tut, in drei Punkten",value_title:"Drei Traditionen, eine Lesart",
     value_intro:"Präzise Astronomie, klassische Symbolik, Marktzuordnung. Alles transparent, alles auf öffentlichen Quellen basierend.",
     vc1_title:"Genauer Himmel",vc1_body:"12 Zeichen × 13 Planeten. Planetenpositionen bogensekundengenau, berechnet mit Open-Source-Algorithmen des öffentlichen Eigentums (VSOP87, IAU).",
@@ -1708,17 +1731,15 @@ var I18N={
     feat7_t:"Datenschutz zuerst",feat7_b:"Kein Tracking, keine Analytics, keine Werbung. Nur Daten, die unbedingt für das Abonnement nötig sind.",
     feat8_t:"Nativer Dark Mode",feat8_b:"Entwickelt für nächtliche Nutzung und lange Sitzungen ohne Augenermüdung.",
     pricing_eyebrow:"Preis",pricing_title:"Einfach, transparent",
-    trial_badge:"",per_month:"/Monat",pricing_sub:"Alle Premium-Funktionen enthalten",
-    pricing_intro:"Alle Pläne enthalten dieselben Premium-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt.",
+    trial_badge:"",per_month:"/Monat",pricing_sub:"Alle Markets Pro-Funktionen enthalten",
+    pricing_intro:"Alle Pläne enthalten dieselben Markets Pro-Funktionen. Wählen Sie die Frequenz, die zu Ihnen passt.",
     ptier_monthly_badge:"Monatlich",
     plat_app:"📱 Nur in der Android-App",plat_web:"🌐 Nur in der Web-App",
     ptier_monthly_sub:"Flexibel. Jederzeit kündbar.",
     ptier_annual_badge:"Jährlich · Bester Preis",
-    ptier_annual_save:"42% sparen — entspricht €5,83/Monat",
+    ptier_annual_save:"45% sparen — entspricht €8,25/Monat",
     ptier_annual_sub:"Für Langzeit-Erkunder.",
-    ptier_lifetime_badge:"Lifetime-Unterstützer",
-    ptier_lifetime_sub:"Alle zukünftigen Updates inklusive. Unterstützen Sie Indie-Entwicklung.",
-    ptier_lifetime_note:"Einmal zahlen. Für immer nutzen.",
+    pricing_trial:"7 Tage kostenlos testen. Markets Pro ist sowohl in der Android-App als auch in der Web-App verfügbar. Jederzeit kündbar.",
     per_year:"/Jahr",
     one_time:"einmalig",
     pli1:"Vollständiges Rad mit allen 13 Planeten",pli2:"Projektionen bis 5 Jahre in der Zukunft",pli3:"Unbegrenzte zwischengespeicherte Daten",pli4:"Anpassbare Transit-Benachrichtigungen",pli5:"Vollständiges Glossar in 13 Sprachen",
@@ -1739,7 +1760,7 @@ var I18N={
     sources_body:"Aufgebaut auf der klassischen westlichen Tradition (Ptolemäus, Tetrabiblos) und der Finanzastrologie des frühen 20. Jahrhunderts — einschließlich der Arbeiten von W.D. Gann (Tunnel Thru the Air, 1927) und Louise McWhirter — sowie der archäosophischen und esoterischen Referenzen von Tommaso Palamidessi und Alice Bailey (Esoteric Astrology). Astronomische Berechnungen basieren auf quelloffenen, gemeinfreien Algorithmen: VSOP87 (Bureau des Longitudes, Paris, 1987) und IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"FAQ",faq_title:"Schnelle Antworten",
     faq1_q:"Sagt die App Märkte voraus?",faq1_a:"Nein. AstroTrader Pro ist ein symbolisches und Bildungswerkzeug. Es zeigt Korrelationen aus der klassischen astrologischen Tradition mit Finanzsektoren, bietet aber keine operativen Prognosen oder Garantien. Die prädiktive Wirksamkeit der Astrologie ist wissenschaftlich nicht bewiesen.",
-    faq2_q:"Funktioniert sie offline?",faq2_a:"Ja. Alle astronomischen Berechnungen und Daten sind in der App enthalten. Die einzige erforderliche Verbindung ist für die Verwaltung des Premium-Abonnements (Google Play). Rad, Projektionen und Glossar funktionieren vollständig offline.",
+    faq2_q:"Funktioniert sie offline?",faq2_a:"Ja. Alle astronomischen Berechnungen und Daten sind in der App enthalten. Die einzige erforderliche Verbindung ist für die Verwaltung des Markets Pro-Abonnements (Google Play). Rad, Projektionen und Glossar funktionieren vollständig offline.",
     faq3_q:"Wie viele Sprachen sind verfügbar?",faq3_a:"13: Italienisch, Englisch, Spanisch, Französisch, Deutsch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Koreanisch, Arabisch (mit vollständigem RTL-Support), Hindi.",
     faq4_q:"Verlängert sich das Abo automatisch?",faq4_a:"Ja, aber Sie können es jederzeit über Google Play-Einstellungen kündigen.",
     faq5_q:"Welche Daten sammelt die App?",faq5_a:"Kein Tracking, keine Analytics, keine Werbung. Die einzigen verarbeiteten Daten sind die für die Abonnementverwaltung unbedingt notwendigen (von RevenueCat verwaltete pseudonyme Kennung, von Google Play verwaltete Transaktions-Metadaten). Vollständige Details in der Datenschutzerklärung.",
@@ -1756,14 +1777,14 @@ var I18N={
     hero_pitch:"Descubra o seu arquétipo do dinheiro a partir do seu mapa natal — astrologia clássica, explicada com clareza. Um cálculo natal gratuito, uma leitura de ~26 páginas, estações pessoais e um céu ao vivo. Elegante, offline e privacy-first. E o estudo dos ciclos e das correlações históricas nos mapas de trânsitos, com análise do mundo e dos mercados.",
     nc_eyebrow:"Mais do que uma lente sobre os mercados",
     nc_title:"Começa pelo seu próprio mapa",
-    nc_intro:"O coração do app é pessoal: o seu mapa natal, lido na chave do dinheiro. Os mercados continuam aqui, gratuitos — mas já não são o centro.",
+    nc_intro:"O coração do app é pessoal: calcula o seu mapa natal e lê-o planeta a planeta, casa a casa. Os mercados continuam aqui, gratuitos — mas já não são o centro.",
     nc1_title:"O seu arquétipo do dinheiro",nc1_body:"Doze arquétipos do dinheiro extraídos de todo o mapa natal, não apenas do seu signo solar. Cálculo gratuito, com alguns toques.",
     nc2_title:"Uma leitura de ~26 páginas",nc2_body:"Planos tradicional, kármico e esotérico, com o fio do dinheiro traçado pelas doze Casas.",
     nc3_title:"Estações pessoais",nc3_body:"Os trânsitos ao seu próprio mapa, com uma notificação quando uma estação abre ou fecha.",
     nc4_title:"Mundo e mercados, grátis",nc4_body:"Ciclos mundiais país a país, e o mapa clássico planeta–setor — deixados livres para explorar.",
     nc5_title:"Astrologia de verdade, explicada",nc5_body:"Termos autênticos — aspectos, dignidades, Casas — explicados na primeira ocorrência, nunca simplificados.",
-    nc6_title:"Sua, e privada",nc6_body:"Treze idiomas, funciona offline, e dados de nascimento que nunca saem do seu dispositivo.",
-    cta_primary:"Em breve no Google Play",cta_download:"Disponível no Google Play",cta_secondary:"Como funciona",cta_note:"Premium €9,99/mês",
+    nc6_title:"Sua, e privada",nc6_body:"Treze idiomas, funciona offline, e dados de nascimento que nunca saem do seu dispositivo.",nc7_title:"O mapa, planeta a planeta",nc7_body:"Cada planeta no seu signo e na sua casa, com as leituras ptolomaica, cármica, esotérica e védica lado a lado. Cada termo explicado: o mapa lê-se mesmo sem saber astrologia.",nc8_title:"Cálculos verificados",nc8_body:"Sol, Lua, planetas e Ascendente coincidem com o Astrodienst a menos de um minuto de arco. Nodo lunar verdadeiro, hora local para datas históricas, calendário juliano ou gregoriano, qualquer ano de 1 a 9999.",nc9_title:"Dia e noite",nc9_body:"As cores seguem a hora: claras de dia, escuras à noite. Ou escolhe-se com um toque.",theme_label:"Cores: dia ou noite",
+    cta_primary:"Em breve no Google Play",cta_download:"Disponível no Google Play",cta_secondary:"Como funciona",cta_note:"Markets Pro €14,99/mês",
     value_eyebrow:"O que faz, em três pontos",value_title:"Três tradições, uma leitura",
     value_intro:"Astronomia precisa, simbologia clássica, mapeamento de mercados. Tudo transparente, tudo baseado em fontes públicas.",
     vc1_title:"Céu preciso",vc1_body:"12 signos × 13 planetas. Posições planetárias precisas ao segundo de arco, calculadas com algoritmos open-source de domínio público (VSOP87, IAU).",
@@ -1788,17 +1809,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Sem rastreamento, sem analytics, sem publicidade. Apenas dados estritamente necessários para a assinatura.",
     feat8_t:"Modo escuro nativo",feat8_b:"Projetado para uso noturno e sessões longas sem cansar a vista.",
     pricing_eyebrow:"Preço",pricing_title:"Simples, transparente",
-    trial_badge:"",per_month:"/mês",pricing_sub:"Todos os recursos Premium incluídos",
-    pricing_intro:"Todos os planos incluem as mesmas funções Premium. Escolha a cadência que mais lhe convém.",
+    trial_badge:"",per_month:"/mês",pricing_sub:"Todos os recursos Markets Pro incluídos",
+    pricing_intro:"Todos os planos incluem as mesmas funções Markets Pro. Escolha a cadência que mais lhe convém.",
     ptier_monthly_badge:"Mensal",
     plat_app:"📱 Apenas no app Android",plat_web:"🌐 Apenas na web app",
     ptier_monthly_sub:"Flexível. Cancele a qualquer momento.",
     ptier_annual_badge:"Anual · Melhor valor",
-    ptier_annual_save:"Economize 42% — equivale a €5,83/mês",
+    ptier_annual_save:"Economize 45% — equivale a €8,25/mês",
     ptier_annual_sub:"Para exploradores de longo prazo.",
-    ptier_lifetime_badge:"Apoio vitalício",
-    ptier_lifetime_sub:"Todas as atualizações futuras incluídas. Apoie o dev indie.",
-    ptier_lifetime_note:"Pague uma vez. Use para sempre.",
+    pricing_trial:"Teste gratuito de 7 dias. O Markets Pro está disponível tanto na app Android como na web app. Cancele quando quiser.",
     per_year:"/ano",
     one_time:"uma vez",
     pli1:"Roda completa com todos os 13 planetas",pli2:"Projeções até 5 anos no futuro",pli3:"Datas em cache ilimitadas",pli4:"Notificações de trânsito personalizáveis",pli5:"Glossário completo em 13 idiomas",
@@ -1819,7 +1838,7 @@ var I18N={
     sources_body:"Construída sobre a tradição clássica ocidental (Ptolomeu, Tetrabiblos) e sobre a astrologia financeira do início do século XX — incluindo os trabalhos de W.D. Gann (Tunnel Thru the Air, 1927) e Louise McWhirter — além das referências arqueosóficas e esotéricas de Tommaso Palamidessi e Alice Bailey (Esoteric Astrology). Os cálculos astronômicos são baseados em algoritmos open-source de domínio público: VSOP87 (Bureau des Longitudes, Paris, 1987) e IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"FAQ",faq_title:"Respostas rápidas",
     faq1_q:"O app prevê os mercados?",faq1_a:"Não. AstroTrader Pro é uma ferramenta simbólica e educacional. Mostra correlações da tradição astrológica clássica com setores financeiros, mas não oferece previsões operacionais ou garantias. A eficácia preditiva da astrologia não é cientificamente comprovada.",
-    faq2_q:"Funciona offline?",faq2_a:"Sim. Todos os cálculos astronômicos e dados estão incluídos no app. A única conexão necessária é para gestão da assinatura Premium (Google Play). Roda, projeções e glossário funcionam totalmente offline.",
+    faq2_q:"Funciona offline?",faq2_a:"Sim. Todos os cálculos astronômicos e dados estão incluídos no app. A única conexão necessária é para gestão da assinatura Markets Pro (Google Play). Roda, projeções e glossário funcionam totalmente offline.",
     faq3_q:"Quantos idiomas estão disponíveis?",faq3_a:"13: italiano, inglês, espanhol, francês, alemão, português, holandês, russo, chinês, japonês, coreano, árabe (com suporte RTL completo), hindi.",
     faq4_q:"A assinatura se renova automaticamente?",faq4_a:"Sim, mas você pode cancelar a qualquer momento nas configurações do Google Play.",
     faq5_q:"Quais dados o app coleta?",faq5_a:"Sem rastreamento, sem analytics, sem publicidade. Os únicos dados processados são os estritamente necessários à gestão da assinatura (identificador pseudônimo gerenciado por RevenueCat, metadados de transação gerenciados por Google Play). Detalhes completos na política de privacidade.",
@@ -1836,14 +1855,14 @@ var I18N={
     hero_pitch:"Ontdek jouw geld-archetype vanuit je geboortehoroscoop — klassieke astrologie, helder uitgelegd. Een gratis horoscoopberekening, een lezing van ~26 pagina's, persoonlijke seizoenen en een live hemel. Elegant, offline en privacy-first. Plus de studie van cycli en historische correlaties in transitkaarten, met wereld- en marktanalyse.",
     nc_eyebrow:"Meer dan een blik op de markten",
     nc_title:"Het begint met je eigen horoscoop",
-    nc_intro:"Het hart van de app is persoonlijk: je geboortehoroscoop, gelezen in het teken van geld. De markten zijn er nog, gratis — maar niet langer het middelpunt.",
+    nc_intro:"Het hart van de app is persoonlijk: je berekent je geboortehoroscoop en leest hem planeet voor planeet, huis voor huis. De markten zijn er nog, gratis — maar niet langer het middelpunt.",
     nc1_title:"Jouw geld-archetype",nc1_body:"Twaalf geld-archetypen uit de hele geboortehoroscoop, niet alleen je zonneteken. Gratis te berekenen, in een paar tikken.",
     nc2_title:"Een lezing van ~26 pagina's",nc2_body:"Traditionele, karmische en esoterische lagen, met de rode draad van geld door alle twaalf Huizen.",
     nc3_title:"Persoonlijke seizoenen",nc3_body:"De transits naar je eigen horoscoop, met een melding wanneer een seizoen begint of eindigt.",
     nc4_title:"Wereld en markten, gratis",nc4_body:"Mundane cycli land voor land, en de klassieke planeet–sectorkaart — vrij te verkennen.",
     nc5_title:"Echte astrologie, uitgelegd",nc5_body:"Echte termen — aspecten, waardigheden, Huizen — bij eerste gebruik uitgelegd, nooit versimpeld.",
-    nc6_title:"Van jou, en privé",nc6_body:"Dertien talen, offline te gebruiken, en geboortegegevens die je apparaat nooit verlaten.",
-    cta_primary:"Binnenkort op Google Play",cta_download:"Ontdek het op Google Play",cta_secondary:"Hoe het werkt",cta_note:"Premium €9,99/maand",
+    nc6_title:"Van jou, en privé",nc6_body:"Dertien talen, offline te gebruiken, en geboortegegevens die je apparaat nooit verlaten.",nc7_title:"De horoscoop, planeet voor planeet",nc7_body:"Elke planeet in haar teken en huis, met ptolemeïsche, karmische, esoterische en vedische duiding naast elkaar. Elk begrip uitgelegd: de horoscoop is ook zonder voorkennis te lezen.",nc8_title:"Gecontroleerde berekeningen",nc8_body:"Zon, Maan, planeten en Ascendant komen tot op één boogminuut overeen met Astrodienst. Ware maansknoop, lokale tijd voor historische data, juliaanse of gregoriaanse kalender, elk jaar van 1 tot 9999.",nc9_title:"Dag en nacht",nc9_body:"De kleuren volgen de tijd: licht overdag, donker in de avond. Of kies met één tik.",theme_label:"Kleuren: dag of nacht",
+    cta_primary:"Binnenkort op Google Play",cta_download:"Ontdek het op Google Play",cta_secondary:"Hoe het werkt",cta_note:"Markets Pro €14,99/maand",
     value_eyebrow:"Wat het doet, in drie punten",value_title:"Drie tradities, één leeswijze",
     value_intro:"Precieze astronomie, klassieke symboliek, marktmapping. Alles transparant, alles gebaseerd op publieke bronnen.",
     vc1_title:"Precieze hemel",vc1_body:"12 tekens × 13 planeten. Planeetposities tot op de boogseconde nauwkeurig, berekend met open-source publieke-domein algoritmen (VSOP87, IAU).",
@@ -1868,17 +1887,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Geen tracking, geen analytics, geen advertenties. Alleen data strikt noodzakelijk voor abonnement.",
     feat8_t:"Native donkere modus",feat8_b:"Ontworpen voor nachtgebruik en lange sessies zonder oogvermoeidheid.",
     pricing_eyebrow:"Prijs",pricing_title:"Eenvoudig, transparant",
-    trial_badge:"",per_month:"/maand",pricing_sub:"Alle Premium-functies inbegrepen",
-    pricing_intro:"Alle plannen bevatten dezelfde Premium-functies. Kies de frequentie die bij je past.",
+    trial_badge:"",per_month:"/maand",pricing_sub:"Alle Markets Pro-functies inbegrepen",
+    pricing_intro:"Alle plannen bevatten dezelfde Markets Pro-functies. Kies de frequentie die bij je past.",
     ptier_monthly_badge:"Maandelijks",
     plat_app:"📱 Alleen Android-app",plat_web:"🌐 Alleen web-app",
     ptier_monthly_sub:"Flexibel. Annuleer wanneer je wilt.",
     ptier_annual_badge:"Jaarlijks · Beste prijs",
-    ptier_annual_save:"Bespaar 42% — gelijk aan €5,83/maand",
+    ptier_annual_save:"Bespaar 45% — gelijk aan €8,25/maand",
     ptier_annual_sub:"Voor lange-termijn ontdekkers.",
-    ptier_lifetime_badge:"Lifetime-ondersteuner",
-    ptier_lifetime_sub:"Alle toekomstige updates inbegrepen. Steun indie-ontwikkeling.",
-    ptier_lifetime_note:"Eenmalig betalen. Voor altijd gebruiken.",
+    pricing_trial:"7 dagen gratis proberen. Markets Pro is beschikbaar in zowel de Android-app als de web-app. Altijd opzegbaar.",
     per_year:"/jaar",
     one_time:"eenmalig",
     pli1:"Volledig wiel met alle 13 planeten",pli2:"Projecties tot 5 jaar vooruit",pli3:"Onbeperkte gecachte data",pli4:"Aanpasbare transit-meldingen",pli5:"Compleet woordenboek in 13 talen",
@@ -1899,7 +1916,7 @@ var I18N={
     sources_body:"Gebouwd op de klassieke Westerse traditie (Ptolemaeus, Tetrabiblos) en op vroeg 20e-eeuwse financiële astrologie — inclusief het werk van W.D. Gann (Tunnel Thru the Air, 1927) en Louise McWhirter — plus de archeosofische en esoterische referenties van Tommaso Palamidessi en Alice Bailey (Esoteric Astrology). Astronomische berekeningen zijn gebaseerd op open-source publieke-domein algoritmen: VSOP87 (Bureau des Longitudes, Parijs, 1987) en IAU 2006 (International Astronomical Union).",
     faq_eyebrow:"FAQ",faq_title:"Snelle antwoorden",
     faq1_q:"Voorspelt de app de markten?",faq1_a:"Nee. AstroTrader Pro is een symbolisch en educatief hulpmiddel. Het toont correlaties van klassieke astrologische traditie met financiële sectoren, maar biedt geen operationele voorspellingen of garanties. De voorspellende werkzaamheid van astrologie is wetenschappelijk niet bewezen.",
-    faq2_q:"Werkt het offline?",faq2_a:"Ja. Alle astronomische berekeningen en data zijn met de app gebundeld. De enige vereiste verbinding is voor het beheer van het Premium-abonnement (Google Play). Wiel, projecties en woordenboek werken volledig offline.",
+    faq2_q:"Werkt het offline?",faq2_a:"Ja. Alle astronomische berekeningen en data zijn met de app gebundeld. De enige vereiste verbinding is voor het beheer van het Markets Pro-abonnement (Google Play). Wiel, projecties en woordenboek werken volledig offline.",
     faq3_q:"Hoeveel talen zijn beschikbaar?",faq3_a:"13: Italiaans, Engels, Spaans, Frans, Duits, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaans, Arabisch (met volledige RTL-ondersteuning), Hindi.",
     faq4_q:"Wordt het abonnement automatisch verlengd?",faq4_a:"Ja, maar je kunt op elk moment opzeggen via Google Play-instellingen.",
     faq5_q:"Welke data verzamelt de app?",faq5_a:"Geen tracking, geen analytics, geen advertenties. De enige verwerkte data is wat strikt noodzakelijk is voor abonnementbeheer (pseudonieme identifier beheerd door RevenueCat, transactie-metadata beheerd door Google Play). Volledige details in het privacybeleid.",
@@ -1916,14 +1933,14 @@ var I18N={
     hero_pitch:"Откройте свой денежный архетип по натальной карте — классическая астрология, объяснённая ясно. Бесплатный расчёт карты, разбор на ~26 страниц, личные сезоны и живое небо. Элегантно, работает офлайн, privacy-first. А также изучение циклов и исторических корреляций на картах транзитов, с анализом мира и рынков.",
     nc_eyebrow:"Больше, чем взгляд на рынки",
     nc_title:"Всё начинается с вашей карты",
-    nc_intro:"Сердце приложения — личное: ваша натальная карта, прочитанная через тему денег. Рынки по-прежнему здесь, бесплатно, — но больше не в центре.",
+    nc_intro:"Сердце приложения — личное: вы рассчитываете свою натальную карту и читаете её планету за планетой, дом за домом. Рынки по-прежнему здесь, бесплатно, — но больше не в центре.",
     nc1_title:"Ваш денежный архетип",nc1_body:"Двенадцать денежных архетипов из всей натальной карты, а не только из солнечного знака. Бесплатный расчёт, в пару касаний.",
     nc2_title:"Разбор на ~26 страниц",nc2_body:"Традиционный, кармический и эзотерический планы, с нитью денег через все двенадцать Домов.",
     nc3_title:"Личные сезоны",nc3_body:"Транзиты к вашей собственной карте, с уведомлением, когда сезон открывается или закрывается.",
     nc4_title:"Мир и рынки, бесплатно",nc4_body:"Мунданные циклы по странам и классическая карта планета–сектор — свободны для изучения.",
     nc5_title:"Настоящая астрология, с пояснениями",nc5_body:"Подлинные термины — аспекты, достоинства, Дома — объясняются при первом появлении, без упрощений.",
-    nc6_title:"Ваше и приватное",nc6_body:"Тринадцать языков, работа офлайн и данные рождения, которые никогда не покидают устройство.",
-    cta_primary:"Скоро в Google Play",cta_download:"Доступно в Google Play",cta_secondary:"Как это работает",cta_note:"Premium €9,99/месяц",
+    nc6_title:"Ваше и приватное",nc6_body:"Тринадцать языков, работа офлайн и данные рождения, которые никогда не покидают устройство.",nc7_title:"Карта, планета за планетой",nc7_body:"Каждая планета в своём знаке и доме, с птолемеевским, кармическим, эзотерическим и ведическим толкованием рядом. Каждый термин объяснён: карту можно прочитать и без знания астрологии.",nc8_title:"Проверенные расчёты",nc8_body:"Солнце, Луна, планеты и Асцендент совпадают с Astrodienst с точностью до угловой минуты. Истинный лунный узел, местное время для исторических дат, юлианский или григорианский календарь, любой год от 1 до 9999.",nc9_title:"День и ночь",nc9_body:"Цвета следуют времени суток: светлые днём, тёмные вечером. Или выберите одним касанием.",theme_label:"Цвета: день или ночь",
+    cta_primary:"Скоро в Google Play",cta_download:"Доступно в Google Play",cta_secondary:"Как это работает",cta_note:"Markets Pro €14,99/месяц",
     value_eyebrow:"Что делает, в трёх пунктах",value_title:"Три традиции, одно прочтение",
     value_intro:"Точная астрономия, классическая символика, картография рынков. Всё прозрачно, всё на публичных источниках.",
     vc1_title:"Точное небо",vc1_body:"12 знаков × 13 планет. Положения планет с точностью до угловой секунды, рассчитанные через open-source алгоритмы общественного достояния (VSOP87, IAU).",
@@ -1948,17 +1965,15 @@ var I18N={
     feat7_t:"Privacy-first",feat7_b:"Никакого трекинга, аналитики или рекламы. Только данные, строго необходимые для подписки.",
     feat8_t:"Тёмная тема",feat8_b:"Создано для ночного использования и длительных сессий без напряжения глаз.",
     pricing_eyebrow:"Цена",pricing_title:"Просто, прозрачно",
-    trial_badge:"",per_month:"/месяц",pricing_sub:"Все Premium-функции включены",
-    pricing_intro:"Все планы включают одинаковые Premium-функции. Выберите подходящий ритм.",
+    trial_badge:"",per_month:"/месяц",pricing_sub:"Все Markets Pro-функции включены",
+    pricing_intro:"Все планы включают одинаковые Markets Pro-функции. Выберите подходящий ритм.",
     ptier_monthly_badge:"Ежемесячно",
     plat_app:"📱 Только в Android-приложении",plat_web:"🌐 Только в веб-приложении",
     ptier_monthly_sub:"Гибко. Отмена в любое время.",
     ptier_annual_badge:"Годовой · Лучшая цена",
-    ptier_annual_save:"Экономия 42% — эквивалент €5,83/месяц",
+    ptier_annual_save:"Экономия 45% — эквивалент €8,25/месяц",
     ptier_annual_sub:"Для долгосрочных исследователей.",
-    ptier_lifetime_badge:"Пожизненная поддержка",
-    ptier_lifetime_sub:"Все будущие обновления включены. Поддержите инди-разработку.",
-    ptier_lifetime_note:"Заплати один раз. Используй вечно.",
+    pricing_trial:"7 дней бесплатно. Markets Pro доступен и в приложении Android, и в веб-приложении. Отмена в любой момент.",
     per_year:"/год",
     one_time:"единоразово",
     pli1:"Полное колесо со всеми 13 планетами",pli2:"Прогнозы на 5 лет вперёд",pli3:"Неограниченный кэш дат",pli4:"Настраиваемые уведомления о транзитах",pli5:"Полный глоссарий на 13 языках",
@@ -1979,7 +1994,7 @@ var I18N={
     sources_body:"Основано на классической западной традиции (Птолемей, Тетрабиблос) и финансовой астрологии начала XX века — включая работы У.Д. Ганна (Tunnel Thru the Air, 1927) и Луизы Макуиртер — а также археософские и эзотерические референции Томмазо Паламидесси и Алисы Бейли (Esoteric Astrology). Астрономические расчёты основаны на алгоритмах общественного достояния: VSOP87 (Bureau des Longitudes, Париж, 1987) и IAU 2006 (Международный астрономический союз).",
     faq_eyebrow:"FAQ",faq_title:"Быстрые ответы",
     faq1_q:"Приложение предсказывает рынки?",faq1_a:"Нет. AstroTrader Pro — символический и образовательный инструмент. Он показывает корреляции классической астрологической традиции с финансовыми секторами, но не предлагает операционных прогнозов или гарантий. Прогностическая эффективность астрологии не доказана научно.",
-    faq2_q:"Работает офлайн?",faq2_a:"Да. Все астрономические вычисления и данные включены в приложение. Единственное необходимое соединение — для управления подпиской Premium (Google Play). Колесо, прогнозы и глоссарий работают полностью офлайн.",
+    faq2_q:"Работает офлайн?",faq2_a:"Да. Все астрономические вычисления и данные включены в приложение. Единственное необходимое соединение — для управления подпиской Markets Pro (Google Play). Колесо, прогнозы и глоссарий работают полностью офлайн.",
     faq3_q:"Сколько языков доступно?",faq3_a:"13: итальянский, английский, испанский, французский, немецкий, португальский, нидерландский, русский, китайский, японский, корейский, арабский (с полной RTL-поддержкой), хинди.",
     faq4_q:"Подписка обновляется автоматически?",faq4_a:"Да, но вы можете отменить её в любой момент через настройки Google Play.",
     faq5_q:"Какие данные собирает приложение?",faq5_a:"Никакого трекинга, аналитики или рекламы. Единственные обрабатываемые данные — строго необходимые для управления подпиской (псевдонимный идентификатор управляется RevenueCat, метаданные транзакций — Google Play). Полные детали в политике конфиденциальности.",
@@ -1996,14 +2011,14 @@ var I18N={
     hero_pitch:"从你的星盘发现你的金钱原型——把古典占星讲清楚。免费星盘计算、约26页的解读、个人季节，以及实时星空。优雅、可离线、隐私优先。另有基于行运盘的周期与历史相关性研究，以及世界与市场分析。",
     nc_eyebrow:"不只是看市场的镜头",
     nc_title:"从你自己的星盘开始",
-    nc_intro:"应用的核心是个人的：你的星盘，以金钱为线索来解读。市场仍然在这里，免费——但不再是重点。",
+    nc_intro:"应用的核心是个人的：计算你的本命星盘，逐颗行星、逐个宫位地阅读。市场仍然在这里，免费——但不再是重点。",
     nc1_title:"你的金钱原型",nc1_body:"十二种金钱原型取自整张星盘，而非仅仅太阳星座。免费计算，只需轻点几下。",
     nc2_title:"约26页的解读",nc2_body:"传统、业力与秘传三层，金钱的线索贯穿全部十二宫。",
     nc3_title:"个人季节",nc3_body:"行运至你自己的星盘，季节开启或结束时会有通知。",
     nc4_title:"世界与市场，免费",nc4_body:"逐国的世俗周期，以及经典的行星—板块对应图——保持免费供你探索。",
     nc5_title:"真正的占星，讲得明白",nc5_body:"真实的术语——相位、尊贵、宫位——首次出现即解释，从不简化敷衍。",
-    nc6_title:"属于你，且私密",nc6_body:"十三种语言，可离线使用，出生数据永不离开你的设备。",
-    cta_primary:"即将在 Google Play 上线",cta_download:"在 Google Play 下载",cta_secondary:"工作原理",cta_note:"Premium €9.99/月",
+    nc6_title:"属于你，且私密",nc6_body:"十三种语言，可离线使用，出生数据永不离开你的设备。",nc7_title:"逐颗行星读星盘",nc7_body:"每颗行星所在的星座与宫位，托勒密、业力、秘传与吠陀解读并列呈现。每个术语都有解释：不懂占星也能读懂自己的星盘。",nc8_title:"经过验证的计算",nc8_body:"太阳、月亮、行星与上升点与 Astrodienst 的误差在一角分以内。真月交点、历史日期采用当地平太阳时、儒略历或格里历、年份 1 至 9999。",nc9_title:"白天与夜晚",nc9_body:"配色随时间变化：白天明亮，晚上深色。也可以一键切换。",theme_label:"配色：白天或夜晚",
+    cta_primary:"即将在 Google Play 上线",cta_download:"在 Google Play 下载",cta_secondary:"工作原理",cta_note:"Markets Pro €14.99/月",
     value_eyebrow:"三个要点",value_title:"三种传统，一种解读",
     value_intro:"精准天文学、经典符号学、市场映射。一切透明，一切基于公共资源。",
     vc1_title:"精准天空",vc1_body:"12 个星座 × 13 颗行星。行星位置精确到弧秒，使用开源公共领域算法（VSOP87、IAU）计算。",
@@ -2028,17 +2043,15 @@ var I18N={
     feat7_t:"隐私优先",feat7_b:"无追踪、无分析、无广告。仅订阅所需的最少数据。",
     feat8_t:"原生深色模式",feat8_b:"为夜间使用和长时间会话设计，不让眼睛疲劳。",
     pricing_eyebrow:"价格",pricing_title:"简单、透明",
-    trial_badge:"",per_month:"/月",pricing_sub:"包含所有 Premium 功能",
+    trial_badge:"",per_month:"/月",pricing_sub:"包含所有 Markets Pro 功能",
     pricing_intro:"所有方案均包含相同的高级功能。选择适合您的频率。",
     ptier_monthly_badge:"月付",
     plat_app:"📱 仅限安卓应用",plat_web:"🌐 仅限网页版",
     ptier_monthly_sub:"灵活。随时取消。",
     ptier_annual_badge:"年付 · 最佳价值",
-    ptier_annual_save:"节省42% — 相当于每月€5.83",
+    ptier_annual_save:"节省45% — 相当于每月€8.25",
     ptier_annual_sub:"长期探索者首选。",
-    ptier_lifetime_badge:"终身支持",
-    ptier_lifetime_sub:"所有未来更新均包含。支持独立开发。",
-    ptier_lifetime_note:"一次付费。永久使用。",
+    pricing_trial:"7 天免费试用。Markets Pro 同时在 Android 应用和网页版中提供。随时取消。",
     per_year:"/年",
     one_time:"一次性",
     pli1:"完整轮盘，含全部 13 颗行星",pli2:"未来 5 年投影",pli3:"无限缓存日期",pli4:"可自定义过境通知",pli5:"13 种语言的完整词汇表",
@@ -2059,7 +2072,7 @@ var I18N={
     sources_body:"基于西方古典传统（托勒密《占星四书》）和20世纪早期金融占星——包括 W.D. Gann（Tunnel Thru the Air, 1927）和 Louise McWhirter 的作品——以及 Tommaso Palamidessi 和 Alice Bailey（Esoteric Astrology）的考古哲学与神秘学参考。天文计算基于开源公共领域算法：VSOP87（Bureau des Longitudes，巴黎，1987）和 IAU 2006（国际天文联合会）。",
     faq_eyebrow:"FAQ",faq_title:"快速解答",
     faq1_q:"应用预测市场吗？",faq1_a:"不。AstroTrader Pro 是符号和教育工具。它显示经典占星传统与金融行业的相关性，但不提供操作预测或任何保证。占星的预测有效性未经科学证实。",
-    faq2_q:"离线工作吗？",faq2_a:"是。所有天文计算和数据都与应用捆绑。唯一需要的连接是管理 Premium 订阅（Google Play）。轮盘、投影和词汇表完全离线工作。",
+    faq2_q:"离线工作吗？",faq2_a:"是。所有天文计算和数据都与应用捆绑。唯一需要的连接是管理 Markets Pro 订阅（Google Play）。轮盘、投影和词汇表完全离线工作。",
     faq3_q:"有多少种语言可用？",faq3_a:"13 种：意大利语、英语、西班牙语、法语、德语、葡萄牙语、荷兰语、俄语、中文、日语、韩语、阿拉伯语（完整 RTL 支持）、印地语。",
     faq4_q:"订阅自动续订吗？",faq4_a:"是的，但您可以随时通过 Google Play 设置取消。",
     faq5_q:"应用收集哪些数据？",faq5_a:"无追踪、无分析、无广告。处理的唯一数据是订阅管理所严格必需的（由 RevenueCat 处理的伪名标识符，由 Google Play 处理的交易元数据）。完整详情见隐私政策。",
@@ -2076,14 +2089,14 @@ var I18N={
     hero_pitch:"出生図からあなたの「お金の元型」を見つける——古典占星術を、わかりやすく。無料の出生図計算、約26ページの読み解き、パーソナル・シーズン、そしてリアルタイムの星空。エレガントで、オフライン対応、プライバシー重視。さらに、トランジット図による周期と歴史的相関の研究、世界と市場の分析も。",
     nc_eyebrow:"市場を見るレンズにとどまらない",
     nc_title:"まず、あなた自身の出生図から",
-    nc_intro:"アプリの核心は個人的です。あなたの出生図を、お金という視点で読み解きます。市場は今も無料で残っています——でも、もう主役ではありません。",
+    nc_intro:"アプリの核心は個人的です。あなたの出生図を計算し、惑星ごと、ハウスごとに読み解きます。市場は今も無料で残っています——でも、もう主役ではありません。",
     nc1_title:"あなたのお金の元型",nc1_body:"太陽星座だけでなく、出生図全体から導く十二のお金の元型。数タップで、無料で計算。",
     nc2_title:"約26ページの読み解き",nc2_body:"伝統・カルマ・秘教の三つの層。お金の糸が十二のハウスすべてを貫きます。",
     nc3_title:"パーソナル・シーズン",nc3_body:"あなた自身の出生図へのトランジット。シーズンが始まる・終わるときに通知します。",
     nc4_title:"世界と市場、無料",nc4_body:"国ごとのマンデン・サイクルと、古典的な惑星—セクター対応図——自由に探索できるよう無料のまま。",
     nc5_title:"本物の占星術を、丁寧に",nc5_body:"本物の用語——アスペクト、品位、ハウス——を初出で説明。決して薄めません。",
-    nc6_title:"あなたのもの、そしてプライベート",nc6_body:"十三言語、オフライン対応、出生データは端末から決して出ません。",
-    cta_primary:"Google Play に近日登場",cta_download:"Google Play で手に入れよう",cta_secondary:"仕組み",cta_note:"Premium €9.99/月",
+    nc6_title:"あなたのもの、そしてプライベート",nc6_body:"十三言語、オフライン対応、出生データは端末から決して出ません。",nc7_title:"惑星ごとに読むホロスコープ",nc7_body:"各惑星のサインとハウスを、プトレマイオス・カルマ・秘教・ヴェーダの解説と並べて表示。用語はすべて説明つきで、占星術を知らなくても自分で読めます。",nc8_title:"検証済みの計算",nc8_body:"太陽・月・惑星・アセンダントは Astrodienst と1分角以内で一致。真のノード、歴史的な日付の地方平均時、ユリウス暦またはグレゴリオ暦、1年〜9999年に対応。",nc9_title:"昼と夜",nc9_body:"配色は時刻に合わせて変わります。昼は明るく、夜は暗く。タップで選ぶこともできます。",theme_label:"配色：昼または夜",
+    cta_primary:"Google Play に近日登場",cta_download:"Google Play で手に入れよう",cta_secondary:"仕組み",cta_note:"Markets Pro €14.99/月",
     value_eyebrow:"3つの要点",value_title:"三つの伝統、一つの読み方",
     value_intro:"精密な天文学、古典的シンボリズム、市場マッピング。すべて透明、すべて公開ソースに基づく。",
     vc1_title:"正確な空",vc1_body:"12星座 × 13天体。弧秒精度の惑星位置を、オープンソースのパブリックドメイン・アルゴリズム（VSOP87、IAU）で計算。",
@@ -2108,17 +2121,15 @@ var I18N={
     feat7_t:"プライバシー優先",feat7_b:"追跡なし、分析なし、広告なし。サブスクリプションに厳密に必要なデータのみ。",
     feat8_t:"ネイティブダークモード",feat8_b:"夜間使用と目を疲れさせない長時間セッションのために設計。",
     pricing_eyebrow:"価格",pricing_title:"シンプル、透明",
-    trial_badge:"",per_month:"/月",pricing_sub:"全 Premium 機能を含む",
+    trial_badge:"",per_month:"/月",pricing_sub:"全 Markets Pro 機能を含む",
     pricing_intro:"すべてのプランは同じプレミアム機能を含みます。あなたに合うペースを選んでください。",
     ptier_monthly_badge:"月額",
     plat_app:"📱 Androidアプリのみ",plat_web:"🌐 ウェブアプリのみ",
     ptier_monthly_sub:"柔軟。いつでもキャンセル可能。",
     ptier_annual_badge:"年額 · ベストバリュー",
-    ptier_annual_save:"42%お得 — 月額€5.83相当",
+    ptier_annual_save:"45%お得 — 月額€8.25相当",
     ptier_annual_sub:"長期的な探求者向け。",
-    ptier_lifetime_badge:"ライフタイムサポート",
-    ptier_lifetime_sub:"すべての将来のアップデート含む。インディー開発を支援。",
-    ptier_lifetime_note:"一度支払い。永久に使用。",
+    pricing_trial:"7日間の無料トライアル。Markets Pro は Android アプリとウェブアプリの両方で利用できます。いつでも解約可能。",
     per_year:"/年",
     one_time:"一度のみ",
     pli1:"全13天体の完全なホイール",pli2:"最大5年先の投影",pli3:"キャッシュ日付無制限",pli4:"カスタマイズ可能なトランジット通知",pli5:"13言語の完全用語集",
@@ -2139,7 +2150,7 @@ var I18N={
     sources_body:"古典西洋伝統（プトレマイオス『テトラビブロス』）と20世紀初頭の金融占星術——W.D. ガン（Tunnel Thru the Air, 1927）とルイーズ・マクワーターの著作を含む——に加え、トンマーゾ・パラミデッシとアリス・ベイリー（Esoteric Astrology）の考古哲学・秘教的参照に基づく。天体計算はオープンソースのパブリックドメイン・アルゴリズム：VSOP87（ビューロー・デ・ロンジチュード、パリ、1987）と IAU 2006（国際天文学連合）に基づく。",
     faq_eyebrow:"FAQ",faq_title:"素早い回答",
     faq1_q:"アプリは市場を予測しますか？",faq1_a:"いいえ。AstroTrader Pro は象徴的・教育的ツールです。古典占星術伝統と金融セクターの相関を示しますが、運用予測や保証は提供しません。占星術の予測有効性は科学的に証明されていません。",
-    faq2_q:"オフラインで動作しますか？",faq2_a:"はい。すべての天体計算とデータはアプリに同梱されています。必要な接続は Premium サブスクリプション管理（Google Play）のみ。ホイール、投影、用語集は完全にオフラインで動作します。",
+    faq2_q:"オフラインで動作しますか？",faq2_a:"はい。すべての天体計算とデータはアプリに同梱されています。必要な接続は Markets Pro サブスクリプション管理（Google Play）のみ。ホイール、投影、用語集は完全にオフラインで動作します。",
     faq3_q:"何ヶ国語が利用可能ですか？",faq3_a:"13: イタリア語、英語、スペイン語、フランス語、ドイツ語、ポルトガル語、オランダ語、ロシア語、中国語、日本語、韓国語、アラビア語（完全 RTL サポート）、ヒンディー語。",
     faq4_q:"サブスクリプションは自動更新されますか？",faq4_a:"はい、ただし Google Play 設定からいつでもキャンセルできます。",
     faq5_q:"アプリはどのようなデータを収集しますか？",faq5_a:"追跡なし、分析なし、広告なし。処理される唯一のデータはサブスクリプション管理に厳密に必要なもの（RevenueCat が管理する仮名識別子、Google Play が管理する取引メタデータ）。完全な詳細はプライバシーポリシーで。",
@@ -2156,14 +2167,14 @@ var I18N={
     hero_pitch:"출생 차트에서 당신의 '돈의 원형'을 발견하세요 — 고전 점성술을 명확하게. 무료 출생 차트 계산, 약 26페이지의 해석, 개인 시즌, 그리고 실시간 하늘. 우아하고 오프라인 가능하며 프라이버시 우선. 또한 트랜짓 차트로 보는 주기와 역사적 상관관계 연구, 세계와 시장 분석까지.",
     nc_eyebrow:"시장을 보는 렌즈, 그 이상",
     nc_title:"당신 자신의 차트에서 시작합니다",
-    nc_intro:"앱의 핵심은 개인적입니다. 당신의 출생 차트를 돈이라는 관점에서 읽습니다. 시장은 여전히 무료로 있지만 — 더 이상 중심은 아닙니다.",
+    nc_intro:"앱의 핵심은 개인적입니다. 출생 차트를 계산하고 행성별로, 하우스별로 읽습니다. 시장은 여전히 무료로 있지만 — 더 이상 중심은 아닙니다.",
     nc1_title:"당신의 돈의 원형",nc1_body:"태양 별자리만이 아니라 출생 차트 전체에서 뽑아낸 열두 가지 돈의 원형. 몇 번의 탭으로 무료 계산.",
     nc2_title:"약 26페이지의 해석",nc2_body:"전통·카르마·비교(秘敎)의 세 층위, 돈의 실이 열두 하우스 전체를 관통합니다.",
     nc3_title:"개인 시즌",nc3_body:"당신 자신의 차트로 오는 트랜짓, 시즌이 열리거나 닫힐 때 알림을 드립니다.",
     nc4_title:"세계와 시장, 무료",nc4_body:"나라별 먼데인 주기와 고전적인 행성–섹터 지도 — 자유롭게 탐색하도록 무료로 유지.",
     nc5_title:"진짜 점성술, 설명과 함께",nc5_body:"진짜 용어 — 어스펙트, 품위, 하우스 — 를 처음 나올 때 설명하며, 결코 쉽게 뭉개지 않습니다.",
-    nc6_title:"당신의 것, 그리고 비공개",nc6_body:"열세 개 언어, 오프라인 가능, 출생 데이터는 기기를 절대 벗어나지 않습니다.",
-    cta_primary:"Google Play에 곧 출시",cta_download:"Google Play에서 다운로드",cta_secondary:"작동 방식",cta_note:"Premium €9.99/월",
+    nc6_title:"당신의 것, 그리고 비공개",nc6_body:"열세 개 언어, 오프라인 가능, 출생 데이터는 기기를 절대 벗어나지 않습니다.",nc7_title:"행성별로 읽는 차트",nc7_body:"각 행성의 별자리와 하우스를 프톨레마이오스·카르마·비전·베다 해석과 나란히 보여 줍니다. 모든 용어에 설명이 있어 점성술을 몰라도 스스로 읽을 수 있습니다.",nc8_title:"검증된 계산",nc8_body:"태양, 달, 행성, 상승점이 Astrodienst와 1분각 이내로 일치합니다. 진교점, 역사적 날짜의 지방 평균시, 율리우스력 또는 그레고리력, 1년부터 9999년까지.",nc9_title:"낮과 밤",nc9_body:"색상이 시간을 따라갑니다. 낮에는 밝게, 저녁에는 어둡게. 한 번의 터치로 고를 수도 있습니다.",theme_label:"색상: 낮 또는 밤",
+    cta_primary:"Google Play에 곧 출시",cta_download:"Google Play에서 다운로드",cta_secondary:"작동 방식",cta_note:"Markets Pro €14.99/월",
     value_eyebrow:"세 가지 핵심",value_title:"세 전통, 하나의 해석",
     value_intro:"정확한 천문학, 고전적 상징, 시장 매핑. 모두 투명하게, 모두 공개 출처를 기반으로.",
     vc1_title:"정확한 하늘",vc1_body:"12 별자리 × 13 행성. 호초 정밀도의 행성 위치를, 공개 도메인 오픈소스 알고리즘(VSOP87, IAU)으로 계산.",
@@ -2188,17 +2199,15 @@ var I18N={
     feat7_t:"프라이버시 우선",feat7_b:"추적, 분석, 광고 없음. 구독에 엄격히 필요한 데이터만.",
     feat8_t:"네이티브 다크 모드",feat8_b:"야간 사용과 긴 세션 동안 눈의 피로를 줄이도록 설계.",
     pricing_eyebrow:"가격",pricing_title:"단순, 투명",
-    trial_badge:"",per_month:"/월",pricing_sub:"모든 Premium 기능 포함",
+    trial_badge:"",per_month:"/월",pricing_sub:"모든 Markets Pro 기능 포함",
     pricing_intro:"모든 플랜은 동일한 프리미엄 기능을 포함합니다. 당신에게 맞는 주기를 선택하세요.",
     ptier_monthly_badge:"월간",
     plat_app:"📱 안드로이드 앱 전용",plat_web:"🌐 웹 앱 전용",
     ptier_monthly_sub:"유연함. 언제든지 취소.",
     ptier_annual_badge:"연간 · 최고 가치",
-    ptier_annual_save:"42% 절약 — 월 €5.83 상당",
+    ptier_annual_save:"45% 절약 — 월 €8.25 상당",
     ptier_annual_sub:"장기 탐험가용.",
-    ptier_lifetime_badge:"평생 후원",
-    ptier_lifetime_sub:"모든 미래 업데이트 포함. 인디 개발 지원.",
-    ptier_lifetime_note:"한 번 결제. 평생 사용.",
+    pricing_trial:"7일 무료 체험. Markets Pro는 Android 앱과 웹 앱에서 모두 사용할 수 있습니다. 언제든 해지 가능.",
     per_year:"/년",
     one_time:"일회성",
     pli1:"전체 13 행성이 있는 완전한 휠",pli2:"최대 5년 미래 투영",pli3:"무제한 캐시된 날짜",pli4:"맞춤형 트랜짓 알림",pli5:"13개 언어의 완전한 용어집",
@@ -2219,7 +2228,7 @@ var I18N={
     sources_body:"고전 서양 전통(프톨레마이오스, 테트라비블로스)과 20세기 초 금융 점성술—W.D. 갠(Tunnel Thru the Air, 1927)과 루이스 맥워터의 작업 포함—에 더하여, 톰마소 팔라미데시와 앨리스 베일리(Esoteric Astrology)의 고고철학적·비전적 참고에 기초. 천체 계산은 공개 도메인 오픈소스 알고리즘에 기반: VSOP87(Bureau des Longitudes, 파리, 1987)과 IAU 2006(국제천문학연합).",
     faq_eyebrow:"FAQ",faq_title:"빠른 답변",
     faq1_q:"앱이 시장을 예측하나요?",faq1_a:"아닙니다. AstroTrader Pro는 상징적이고 교육적인 도구입니다. 고전 점성술 전통과 금융 부문의 상관관계를 보여주지만, 운영 예측이나 어떠한 보장도 제공하지 않습니다. 점성술의 예측 효과는 과학적으로 입증되지 않았습니다.",
-    faq2_q:"오프라인에서 작동하나요?",faq2_a:"예. 모든 천체 계산과 데이터는 앱에 번들됩니다. 필요한 유일한 연결은 Premium 구독 관리(Google Play)용입니다. 휠, 투영, 용어집은 완전히 오프라인에서 작동합니다.",
+    faq2_q:"오프라인에서 작동하나요?",faq2_a:"예. 모든 천체 계산과 데이터는 앱에 번들됩니다. 필요한 유일한 연결은 Markets Pro 구독 관리(Google Play)용입니다. 휠, 투영, 용어집은 완전히 오프라인에서 작동합니다.",
     faq3_q:"몇 개의 언어를 사용할 수 있나요?",faq3_a:"13개: 이탈리아어, 영어, 스페인어, 프랑스어, 독일어, 포르투갈어, 네덜란드어, 러시아어, 중국어, 일본어, 한국어, 아랍어(완전 RTL 지원), 힌디어.",
     faq4_q:"구독이 자동 갱신되나요?",faq4_a:"예, 하지만 Google Play 설정에서 언제든지 취소할 수 있습니다.",
     faq5_q:"앱은 어떤 데이터를 수집하나요?",faq5_a:"추적, 분석, 광고 없음. 처리되는 유일한 데이터는 구독 관리에 엄격히 필요한 것(RevenueCat이 관리하는 가명 식별자, Google Play가 관리하는 거래 메타데이터)입니다. 자세한 내용은 개인정보 보호정책에서.",
@@ -2236,14 +2245,14 @@ var I18N={
     hero_pitch:"اكتشف نمط المال الخاص بك من خريطتك الفلكية — علم التنجيم الكلاسيكي، موضَّحًا بوضوح. حساب مجاني للخريطة، قراءة من نحو 26 صفحة، مواسم شخصية، وسماء حية. أنيق، يعمل دون اتصال، ويحترم الخصوصية. إضافة إلى دراسة الدورات والارتباطات التاريخية على خرائط العبور، مع تحليل العالم والأسواق.",
     nc_eyebrow:"أكثر من مجرد عدسة على الأسواق",
     nc_title:"يبدأ الأمر من خريطتك أنت",
-    nc_intro:"قلب التطبيق شخصي: خريطتك الفلكية، مقروءة من زاوية المال. الأسواق لا تزال هنا، مجانًا — لكنها لم تعد المحور.",
+    nc_intro:"قلب التطبيق شخصي: تحسب خريطتك الفلكية وتقرأها كوكبًا كوكبًا وبيتًا بيتًا. الأسواق لا تزال هنا، مجانًا — لكنها لم تعد المحور.",
     nc1_title:"نمط المال الخاص بك",nc1_body:"اثنا عشر نمطًا للمال مستخلَصة من الخريطة الفلكية كاملة، لا من برجك الشمسي وحده. حساب مجاني، بنقرات قليلة.",
     nc2_title:"قراءة من نحو 26 صفحة",nc2_body:"مستويات تقليدية وكارمية وباطنية، مع خيط المال ممتدًّا عبر البيوت الاثني عشر جميعها.",
     nc3_title:"مواسم شخصية",nc3_body:"العبورات إلى خريطتك أنت، مع إشعار عند بدء موسم أو انتهائه.",
     nc4_title:"العالم والأسواق، مجانًا",nc4_body:"دورات عالمية دولةً دولة، وخريطة الكوكب–القطاع الكلاسيكية — تُترك مجانية للاستكشاف.",
     nc5_title:"تنجيم حقيقي، مشروح",nc5_body:"مصطلحات أصيلة — الاتصالات، الكرامات، البيوت — تُشرح عند أول ورود، دون تبسيط مخل.",
-    nc6_title:"مِلكك، وخاص",nc6_body:"ثلاث عشرة لغة، يعمل دون اتصال، وبيانات ميلاد لا تغادر جهازك أبدًا.",
-    cta_primary:"قريبًا على Google Play",cta_download:"احصل عليه من Google Play",cta_secondary:"كيف يعمل",cta_note:"Premium €9.99/شهر",
+    nc6_title:"مِلكك، وخاص",nc6_body:"ثلاث عشرة لغة، يعمل دون اتصال، وبيانات ميلاد لا تغادر جهازك أبدًا.",nc7_title:"الخريطة كوكبًا كوكبًا",nc7_body:"كل كوكب في برجه وبيته، مع القراءات البطلمية والكارمية والباطنية والفيدية جنبًا إلى جنب. كل مصطلح مشروح: تُقرأ الخريطة حتى دون معرفة بالتنجيم.",nc8_title:"حسابات مُتحقَّق منها",nc8_body:"الشمس والقمر والكواكب والطالع تطابق Astrodienst بفارق أقل من دقيقة قوسية. العقدة القمرية الحقيقية، التوقيت المحلي للتواريخ التاريخية، التقويم اليولياني أو الغريغوري، أي سنة من 1 إلى 9999.",nc9_title:"نهار وليل",nc9_body:"الألوان تتبع الوقت: فاتحة نهارًا، داكنة مساءً. أو تختارها بلمسة.",theme_label:"الألوان: نهار أو ليل",
+    cta_primary:"قريبًا على Google Play",cta_download:"احصل عليه من Google Play",cta_secondary:"كيف يعمل",cta_note:"Markets Pro €14.99/شهر",
     value_eyebrow:"ما يفعله، في ثلاث نقاط",value_title:"ثلاث تقاليد، قراءة واحدة",
     value_intro:"فلك دقيق، رموز كلاسيكية، رسم خرائط للأسواق. كل شيء شفاف، كل شيء مبني على مصادر عامة.",
     vc1_title:"سماء دقيقة",vc1_body:"12 برجًا × 13 كوكبًا. مواقع الكواكب دقيقة إلى الثانية القوسية، محسوبة بخوارزميات مفتوحة المصدر في الملكية العامة (VSOP87، IAU).",
@@ -2268,17 +2277,15 @@ var I18N={
     feat7_t:"الخصوصية أولاً",feat7_b:"بدون تتبع، بدون تحليلات، بدون إعلانات. فقط البيانات الضرورية للاشتراك.",
     feat8_t:"وضع داكن أصلي",feat8_b:"مصمم للاستخدام الليلي والجلسات الطويلة دون إجهاد العين.",
     pricing_eyebrow:"السعر",pricing_title:"بسيط، شفاف",
-    trial_badge:"",per_month:"/شهر",pricing_sub:"جميع ميزات Premium مضمنة",
-    pricing_intro:"جميع الخطط تتضمن نفس ميزات Premium. اختر الإيقاع المناسب لك.",
+    trial_badge:"",per_month:"/شهر",pricing_sub:"جميع ميزات Markets Pro مضمنة",
+    pricing_intro:"جميع الخطط تتضمن نفس ميزات Markets Pro. اختر الإيقاع المناسب لك.",
     ptier_monthly_badge:"شهري",
     plat_app:"📱 تطبيق أندرويد فقط",plat_web:"🌐 تطبيق الويب فقط",
     ptier_monthly_sub:"مرن. إلغاء في أي وقت.",
     ptier_annual_badge:"سنوي · أفضل قيمة",
-    ptier_annual_save:"وفّر 42% — ما يعادل €5.83/شهر",
+    ptier_annual_save:"وفّر 45% — ما يعادل €8.25/شهر",
     ptier_annual_sub:"لمستكشفي الأمد الطويل.",
-    ptier_lifetime_badge:"دعم مدى الحياة",
-    ptier_lifetime_sub:"جميع التحديثات المستقبلية مشمولة. ادعم التطوير المستقل.",
-    ptier_lifetime_note:"ادفع مرة واحدة. استخدم للأبد.",
+    pricing_trial:"تجربة مجانية لمدة 7 أيام. Markets Pro متاح في تطبيق Android وتطبيق الويب معًا. ألغِ في أي وقت.",
     per_year:"/سنة",
     one_time:"مرة واحدة",
     pli1:"عجلة كاملة بجميع الكواكب الـ 13",pli2:"إسقاطات حتى 5 سنوات في المستقبل",pli3:"تواريخ مخزنة غير محدودة",pli4:"إشعارات عبور قابلة للتخصيص",pli5:"قاموس كامل بـ 13 لغة",
@@ -2299,7 +2306,7 @@ var I18N={
     sources_body:"مبنية على التقاليد الغربية الكلاسيكية (بطليموس، Tetrabiblos) وعلم التنجيم المالي في أوائل القرن العشرين — بما في ذلك أعمال W.D. Gann (Tunnel Thru the Air، 1927) ولويز ماكويرتر — بالإضافة إلى المراجع الأركيوسوفية والباطنية لـ Tommaso Palamidessi وأليس بيلي (Esoteric Astrology). الحسابات الفلكية مبنية على خوارزميات مفتوحة المصدر في الملكية العامة: VSOP87 (Bureau des Longitudes، باريس، 1987) و IAU 2006 (الاتحاد الفلكي الدولي).",
     faq_eyebrow:"الأسئلة الشائعة",faq_title:"إجابات سريعة",
     faq1_q:"هل يتنبأ التطبيق بالأسواق؟",faq1_a:"لا. AstroTrader Pro أداة رمزية وتعليمية. يعرض ارتباطات من التقاليد الفلكية الكلاسيكية مع القطاعات المالية، لكنه لا يقدم تنبؤات تشغيلية أو أي ضمانات. فعالية التنبؤ للتنجيم غير مثبتة علميًا.",
-    faq2_q:"هل يعمل دون اتصال؟",faq2_a:"نعم. جميع الحسابات الفلكية والبيانات مدمجة مع التطبيق. الاتصال الوحيد المطلوب لإدارة اشتراك Premium (Google Play). العجلة، الإسقاطات، والقاموس تعمل بالكامل دون اتصال.",
+    faq2_q:"هل يعمل دون اتصال؟",faq2_a:"نعم. جميع الحسابات الفلكية والبيانات مدمجة مع التطبيق. الاتصال الوحيد المطلوب لإدارة اشتراك Markets Pro (Google Play). العجلة، الإسقاطات، والقاموس تعمل بالكامل دون اتصال.",
     faq3_q:"كم عدد اللغات المتاحة؟",faq3_a:"13: الإيطالية، الإنجليزية، الإسبانية، الفرنسية، الألمانية، البرتغالية، الهولندية، الروسية، الصينية، اليابانية، الكورية، العربية (مع دعم RTL كامل)، الهندية.",
     faq4_q:"هل يتجدد الاشتراك تلقائيًا؟",faq4_a:"نعم، لكن يمكنك الإلغاء في أي وقت من إعدادات Google Play.",
     faq5_q:"ما البيانات التي يجمعها التطبيق؟",faq5_a:"بدون تتبع، بدون تحليلات، بدون إعلانات. البيانات الوحيدة المعالجة هي ما يلزم بدقة لإدارة الاشتراك (معرف مستعار يديره RevenueCat، بيانات وصفية للمعاملات يديرها Google Play). التفاصيل الكاملة في سياسة الخصوصية.",
@@ -2316,14 +2323,14 @@ var I18N={
     hero_pitch:"अपनी जन्म कुंडली से अपना धन-आदर्श (money archetype) जानें — शास्त्रीय ज्योतिष, स्पष्ट रूप में। मुफ़्त कुंडली गणना, ~26 पृष्ठ की व्याख्या, व्यक्तिगत ऋतुएँ, और सजीव आकाश। सुरुचिपूर्ण, ऑफ़लाइन-सक्षम, गोपनीयता-प्रथम। साथ ही गोचर कुंडलियों पर चक्रों और ऐतिहासिक सहसंबंधों का अध्ययन, विश्व और बाज़ार विश्लेषण के साथ।",
     nc_eyebrow:"केवल बाज़ार का लेंस नहीं",
     nc_title:"शुरुआत आपकी अपनी कुंडली से",
-    nc_intro:"ऐप का हृदय व्यक्तिगत है: आपकी जन्म कुंडली, धन की दृष्टि से पढ़ी हुई। बाज़ार अब भी यहाँ हैं, मुफ़्त — पर वे अब केंद्र नहीं हैं।",
+    nc_intro:"ऐप का हृदय व्यक्तिगत है: आप अपनी जन्म कुंडली बनाते हैं और उसे ग्रह-दर-ग्रह, भाव-दर-भाव पढ़ते हैं। बाज़ार अब भी यहाँ हैं, मुफ़्त — पर वे अब केंद्र नहीं हैं।",
     nc1_title:"आपका धन-आदर्श",nc1_body:"केवल सूर्य राशि से नहीं, बल्कि पूरी जन्म कुंडली से निकले बारह धन-आदर्श। कुछ ही टैप में, मुफ़्त गणना।",
     nc2_title:"~26 पृष्ठ की व्याख्या",nc2_body:"पारंपरिक, कार्मिक और गूढ़ स्तर, धन का सूत्र बारहों भावों में पिरोया हुआ।",
     nc3_title:"व्यक्तिगत ऋतुएँ",nc3_body:"आपकी अपनी कुंडली पर गोचर, और जब कोई ऋतु आरंभ या समाप्त हो तो सूचना।",
     nc4_title:"विश्व और बाज़ार, मुफ़्त",nc4_body:"देश-दर-देश सांसारिक चक्र, और शास्त्रीय ग्रह–क्षेत्र मानचित्र — खोजने के लिए मुफ़्त।",
     nc5_title:"असली ज्योतिष, समझाया हुआ",nc5_body:"असली शब्द — दृष्टि, गरिमा, भाव — पहली बार आने पर समझाए गए, कभी सरलीकृत नहीं।",
-    nc6_title:"आपकी, और निजी",nc6_body:"तेरह भाषाएँ, ऑफ़लाइन-सक्षम, और जन्म-डेटा जो आपका उपकरण कभी नहीं छोड़ता।",
-    cta_primary:"जल्द ही Google Play पर",cta_download:"Google Play से प्राप्त करें",cta_secondary:"यह कैसे काम करता है",cta_note:"Premium €9.99/महीना",
+    nc6_title:"आपकी, और निजी",nc6_body:"तेरह भाषाएँ, ऑफ़लाइन-सक्षम, और जन्म-डेटा जो आपका उपकरण कभी नहीं छोड़ता।",nc7_title:"ग्रह-दर-ग्रह कुंडली",nc7_body:"हर ग्रह अपनी राशि और भाव में, टॉलेमिक, कार्मिक, गूढ़ और वैदिक व्याख्याओं के साथ। हर शब्द समझाया गया है: ज्योतिष जाने बिना भी कुंडली पढ़ी जा सकती है।",nc8_title:"जाँची हुई गणनाएँ",nc8_body:"सूर्य, चंद्रमा, ग्रह और लग्न Astrodienst से एक कला-मिनट के भीतर मेल खाते हैं। सच्चा चंद्र-नोड, ऐतिहासिक तिथियों के लिए स्थानीय समय, जूलियन या ग्रेगोरियन पंचांग, वर्ष 1 से 9999 तक।",nc9_title:"दिन और रात",nc9_body:"रंग समय के साथ बदलते हैं: दिन में हल्के, शाम को गहरे। या एक स्पर्श से चुनें।",theme_label:"रंग: दिन या रात",
+    cta_primary:"जल्द ही Google Play पर",cta_download:"Google Play से प्राप्त करें",cta_secondary:"यह कैसे काम करता है",cta_note:"Markets Pro €14.99/महीना",
     value_eyebrow:"यह क्या करता है, तीन बिंदुओं में",value_title:"तीन परंपराएँ, एक पठन",
     value_intro:"सटीक खगोल विज्ञान, शास्त्रीय प्रतीकवाद, बाज़ार मानचित्रण। सब पारदर्शी, सब सार्वजनिक स्रोतों पर आधारित।",
     vc1_title:"सटीक आकाश",vc1_body:"12 राशियाँ × 13 ग्रह। चाप-सेकंड तक सटीक ग्रहीय स्थितियाँ, सार्वजनिक डोमेन ओपन-सोर्स एल्गोरिदम (VSOP87, IAU) से गणना की गई।",
@@ -2348,17 +2355,15 @@ var I18N={
     feat7_t:"गोपनीयता-प्रथम",feat7_b:"कोई ट्रैकिंग नहीं, कोई एनालिटिक्स नहीं, कोई विज्ञापन नहीं। केवल सदस्यता के लिए आवश्यक डेटा।",
     feat8_t:"नेटिव डार्क मोड",feat8_b:"रात के उपयोग और लंबी सत्रों के लिए डिज़ाइन, आँखों पर तनाव के बिना।",
     pricing_eyebrow:"मूल्य",pricing_title:"सरल, पारदर्शी",
-    trial_badge:"",per_month:"/महीना",pricing_sub:"सभी Premium सुविधाएँ शामिल",
+    trial_badge:"",per_month:"/महीना",pricing_sub:"सभी Markets Pro सुविधाएँ शामिल",
     pricing_intro:"",
     ptier_monthly_badge:"मासिक",
     plat_app:"📱 केवल Android ऐप",plat_web:"🌐 केवल वेब ऐप",
     ptier_monthly_sub:"लचीला। किसी भी समय रद्द करें।",
     ptier_annual_badge:"वार्षिक · सर्वोत्तम मूल्य",
-    ptier_annual_save:"42% बचाएं — €5.83/महीना के बराबर",
+    ptier_annual_save:"45% बचाएं — €8.25/महीना के बराबर",
     ptier_annual_sub:"दीर्घकालिक अन्वेषकों के लिए।",
-    ptier_lifetime_badge:"आजीवन समर्थक",
-    ptier_lifetime_sub:"सभी भविष्य के अपडेट शामिल। इंडी विकास का समर्थन करें।",
-    ptier_lifetime_note:"एक बार भुगतान करें। हमेशा उपयोग करें।",
+    pricing_trial:"7 दिन का मुफ़्त ट्रायल। Markets Pro Android ऐप और वेब ऐप दोनों पर उपलब्ध है। कभी भी रद्द करें।",
     per_year:"/वर्ष",
     one_time:"एक बार",
     pli1:"सभी 13 ग्रहों के साथ पूर्ण चक्र",pli2:"भविष्य में 5 साल तक प्रक्षेपण",pli3:"असीमित कैश्ड तिथियाँ",pli4:"अनुकूलन योग्य गोचर सूचनाएँ",pli5:"13 भाषाओं में पूर्ण शब्दकोश",
@@ -2379,7 +2384,7 @@ var I18N={
     sources_body:"शास्त्रीय पश्चिमी परंपरा (टॉलमी, टेट्राबिब्लोस) और 20वीं सदी की शुरुआत के वित्तीय ज्योतिष पर निर्मित — W.D. Gann (Tunnel Thru the Air, 1927) और लुईस मैकवर्टर के कार्य सहित — साथ ही टोमासो पालामीदेसी और एलिस बेली (Esoteric Astrology) के पुरातत्व-दार्शनिक और गूढ़ संदर्भ। खगोलीय गणनाएँ सार्वजनिक डोमेन ओपन-सोर्स एल्गोरिदम पर आधारित हैं: VSOP87 (Bureau des Longitudes, पेरिस, 1987) और IAU 2006 (अंतर्राष्ट्रीय खगोलीय संघ)।",
     faq_eyebrow:"FAQ",faq_title:"त्वरित उत्तर",
     faq1_q:"क्या ऐप बाज़ारों की भविष्यवाणी करता है?",faq1_a:"नहीं। AstroTrader Pro एक प्रतीकात्मक और शैक्षिक उपकरण है। यह शास्त्रीय ज्योतिष परंपरा से वित्तीय क्षेत्रों के साथ सहसंबंध दिखाता है, लेकिन परिचालन पूर्वानुमान या कोई गारंटी नहीं देता। ज्योतिष की भविष्यवाणी प्रभावशीलता वैज्ञानिक रूप से सिद्ध नहीं है।",
-    faq2_q:"क्या यह ऑफ़लाइन काम करता है?",faq2_a:"हाँ। सभी खगोलीय गणनाएँ और डेटा ऐप के साथ बंडल हैं। एकमात्र आवश्यक कनेक्शन Premium सदस्यता प्रबंधन (Google Play) के लिए है। चक्र, प्रक्षेपण, और शब्दकोश पूरी तरह ऑफ़लाइन काम करते हैं।",
+    faq2_q:"क्या यह ऑफ़लाइन काम करता है?",faq2_a:"हाँ। सभी खगोलीय गणनाएँ और डेटा ऐप के साथ बंडल हैं। एकमात्र आवश्यक कनेक्शन Markets Pro सदस्यता प्रबंधन (Google Play) के लिए है। चक्र, प्रक्षेपण, और शब्दकोश पूरी तरह ऑफ़लाइन काम करते हैं।",
     faq3_q:"कितनी भाषाएँ उपलब्ध हैं?",faq3_a:"13: इतालवी, अंग्रेज़ी, स्पेनिश, फ्रेंच, जर्मन, पुर्तगाली, डच, रूसी, चीनी, जापानी, कोरियाई, अरबी (पूर्ण RTL समर्थन के साथ), हिन्दी।",
     faq4_q:"क्या सदस्यता स्वचालित रूप से नवीनीकृत होती है?",faq4_a:"हाँ, लेकिन आप किसी भी समय Google Play सेटिंग्स से रद्द कर सकते हैं।",
     faq5_q:"ऐप कौन सा डेटा एकत्र करता है?",faq5_a:"कोई ट्रैकिंग, एनालिटिक्स या विज्ञापन नहीं। संसाधित किया जाने वाला एकमात्र डेटा सदस्यता प्रबंधन के लिए सख्ती से आवश्यक है (RevenueCat द्वारा प्रबंधित छद्म पहचानकर्ता, Google Play द्वारा प्रबंधित लेनदेन मेटाडेटा)। पूर्ण विवरण गोपनीयता नीति में।",
@@ -2443,6 +2448,7 @@ var I18N={
       if(v.indexOf('<')>=0) el.innerHTML=v;
       else el.textContent=v;
     });
+    var tb=document.getElementById('theme-toggle');if(tb&&dict&&dict.theme_label){tb.setAttribute('aria-label',dict.theme_label);tb.setAttribute('title',dict.theme_label);}
     applyLaunchState(dict);
   }
   // === LAUNCH STATE ===
