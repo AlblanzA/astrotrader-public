@@ -71,6 +71,32 @@ async function leggiManifesto() {
   return m;
 }
 
+// 19/11/2026 (richiesta utente): su Instagram ogni post porta l'hashtag del
+// suo soggetto (pianeta/punto/tema, dedotto dall'id) e #psychologicalastrology.
+// Si aggiungono solo se mancano; FB e Threads usano i loro testi e li tolgono.
+const SOGGETTO_TAG = {
+  sole: 'sun', luna: 'moon', mercurio: 'mercury', venere: 'venus', marte: 'mars',
+  giove: 'jupiter', saturno: 'saturn', urano: 'uranus', nettuno: 'neptune', plutone: 'pluto',
+  chirone: 'chiron', rahu: 'rahu', ketu: 'ketu', lilith: 'blackmoonlilith', fortuna: 'partoffortune',
+  angles: 'ascendant', retro: 'retrograde', aspects: 'astrologyaspects', piena: 'fullmoon', nuova: 'newmoon',
+};
+function captionIG(p) {
+  let c = String(p.caption || '').trimEnd();
+  const id = String(p.id || '').toLowerCase();
+  const tags = [];
+  for (const [k, t] of Object.entries(SOGGETTO_TAG)) {
+    if (new RegExp(`[_-]${k}(?=[_-]|$)`).test(id)) tags.push(t);
+  }
+  tags.push('psychologicalastrology');
+  const nuovi = tags.filter((t) => !new RegExp(`#${t}(?![\\p{L}\\p{N}_])`, 'iu').test(c)).map((t) => '#' + t);
+  if (!nuovi.length) return c;
+  const righe = c.split('\n');
+  const ultima = righe[righe.length - 1] || '';
+  if (/^\s*(#[\p{L}\p{N}_]+\s*)+$/u.test(ultima)) righe[righe.length - 1] = ultima.trimEnd() + ' ' + nuovi.join(' ');
+  else righe.push('', nuovi.join(' '));
+  return righe.join('\n');
+}
+
 async function figlio(url) {
   const c = await post(GRAPH, `/${USER}/media`, { image_url: url, is_carousel_item: 'true', access_token: TOKEN });
   return c.id;
@@ -79,7 +105,7 @@ async function figlio(url) {
 async function pubblicaFeed(p, urls) {
   let creation;
   if (urls.length === 1) {
-    const c = await post(GRAPH, `/${USER}/media`, { image_url: urls[0], caption: p.caption, access_token: TOKEN });
+    const c = await post(GRAPH, `/${USER}/media`, { image_url: urls[0], caption: captionIG(p), access_token: TOKEN });
     await attendiPronto(GRAPH, TOKEN, c.id, 'immagine');
     creation = c.id;
   } else {
@@ -88,7 +114,7 @@ async function pubblicaFeed(p, urls) {
     for (const u of urls) figli.push(await figlio(u));
     for (let i = 0; i < figli.length; i++) await attendiPronto(GRAPH, TOKEN, figli[i], `scheda ${i + 1}`);
     const padre = await post(GRAPH, `/${USER}/media`, {
-      media_type: 'CAROUSEL', children: figli.join(','), caption: p.caption, access_token: TOKEN,
+      media_type: 'CAROUSEL', children: figli.join(','), caption: captionIG(p), access_token: TOKEN,
     });
     await attendiPronto(GRAPH, TOKEN, padre.id, 'carosello');
     creation = padre.id;
